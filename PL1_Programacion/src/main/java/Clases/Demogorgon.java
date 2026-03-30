@@ -11,4 +11,5 @@ package Clases;
 public class Demogorgon {
     int id;
     int numero;
+    int prueba;
 }
