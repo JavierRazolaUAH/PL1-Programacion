@@ -9,5 +9,5 @@ package com.mycompany.pl1_programacion;
  * @author javir
  */
 public class Demogorgon {
-    
+    int id;
 }
