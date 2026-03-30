@@ -26,21 +26,567 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Panel_Zona_Hawkins = new javax.swing.JPanel();
+        ScrollPanel_Calle_Principal = new javax.swing.JScrollPane();
+        ScrollPanel_Sotano_Byers = new javax.swing.JScrollPane();
+        Panel_Radio_WSQK = new javax.swing.JPanel();
+        ScrollPanel_Radio_WSQK = new javax.swing.JScrollPane();
+        Cantidad_Sangre = new javax.swing.JTextField();
+        Label_SANGRE = new javax.swing.JLabel();
+        Imagen_Radio = new javax.swing.JLabel();
+        HAWKINS = new javax.swing.JLabel();
+        Calle_Principal = new javax.swing.JLabel();
+        Sotano_Byers = new javax.swing.JLabel();
+        Calle_Principal2 = new javax.swing.JLabel();
+        Imagen_Hawkins = new javax.swing.JLabel();
+        Imagen_Sotano = new javax.swing.JLabel();
+        Panel_Zona_Portales = new javax.swing.JPanel();
+        PORTALES = new javax.swing.JLabel();
+        Panel_Portal_Bosque = new javax.swing.JPanel();
+        Entrada_1 = new javax.swing.JPanel();
+        Dentro_Portal_1 = new javax.swing.JPanel();
+        Salida_1 = new javax.swing.JPanel();
+        Panel_Portal_Laboratorio = new javax.swing.JPanel();
+        Entrada_2 = new javax.swing.JPanel();
+        Dentro_Portal_2 = new javax.swing.JPanel();
+        Salida_2 = new javax.swing.JPanel();
+        Panel_Portal_Centro_Comercial = new javax.swing.JPanel();
+        Entrada_3 = new javax.swing.JPanel();
+        Dentro_Portal_3 = new javax.swing.JPanel();
+        Salida_3 = new javax.swing.JPanel();
+        Panel_Portal_Alcantarillado = new javax.swing.JPanel();
+        Entrada_4 = new javax.swing.JPanel();
+        Dentro_Portal_4 = new javax.swing.JPanel();
+        Salida_4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Panel_Zona_Upsidedown = new javax.swing.JPanel();
+        UPSIDEDOWN = new javax.swing.JLabel();
+        Bosque = new javax.swing.JLabel();
+        Panel_Bosque = new javax.swing.JPanel();
+        ScrollPanel_NiñosBosque = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jLabel1 = new javax.swing.JLabel();
+        Laboratorio = new javax.swing.JLabel();
+        Panel_Portal_Laboratorio1 = new javax.swing.JPanel();
+        ScrollPanel_NiñosLaboratorio = new javax.swing.JScrollPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jLabel2 = new javax.swing.JLabel();
+        Centro_Comercial = new javax.swing.JLabel();
+        Panel_Portal_Centro_Comercial1 = new javax.swing.JPanel();
+        ScrollPanel_NiñosCentroComercial = new javax.swing.JScrollPane();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jLabel3 = new javax.swing.JLabel();
+        Alcantarillado = new javax.swing.JLabel();
+        Panel_Portal_Alcantarillado1 = new javax.swing.JPanel();
+        ScrollPanel_NiñosAlcantarillado = new javax.swing.JScrollPane();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jLabel4 = new javax.swing.JLabel();
+        Panel_Estadisticas = new javax.swing.JPanel();
+        Texto_Principal = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Panel_Zona_Hawkins.setBackground(new java.awt.Color(204, 255, 204));
+        Panel_Zona_Hawkins.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 3));
+        Panel_Zona_Hawkins.setPreferredSize(new java.awt.Dimension(300, 500));
+        Panel_Zona_Hawkins.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ScrollPanel_Calle_Principal.setPreferredSize(new java.awt.Dimension(260, 110));
+        Panel_Zona_Hawkins.add(ScrollPanel_Calle_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 150, 100));
+
+        ScrollPanel_Sotano_Byers.setPreferredSize(new java.awt.Dimension(260, 110));
+        Panel_Zona_Hawkins.add(ScrollPanel_Sotano_Byers, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 70));
+
+        Panel_Radio_WSQK.setOpaque(false);
+        Panel_Radio_WSQK.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Radio_WSQK.add(ScrollPanel_Radio_WSQK, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 100, 80));
+
+        Cantidad_Sangre.setEditable(false);
+        Cantidad_Sangre.setPreferredSize(new java.awt.Dimension(60, 40));
+        Cantidad_Sangre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cantidad_SangreActionPerformed(evt);
+            }
+        });
+        Panel_Radio_WSQK.add(Cantidad_Sangre, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 70, 60, 40));
+
+        Label_SANGRE.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
+        Label_SANGRE.setForeground(new java.awt.Color(255, 0, 0));
+        Label_SANGRE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Label_SANGRE.setText("SANGRE");
+        Label_SANGRE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Label_SANGRE.setOpaque(true);
+        Panel_Radio_WSQK.add(Label_SANGRE, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 50, 60, 20));
+
+        Imagen_Radio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Radio.png"))); // NOI18N
+        Panel_Radio_WSQK.add(Imagen_Radio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 140));
+
+        Panel_Zona_Hawkins.add(Panel_Radio_WSQK, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 230, 140));
+
+        HAWKINS.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        HAWKINS.setText("HAWKINS");
+        Panel_Zona_Hawkins.add(HAWKINS, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+
+        Calle_Principal.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Calle_Principal.setText("Calle_Principal");
+        Panel_Zona_Hawkins.add(Calle_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 35, -1, -1));
+
+        Sotano_Byers.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Sotano_Byers.setText("Sotano Byers");
+        Panel_Zona_Hawkins.add(Sotano_Byers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 175, -1, -1));
+
+        Calle_Principal2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Calle_Principal2.setText("Radio WSQK");
+        Panel_Zona_Hawkins.add(Calle_Principal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 315, -1, -1));
+
+        Imagen_Hawkins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/hawkins (1).jpg"))); // NOI18N
+        Panel_Zona_Hawkins.add(Imagen_Hawkins, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 65, 90, 90));
+
+        Imagen_Sotano.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Sotano.PNG"))); // NOI18N
+        Panel_Zona_Hawkins.add(Imagen_Sotano, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 195, 250, 100));
+
+        getContentPane().add(Panel_Zona_Hawkins, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 80, -1, -1));
+
+        Panel_Zona_Portales.setBackground(new java.awt.Color(255, 153, 204));
+        Panel_Zona_Portales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+        Panel_Zona_Portales.setPreferredSize(new java.awt.Dimension(300, 500));
+        Panel_Zona_Portales.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PORTALES.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        PORTALES.setText("PORTALES");
+        Panel_Zona_Portales.add(PORTALES, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+
+        Panel_Portal_Bosque.setBackground(new java.awt.Color(156, 28, 156));
+        Panel_Portal_Bosque.setOpaque(false);
+        Panel_Portal_Bosque.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.GroupLayout Entrada_1Layout = new javax.swing.GroupLayout(Entrada_1);
+        Entrada_1.setLayout(Entrada_1Layout);
+        Entrada_1Layout.setHorizontalGroup(
+            Entrada_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        Entrada_1Layout.setVerticalGroup(
+            Entrada_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
+
+        Panel_Portal_Bosque.add(Entrada_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 70, 80));
+
+        javax.swing.GroupLayout Dentro_Portal_1Layout = new javax.swing.GroupLayout(Dentro_Portal_1);
+        Dentro_Portal_1.setLayout(Dentro_Portal_1Layout);
+        Dentro_Portal_1Layout.setHorizontalGroup(
+            Dentro_Portal_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Dentro_Portal_1Layout.setVerticalGroup(
+            Dentro_Portal_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        Panel_Portal_Bosque.add(Dentro_Portal_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 80));
+
+        javax.swing.GroupLayout Salida_1Layout = new javax.swing.GroupLayout(Salida_1);
+        Salida_1.setLayout(Salida_1Layout);
+        Salida_1Layout.setHorizontalGroup(
+            Salida_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Salida_1Layout.setVerticalGroup(
+            Salida_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        Panel_Portal_Bosque.add(Salida_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 35, 70, 30));
+
+        Panel_Zona_Portales.add(Panel_Portal_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 260, 100));
+
+        Panel_Portal_Laboratorio.setBackground(new java.awt.Color(156, 28, 156));
+        Panel_Portal_Laboratorio.setOpaque(false);
+
+        javax.swing.GroupLayout Entrada_2Layout = new javax.swing.GroupLayout(Entrada_2);
+        Entrada_2.setLayout(Entrada_2Layout);
+        Entrada_2Layout.setHorizontalGroup(
+            Entrada_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Entrada_2Layout.setVerticalGroup(
+            Entrada_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Dentro_Portal_2Layout = new javax.swing.GroupLayout(Dentro_Portal_2);
+        Dentro_Portal_2.setLayout(Dentro_Portal_2Layout);
+        Dentro_Portal_2Layout.setHorizontalGroup(
+            Dentro_Portal_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Dentro_Portal_2Layout.setVerticalGroup(
+            Dentro_Portal_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Salida_2Layout = new javax.swing.GroupLayout(Salida_2);
+        Salida_2.setLayout(Salida_2Layout);
+        Salida_2Layout.setHorizontalGroup(
+            Salida_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Salida_2Layout.setVerticalGroup(
+            Salida_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Panel_Portal_LaboratorioLayout = new javax.swing.GroupLayout(Panel_Portal_Laboratorio);
+        Panel_Portal_Laboratorio.setLayout(Panel_Portal_LaboratorioLayout);
+        Panel_Portal_LaboratorioLayout.setHorizontalGroup(
+            Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Dentro_Portal_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Salida_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Entrada_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_LaboratorioLayout.setVerticalGroup(
+            Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Dentro_Portal_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(Salida_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Entrada_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Portales.add(Panel_Portal_Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 155, 260, -1));
+
+        Panel_Portal_Centro_Comercial.setBackground(new java.awt.Color(156, 28, 156));
+        Panel_Portal_Centro_Comercial.setOpaque(false);
+
+        javax.swing.GroupLayout Entrada_3Layout = new javax.swing.GroupLayout(Entrada_3);
+        Entrada_3.setLayout(Entrada_3Layout);
+        Entrada_3Layout.setHorizontalGroup(
+            Entrada_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Entrada_3Layout.setVerticalGroup(
+            Entrada_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Dentro_Portal_3Layout = new javax.swing.GroupLayout(Dentro_Portal_3);
+        Dentro_Portal_3.setLayout(Dentro_Portal_3Layout);
+        Dentro_Portal_3Layout.setHorizontalGroup(
+            Dentro_Portal_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Dentro_Portal_3Layout.setVerticalGroup(
+            Dentro_Portal_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Salida_3Layout = new javax.swing.GroupLayout(Salida_3);
+        Salida_3.setLayout(Salida_3Layout);
+        Salida_3Layout.setHorizontalGroup(
+            Salida_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Salida_3Layout.setVerticalGroup(
+            Salida_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Panel_Portal_Centro_ComercialLayout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial);
+        Panel_Portal_Centro_Comercial.setLayout(Panel_Portal_Centro_ComercialLayout);
+        Panel_Portal_Centro_ComercialLayout.setHorizontalGroup(
+            Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Dentro_Portal_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Salida_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Entrada_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_Centro_ComercialLayout.setVerticalGroup(
+            Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Dentro_Portal_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(Salida_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Entrada_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Portales.add(Panel_Portal_Centro_Comercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, -1));
+
+        Panel_Portal_Alcantarillado.setBackground(new java.awt.Color(156, 28, 156));
+        Panel_Portal_Alcantarillado.setOpaque(false);
+
+        javax.swing.GroupLayout Entrada_4Layout = new javax.swing.GroupLayout(Entrada_4);
+        Entrada_4.setLayout(Entrada_4Layout);
+        Entrada_4Layout.setHorizontalGroup(
+            Entrada_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Entrada_4Layout.setVerticalGroup(
+            Entrada_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        Dentro_Portal_4.setToolTipText("");
+
+        javax.swing.GroupLayout Dentro_Portal_4Layout = new javax.swing.GroupLayout(Dentro_Portal_4);
+        Dentro_Portal_4.setLayout(Dentro_Portal_4Layout);
+        Dentro_Portal_4Layout.setHorizontalGroup(
+            Dentro_Portal_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Dentro_Portal_4Layout.setVerticalGroup(
+            Dentro_Portal_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Salida_4Layout = new javax.swing.GroupLayout(Salida_4);
+        Salida_4.setLayout(Salida_4Layout);
+        Salida_4Layout.setHorizontalGroup(
+            Salida_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+        Salida_4Layout.setVerticalGroup(
+            Salida_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout Panel_Portal_AlcantarilladoLayout = new javax.swing.GroupLayout(Panel_Portal_Alcantarillado);
+        Panel_Portal_Alcantarillado.setLayout(Panel_Portal_AlcantarilladoLayout);
+        Panel_Portal_AlcantarilladoLayout.setHorizontalGroup(
+            Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Dentro_Portal_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Salida_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15, 15, 15)
+                    .addComponent(Entrada_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_AlcantarilladoLayout.setVerticalGroup(
+            Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Dentro_Portal_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(Salida_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Entrada_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Portales.add(Panel_Portal_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 385, 260, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Panel_Portal.png"))); // NOI18N
+        Panel_Zona_Portales.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 296, 496));
+
+        getContentPane().add(Panel_Zona_Portales, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, -1));
+
+        Panel_Zona_Upsidedown.setBackground(new java.awt.Color(255, 102, 102));
+        Panel_Zona_Upsidedown.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
+        Panel_Zona_Upsidedown.setPreferredSize(new java.awt.Dimension(300, 500));
+        Panel_Zona_Upsidedown.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        UPSIDEDOWN.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        UPSIDEDOWN.setText("UPSIDEDOWN");
+        Panel_Zona_Upsidedown.add(UPSIDEDOWN, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
+
+        Bosque.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Bosque.setText("Bosque");
+        Panel_Zona_Upsidedown.add(Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 80, -1));
+
+        Panel_Bosque.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Bosque.add(ScrollPanel_NiñosBosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
+        Panel_Bosque.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Bosque.jpg"))); // NOI18N
+        Panel_Bosque.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
+
+        Panel_Zona_Upsidedown.add(Panel_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 45, 260, 90));
+
+        Laboratorio.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Laboratorio.setText("Laboratorio");
+        Panel_Zona_Upsidedown.add(Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 120, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
+
+        javax.swing.GroupLayout Panel_Portal_Laboratorio1Layout = new javax.swing.GroupLayout(Panel_Portal_Laboratorio1);
+        Panel_Portal_Laboratorio1.setLayout(Panel_Portal_Laboratorio1Layout);
+        Panel_Portal_Laboratorio1Layout.setHorizontalGroup(
+            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel2)
+                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                            .addGap(150, 150, 150)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_Laboratorio1Layout.setVerticalGroup(
+            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2)
+                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Upsidedown.add(Panel_Portal_Laboratorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 90));
+
+        Centro_Comercial.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Centro_Comercial.setText("Centro Comercial");
+        Panel_Zona_Upsidedown.add(Centro_Comercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 140, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
+
+        javax.swing.GroupLayout Panel_Portal_Centro_Comercial1Layout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial1);
+        Panel_Portal_Centro_Comercial1.setLayout(Panel_Portal_Centro_Comercial1Layout);
+        Panel_Portal_Centro_Comercial1Layout.setHorizontalGroup(
+            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(40, 40, 40)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_Centro_Comercial1Layout.setVerticalGroup(
+            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3)
+                        .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Upsidedown.add(Panel_Portal_Centro_Comercial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 275, 260, 90));
+
+        Alcantarillado.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
+        Alcantarillado.setText("Alcantarillado");
+        Panel_Zona_Upsidedown.add(Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 375, 100, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
+
+        javax.swing.GroupLayout Panel_Portal_Alcantarillado1Layout = new javax.swing.GroupLayout(Panel_Portal_Alcantarillado1);
+        Panel_Portal_Alcantarillado1.setLayout(Panel_Portal_Alcantarillado1Layout);
+        Panel_Portal_Alcantarillado1Layout.setHorizontalGroup(
+            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                            .addGap(150, 150, 150)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel4))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        Panel_Portal_Alcantarillado1Layout.setVerticalGroup(
+            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        Panel_Zona_Upsidedown.add(Panel_Portal_Alcantarillado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 260, 90));
+
+        getContentPane().add(Panel_Zona_Upsidedown, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 80, -1, -1));
+
+        javax.swing.GroupLayout Panel_EstadisticasLayout = new javax.swing.GroupLayout(Panel_Estadisticas);
+        Panel_Estadisticas.setLayout(Panel_EstadisticasLayout);
+        Panel_EstadisticasLayout.setHorizontalGroup(
+            Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 136, Short.MAX_VALUE)
+        );
+        Panel_EstadisticasLayout.setVerticalGroup(
+            Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(Panel_Estadisticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 610, -1, 110));
+
+        Texto_Principal.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        Texto_Principal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Texto_Principal.setText("Simulacion de Stranger Things");
+        Texto_Principal.setToolTipText("");
+        getContentPane().add(Texto_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Cantidad_SangreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cantidad_SangreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Cantidad_SangreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +624,62 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Alcantarillado;
+    private javax.swing.JLabel Bosque;
+    private javax.swing.JLabel Calle_Principal;
+    private javax.swing.JLabel Calle_Principal2;
+    private javax.swing.JTextField Cantidad_Sangre;
+    private javax.swing.JLabel Centro_Comercial;
+    private javax.swing.JPanel Dentro_Portal_1;
+    private javax.swing.JPanel Dentro_Portal_2;
+    private javax.swing.JPanel Dentro_Portal_3;
+    private javax.swing.JPanel Dentro_Portal_4;
+    private javax.swing.JPanel Entrada_1;
+    private javax.swing.JPanel Entrada_2;
+    private javax.swing.JPanel Entrada_3;
+    private javax.swing.JPanel Entrada_4;
+    private javax.swing.JLabel HAWKINS;
+    private javax.swing.JLabel Imagen_Hawkins;
+    private javax.swing.JLabel Imagen_Radio;
+    private javax.swing.JLabel Imagen_Sotano;
+    private javax.swing.JLabel Label_SANGRE;
+    private javax.swing.JLabel Laboratorio;
+    private javax.swing.JLabel PORTALES;
+    private javax.swing.JPanel Panel_Bosque;
+    private javax.swing.JPanel Panel_Estadisticas;
+    private javax.swing.JPanel Panel_Portal_Alcantarillado;
+    private javax.swing.JPanel Panel_Portal_Alcantarillado1;
+    private javax.swing.JPanel Panel_Portal_Bosque;
+    private javax.swing.JPanel Panel_Portal_Centro_Comercial;
+    private javax.swing.JPanel Panel_Portal_Centro_Comercial1;
+    private javax.swing.JPanel Panel_Portal_Laboratorio;
+    private javax.swing.JPanel Panel_Portal_Laboratorio1;
+    private javax.swing.JPanel Panel_Radio_WSQK;
+    private javax.swing.JPanel Panel_Zona_Hawkins;
+    private javax.swing.JPanel Panel_Zona_Portales;
+    private javax.swing.JPanel Panel_Zona_Upsidedown;
+    private javax.swing.JPanel Salida_1;
+    private javax.swing.JPanel Salida_2;
+    private javax.swing.JPanel Salida_3;
+    private javax.swing.JPanel Salida_4;
+    private javax.swing.JScrollPane ScrollPanel_Calle_Principal;
+    private javax.swing.JScrollPane ScrollPanel_NiñosAlcantarillado;
+    private javax.swing.JScrollPane ScrollPanel_NiñosBosque;
+    private javax.swing.JScrollPane ScrollPanel_NiñosCentroComercial;
+    private javax.swing.JScrollPane ScrollPanel_NiñosLaboratorio;
+    private javax.swing.JScrollPane ScrollPanel_Radio_WSQK;
+    private javax.swing.JScrollPane ScrollPanel_Sotano_Byers;
+    private javax.swing.JLabel Sotano_Byers;
+    private javax.swing.JLabel Texto_Principal;
+    private javax.swing.JLabel UPSIDEDOWN;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane8;
     // End of variables declaration//GEN-END:variables
 }
