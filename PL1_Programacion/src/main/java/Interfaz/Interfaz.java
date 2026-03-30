@@ -448,41 +448,12 @@ public class Interfaz extends javax.swing.JFrame {
         Laboratorio.setText("Laboratorio");
         Panel_Zona_Upsidedown.add(Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 120, -1));
 
-        Textura_Laboratorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
+        Panel_Portal_Laboratorio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Portal_Laboratorio1.add(ScrollPanel_NiñosLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
+        Panel_Portal_Laboratorio1.add(ScrollPanel_DemogorgonsLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
 
-        javax.swing.GroupLayout Panel_Portal_Laboratorio1Layout = new javax.swing.GroupLayout(Panel_Portal_Laboratorio1);
-        Panel_Portal_Laboratorio1.setLayout(Panel_Portal_Laboratorio1Layout);
-        Panel_Portal_Laboratorio1Layout.setHorizontalGroup(
-            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Textura_Laboratorio)
-                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
-                            .addGap(150, 150, 150)
-                            .addComponent(ScrollPanel_DemogorgonsLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        Panel_Portal_Laboratorio1Layout.setVerticalGroup(
-            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Textura_Laboratorio)
-                        .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ScrollPanel_DemogorgonsLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        Textura_Laboratorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
+        Panel_Portal_Laboratorio1.add(Textura_Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
         Panel_Zona_Upsidedown.add(Panel_Portal_Laboratorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 90));
 
@@ -490,40 +461,12 @@ public class Interfaz extends javax.swing.JFrame {
         Centro_Comercial.setText("Centro Comercial");
         Panel_Zona_Upsidedown.add(Centro_Comercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 140, -1));
 
-        Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
+        Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
+        Panel_Portal_Centro_Comercial1.add(ScrollPanel_DemogorgonsCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
 
-        javax.swing.GroupLayout Panel_Portal_Centro_Comercial1Layout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial1);
-        Panel_Portal_Centro_Comercial1.setLayout(Panel_Portal_Centro_Comercial1Layout);
-        Panel_Portal_Centro_Comercial1Layout.setHorizontalGroup(
-            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(40, 40, 40)
-                            .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Textura_CentroComercial))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        Panel_Portal_Centro_Comercial1Layout.setVerticalGroup(
-            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Textura_CentroComercial)
-                        .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
+        Panel_Portal_Centro_Comercial1.add(Textura_CentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
         Panel_Zona_Upsidedown.add(Panel_Portal_Centro_Comercial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 275, 260, 90));
 
@@ -531,41 +474,12 @@ public class Interfaz extends javax.swing.JFrame {
         Alcantarillado.setText("Alcantarillado");
         Panel_Zona_Upsidedown.add(Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 375, 100, -1));
 
-        Textura_Alcantarillado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
+        Panel_Portal_Alcantarillado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Portal_Alcantarillado1.add(ScrollPanel_NiñosAlcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
+        Panel_Portal_Alcantarillado1.add(ScrollPanel_DemogorgonsAlcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
 
-        javax.swing.GroupLayout Panel_Portal_Alcantarillado1Layout = new javax.swing.GroupLayout(Panel_Portal_Alcantarillado1);
-        Panel_Portal_Alcantarillado1.setLayout(Panel_Portal_Alcantarillado1Layout);
-        Panel_Portal_Alcantarillado1Layout.setHorizontalGroup(
-            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
-                            .addGap(150, 150, 150)
-                            .addComponent(ScrollPanel_DemogorgonsAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Textura_Alcantarillado))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        Panel_Portal_Alcantarillado1Layout.setVerticalGroup(
-            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Textura_Alcantarillado)
-                        .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ScrollPanel_DemogorgonsAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        Textura_Alcantarillado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
+        Panel_Portal_Alcantarillado1.add(Textura_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
         Panel_Zona_Upsidedown.add(Panel_Portal_Alcantarillado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 260, 90));
 
