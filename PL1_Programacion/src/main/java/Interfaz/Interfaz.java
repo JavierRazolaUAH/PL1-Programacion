@@ -489,6 +489,7 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Estadisticas.setOpaque(false);
         Panel_Estadisticas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Niños_Capturados.setEditable(false);
         Niños_Capturados.setBackground(new java.awt.Color(255, 153, 153));
         Niños_Capturados.setFont(new java.awt.Font("Segoe UI Emoji", 1, 36)); // NOI18N
         Niños_Capturados.setHorizontalAlignment(javax.swing.JTextField.CENTER);
