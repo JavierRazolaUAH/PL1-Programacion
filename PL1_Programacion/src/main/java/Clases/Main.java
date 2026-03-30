@@ -4,13 +4,17 @@
 
 package Clases;
 
+import Interfaz.Interfaz;
+
 /**
  *
  * @author javir
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static void main(String args[]) {
+    java.awt.EventQueue.invokeLater(() -> {
+        new Interfaz().setVisible(true);
+    });
     }
 }
