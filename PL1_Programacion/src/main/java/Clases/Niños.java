@@ -9,5 +9,6 @@ package Clases;
  * @author javir
  */
 public class Niños {
+    int id;
     
 }
