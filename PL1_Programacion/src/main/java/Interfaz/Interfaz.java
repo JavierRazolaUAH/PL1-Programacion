@@ -138,7 +138,7 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Zona_Hawkins.add(HAWKINS, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
         Calle_Principal.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
-        Calle_Principal.setText("Calle_Principal");
+        Calle_Principal.setText("Calle Principal");
         Panel_Zona_Hawkins.add(Calle_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 35, -1, -1));
 
         Sotano_Byers.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
