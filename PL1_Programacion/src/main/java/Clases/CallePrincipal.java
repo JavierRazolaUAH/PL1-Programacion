@@ -27,27 +27,28 @@ public class CallePrincipal {
 
     // --- MÉTODOS DE LA SIMULACIÓN ---
 
-    // 1. Método para cuando el niño acaba de ser creado en el Main
-    public void inicio(Nino nino) throws InterruptedException {
+  // --- MÉTODOS DE ENTRADA Y SALIDA ---
+public void inicio(Nino nino) throws InterruptedException {
         ninosEnCalle.put(nino);
-        // Logs.getInstance().log(nino.getNombre() + " ha iniciado su actividad en la CALLE PRINCIPAL.");
-        
-        // No hay tiempo de espera obligatorio al inicio según el enunciado, 
-        // así que el niño sale inmediatamente hacia el Sótano Byers.
-        ninosEnCalle.remove(nino);
+        Logs.getInstance().log(nino.getIdNino() + " ha INICIADO su actividad en Hawkins (Calle Principal).");
+        salirZona(nino); // Sale automáticamente sin esperar
     }
 
-    // 2. Método para el final del ciclo (Deambular)
     public void deambular(Nino nino) throws InterruptedException {
         ninosEnCalle.put(nino);
-        // Logs.getInstance().log(nino.getNombre() + " está deambulando por la CALLE PRINCIPAL.");
+        Logs.getInstance().log(nino.getIdNino() + " está DEAMBULANDO por la Calle Principal.");
         
-        // Tiempo deambulando: Aleatorio entre 3 y 5 segundos (3000 - 5000 ms)
+        // Tiempo deambulando: Aleatorio entre 3 y 5 segundos
         int tiempoDeambular = rand.nextInt(2000) + 3000; 
         Thread.sleep(tiempoDeambular);
         
-        ninosEnCalle.remove(nino);
-        // Logs.getInstance().log(nino.getNombre() + " deja de deambular y vuelve al SÓTANO BYERS.");
+        salirZona(nino);
+    }
+
+    public void salirZona(Nino nino) {
+        if (ninosEnCalle.remove(nino)) {
+            Logs.getInstance().log(nino.getIdNino() + " ha SALIDO de la Calle Principal.");
+        }
     }
 
     // --- MÉTODOS GETTER (Para tu Interfaz y RMI) ---

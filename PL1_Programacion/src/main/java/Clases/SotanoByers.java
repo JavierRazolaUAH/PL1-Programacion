@@ -24,22 +24,22 @@ public class SotanoByers {
         this.rand = new Random();
     }
 
-    // Método principal que ejecutarán los hilos Niño
-    public void prepararse(Nino nino) throws InterruptedException {
-        // 1. El niño entra al sótano
+ // --- MÉTODOS DE ENTRADA Y SALIDA SEPARADOS ---
+public void entrarZona(Nino nino) throws InterruptedException {
         ninosEnSotano.put(nino);
+        Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO al Sótano Byers y empieza a prepararse.");
         
-        // ¡Recuerda usar tu clase Logs aquí en lugar de un sout!
-        // Logs.getInstance().log(nino.getIdNino() + " ha entrado al SÓTANO BYERS.");
-        
-        // 2. Tiempo de preparación: Aleatorio entre 1 y 2 segundos (1000 - 2000 ms)
+        // Permanece un tiempo aleatorio entre 1 y 2 segundos
         int tiempoEspera = rand.nextInt(1000) + 1000; 
         Thread.sleep(tiempoEspera);
         
-        // 3. El niño termina y sale del sótano
-        ninosEnSotano.remove(nino);
-        
-        // Logs.getInstance().log(nino.getIdNino() + " sale del SÓTANO BYERS hacia los portales.");
+        Logs.getInstance().log(nino.getIdNino() + " ha terminado de prepararse en el Sótano Byers.");
+    }
+
+    public void salirZona(Nino nino) {
+        if (ninosEnSotano.remove(nino)) {
+            Logs.getInstance().log(nino.getIdNino() + " ha SALIDO del Sótano Byers hacia los Portales.");
+        }
     }
 
     // --- Métodos 'Getter' útiles para tu Interfaz Gráfica y la Parte 2 (RMI) ---

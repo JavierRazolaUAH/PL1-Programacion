@@ -12,7 +12,7 @@ public class Nino  extends Thread{
     private String idNino;
     private boolean vivo = true;
     private boolean capturado = false;
-    
+    private int sangreRecolectada = 0;
     // El niño necesita conocer el mapa para moverse
     private final AgrupacionZonas zonas; 
 
@@ -58,7 +58,7 @@ public class Nino  extends Thread{
                 zonas.esperarSiPausado();
                 
                 // Entra al sótano a prepararse (1 a 2 segundos)
-                zonas.getSotanoByers().prepararse(this);
+                
                 
                 zonas.esperarSiPausado();
                 
@@ -79,6 +79,13 @@ public class Nino  extends Thread{
         } catch (InterruptedException e) {
             System.out.println(idNino + " ha sido interrumpido.");
         }
+    }
+    public int getSangreRecolectada() {
+        return sangreRecolectada;
+    }
+
+    public void setSangreRecolectada(int sangreRecolectada) {
+        this.sangreRecolectada = sangreRecolectada;
     }
     
 }
