@@ -19,27 +19,42 @@ public class RadioWSQK {
     // Cola concurrente para almacenar a los niños que están descansando en la radio
     private final BlockingQueue<Nino> ninosEnRadio;
     private final Random rand;
+    private int sangreTotalAlmacenada = 0;
 
     public RadioWSQK() {
         this.ninosEnRadio = new LinkedBlockingQueue<>();
         this.rand = new Random();
     }
 
-    // Método que ejecutarán los niños al volver de los portales
-    public void descansar(Nino nino) throws InterruptedException {
-        // 1. El niño entra a la radio
+// --- MÉTODOS DE ENTRADA Y SALIDA ---
+    public void entrar(Nino nino) throws InterruptedException {
         ninosEnRadio.put(nino);
+    }
+
+    public void salir(Nino nino) {
+        ninosEnRadio.remove(nino);
+    }
+
+    // --- MÉTODOS DE ACCIÓN ---
+    
+    // Método sincronizado para depositar la sangre de forma segura
+    public synchronized void depositarSangre(Nino nino) {
+        // Asumiendo que tu clase Nino tiene un getSangreRecolectada() que devuelve 1 o 0
+        int sangreTraida = nino.getSangreRecolectada();
+        if (sangreTraida > 0) {
+            this.sangreTotalAlmacenada += sangreTraida;
+            nino.setSangreRecolectada(0); // El niño se queda a 0 tras depositarla
+            // Logs.getInstance().log(nino.getIdNino() + " ha depositado 1 ud de sangre. Total: " + sangreTotalAlmacenada);
+        }
+    }
+
+    public void descansar(Nino nino) throws InterruptedException {
+        entrar(nino);
         
-        // Logs.getInstance().log(nino.getIdNino() + " ha entrado a descansar a la RADIO WSQK.");
-        
-        // 2. Tiempo de descanso: Aleatorio entre 2 y 4 segundos (2000 - 4000 ms)
         int tiempoDescanso = rand.nextInt(2000) + 2000; 
         Thread.sleep(tiempoDescanso);
         
-        // 3. El niño termina su descanso y sale
-        ninosEnRadio.remove(nino);
-        
-        // Logs.getInstance().log(nino.getIdNino() + " ha terminado de descansar y sale de la RADIO WSQK.");
+        salir(nino);
     }
 
     // --- MÉTODOS GETTER (Para la Interfaz) ---
@@ -50,5 +65,8 @@ public class RadioWSQK {
 
     public List<Nino> getNinosEnRadio() {
         return new ArrayList<>(ninosEnRadio);
+    }
+    public synchronized int getSangreTotalAlmacenada() { 
+        return sangreTotalAlmacenada; 
     }
 }
