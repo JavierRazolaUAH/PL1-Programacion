@@ -102,8 +102,6 @@ public class Interfaz extends javax.swing.JFrame {
         ScrollPanel_Sotano_Byers.setPreferredSize(new java.awt.Dimension(260, 110));
 
         Panel_Radio_WSQK.setOpaque(false);
-        Panel_Radio_WSQK.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Panel_Radio_WSQK.add(ScrollPanel_Radio_WSQK, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 100, 80));
 
         Cantidad_Sangre.setEditable(false);
         Cantidad_Sangre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -114,7 +112,6 @@ public class Interfaz extends javax.swing.JFrame {
                 Cantidad_SangreActionPerformed(evt);
             }
         });
-        Panel_Radio_WSQK.add(Cantidad_Sangre, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 70, 60, 40));
 
         Label_SANGRE.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
         Label_SANGRE.setForeground(new java.awt.Color(255, 0, 0));
@@ -122,10 +119,37 @@ public class Interfaz extends javax.swing.JFrame {
         Label_SANGRE.setText("SANGRE");
         Label_SANGRE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Label_SANGRE.setOpaque(true);
-        Panel_Radio_WSQK.add(Label_SANGRE, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 50, 60, 20));
 
         Imagen_Radio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Radio.png"))); // NOI18N
-        Panel_Radio_WSQK.add(Imagen_Radio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 140));
+
+        javax.swing.GroupLayout Panel_Radio_WSQKLayout = new javax.swing.GroupLayout(Panel_Radio_WSQK);
+        Panel_Radio_WSQK.setLayout(Panel_Radio_WSQKLayout);
+        Panel_Radio_WSQKLayout.setHorizontalGroup(
+            Panel_Radio_WSQKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ScrollPanel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(Cantidad_Sangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(Label_SANGRE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Imagen_Radio)
+        );
+        Panel_Radio_WSQKLayout.setVerticalGroup(
+            Panel_Radio_WSQKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(ScrollPanel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(Cantidad_Sangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Radio_WSQKLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(Label_SANGRE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Imagen_Radio)
+        );
 
         HAWKINS.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         HAWKINS.setText("HAWKINS");
@@ -213,6 +237,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         Panel_Portal_Bosque.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Bosque.setOpaque(false);
+        Panel_Portal_Bosque.setPreferredSize(new java.awt.Dimension(260, 100));
 
         javax.swing.GroupLayout Entrada_1Layout = new javax.swing.GroupLayout(Entrada_1);
         Entrada_1.setLayout(Entrada_1Layout);
@@ -478,7 +503,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        Panel_Zona_Portales.add(Panel_Portal_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 385, 260, -1));
+        Panel_Zona_Portales.add(Panel_Portal_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 385, 260, 100));
 
         Textura_Portal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Panel_Portal.png"))); // NOI18N
         Panel_Zona_Portales.add(Textura_Portal, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 294, 494));
@@ -493,42 +518,110 @@ public class Interfaz extends javax.swing.JFrame {
         Bosque.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Bosque.setText("Bosque");
 
-        Panel_Bosque.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Panel_Bosque.add(ScrollPanel_NiñosBosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
-        Panel_Bosque.add(ScrollPanel_DemogorgonsBosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
-
         Textura_Bosque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Bosque.jpg"))); // NOI18N
-        Panel_Bosque.add(Textura_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
+
+        javax.swing.GroupLayout Panel_BosqueLayout = new javax.swing.GroupLayout(Panel_Bosque);
+        Panel_Bosque.setLayout(Panel_BosqueLayout);
+        Panel_BosqueLayout.setHorizontalGroup(
+            Panel_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_BosqueLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ScrollPanel_NiñosBosque, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_BosqueLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(ScrollPanel_DemogorgonsBosque, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Textura_Bosque)
+        );
+        Panel_BosqueLayout.setVerticalGroup(
+            Panel_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Textura_Bosque)
+            .addGroup(Panel_BosqueLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(Panel_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrollPanel_NiñosBosque, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPanel_DemogorgonsBosque, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         Laboratorio.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Laboratorio.setText("Laboratorio");
 
-        Panel_Portal_Laboratorio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Panel_Portal_Laboratorio1.add(ScrollPanel_NiñosLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
-        Panel_Portal_Laboratorio1.add(ScrollPanel_DemogorgonsLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
-
         Textura_Laboratorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
-        Panel_Portal_Laboratorio1.add(Textura_Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
+
+        javax.swing.GroupLayout Panel_Portal_Laboratorio1Layout = new javax.swing.GroupLayout(Panel_Portal_Laboratorio1);
+        Panel_Portal_Laboratorio1.setLayout(Panel_Portal_Laboratorio1Layout);
+        Panel_Portal_Laboratorio1Layout.setHorizontalGroup(
+            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(ScrollPanel_DemogorgonsLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Textura_Laboratorio)
+        );
+        Panel_Portal_Laboratorio1Layout.setVerticalGroup(
+            Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Textura_Laboratorio)
+            .addGroup(Panel_Portal_Laboratorio1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(Panel_Portal_Laboratorio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrollPanel_NiñosLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPanel_DemogorgonsLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         Centro_Comercial.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Centro_Comercial.setText("Centro Comercial");
 
-        Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
-        Panel_Portal_Centro_Comercial1.add(ScrollPanel_DemogorgonsCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
-
         Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
-        Panel_Portal_Centro_Comercial1.add(Textura_CentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
+
+        javax.swing.GroupLayout Panel_Portal_Centro_Comercial1Layout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial1);
+        Panel_Portal_Centro_Comercial1.setLayout(Panel_Portal_Centro_Comercial1Layout);
+        Panel_Portal_Centro_Comercial1Layout.setHorizontalGroup(
+            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Textura_CentroComercial)
+            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Panel_Portal_Centro_Comercial1Layout.setVerticalGroup(
+            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Textura_CentroComercial)
+            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         Alcantarillado.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Alcantarillado.setText("Alcantarillado");
 
-        Panel_Portal_Alcantarillado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Panel_Portal_Alcantarillado1.add(ScrollPanel_NiñosAlcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
-        Panel_Portal_Alcantarillado1.add(ScrollPanel_DemogorgonsAlcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 90, 60));
-
         Textura_Alcantarillado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
-        Panel_Portal_Alcantarillado1.add(Textura_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
+
+        javax.swing.GroupLayout Panel_Portal_Alcantarillado1Layout = new javax.swing.GroupLayout(Panel_Portal_Alcantarillado1);
+        Panel_Portal_Alcantarillado1.setLayout(Panel_Portal_Alcantarillado1Layout);
+        Panel_Portal_Alcantarillado1Layout.setHorizontalGroup(
+            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(ScrollPanel_DemogorgonsAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Textura_Alcantarillado)
+        );
+        Panel_Portal_Alcantarillado1Layout.setVerticalGroup(
+            Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Textura_Alcantarillado)
+            .addGroup(Panel_Portal_Alcantarillado1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(Panel_Portal_Alcantarillado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrollPanel_DemogorgonsAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPanel_NiñosAlcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout Panel_Zona_UpsidedownLayout = new javax.swing.GroupLayout(Panel_Zona_Upsidedown);
         Panel_Zona_Upsidedown.setLayout(Panel_Zona_UpsidedownLayout);
