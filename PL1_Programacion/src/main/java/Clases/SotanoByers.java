@@ -50,7 +50,7 @@ public class SotanoByers {
     }
 
     // Devuelve una lista con los niños dentro (para mostrarlos en el JTextArea)
-    public List<Nino> getNiñosEnSotano() {
+    public List<Nino> getNinosEnSotano() {
         return new ArrayList<>(ninosEnSotano);
     }
 }

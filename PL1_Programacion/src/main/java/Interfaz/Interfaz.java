@@ -13,8 +13,101 @@ public class Interfaz extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
+// 1. Atributo para acceder a las zonas
+    private Clases.AgrupacionZonas zonas;
+
+    // --- CONSTRUCTORES ---
     public Interfaz() {
         initComponents();
+    }
+
+    public Interfaz(Clases.AgrupacionZonas zonas) {
+        this.zonas = zonas;
+        initComponents(); // Inicializa los componentes gráficos
+
+        // Inicia todos los temporizadores que actualizan las distintas zonas cada 500ms
+        iniciarActualizadorSotano();
+        iniciarActualizadorRadio();
+        iniciarActualizadorCalle();
+        
+        // Más adelante añadiremos aquí:
+        // iniciarActualizadoresPortales();
+        // iniciarActualizadoresUpsideDown();
+    }
+
+
+    // ==========================================
+    //       ACTUALIZADORES: SÓTANO BYERS
+    // ==========================================
+    public void actualizarSotanoGUI() {
+        if (zonas == null || zonas.isPausado()) {
+            return; // Si está pausado, no actualiza
+        }
+        java.util.List<Clases.Nino> ninos = zonas.getSotanoByers().getNinosEnSotano();
+        StringBuilder sb = new StringBuilder();
+
+        for (Clases.Nino n : ninos) {
+            if (n.isVivo()) {
+                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
+            }
+        }
+        jTextAreaSotano.setText(sb.toString()); // Actualiza el área de texto
+    }
+
+    private void iniciarActualizadorSotano() {
+        new javax.swing.Timer(500, e -> {
+            actualizarSotanoGUI();
+        }).start();
+    }
+
+
+    // ==========================================
+    //       ACTUALIZADORES: RADIO WSQK
+    // ==========================================
+    public void actualizarRadioGUI() {
+        if (zonas == null || zonas.isPausado()) {
+            return; // Si está pausado, no actualiza
+        }
+        java.util.List<Clases.Nino> ninos = zonas.getRadioWSQK().getNinosEnRadio();
+        StringBuilder sb = new StringBuilder();
+
+        for (Clases.Nino n : ninos) {
+            if (n.isVivo()) {
+                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
+            }
+        }
+        jTextAreaRadio.setText(sb.toString()); // Actualiza el área de texto
+    }
+
+    private void iniciarActualizadorRadio() {
+        new javax.swing.Timer(500, e -> {
+            actualizarRadioGUI();
+        }).start();
+    }
+
+
+    // ==========================================
+    //       ACTUALIZADORES: CALLE PRINCIPAL
+    // ==========================================
+    public void actualizarCalleGUI() {
+        if (zonas == null || zonas.isPausado()) {
+            return; // Si está pausado, no actualiza
+        }
+        java.util.List<Clases.Nino> ninos = zonas.getCallePrincipal().getNinosEnCalle();
+        StringBuilder sb = new StringBuilder();
+
+        for (Clases.Nino n : ninos) {
+            if (n.isVivo()) {
+                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
+            }
+        }
+        jTextAreaCalle.setText(sb.toString()); // Actualiza el área de texto
+    }
+
+    private void iniciarActualizadorCalle() {
+        new javax.swing.Timer(500, e -> {
+            actualizarCalleGUI();
+        }).start();
     }
 
     /**
@@ -28,9 +121,12 @@ public class Interfaz extends javax.swing.JFrame {
 
         Panel_Zona_Hawkins = new javax.swing.JPanel();
         ScrollPanel_Calle_Principal = new javax.swing.JScrollPane();
+        jTextAreaCalle = new javax.swing.JTextArea();
         ScrollPanel_Sotano_Byers = new javax.swing.JScrollPane();
+        jTextAreaSotano = new javax.swing.JTextArea();
         Panel_Radio_WSQK = new javax.swing.JPanel();
         ScrollPanel_Radio_WSQK = new javax.swing.JScrollPane();
+        jTextAreaRadio = new javax.swing.JTextArea();
         Cantidad_Sangre = new javax.swing.JTextField();
         Label_SANGRE = new javax.swing.JLabel();
         Imagen_Radio = new javax.swing.JLabel();
@@ -111,9 +207,21 @@ public class Interfaz extends javax.swing.JFrame {
 
         ScrollPanel_Calle_Principal.setPreferredSize(new java.awt.Dimension(260, 110));
 
+        jTextAreaCalle.setColumns(20);
+        jTextAreaCalle.setRows(5);
+        ScrollPanel_Calle_Principal.setViewportView(jTextAreaCalle);
+
         ScrollPanel_Sotano_Byers.setPreferredSize(new java.awt.Dimension(260, 110));
 
+        jTextAreaSotano.setColumns(20);
+        jTextAreaSotano.setRows(5);
+        ScrollPanel_Sotano_Byers.setViewportView(jTextAreaSotano);
+
         Panel_Radio_WSQK.setOpaque(false);
+
+        jTextAreaRadio.setColumns(20);
+        jTextAreaRadio.setRows(5);
+        ScrollPanel_Radio_WSQK.setViewportView(jTextAreaRadio);
 
         Cantidad_Sangre.setEditable(false);
         Cantidad_Sangre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -184,32 +292,34 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Zona_HawkinsLayout.setHorizontalGroup(
             Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(HAWKINS))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Calle_Principal))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(ScrollPanel_Calle_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(Imagen_Hawkins))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Sotano_Byers))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
                 .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Imagen_Sotano)))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Calle_Principal2))
-            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(107, 107, 107)
+                        .addComponent(HAWKINS))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Calle_Principal))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(ScrollPanel_Calle_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Imagen_Hawkins))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Sotano_Byers))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(Imagen_Sotano))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Calle_Principal2))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17))
         );
         Panel_Zona_HawkinsLayout.setVerticalGroup(
             Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -729,8 +839,7 @@ public class Interfaz extends javax.swing.JFrame {
             Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
-                        .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -928,5 +1037,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Textura_Laboratorio;
     private javax.swing.JLabel UPSIDEDOWN;
     private javax.swing.JLabel Vecna;
+    private javax.swing.JTextArea jTextAreaCalle;
+    private javax.swing.JTextArea jTextAreaRadio;
+    private javax.swing.JTextArea jTextAreaSotano;
     // End of variables declaration//GEN-END:variables
 }
