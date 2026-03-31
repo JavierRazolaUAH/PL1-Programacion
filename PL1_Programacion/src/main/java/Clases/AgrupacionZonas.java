@@ -18,6 +18,7 @@ public class AgrupacionZonas {
     private final CallePrincipal callePrincipal;
     private final SotanoByers sotanoByers;
     private final RadioWSQK radioWSQK;
+    private final UpsideDown upsidedown;
     
     // --- CONTROL DE PAUSA / REANUDAR (Sacado de tu práctica anterior) ---
     private volatile boolean pausado = false;
@@ -30,6 +31,7 @@ public class AgrupacionZonas {
         this.callePrincipal = new CallePrincipal();
         this.sotanoByers = new SotanoByers();
         this.radioWSQK = new RadioWSQK();
+        this.upsidedown = new UpsideDown();
     }
 
     // --- MÉTODOS GETTER ---
@@ -46,6 +48,10 @@ public class AgrupacionZonas {
         return radioWSQK; 
     }
 
+    public UpsideDown getUpsidedown() {
+        return upsidedown;
+    }
+    
     // --- MÉTODOS DE PAUSA Y SINCRONIZACIÓN ---
     
     public boolean isPausado() {

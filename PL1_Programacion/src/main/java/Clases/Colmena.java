@@ -17,15 +17,15 @@ public class Colmena {
     private final AtomicInteger contadorCapturasTotal = new AtomicInteger(0);
     
     // Referencia al mundo para poder añadir nuevos Demogorgons
-    private UpsideDown mundo;
+    private AgrupacionZonas zonas;
 
     public Colmena() {
         // Se inicializa vacía
     }
     
     // Método para conectar la colmena con el mundo tras la creación
-    public void setMundo(UpsideDown mundo) {
-        this.mundo = mundo;
+    public void setMundo(AgrupacionZonas zonas) {
+        this.zonas = zonas;
     }
 
     /**
@@ -48,7 +48,7 @@ public class Colmena {
      */
     private void crearNuevoDemogorgon() {
         String id = "D" + (1000 + (int)(Math.random() * 9000));
-        Demogorgon nuevo = new Demogorgon(id, mundo);
+        Demogorgon nuevo = new Demogorgon(id, this.zonas);
         nuevo.start(); // El nuevo hilo empieza a patrullar inmediatamente
         // Log.escribir("¡Ha nacido un nuevo Demogorgon en la Colmena: " + id + "!");
     }

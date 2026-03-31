@@ -7,13 +7,13 @@ import java.util.Random;
  */
 public class Demogorgon extends Thread {
     private final String idDemogorgon;
-    private final UpsideDown upsidedown;
+    private final AgrupacionZonas zonas;
     private final Random random = new Random();
     private int capturasRealizadas = 0;
 
-    public Demogorgon(String id, UpsideDown upsidedown) {
+    public Demogorgon(String id, AgrupacionZonas zonas) {
         this.idDemogorgon = id;
-        this.upsidedown = upsidedown;
+        this.zonas = zonas;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Demogorgon extends Thread {
         try {
             while (!Thread.currentThread().isInterrupted()) {
                 // 1. ELIGE UNA ZONA ALEATORIA PARA CAZAR
-                ZonaInsegura zonaActual = upsidedown.obtenerZonaAleatoria();
+                ZonaInsegura zonaActual = zonas.getUpsidedown().obtenerZonaAleatoria();
                 
                 // 2. INTENTA BUSCAR UNA VÍCTIMA
                 Nino objetivo = zonaActual.seleccionarVictima();
@@ -58,7 +58,7 @@ public class Demogorgon extends Thread {
         Thread.sleep(500 + random.nextInt(501));
 
         // Lo deposita en la Colmena
-        upsidedown.getColmena().depositarNino(victima);
+        zonas.getUpsidedown().getColmena().depositarNino(victima);
         
         // Log.escribir("Demogorgon " + idDemogorgon + " capturó a " + victima.getNombre() + " y lo llevó a la Colmena");
     }
