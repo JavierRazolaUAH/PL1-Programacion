@@ -11,6 +11,7 @@ package Clases;
 public class Nino  extends Thread{
     private String idNino;
     private boolean vivo = true;
+    private boolean capturado = false;
     
     // El niño necesita conocer el mapa para moverse
     private final AgrupacionZonas zonas; 
@@ -36,7 +37,14 @@ public class Nino  extends Thread{
     public void setVivo(boolean vivo) {
         this.vivo = vivo;
     }
+    
+    public boolean isCapturado() {
+        return capturado;
+    }
 
+    public void setCapturado(boolean capturado) {
+        this.capturado = capturado;
+    }
     // --- EL MOTOR DEL HILO ---
     @Override
     public void run() {
