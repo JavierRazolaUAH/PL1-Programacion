@@ -47,4 +47,8 @@ public class ZonaInsegura {
         int indice = random.nextInt(ninosEnZona.size());
         return ninosEnZona.get(indice);
     }
+    
+    public String getNombre() {
+        return nombre;
+    }
 }
