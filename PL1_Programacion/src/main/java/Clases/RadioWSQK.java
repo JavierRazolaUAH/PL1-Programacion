@@ -27,34 +27,44 @@ public class RadioWSQK {
     }
 
 // --- MÉTODOS DE ENTRADA Y SALIDA ---
-    public void entrar(Nino nino) throws InterruptedException {
-        ninosEnRadio.put(nino);
-    }
-
-    public void salir(Nino nino) {
-        ninosEnRadio.remove(nino);
-    }
-
-    // --- MÉTODOS DE ACCIÓN ---
-    
-    // Método sincronizado para depositar la sangre de forma segura
-    public synchronized void depositarSangre(Nino nino) {
-        // Asumiendo que tu clase Nino tiene un getSangreRecolectada() que devuelve 1 o 0
+ public synchronized void depositarSangre(Nino nino) {
         int sangreTraida = nino.getSangreRecolectada();
         if (sangreTraida > 0) {
             this.sangreTotalAlmacenada += sangreTraida;
-            nino.setSangreRecolectada(0); // El niño se queda a 0 tras depositarla
-            // Logs.getInstance().log(nino.getIdNino() + " ha depositado 1 ud de sangre. Total: " + sangreTotalAlmacenada);
+            nino.setSangreRecolectada(0);
+            Logs.getInstance().log(nino.getIdNino() + " ha depositado 1 unidad de sangre en la RADIO. Total sangre: " + sangreTotalAlmacenada);
         }
     }
 
-    public void descansar(Nino nino) throws InterruptedException {
-        entrar(nino);
+    // Unificamos el entrar y el descansar aquí
+    public void entrarZona(Nino nino) throws InterruptedException {
+        // 1. Entra a la lista
+        ninosEnRadio.put(nino);
+        Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO a descansar a la Radio WSQK.");
         
+        // 2. Tiempo de descanso: Aleatorio entre 2 y 4 segundos
         int tiempoDescanso = rand.nextInt(2000) + 2000; 
         Thread.sleep(tiempoDescanso);
         
-        salir(nino);
+        // 3. Llama al método salir
+        salirZona(nino);
+    }
+
+    public void salirZona(Nino nino) {
+        if (ninosEnRadio.remove(nino)) {
+            Logs.getInstance().log(nino.getIdNino() + " ha terminado de descansar y SALE de la Radio WSQK.");
+        }
+    }
+
+public void descansar(Nino nino) throws InterruptedException {
+        ninosEnRadio.put(nino);
+        Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO a descansar a la Radio WSQK.");
+        
+        // Tiempo de descanso: Aleatorio entre 2 y 4 segundos
+        int tiempoDescanso = rand.nextInt(2000) + 2000; 
+        Thread.sleep(tiempoDescanso);
+        
+        salirZona(nino);
     }
 
     // --- MÉTODOS GETTER (Para la Interfaz) ---

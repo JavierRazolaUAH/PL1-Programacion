@@ -28,28 +28,27 @@ public class CallePrincipal {
     // --- MÉTODOS DE LA SIMULACIÓN ---
 
   // --- MÉTODOS DE ENTRADA Y SALIDA ---
-    public void entrar(Nino nino) throws InterruptedException {
+public void inicio(Nino nino) throws InterruptedException {
         ninosEnCalle.put(nino);
-    }
-
-    public void salir(Nino nino) {
-        ninosEnCalle.remove(nino);
-    }
-
-    // --- MÉTODOS DE ACCIÓN ---
-    public void inicio(Nino nino) throws InterruptedException {
-        entrar(nino);
-        // Como no hay tiempo de espera al inicio, sale inmediatamente
-        salir(nino);
+        Logs.getInstance().log(nino.getIdNino() + " ha INICIADO su actividad en Hawkins (Calle Principal).");
+        salirZona(nino); // Sale automáticamente sin esperar
     }
 
     public void deambular(Nino nino) throws InterruptedException {
-        entrar(nino);
+        ninosEnCalle.put(nino);
+        Logs.getInstance().log(nino.getIdNino() + " está DEAMBULANDO por la Calle Principal.");
         
+        // Tiempo deambulando: Aleatorio entre 3 y 5 segundos
         int tiempoDeambular = rand.nextInt(2000) + 3000; 
         Thread.sleep(tiempoDeambular);
         
-        salir(nino);
+        salirZona(nino);
+    }
+
+    public void salirZona(Nino nino) {
+        if (ninosEnCalle.remove(nino)) {
+            Logs.getInstance().log(nino.getIdNino() + " ha SALIDO de la Calle Principal.");
+        }
     }
 
     // --- MÉTODOS GETTER (Para tu Interfaz y RMI) ---

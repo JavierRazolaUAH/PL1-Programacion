@@ -58,7 +58,7 @@ public class Nino  extends Thread{
                 zonas.esperarSiPausado();
                 
                 // Entra al sótano a prepararse (1 a 2 segundos)
-                zonas.getSotanoByers().prepararse(this);
+                
                 
                 zonas.esperarSiPausado();
                 
