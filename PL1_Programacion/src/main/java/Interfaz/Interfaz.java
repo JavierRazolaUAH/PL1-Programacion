@@ -40,7 +40,20 @@ public class Interfaz extends javax.swing.JFrame {
         Calle_Principal2 = new javax.swing.JLabel();
         Imagen_Hawkins = new javax.swing.JLabel();
         Imagen_Sotano = new javax.swing.JLabel();
-        Panel_Zona_Portales = new javax.swing.JPanel();
+        Panel_Zona_Portales = new javax.swing.JPanel() {
+            @Override
+            protected void paintComponent(java.awt.Graphics g) {
+                super.paintComponent(g);
+                // Pon aquí el nombre exacto de tu imagen de fondo
+                java.net.URL ruta = getClass().getResource("/Imagenes/Textura_Panel_Portal.png");
+                if (ruta != null) {
+                    java.awt.Image imagenFondo = new javax.swing.ImageIcon(ruta).getImage();
+                    g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);
+                } else {
+                    System.err.println("No se encontró la imagen del fondo");
+                }
+            }
+        };
         PORTALES = new javax.swing.JLabel();
         Panel_Portal_Bosque = new javax.swing.JPanel();
         Entrada_1 = new javax.swing.JPanel();
@@ -58,7 +71,6 @@ public class Interfaz extends javax.swing.JFrame {
         Entrada_4 = new javax.swing.JPanel();
         Dentro_Portal_4 = new javax.swing.JPanel();
         Salida_4 = new javax.swing.JPanel();
-        Textura_Portal = new javax.swing.JLabel();
         Panel_Zona_Upsidedown = new javax.swing.JPanel();
         UPSIDEDOWN = new javax.swing.JLabel();
         Bosque = new javax.swing.JLabel();
@@ -229,11 +241,9 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Zona_Portales.setBackground(new java.awt.Color(255, 153, 204));
         Panel_Zona_Portales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         Panel_Zona_Portales.setPreferredSize(new java.awt.Dimension(300, 500));
-        Panel_Zona_Portales.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PORTALES.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         PORTALES.setText("PORTALES");
-        Panel_Zona_Portales.add(PORTALES, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
         Panel_Portal_Bosque.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Bosque.setOpaque(false);
@@ -296,8 +306,6 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(Entrada_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        Panel_Zona_Portales.add(Panel_Portal_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 260, 100));
 
         Panel_Portal_Laboratorio.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Laboratorio.setOpaque(false);
@@ -365,8 +373,6 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        Panel_Zona_Portales.add(Panel_Portal_Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 155, 260, -1));
-
         Panel_Portal_Centro_Comercial.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Centro_Comercial.setOpaque(false);
 
@@ -432,8 +438,6 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(Entrada_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
-
-        Panel_Zona_Portales.add(Panel_Portal_Centro_Comercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, -1));
 
         Panel_Portal_Alcantarillado.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Alcantarillado.setOpaque(false);
@@ -503,10 +507,40 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        Panel_Zona_Portales.add(Panel_Portal_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 385, 260, 100));
-
-        Textura_Portal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Panel_Portal.png"))); // NOI18N
-        Panel_Zona_Portales.add(Textura_Portal, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 294, 494));
+        javax.swing.GroupLayout Panel_Zona_PortalesLayout = new javax.swing.GroupLayout(Panel_Zona_Portales);
+        Panel_Zona_Portales.setLayout(Panel_Zona_PortalesLayout);
+        Panel_Zona_PortalesLayout.setHorizontalGroup(
+            Panel_Zona_PortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(PORTALES))
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Panel_Portal_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Panel_Portal_Laboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Panel_Portal_Centro_Comercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Panel_Portal_Alcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Panel_Zona_PortalesLayout.setVerticalGroup(
+            Panel_Zona_PortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(PORTALES)
+                .addGap(9, 9, 9)
+                .addComponent(Panel_Portal_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(Panel_Portal_Laboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(Panel_Portal_Centro_Comercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(Panel_Portal_Alcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         Panel_Zona_Upsidedown.setBackground(new java.awt.Color(255, 102, 102));
         Panel_Zona_Upsidedown.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
@@ -572,29 +606,12 @@ public class Interfaz extends javax.swing.JFrame {
         Centro_Comercial.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Centro_Comercial.setText("Centro Comercial");
 
-        Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
+        Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 90, 60));
+        Panel_Portal_Centro_Comercial1.add(ScrollPanel_DemogorgonsCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 60));
 
-        javax.swing.GroupLayout Panel_Portal_Centro_Comercial1Layout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial1);
-        Panel_Portal_Centro_Comercial1.setLayout(Panel_Portal_Centro_Comercial1Layout);
-        Panel_Portal_Centro_Comercial1Layout.setHorizontalGroup(
-            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Textura_CentroComercial)
-            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        Panel_Portal_Centro_Comercial1Layout.setVerticalGroup(
-            Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Textura_CentroComercial)
-            .addGroup(Panel_Portal_Centro_Comercial1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(Panel_Portal_Centro_Comercial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ScrollPanel_NiñosCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScrollPanel_DemogorgonsCentroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
+        Panel_Portal_Centro_Comercial1.add(Textura_CentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Alcantarillado.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Alcantarillado.setText("Alcantarillado");
@@ -712,11 +729,12 @@ public class Interfaz extends javax.swing.JFrame {
             Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(390, 390, 390)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 390, Short.MAX_VALUE)
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
@@ -735,10 +753,6 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
-                        .addComponent(Texto_Eventos)
-                        .addGap(9, 9, 9)
-                        .addComponent(Texto_NIÑOS_CAPTURADOS1))
-                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addComponent(Texto_NIÑOS_CAPTURADOS)
                         .addGap(9, 9, 9)
                         .addComponent(Niños_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -746,7 +760,12 @@ public class Interfaz extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Demogorgon)
-                            .addComponent(Vecna)))))
+                            .addComponent(Vecna)))
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addComponent(Texto_Eventos)
+                        .addGap(9, 9, 9)
+                        .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Texto_Principal.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
@@ -907,7 +926,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Textura_Bosque;
     private javax.swing.JLabel Textura_CentroComercial;
     private javax.swing.JLabel Textura_Laboratorio;
-    private javax.swing.JLabel Textura_Portal;
     private javax.swing.JLabel UPSIDEDOWN;
     private javax.swing.JLabel Vecna;
     // End of variables declaration//GEN-END:variables
