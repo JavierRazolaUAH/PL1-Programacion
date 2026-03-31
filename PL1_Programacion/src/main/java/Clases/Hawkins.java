@@ -9,5 +9,14 @@ package Clases;
  * @author javir
  */
 public class Hawkins {
-    
+    private CallePrincipal callePrincipal;
+    private SotanoByers sotano;
+    private RadioWSQK radio;
+
+    public Hawkins() {
+        // Al crear Hawkins, se crean sus zonas interiores
+        this.callePrincipal = new CallePrincipal();
+        this.sotano = new SotanoByers();
+        this.radio = new RadioWSQK();
+    }
 }
