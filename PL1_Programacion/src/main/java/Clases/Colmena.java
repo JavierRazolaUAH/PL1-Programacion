@@ -15,16 +15,15 @@ public class Colmena {
     
     // Contador acumulado para saber cuándo crear un nuevo Demogorgon
     private final AtomicInteger contadorCapturasTotal = new AtomicInteger(0);
-    
+    private final AtomicInteger contadorDemogorgons = new AtomicInteger(1); // Empezamos en 1 porque el 0 es el Alpha
     // Referencia al mundo para poder añadir nuevos Demogorgons
     private AgrupacionZonas zonas;
 
     public Colmena() {
-        // Se inicializa vacía
     }
     
     // Método para conectar la colmena con el mundo tras la creación
-    public void setMundo(AgrupacionZonas zonas) {
+    public void setZonas(AgrupacionZonas zonas) {
         this.zonas = zonas;
     }
 
@@ -38,7 +37,7 @@ public class Colmena {
         // Incrementamos el contador y comprobamos si llegamos a 8
         int total = contadorCapturasTotal.incrementAndGet();
         
-        if (total % 8 == 0) {
+        if (zonas != null && prisioneros.size() % 8 == 0) {
             crearNuevoDemogorgon();
         }
     }
@@ -47,11 +46,15 @@ public class Colmena {
      * Lógica para generar un nuevo hilo Demogorgon (Tema 6: Ciclo de vida)
      */
     private void crearNuevoDemogorgon() {
-        String id = "D" + (1000 + (int)(Math.random() * 9000));
-        Demogorgon nuevo = new Demogorgon(id, this.zonas);
-        nuevo.start(); // El nuevo hilo empieza a patrullar inmediatamente
-        // Log.escribir("¡Ha nacido un nuevo Demogorgon en la Colmena: " + id + "!");
-    }
+    // Incrementamos y obtenemos el siguiente número
+    int siguienteId = contadorDemogorgons.getAndIncrement();
+    
+    // Formateamos para que siempre tenga 4 cifras: D0001, D0002... 
+    String idFormateado = String.format("D%04d", siguienteId);
+    
+    Demogorgon nuevo = new Demogorgon(idFormateado, this.zonas);
+    nuevo.start();
+}
 
     /**
      * Método que llamará Eleven en su evento para liberar niños.

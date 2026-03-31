@@ -25,15 +25,22 @@ public class Main {
         });
         
         System.out.println(">>> INICIANDO SIMULACIÓN DE PRUEBA...");
-
-        // 3. Creamos 3 niños de prueba
-        Nino n1 = new Nino("N0001", zonas);
-        Nino n2 = new Nino("N0002", zonas);
-        Nino n3 = new Nino("N0003", zonas);
         
+        // 3. Creamos 3 niños de prueba
+        for (int i = 1; i <= 100; i++) {
+            // Generamos un ID único: N001, N002... N100
+            String idNino = String.format("N%03d", i);
+
+            // Creamos el hilo del niño pasándole la referencia de las zonas
+            Nino n = new Nino(idNino, zonas);
+
+            // Arrancamos el hilo del niño
+            n.start();
+        }
+        
+        Demogorgon d0 = new Demogorgon("D0000", zonas);
         // 4. Lanzamos los hilos para que empiecen a moverse
-        n1.start();
-        n2.start();
-        n3.start();
+  
+        d0.start();
     }
 }

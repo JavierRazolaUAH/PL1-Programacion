@@ -906,10 +906,26 @@
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_Ni&#xf1;osBosque">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaNinosBosque">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_DemogorgonsBosque">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaDemogorgonsBosque">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="Textura_Bosque">
               <Properties>
@@ -961,10 +977,26 @@
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_Ni&#xf1;osLaboratorio">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaNinosLaboratorio">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_DemogorgonsLaboratorio">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaDemogorgonsLaboratorio">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="Textura_Laboratorio">
               <Properties>
@@ -997,6 +1029,14 @@
               </Constraints>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaNinosCentroComercial">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_DemogorgonsCentroComercial">
               <Constraints>
@@ -1006,6 +1046,14 @@
               </Constraints>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaDemogorgonsCentroComercial">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="Textura_CentroComercial">
               <Properties>
@@ -1062,10 +1110,26 @@
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_Ni&#xf1;osAlcantarillado">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaNinosAlcantarillado">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_DemogorgonsAlcantarillado">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaDemogorgonsAlcantarillado">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="Textura_Alcantarillado">
               <Properties>
@@ -1105,7 +1169,7 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
-                          <Component id="Niños_Capturados" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="Ninos_Capturados" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                       <Component id="Demogorgon" min="-2" pref="110" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
@@ -1124,7 +1188,7 @@
                       <Group type="102" attributes="0">
                           <Component id="Texto_NIÑOS_CAPTURADOS" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                          <Component id="Niños_Capturados" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="Ninos_Capturados" min="-2" pref="78" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
@@ -1145,7 +1209,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="Ni&#xf1;os_Capturados">
+        <Component class="javax.swing.JTextField" name="Ninos_Capturados">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1159,7 +1223,7 @@
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ni&#xf1;os_CapturadosActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ninos_CapturadosActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Texto_Eventos">

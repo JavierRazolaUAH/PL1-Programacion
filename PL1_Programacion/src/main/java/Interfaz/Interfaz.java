@@ -29,7 +29,7 @@ public class Interfaz extends javax.swing.JFrame {
         iniciarActualizadorSotano();
         iniciarActualizadorRadio();
         iniciarActualizadorCalle();
-        
+            iniciarActualizadorZonasInseguras();
         // Más adelante añadiremos aquí:
         // iniciarActualizadoresPortales();
         // iniciarActualizadoresUpsideDown();
@@ -103,13 +103,110 @@ public class Interfaz extends javax.swing.JFrame {
         }
         jTextAreaCalle.setText(sb.toString()); // Actualiza el área de texto
     }
-
     private void iniciarActualizadorCalle() {
         new javax.swing.Timer(500, e -> {
             actualizarCalleGUI();
         }).start();
     }
 
+    
+    // ==========================================
+    //       ACTUALIZADORES: Zonas Inseguras
+    // ==========================================
+    // Zona Bosque
+        public void actualizarBosqueGUI(){
+            if (zonas == null || zonas.isPausado()) {
+        return; 
+        }
+        Clases.ZonaInsegura bosque = zonas.getUpsidedown().getZona("BOSQUE");
+        if (bosque == null) return;
+        java.util.List<Clases.Demogorgon> demogorgons = bosque.getDemogorgonsEnZona();
+        
+        StringBuilder sb = new StringBuilder();
+        for (Clases.Demogorgon d : demogorgons) {
+        sb.append(d.getIdDemogorgon()).append("\n");
+        }
+        jTextAreaDemogorgonsBosque.setText(sb.toString());
+        
+        StringBuilder sbN = new StringBuilder();
+        for (Clases.Nino n : bosque.getNinosEnZona()) {
+        sbN.append(n.getIdNino()).append("\n");
+        }
+        jTextAreaNinosBosque.setText(sbN.toString());
+        }
+    // Zona Laboratorio
+    public void actualizarLaboratorioGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.ZonaInsegura lab = zonas.getUpsidedown().getZona("LABORATORIO");
+        if (lab == null) return;
+
+        StringBuilder sb = new StringBuilder();
+        for (Clases.Demogorgon d : lab.getDemogorgonsEnZona()) {
+            sb.append(d.getIdDemogorgon()).append("\n");
+        }
+        jTextAreaDemogorgonsLaboratorio.setText(sb.toString());
+        StringBuilder sbN = new StringBuilder();
+        for (Clases.Nino n : lab.getNinosEnZona()) sbN.append(n.getIdNino()).append("\n");
+        jTextAreaNinosLaboratorio.setText(sbN.toString());
+    }
+
+    // Zona Centro Comercial
+    public void actualizarCentroComercialGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.ZonaInsegura cc = zonas.getUpsidedown().getZona("CENTRO COMERCIAL");
+        if (cc == null) return;
+
+        StringBuilder sb = new StringBuilder();
+        for (Clases.Demogorgon d : cc.getDemogorgonsEnZona()) {
+            sb.append(d.getIdDemogorgon()).append("\n");
+        }
+        jTextAreaDemogorgonsCentroComercial.setText(sb.toString());
+        StringBuilder sbN = new StringBuilder();
+        for (Clases.Nino n : cc.getNinosEnZona()) sbN.append(n.getIdNino()).append("\n");
+        jTextAreaNinosCentroComercial.setText(sbN.toString());
+    }
+
+    // Zona Alcantarillado
+    public void actualizarAlcantarilladoGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.ZonaInsegura alc = zonas.getUpsidedown().getZona("ALCANTARILLADO");
+        if (alc == null) return;
+
+        StringBuilder sb = new StringBuilder();
+        for (Clases.Demogorgon d : alc.getDemogorgonsEnZona()) {
+            sb.append(d.getIdDemogorgon()).append("\n");
+        }
+        jTextAreaDemogorgonsAlcantarillado.setText(sb.toString());
+        StringBuilder sbN = new StringBuilder();
+        for (Clases.Nino n : alc.getNinosEnZona()) sbN.append(n.getIdNino()).append("\n");
+        jTextAreaNinosAlcantarillado.setText(sbN.toString());
+    }
+    private void iniciarActualizadorZonasInseguras() {
+    // Un solo timer para todas las zonas de la dimensión paralela
+    new javax.swing.Timer(500, e -> {
+        actualizarBosqueGUI();
+        actualizarLaboratorioGUI();
+        actualizarCentroComercialGUI();
+        actualizarAlcantarilladoGUI();
+        actualizarContadorCapturadosGUI();
+    }).start();
+    }
+    //
+    
+    public void actualizarContadorCapturadosGUI() {
+    if (zonas == null) return;
+
+    // Accedemos a la colmena a través de UpsideDown
+    Clases.Colmena colmena = zonas.getUpsidedown().getColmena();
+    
+    if (colmena != null) {
+        int total = colmena.getNumPrisioneros(); // Niños que están allí ahora
+        // O si quieres el histórico: colmena.getCapturasHistoricas();
+
+        // Actualizamos el JTextField (importante convertir el int a String)
+        Ninos_Capturados.setText(String.valueOf(total));
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -172,25 +269,33 @@ public class Interfaz extends javax.swing.JFrame {
         Bosque = new javax.swing.JLabel();
         Panel_Bosque = new javax.swing.JPanel();
         ScrollPanel_NiñosBosque = new javax.swing.JScrollPane();
+        jTextAreaNinosBosque = new javax.swing.JTextArea();
         ScrollPanel_DemogorgonsBosque = new javax.swing.JScrollPane();
+        jTextAreaDemogorgonsBosque = new javax.swing.JTextArea();
         Textura_Bosque = new javax.swing.JLabel();
         Laboratorio = new javax.swing.JLabel();
         Panel_Portal_Laboratorio1 = new javax.swing.JPanel();
         ScrollPanel_NiñosLaboratorio = new javax.swing.JScrollPane();
+        jTextAreaNinosLaboratorio = new javax.swing.JTextArea();
         ScrollPanel_DemogorgonsLaboratorio = new javax.swing.JScrollPane();
+        jTextAreaDemogorgonsLaboratorio = new javax.swing.JTextArea();
         Textura_Laboratorio = new javax.swing.JLabel();
         Centro_Comercial = new javax.swing.JLabel();
         Panel_Portal_Centro_Comercial1 = new javax.swing.JPanel();
         ScrollPanel_NiñosCentroComercial = new javax.swing.JScrollPane();
+        jTextAreaNinosCentroComercial = new javax.swing.JTextArea();
         ScrollPanel_DemogorgonsCentroComercial = new javax.swing.JScrollPane();
+        jTextAreaDemogorgonsCentroComercial = new javax.swing.JTextArea();
         Textura_CentroComercial = new javax.swing.JLabel();
         Alcantarillado = new javax.swing.JLabel();
         Panel_Portal_Alcantarillado1 = new javax.swing.JPanel();
         ScrollPanel_NiñosAlcantarillado = new javax.swing.JScrollPane();
+        jTextAreaNinosAlcantarillado = new javax.swing.JTextArea();
         ScrollPanel_DemogorgonsAlcantarillado = new javax.swing.JScrollPane();
+        jTextAreaDemogorgonsAlcantarillado = new javax.swing.JTextArea();
         Textura_Alcantarillado = new javax.swing.JLabel();
         Panel_Estadisticas = new javax.swing.JPanel();
-        Niños_Capturados = new javax.swing.JTextField();
+        Ninos_Capturados = new javax.swing.JTextField();
         Texto_Eventos = new javax.swing.JLabel();
         Demogorgon = new javax.swing.JLabel();
         Vecna = new javax.swing.JLabel();
@@ -662,6 +767,14 @@ public class Interfaz extends javax.swing.JFrame {
         Bosque.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Bosque.setText("Bosque");
 
+        jTextAreaNinosBosque.setColumns(20);
+        jTextAreaNinosBosque.setRows(5);
+        ScrollPanel_NiñosBosque.setViewportView(jTextAreaNinosBosque);
+
+        jTextAreaDemogorgonsBosque.setColumns(20);
+        jTextAreaDemogorgonsBosque.setRows(5);
+        ScrollPanel_DemogorgonsBosque.setViewportView(jTextAreaDemogorgonsBosque);
+
         Textura_Bosque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Bosque.jpg"))); // NOI18N
 
         javax.swing.GroupLayout Panel_BosqueLayout = new javax.swing.GroupLayout(Panel_Bosque);
@@ -688,6 +801,14 @@ public class Interfaz extends javax.swing.JFrame {
 
         Laboratorio.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Laboratorio.setText("Laboratorio");
+
+        jTextAreaNinosLaboratorio.setColumns(20);
+        jTextAreaNinosLaboratorio.setRows(5);
+        ScrollPanel_NiñosLaboratorio.setViewportView(jTextAreaNinosLaboratorio);
+
+        jTextAreaDemogorgonsLaboratorio.setColumns(20);
+        jTextAreaDemogorgonsLaboratorio.setRows(5);
+        ScrollPanel_DemogorgonsLaboratorio.setViewportView(jTextAreaDemogorgonsLaboratorio);
 
         Textura_Laboratorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
 
@@ -717,7 +838,17 @@ public class Interfaz extends javax.swing.JFrame {
         Centro_Comercial.setText("Centro Comercial");
 
         Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextAreaNinosCentroComercial.setColumns(20);
+        jTextAreaNinosCentroComercial.setRows(5);
+        ScrollPanel_NiñosCentroComercial.setViewportView(jTextAreaNinosCentroComercial);
+
         Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 90, 60));
+
+        jTextAreaDemogorgonsCentroComercial.setColumns(20);
+        jTextAreaDemogorgonsCentroComercial.setRows(5);
+        ScrollPanel_DemogorgonsCentroComercial.setViewportView(jTextAreaDemogorgonsCentroComercial);
+
         Panel_Portal_Centro_Comercial1.add(ScrollPanel_DemogorgonsCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 60));
 
         Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
@@ -725,6 +856,14 @@ public class Interfaz extends javax.swing.JFrame {
 
         Alcantarillado.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Alcantarillado.setText("Alcantarillado");
+
+        jTextAreaNinosAlcantarillado.setColumns(20);
+        jTextAreaNinosAlcantarillado.setRows(5);
+        ScrollPanel_NiñosAlcantarillado.setViewportView(jTextAreaNinosAlcantarillado);
+
+        jTextAreaDemogorgonsAlcantarillado.setColumns(20);
+        jTextAreaDemogorgonsAlcantarillado.setRows(5);
+        ScrollPanel_DemogorgonsAlcantarillado.setViewportView(jTextAreaDemogorgonsAlcantarillado);
 
         Textura_Alcantarillado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
 
@@ -804,15 +943,15 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Estadisticas.setBackground(new java.awt.Color(0, 255, 153));
         Panel_Estadisticas.setOpaque(false);
 
-        Niños_Capturados.setEditable(false);
-        Niños_Capturados.setBackground(new java.awt.Color(255, 153, 153));
-        Niños_Capturados.setFont(new java.awt.Font("Segoe UI Emoji", 1, 36)); // NOI18N
-        Niños_Capturados.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Niños_Capturados.setText("0");
-        Niños_Capturados.setOpaque(true);
-        Niños_Capturados.addActionListener(new java.awt.event.ActionListener() {
+        Ninos_Capturados.setEditable(false);
+        Ninos_Capturados.setBackground(new java.awt.Color(255, 153, 153));
+        Ninos_Capturados.setFont(new java.awt.Font("Segoe UI Emoji", 1, 36)); // NOI18N
+        Ninos_Capturados.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Ninos_Capturados.setText("0");
+        Ninos_Capturados.setOpaque(true);
+        Ninos_Capturados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Niños_CapturadosActionPerformed(evt);
+                Ninos_CapturadosActionPerformed(evt);
             }
         });
 
@@ -850,7 +989,7 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(Texto_NIÑOS_CAPTURADOS, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addComponent(Niños_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Ninos_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Demogorgon, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(240, 240, 240)
@@ -864,7 +1003,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addComponent(Texto_NIÑOS_CAPTURADOS)
                         .addGap(9, 9, 9)
-                        .addComponent(Niños_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Ninos_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -930,9 +1069,9 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cantidad_SangreActionPerformed
 
-    private void Niños_CapturadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Niños_CapturadosActionPerformed
+    private void Ninos_CapturadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ninos_CapturadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Niños_CapturadosActionPerformed
+    }//GEN-LAST:event_Ninos_CapturadosActionPerformed
 
     private void Boton_PausaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_PausaActionPerformed
         // TODO add your handling code here:
@@ -996,7 +1135,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Imagen_Sotano;
     private javax.swing.JLabel Label_SANGRE;
     private javax.swing.JLabel Laboratorio;
-    private javax.swing.JTextField Niños_Capturados;
+    private javax.swing.JTextField Ninos_Capturados;
     private javax.swing.JLabel PORTALES;
     private javax.swing.JPanel Panel_Bosque;
     private javax.swing.JPanel Panel_Estadisticas;
@@ -1038,6 +1177,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel UPSIDEDOWN;
     private javax.swing.JLabel Vecna;
     private javax.swing.JTextArea jTextAreaCalle;
+    private javax.swing.JTextArea jTextAreaDemogorgonsAlcantarillado;
+    private javax.swing.JTextArea jTextAreaDemogorgonsBosque;
+    private javax.swing.JTextArea jTextAreaDemogorgonsCentroComercial;
+    private javax.swing.JTextArea jTextAreaDemogorgonsLaboratorio;
+    private javax.swing.JTextArea jTextAreaNinosAlcantarillado;
+    private javax.swing.JTextArea jTextAreaNinosBosque;
+    private javax.swing.JTextArea jTextAreaNinosCentroComercial;
+    private javax.swing.JTextArea jTextAreaNinosLaboratorio;
     private javax.swing.JTextArea jTextAreaRadio;
     private javax.swing.JTextArea jTextAreaSotano;
     // End of variables declaration//GEN-END:variables

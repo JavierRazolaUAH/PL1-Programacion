@@ -16,6 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ZonaInsegura {
     String nombre;
     private final List<Nino> ninosEnZona = new CopyOnWriteArrayList<>();
+    private final List<Demogorgon> demogorgonsEnZona = new CopyOnWriteArrayList<>();
     private final Random random = new Random();
     private final AtomicInteger sangreRecolectada = new AtomicInteger(0);
     
@@ -24,14 +25,26 @@ public class ZonaInsegura {
     public ZonaInsegura(String nombre) {
         this.nombre = nombre;
     }
-    
-    public void entrar(Nino n) {
-    ninosEnZona.add(n);
-}
+    // --- GESTIÓN DE NIÑOS ---
 
-    public void salir(Nino n) {
-    ninosEnZona.remove(n);
-}
+    public void entrarNino(Nino n) {
+        ninosEnZona.add(n);
+    }
+
+    public void salirNino(Nino n) {
+        ninosEnZona.remove(n);
+    }
+
+    // --- GESTIÓN DE DEMOGORGONS ---
+
+    public void entrarDemogorgon(Demogorgon d) {
+        demogorgonsEnZona.add(d);
+    }
+
+    public void salirDemogorgon(Demogorgon d) {
+        demogorgonsEnZona.remove(d);
+    }
+
     public void recolectarSangre(Nino n) throws InterruptedException {
 
         long tiempo = 3000 + random.nextInt(2001);
@@ -48,7 +61,36 @@ public class ZonaInsegura {
         return ninosEnZona.get(indice);
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public String getNombre() {
         return nombre;
     }
+
+    public List<Nino> getNinosEnZona() {
+        return ninosEnZona;
+    }
+
+    public List<Demogorgon> getDemogorgonsEnZona() {
+        return demogorgonsEnZona;
+    }
+    
+    
 }

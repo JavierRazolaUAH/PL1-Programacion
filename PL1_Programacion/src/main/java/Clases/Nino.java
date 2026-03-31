@@ -47,39 +47,59 @@ public class Nino  extends Thread{
     }
     // --- EL MOTOR DEL HILO ---
     @Override
-    public void run() {
-        try {
-            // 1. FASE DE NACIMIENTO
-            // Entra a la calle al nacer.
-            zonas.getCallePrincipal().inicio(this);
+public void run() {
+    try {
+        // 1. FASE DE NACIMIENTO
+        zonas.getCallePrincipal().inicio(this);
 
-            // 2. CICLO ITERATIVO
-            while (vivo) {
-                zonas.esperarSiPausado();
-                
-                // Entra al sótano a prepararse (1 a 2 segundos)
-                
-                
-                zonas.esperarSiPausado();
-                
-                // --- AQUÍ IRÁN LOS PORTALES MÁS ADELANTE ---
-                // (Por ahora nos saltamos el Upside Down para probar la interfaz)
-                
-                // Entra a la radio a descansar (2 a 4 segundos)
-                zonas.getRadioWSQK().descansar(this);
-                
-                zonas.esperarSiPausado();
-                
-                // Vuelve a la calle a deambular (3 a 5 segundos)
-                zonas.getCallePrincipal().deambular(this);
-                
-                // Al terminar, el bucle while vuelve a mandarlo al Sótano
+        // 2. CICLO ITERATIVO
+        while (vivo) {
+            zonas.esperarSiPausado();
+            
+            // --- NUEVA FASE: VIAJE AL UPSIDE DOWN ---
+            // Elegimos una zona aleatoria para ir a recolectar
+            ZonaInsegura zonaActual = zonas.getUpsidedown().obtenerZonaAleatoria();
+            
+            // Entramos en la lista de la zona
+            zonaActual.entrarNino(this);
+            
+            // Recolectamos sangre (dentro de recolectarSangre ya hay un sleep de 3-5s)
+            // Solo recolectamos si NO hemos sido capturados todavía
+            if (!capturado) {
+                zonaActual.recolectarSangre(this);
+            }
+            
+            // IMPORTANTE: Si un Demogorgon nos captura, él mismo nos saca de la zona.
+            // Pero si terminamos de recolectar y nadie nos ha pillado, salimos nosotros.
+            zonaActual.salirNino(this);
+            
+            // --- GESTIÓN DE CAPTURA ---
+            if (capturado) {
+                System.out.println(idNino + " ha sido capturado. Esperando en la Colmena...");
+                synchronized (this) {
+                    while (capturado) {
+                        this.wait(); // El hilo se duerme hasta que Eleven haga notify()
+                    }
+                }
+                System.out.println(idNino + " ¡Ha sido liberado por Eleven!");
             }
 
-        } catch (InterruptedException e) {
-            System.out.println(idNino + " ha sido interrumpido.");
+            zonas.esperarSiPausado();
+            
+            // Entra a la radio a descansar (2 a 4 segundos)
+            zonas.getRadioWSQK().descansar(this);
+            
+            zonas.esperarSiPausado();
+            
+            // Vuelve a la calle a deambular (3 a 5 segundos)
+            zonas.getCallePrincipal().deambular(this);
         }
+
+    } catch (InterruptedException e) {
+        System.out.println(idNino + " ha sido interrumpido.");
+        Thread.currentThread().interrupt();
     }
+}
     public int getSangreRecolectada() {
         return sangreRecolectada;
     }

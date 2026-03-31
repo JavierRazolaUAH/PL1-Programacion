@@ -32,6 +32,7 @@ public class AgrupacionZonas {
         this.sotanoByers = new SotanoByers();
         this.radioWSQK = new RadioWSQK();
         this.upsidedown = new UpsideDown();
+        this.upsidedown.getColmena().setZonas(this);
     }
 
     // --- MÉTODOS GETTER ---
