@@ -92,18 +92,14 @@ public class Interfaz extends javax.swing.JFrame {
         Boton_Pausa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Panel_Zona_Hawkins.setBackground(new java.awt.Color(204, 255, 204));
         Panel_Zona_Hawkins.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 3));
         Panel_Zona_Hawkins.setPreferredSize(new java.awt.Dimension(300, 500));
-        Panel_Zona_Hawkins.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ScrollPanel_Calle_Principal.setPreferredSize(new java.awt.Dimension(260, 110));
-        Panel_Zona_Hawkins.add(ScrollPanel_Calle_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 150, 100));
 
         ScrollPanel_Sotano_Byers.setPreferredSize(new java.awt.Dimension(260, 110));
-        Panel_Zona_Hawkins.add(ScrollPanel_Sotano_Byers, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 70));
 
         Panel_Radio_WSQK.setOpaque(false);
         Panel_Radio_WSQK.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -131,31 +127,80 @@ public class Interfaz extends javax.swing.JFrame {
         Imagen_Radio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Radio.png"))); // NOI18N
         Panel_Radio_WSQK.add(Imagen_Radio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 140));
 
-        Panel_Zona_Hawkins.add(Panel_Radio_WSQK, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 230, 140));
-
         HAWKINS.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         HAWKINS.setText("HAWKINS");
-        Panel_Zona_Hawkins.add(HAWKINS, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
         Calle_Principal.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Calle_Principal.setText("Calle Principal");
-        Panel_Zona_Hawkins.add(Calle_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 35, -1, -1));
 
         Sotano_Byers.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Sotano_Byers.setText("Sotano Byers");
-        Panel_Zona_Hawkins.add(Sotano_Byers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 175, -1, -1));
 
         Calle_Principal2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Calle_Principal2.setText("Radio WSQK");
-        Panel_Zona_Hawkins.add(Calle_Principal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 315, -1, -1));
 
         Imagen_Hawkins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cartel_Hawkins.jpg"))); // NOI18N
-        Panel_Zona_Hawkins.add(Imagen_Hawkins, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 65, 90, 90));
 
         Imagen_Sotano.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Sotano.PNG"))); // NOI18N
-        Panel_Zona_Hawkins.add(Imagen_Sotano, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 195, 250, 100));
 
-        getContentPane().add(Panel_Zona_Hawkins, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 80, -1, -1));
+        javax.swing.GroupLayout Panel_Zona_HawkinsLayout = new javax.swing.GroupLayout(Panel_Zona_Hawkins);
+        Panel_Zona_Hawkins.setLayout(Panel_Zona_HawkinsLayout);
+        Panel_Zona_HawkinsLayout.setHorizontalGroup(
+            Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(HAWKINS))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Calle_Principal))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(ScrollPanel_Calle_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(Imagen_Hawkins))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Sotano_Byers))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Imagen_Sotano)))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(Calle_Principal2))
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Panel_Zona_HawkinsLayout.setVerticalGroup(
+            Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(HAWKINS)
+                .addGap(4, 4, 4)
+                .addComponent(Calle_Principal)
+                .addGap(9, 9, 9)
+                .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScrollPanel_Calle_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(Imagen_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addComponent(Sotano_Byers)
+                .addGap(4, 4, 4)
+                .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Imagen_Sotano))
+                .addGap(20, 20, 20)
+                .addComponent(Calle_Principal2)
+                .addGap(9, 9, 9)
+                .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         Panel_Zona_Portales.setBackground(new java.awt.Color(255, 153, 204));
         Panel_Zona_Portales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
@@ -168,7 +213,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         Panel_Portal_Bosque.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Bosque.setOpaque(false);
-        Panel_Portal_Bosque.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout Entrada_1Layout = new javax.swing.GroupLayout(Entrada_1);
         Entrada_1.setLayout(Entrada_1Layout);
@@ -181,8 +225,6 @@ public class Interfaz extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        Panel_Portal_Bosque.add(Entrada_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 70, 80));
-
         javax.swing.GroupLayout Dentro_Portal_1Layout = new javax.swing.GroupLayout(Dentro_Portal_1);
         Dentro_Portal_1.setLayout(Dentro_Portal_1Layout);
         Dentro_Portal_1Layout.setHorizontalGroup(
@@ -193,8 +235,6 @@ public class Interfaz extends javax.swing.JFrame {
             Dentro_Portal_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 80, Short.MAX_VALUE)
         );
-
-        Panel_Portal_Bosque.add(Dentro_Portal_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 80));
 
         javax.swing.GroupLayout Salida_1Layout = new javax.swing.GroupLayout(Salida_1);
         Salida_1.setLayout(Salida_1Layout);
@@ -207,7 +247,30 @@ public class Interfaz extends javax.swing.JFrame {
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        Panel_Portal_Bosque.add(Salida_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 35, 70, 30));
+        javax.swing.GroupLayout Panel_Portal_BosqueLayout = new javax.swing.GroupLayout(Panel_Portal_Bosque);
+        Panel_Portal_Bosque.setLayout(Panel_Portal_BosqueLayout);
+        Panel_Portal_BosqueLayout.setHorizontalGroup(
+            Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(Dentro_Portal_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(Salida_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(Entrada_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        Panel_Portal_BosqueLayout.setVerticalGroup(
+            Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(Dentro_Portal_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(Salida_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(Entrada_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         Panel_Zona_Portales.add(Panel_Portal_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 260, 100));
 
@@ -420,20 +483,15 @@ public class Interfaz extends javax.swing.JFrame {
         Textura_Portal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Panel_Portal.png"))); // NOI18N
         Panel_Zona_Portales.add(Textura_Portal, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 294, 494));
 
-        getContentPane().add(Panel_Zona_Portales, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, -1));
-
         Panel_Zona_Upsidedown.setBackground(new java.awt.Color(255, 102, 102));
         Panel_Zona_Upsidedown.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
         Panel_Zona_Upsidedown.setPreferredSize(new java.awt.Dimension(300, 500));
-        Panel_Zona_Upsidedown.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         UPSIDEDOWN.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         UPSIDEDOWN.setText("UPSIDEDOWN");
-        Panel_Zona_Upsidedown.add(UPSIDEDOWN, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
         Bosque.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Bosque.setText("Bosque");
-        Panel_Zona_Upsidedown.add(Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 80, -1));
 
         Panel_Bosque.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Panel_Bosque.add(ScrollPanel_NiñosBosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
@@ -442,11 +500,8 @@ public class Interfaz extends javax.swing.JFrame {
         Textura_Bosque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Bosque.jpg"))); // NOI18N
         Panel_Bosque.add(Textura_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
-        Panel_Zona_Upsidedown.add(Panel_Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 45, 260, 90));
-
         Laboratorio.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Laboratorio.setText("Laboratorio");
-        Panel_Zona_Upsidedown.add(Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 145, 120, -1));
 
         Panel_Portal_Laboratorio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Panel_Portal_Laboratorio1.add(ScrollPanel_NiñosLaboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
@@ -455,11 +510,8 @@ public class Interfaz extends javax.swing.JFrame {
         Textura_Laboratorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Laboratorio.png"))); // NOI18N
         Panel_Portal_Laboratorio1.add(Textura_Laboratorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
-        Panel_Zona_Upsidedown.add(Panel_Portal_Laboratorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 90));
-
         Centro_Comercial.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Centro_Comercial.setText("Centro Comercial");
-        Panel_Zona_Upsidedown.add(Centro_Comercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 140, -1));
 
         Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
@@ -468,11 +520,8 @@ public class Interfaz extends javax.swing.JFrame {
         Textura_CentroComercial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_CentroComerical.png"))); // NOI18N
         Panel_Portal_Centro_Comercial1.add(Textura_CentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
-        Panel_Zona_Upsidedown.add(Panel_Portal_Centro_Comercial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 275, 260, 90));
-
         Alcantarillado.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Alcantarillado.setText("Alcantarillado");
-        Panel_Zona_Upsidedown.add(Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 375, 100, -1));
 
         Panel_Portal_Alcantarillado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Panel_Portal_Alcantarillado1.add(ScrollPanel_NiñosAlcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 90, 60));
@@ -481,13 +530,59 @@ public class Interfaz extends javax.swing.JFrame {
         Textura_Alcantarillado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Textura_Alcantarillado.png"))); // NOI18N
         Panel_Portal_Alcantarillado1.add(Textura_Alcantarillado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 90));
 
-        Panel_Zona_Upsidedown.add(Panel_Portal_Alcantarillado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 260, 90));
-
-        getContentPane().add(Panel_Zona_Upsidedown, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 80, -1, -1));
+        javax.swing.GroupLayout Panel_Zona_UpsidedownLayout = new javax.swing.GroupLayout(Panel_Zona_Upsidedown);
+        Panel_Zona_Upsidedown.setLayout(Panel_Zona_UpsidedownLayout);
+        Panel_Zona_UpsidedownLayout.setHorizontalGroup(
+            Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Panel_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(UPSIDEDOWN))
+                    .addComponent(Laboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_Portal_Laboratorio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Centro_Comercial, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_Portal_Centro_Comercial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Alcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_Portal_Alcantarillado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        Panel_Zona_UpsidedownLayout.setVerticalGroup(
+            Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(Panel_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Bosque))
+                    .addComponent(UPSIDEDOWN))
+                .addGap(10, 10, 10)
+                .addGroup(Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Laboratorio)
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Panel_Portal_Laboratorio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Centro_Comercial)
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Panel_Portal_Centro_Comercial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(Panel_Zona_UpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Alcantarillado)
+                    .addGroup(Panel_Zona_UpsidedownLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Panel_Portal_Alcantarillado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         Panel_Estadisticas.setBackground(new java.awt.Color(0, 255, 153));
         Panel_Estadisticas.setOpaque(false);
-        Panel_Estadisticas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Niños_Capturados.setEditable(false);
         Niños_Capturados.setBackground(new java.awt.Color(255, 153, 153));
@@ -500,37 +595,71 @@ public class Interfaz extends javax.swing.JFrame {
                 Niños_CapturadosActionPerformed(evt);
             }
         });
-        Panel_Estadisticas.add(Niños_Capturados, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 100, 78));
 
         Texto_Eventos.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         Texto_Eventos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_Eventos.setText("Evento Activo:");
-        Panel_Estadisticas.add(Texto_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 200, -1));
 
         Demogorgon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Demogorgon.png"))); // NOI18N
         Demogorgon.setText("jLabel3");
-        Panel_Estadisticas.add(Demogorgon, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 110, 120));
 
         Vecna.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Vecna.png"))); // NOI18N
-        Panel_Estadisticas.add(Vecna, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 40, 80, 120));
 
         Texto_NIÑOS_CAPTURADOS.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         Texto_NIÑOS_CAPTURADOS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_NIÑOS_CAPTURADOS.setText("Niños capturados");
-        Panel_Estadisticas.add(Texto_NIÑOS_CAPTURADOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 200, -1));
 
         Texto_NIÑOS_CAPTURADOS1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
         Texto_NIÑOS_CAPTURADOS1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_NIÑOS_CAPTURADOS1.setText("Ninguno");
-        Panel_Estadisticas.add(Texto_NIÑOS_CAPTURADOS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 200, -1));
 
-        getContentPane().add(Panel_Estadisticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 580, 970, 170));
+        javax.swing.GroupLayout Panel_EstadisticasLayout = new javax.swing.GroupLayout(Panel_Estadisticas);
+        Panel_Estadisticas.setLayout(Panel_EstadisticasLayout);
+        Panel_EstadisticasLayout.setHorizontalGroup(
+            Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(390, 390, 390)
+                .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(Texto_NIÑOS_CAPTURADOS, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(Niños_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Demogorgon, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(Vecna))))
+        );
+        Panel_EstadisticasLayout.setVerticalGroup(
+            Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addComponent(Texto_Eventos)
+                        .addGap(9, 9, 9)
+                        .addComponent(Texto_NIÑOS_CAPTURADOS1))
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addComponent(Texto_NIÑOS_CAPTURADOS)
+                        .addGap(9, 9, 9)
+                        .addComponent(Niños_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Demogorgon)
+                            .addComponent(Vecna)))))
+        );
 
         Texto_Principal.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
         Texto_Principal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_Principal.setText("Simulacion de Stranger Things");
         Texto_Principal.setToolTipText("");
-        getContentPane().add(Texto_Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 80));
 
         Boton_Pausa.setText("PAUSAR");
         Boton_Pausa.addActionListener(new java.awt.event.ActionListener() {
@@ -538,7 +667,40 @@ public class Interfaz extends javax.swing.JFrame {
                 Boton_PausaActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton_Pausa, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 20, 110, 40));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(870, 870, 870)
+                .addComponent(Boton_Pausa, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(Panel_Zona_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(Panel_Zona_Portales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(Panel_Zona_Upsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(Panel_Estadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Boton_Pausa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Panel_Zona_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_Zona_Portales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_Zona_Upsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Panel_Estadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
