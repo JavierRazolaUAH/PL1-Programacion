@@ -31,13 +31,12 @@ public class Colmena {
      * Método que llama el Demogorgon al depositar un niño.
      */
     public void depositarNino(Nino nino) {
-        // Añadimos al niño a la cola de prisioneros
         prisioneros.add(nino);
-        
-        // Incrementamos el contador y comprobamos si llegamos a 8
         int total = contadorCapturasTotal.incrementAndGet();
         
-        if (zonas != null && prisioneros.size() % 8 == 0) {
+        // Usamos el 'total' histórico en lugar del size() de la cola
+        if (zonas != null && total % 8 == 0) {
+            Logs.getInstance().log("¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.");
             crearNuevoDemogorgon();
         }
     }

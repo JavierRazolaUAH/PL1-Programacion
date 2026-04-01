@@ -57,7 +57,9 @@
                   <Component id="Panel_Zona_Portales" min="-2" max="-2" attributes="0"/>
                   <Component id="Panel_Zona_Upsidedown" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="Panel_Estadisticas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,28 +101,25 @@
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                           <Component id="Imagen_Hawkins" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-                          <Component id="Sotano_Byers" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          <Component id="Imagen_Sotano" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-                          <Component id="Calle_Principal2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          <Component id="Panel_Radio_WSQK" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Component id="Panel_SotanoByers" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="Sotano_Byers" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="ScrollPanel_Sotano_Byers" min="-2" pref="194" max="-2" attributes="0"/>
+                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Panel_Radio_WSQK" min="-2" max="-2" attributes="0"/>
+                              <Component id="Calle_Principal2" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -141,18 +140,13 @@
                   </Group>
                   <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
                   <Component id="Sotano_Byers" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                          <Component id="ScrollPanel_Sotano_Byers" min="-2" pref="70" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="Imagen_Sotano" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="Panel_SotanoByers" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="Calle_Principal2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="Panel_Radio_WSQK" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -175,61 +169,51 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="ScrollPanel_Sotano_Byers">
-          <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[260, 110]"/>
-            </Property>
-          </Properties>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextAreaSotano">
-              <Properties>
-                <Property name="columns" type="int" value="20"/>
-                <Property name="rows" type="int" value="5"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JPanel" name="Panel_Radio_WSQK">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel() {&#xa;    @Override&#xa;    protected void paintComponent(java.awt.Graphics g) {&#xa;        super.paintComponent(g);&#xa;        // Pon aqu&#xed; el nombre exacto de tu imagen de fondo&#xa;        java.net.URL ruta = getClass().getResource(&quot;/Imagenes/Textura_Radio.png&quot;);&#xa;        if (ruta != null) {&#xa;            java.awt.Image imagenFondo = new javax.swing.ImageIcon(ruta).getImage();&#xa;            g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);&#xa;        } else {&#xa;            System.err.println(&quot;No se encontr&#xf3; la imagen del fondo&quot;);&#xa;        }&#xa;    }&#xa;}"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_Radio_WSQK" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_Radio_WSQK" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Cantidad_Sangre" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Label_SANGRE" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="35" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="165" pref="165" max="-2" attributes="0"/>
-                      <Component id="Cantidad_Sangre" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="165" pref="165" max="-2" attributes="0"/>
-                      <Component id="Label_SANGRE" min="-2" pref="60" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Imagen_Radio" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_Radio_WSQK" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+                              <Component id="Cantidad_Sangre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                              <Component id="Label_SANGRE" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ScrollPanel_Radio_WSQK" min="-2" pref="104" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                      <Component id="Cantidad_Sangre" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                      <Component id="Label_SANGRE" min="-2" pref="20" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Imagen_Radio" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -273,13 +257,6 @@
                 <Property name="opaque" type="boolean" value="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="Imagen_Radio">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Textura_Radio.png"/>
-                </Property>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="HAWKINS">
@@ -321,13 +298,58 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Imagen_Sotano">
+        <Container class="javax.swing.JPanel" name="Panel_SotanoByers">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Textura_Sotano.PNG"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
             </Property>
           </Properties>
-        </Component>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel() {&#xa;    @Override&#xa;    protected void paintComponent(java.awt.Graphics g) {&#xa;        super.paintComponent(g);&#xa;        // Pon aqu&#xed; el nombre exacto de tu imagen de fondo&#xa;        java.net.URL ruta = getClass().getResource(&quot;/Imagenes/Textura_Sotano.PNG&quot;);&#xa;        if (ruta != null) {&#xa;            java.awt.Image imagenFondo = new javax.swing.ImageIcon(ruta).getImage();&#xa;            g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);&#xa;        } else {&#xa;            System.err.println(&quot;No se encontr&#xf3; la imagen del fondo&quot;);&#xa;        }&#xa;    }&#xa;}"/>
+          </AuxValues>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_Sotano_Byers" min="-2" pref="194" max="-2" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_Sotano_Byers" min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="ScrollPanel_Sotano_Byers">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[260, 110]"/>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaSotano">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="Panel_Zona_Portales">
@@ -444,6 +466,13 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="Entrada_1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -459,6 +488,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Dentro_Portal_1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -474,6 +510,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Salida_1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -537,6 +580,13 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="Entrada_2">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -552,6 +602,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Dentro_Portal_2">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -567,6 +624,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Salida_2">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -630,6 +694,13 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="Entrada_3">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -645,6 +716,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Dentro_Portal_3">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -660,6 +738,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Salida_3">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -723,6 +808,13 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="Entrada_4">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -739,6 +831,11 @@
             </Container>
             <Container class="javax.swing.JPanel" name="Dentro_Portal_4">
               <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder/>
+                  </Border>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
 
@@ -756,6 +853,13 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="Salida_4">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -795,20 +899,22 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Panel_Bosque" min="-2" max="-2" attributes="0"/>
-                      <Component id="Bosque" min="-2" pref="80" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                          <Component id="UPSIDEDOWN" min="-2" max="-2" attributes="0"/>
+                      <Component id="Panel_Portal_Alcantarillado1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Bosque" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+                              <Component id="UPSIDEDOWN" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Laboratorio" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="Panel_Portal_Laboratorio1" max="32767" attributes="0"/>
+                          <Component id="Centro_Comercial" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="Panel_Portal_Centro_Comercial1" max="32767" attributes="0"/>
+                          <Component id="Alcantarillado" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="Panel_Bosque" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="Laboratorio" min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="Panel_Portal_Laboratorio1" min="-2" max="-2" attributes="0"/>
-                      <Component id="Centro_Comercial" min="-2" pref="140" max="-2" attributes="0"/>
-                      <Component id="Panel_Portal_Centro_Comercial1" min="-2" max="-2" attributes="0"/>
-                      <Component id="Alcantarillado" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="Panel_Portal_Alcantarillado1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -816,19 +922,23 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
-                          <Component id="Panel_Bosque" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Component id="Bosque" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="UPSIDEDOWN" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="Bosque" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Component id="Panel_Bosque" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="UPSIDEDOWN" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="Laboratorio" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
@@ -845,13 +955,10 @@
                       </Group>
                   </Group>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Alcantarillado" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                          <Component id="Panel_Portal_Alcantarillado1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="Alcantarillado" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="Panel_Portal_Alcantarillado1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -874,30 +981,41 @@
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="Panel_Bosque">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="ff" red="99" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel() {&#xa;    @Override&#xa;    protected void paintComponent(java.awt.Graphics g) {&#xa;        super.paintComponent(g);&#xa;        // Pon aqu&#xed; el nombre exacto de tu imagen de fondo&#xa;        java.net.URL ruta = getClass().getResource(&quot;/Imagenes/Textura_Bosque.jpg&quot;);&#xa;        if (ruta != null) {&#xa;            java.awt.Image imagenFondo = new javax.swing.ImageIcon(ruta).getImage();&#xa;            g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);&#xa;        } else {&#xa;            System.err.println(&quot;No se encontr&#xf3; la imagen del fondo&quot;);&#xa;        }&#xa;    }&#xa;}"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_NiñosBosque" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_NiñosBosque" min="-2" pref="106" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_DemogorgonsBosque" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="150" pref="150" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_DemogorgonsBosque" min="-2" pref="90" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Textura_Bosque" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Textura_Bosque" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ScrollPanel_NiñosBosque" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="ScrollPanel_DemogorgonsBosque" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="ScrollPanel_DemogorgonsBosque" pref="78" max="32767" attributes="0"/>
+                          <Component id="ScrollPanel_NiñosBosque" pref="0" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -927,13 +1045,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="Textura_Bosque">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Textura_Bosque.jpg"/>
-                </Property>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="Laboratorio">
@@ -950,25 +1061,31 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_NiñosLaboratorio" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_NiñosLaboratorio" min="-2" pref="110" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="ScrollPanel_DemogorgonsLaboratorio" min="-2" pref="107" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="150" pref="150" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_DemogorgonsLaboratorio" min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="Textura_Laboratorio" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="Textura_Laboratorio" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Textura_Laboratorio" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                      <Component id="Textura_Laboratorio" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ScrollPanel_NiñosLaboratorio" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="ScrollPanel_DemogorgonsLaboratorio" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="ScrollPanel_DemogorgonsLaboratorio" pref="0" max="32767" attributes="0"/>
+                          <Component id="ScrollPanel_NiñosLaboratorio" pref="0" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1024,7 +1141,7 @@
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_Ni&#xf1;osCentroComercial">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="10" width="90" height="60"/>
+                  <AbsoluteConstraints x="10" y="10" width="110" height="70"/>
                 </Constraint>
               </Constraints>
 
@@ -1041,7 +1158,7 @@
             <Container class="javax.swing.JScrollPane" name="ScrollPanel_DemogorgonsCentroComercial">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="160" y="10" width="90" height="60"/>
+                  <AbsoluteConstraints x="150" y="10" width="100" height="70"/>
                 </Constraint>
               </Constraints>
 
@@ -1078,30 +1195,36 @@
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="Panel_Portal_Alcantarillado1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel() {&#xa;    @Override&#xa;    protected void paintComponent(java.awt.Graphics g) {&#xa;        super.paintComponent(g);&#xa;        // Pon aqu&#xed; el nombre exacto de tu imagen de fondo&#xa;        java.net.URL ruta = getClass().getResource(&quot;/Imagenes/Textura_Alcantarillado.png&quot;);&#xa;        if (ruta != null) {&#xa;            java.awt.Image imagenFondo = new javax.swing.ImageIcon(ruta).getImage();&#xa;            g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);&#xa;        } else {&#xa;            System.err.println(&quot;No se encontr&#xf3; la imagen del fondo&quot;);&#xa;        }&#xa;    }&#xa;}"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="150" pref="150" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_DemogorgonsAlcantarillado" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_NiñosAlcantarillado" min="-2" pref="104" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="ScrollPanel_DemogorgonsAlcantarillado" min="-2" pref="104" max="-2" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                      <Component id="ScrollPanel_NiñosAlcantarillado" min="-2" pref="90" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Textura_Alcantarillado" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Textura_Alcantarillado" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ScrollPanel_DemogorgonsAlcantarillado" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="ScrollPanel_NiñosAlcantarillado" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="ScrollPanel_DemogorgonsAlcantarillado" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="ScrollPanel_NiñosAlcantarillado" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1131,13 +1254,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="Textura_Alcantarillado">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Textura_Alcantarillado.png"/>
-                </Property>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -1157,11 +1273,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="Texto_Eventos" min="-2" pref="200" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                          <Component id="Texto_NIÑOS_CAPTURADOS1" min="-2" pref="200" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="Texto_NIÑOS_CAPTURADOS1" min="-2" pref="351" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="390" max="32767" attributes="0"/>
+                  <EmptySpace pref="256" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
@@ -1199,11 +1315,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="Texto_Eventos" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                          <Component id="Texto_NIÑOS_CAPTURADOS1" min="-2" pref="496" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Texto_NIÑOS_CAPTURADOS1" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="103" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

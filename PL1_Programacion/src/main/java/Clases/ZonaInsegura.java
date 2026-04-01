@@ -54,31 +54,19 @@ public class ZonaInsegura {
         sangreRecolectada.incrementAndGet(); // Suma 1 de forma segura
     }
     public Nino seleccionarVictima() {
-        if (ninosEnZona.isEmpty()) {
-            return null;
+        // En lugar de leer el tamaño, intentamos cogerlo directamente de forma segura
+        try {
+            if (ninosEnZona.isEmpty()) {
+                return null;
+            }
+            int indice = random.nextInt(ninosEnZona.size());
+            return ninosEnZona.get(indice);
+        } catch (Exception e) {
+            // Si el niño justo se ha escapado en ese milisegundo, devolvemos null
+            return null; 
         }
-        int indice = random.nextInt(ninosEnZona.size());
-        return ninosEnZona.get(indice);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+       
     
     public String getNombre() {
         return nombre;
