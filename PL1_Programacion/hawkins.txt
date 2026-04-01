@@ -23800,3 +23800,1982 @@
 2026-03-31 19:53:52 - N095 ha ENTRADO a descansar a la Radio WSQK.
 2026-03-31 19:53:52 - N031 ha terminado de descansar y SALE de la Radio WSQK.
 2026-03-31 19:53:52 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:26 - N085 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N085 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N003 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N096 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N092 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N054 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N054 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N091 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N090 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N094 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N094 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N093 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N093 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N089 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N088 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N087 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N081 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N081 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N083 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N083 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N082 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N077 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N077 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N076 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N076 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N075 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N071 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N071 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N070 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N070 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N069 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N065 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N005 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N005 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N064 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N007 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N059 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N008 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N063 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N006 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N001 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N002 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N044 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N044 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N058 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N014 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N013 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N018 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N019 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N020 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N053 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N053 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N057 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N024 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N024 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N025 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N026 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N051 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N052 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N052 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N032 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N032 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N030 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N030 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N031 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N031 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N047 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N036 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N036 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N037 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N038 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N042 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N043 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N048 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N048 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N004 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N004 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N009 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N009 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N045 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N041 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N041 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N046 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N010 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N049 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N049 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N050 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N095 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N095 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N017 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N056 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N040 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N040 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N039 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N039 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N034 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N034 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N035 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N055 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N061 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N060 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N060 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N028 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N062 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N066 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N066 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N033 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N086 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N067 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N072 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N068 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N029 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N073 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N074 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N078 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N078 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N079 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N079 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N099 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N098 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N080 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N097 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N027 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N027 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N100 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N100 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N023 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N023 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N011 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N011 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N015 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N012 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N022 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N021 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N021 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N016 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N084 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-01 11:55:26 - N016 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N022 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N012 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N015 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N097 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N080 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N098 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N099 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N074 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N073 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N029 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N072 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N067 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N086 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N033 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N062 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N028 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N055 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N035 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N017 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N050 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N010 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N045 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N043 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N042 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N038 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N037 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N047 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N026 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N025 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N057 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N020 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N019 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N018 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N013 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N014 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N058 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N002 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N001 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N006 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N063 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N008 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N059 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N007 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N064 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N065 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N069 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N075 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N082 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N088 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N090 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N091 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N092 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N096 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N003 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:26 - N084 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:29 - N089 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N075 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N041 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N036 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N033 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N081 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N020 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N046 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N016 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N035 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N090 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N095 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N085 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N034 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N038 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N071 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N056 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N054 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N084 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N100 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N098 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N028 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N092 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N014 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N068 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N051 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:29 - N060 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N005 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N097 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N074 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N027 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N061 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N023 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N078 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N044 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N062 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N010 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N040 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N083 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N063 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N037 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N024 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N039 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N018 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N007 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N045 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N053 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N072 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N031 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N064 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N017 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N047 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N048 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N008 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N012 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N080 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N029 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N087 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N055 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N032 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N077 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N066 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N002 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N025 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N058 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N030 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N015 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N011 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N099 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N088 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N003 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N013 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N094 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N086 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N049 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:30 - N059 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N067 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N004 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N070 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N093 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N091 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N009 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N076 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N001 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N065 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N026 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N057 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N073 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N079 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N021 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N022 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N082 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N042 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N050 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N069 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N019 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N052 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N043 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N006 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N096 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:31 - N075 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:31 - N075 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:31 - N100 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:31 - N100 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N005 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N037 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N060 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N060 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N020 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N020 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N089 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N089 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N041 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N010 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N010 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N087 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N087 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N061 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N061 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N056 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N056 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N083 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N083 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N085 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N085 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N039 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N046 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N078 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N078 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N035 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N028 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N058 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N058 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N092 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N092 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N044 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N034 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N034 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N051 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N051 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N033 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:32 - N008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:32 - N008 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N081 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N081 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N071 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N071 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N088 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N088 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N023 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N070 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N070 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N095 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N095 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N016 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N032 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N015 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N036 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N030 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N030 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N068 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N068 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N098 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N098 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N063 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N063 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N040 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N090 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N090 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N054 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N012 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N054 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N012 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N082 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N082 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N007 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N045 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N045 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N086 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N086 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N084 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N084 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N038 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N077 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N077 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N066 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N066 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N053 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N047 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N047 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N094 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N094 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N024 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N024 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N004 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N055 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N097 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N097 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N027 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N067 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N067 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N074 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N074 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N091 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N091 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N049 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N049 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N019 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N062 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N062 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N017 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N064 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N064 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N050 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N050 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N099 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N099 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N014 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N052 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N052 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N065 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N065 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N072 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N072 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:33 - N059 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:33 - N059 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N042 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N042 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N048 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N006 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N080 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N080 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N001 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N001 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N076 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N076 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N096 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N096 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N013 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N029 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N029 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N093 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N093 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N073 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N073 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N075 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:34 - N021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N021 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N011 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N011 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N069 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N069 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N009 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N026 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N043 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N043 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:34 - N057 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:34 - N057 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:35 - N022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:35 - N022 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:35 - N079 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:35 - N079 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:35 - N100 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:35 - N060 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:35 - N010 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:35 - N020 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:35 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:35 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N005 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N008 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N070 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N063 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N081 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N071 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N092 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N018 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N095 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N034 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N023 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N036 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N094 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N088 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:36 - N016 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N037 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N044 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N074 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N085 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N030 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N058 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N041 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N083 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N039 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N002 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N015 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N098 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N097 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N072 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N017 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N033 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N059 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N076 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N027 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N028 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N099 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N012 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N025 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N035 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N077 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N048 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N055 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N053 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N040 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N078 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N091 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N003 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N096 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N066 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N084 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N014 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N032 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N004 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N064 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:37 - N042 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N007 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N086 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N038 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N069 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N062 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N047 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N022 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N001 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N067 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N090 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N045 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N073 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N065 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N075 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:38 - N050 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N082 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N054 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N031 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N026 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N049 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N013 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N024 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N080 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N019 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N052 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N021 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N079 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N029 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:38 - N006 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N087 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N057 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N043 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N005 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N011 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N093 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N070 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N100 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N009 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:39 - N023 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N081 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N095 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N010 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:39 - N056 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N036 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N061 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N071 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N083 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N051 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N068 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N018 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N008 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N044 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N092 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N037 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N060 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N028 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N027 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N085 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N077 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:40 - N015 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N094 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N007 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N038 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N034 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N025 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N069 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N088 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N002 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N074 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N041 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N099 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N059 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N087 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:41 - N087 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:41 - N076 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N063 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:41 - N005 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:41 - N062 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N058 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N072 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N084 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N003 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N073 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N039 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N046 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N048 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N089 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N019 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N032 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N053 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N098 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N033 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N022 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N016 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N030 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N075 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:41 - N075 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:41 - N086 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:41 - N040 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N050 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N017 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N042 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N045 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N014 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N035 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N079 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N031 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N091 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N055 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N013 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N067 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N026 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N097 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N068 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N068 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N057 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N064 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N078 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N004 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N092 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N092 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N012 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N051 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N051 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N001 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N047 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N066 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N006 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N083 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N083 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N065 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N096 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N036 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N100 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:42 - N100 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:42 - N049 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:42 - N021 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N071 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N071 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N054 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N052 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N090 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N070 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N070 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N082 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N080 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N077 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N077 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N088 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N088 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N076 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N076 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N059 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N059 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N024 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N095 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N095 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N062 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N062 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N056 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N056 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N007 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N029 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N023 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N061 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N061 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N073 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N073 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N081 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N081 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N008 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N028 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N089 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N089 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N010 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N010 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N044 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N093 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:43 - N015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N015 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:43 - N099 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:43 - N099 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N019 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N009 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:44 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N084 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N084 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N041 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N098 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N098 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N050 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N050 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N069 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N069 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N034 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N034 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N085 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N085 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N072 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N072 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N017 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N040 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N094 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N094 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N027 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N060 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N060 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N037 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N057 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N057 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N001 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N001 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N030 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N030 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N012 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N012 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N066 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N066 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N013 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N079 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N079 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N063 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:44 - N063 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:44 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:45 - N022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N045 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N045 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N022 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N038 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N096 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N096 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N074 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N074 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N091 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N091 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N046 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N058 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N058 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N042 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N042 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N080 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N080 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N016 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N048 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N078 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N078 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N053 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N039 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:45 - N031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N032 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N033 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N055 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N086 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N086 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N064 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N064 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N097 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N097 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N067 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N067 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:45 - N026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:45 - N026 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N035 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N014 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N047 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N047 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N021 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N100 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N004 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N092 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N005 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N083 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N029 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N029 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N054 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N054 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N065 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N065 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N052 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N052 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N024 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N024 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N006 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N090 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N090 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N049 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N049 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:46 - N075 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N036 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N008 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:46 - N082 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:46 - N082 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:47 - N073 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N099 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N084 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N050 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N044 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:47 - N009 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:47 - N077 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N088 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N060 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N002 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N093 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:47 - N093 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:47 - N040 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N003 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N085 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N034 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N081 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N018 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N094 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N071 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N070 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N066 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:47 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N076 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N028 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N038 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N017 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N098 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N045 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N041 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N095 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N059 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N015 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N025 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N096 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N080 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N069 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N010 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N079 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N062 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N027 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N072 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N023 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N007 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N019 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N063 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N068 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:48 - N087 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:48 - N097 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:48 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N053 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N031 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N030 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N037 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N039 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N058 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N004 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N014 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N057 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N001 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N016 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N055 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N048 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N086 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N092 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:49 - N047 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N035 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N091 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N033 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N074 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N026 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N012 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N042 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N024 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N090 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N051 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:49 - N013 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:49 - N022 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N032 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N005 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N036 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N029 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N021 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N082 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N083 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N006 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N078 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N049 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N044 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N100 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N067 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N099 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N050 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N054 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N064 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:50 - N075 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N084 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:50 - N065 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:51 - N052 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:51 - N061 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N009 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:51 - N008 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N087 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:51 - N087 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:51 - N002 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N041 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N077 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N018 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N056 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N003 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N088 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N085 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N028 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N096 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N081 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N073 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N092 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:51 - N092 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:51 - N040 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N070 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N059 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N079 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N094 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:51 - N068 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:51 - N068 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:52 - N019 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N060 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N062 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N066 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N034 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N089 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N045 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N080 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N093 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:52 - N076 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N030 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N001 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:52 - N044 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:52 - N015 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N063 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N071 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:52 - N036 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:52 - N038 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N055 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N025 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N010 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N051 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:52 - N051 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:52 - N098 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N050 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:52 - N050 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:52 - N091 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N014 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N026 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:52 - N031 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N037 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N046 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N023 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N005 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N017 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N042 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N058 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N027 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N039 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N095 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N048 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N069 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N061 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N061 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N072 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N047 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N053 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N016 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N013 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N075 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N075 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N035 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N097 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N007 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N021 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N096 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N096 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N008 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N064 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N057 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:53 - N085 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N085 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N088 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N088 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N084 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N084 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N056 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N056 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:53 - N100 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:53 - N100 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N081 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N081 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N086 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N070 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N070 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N004 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N022 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N040 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N062 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N062 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N083 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N083 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N067 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N090 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N059 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N059 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N099 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N099 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N019 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N033 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N082 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N066 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N066 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N030 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N030 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N024 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N074 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N049 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N041 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N078 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N065 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N006 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N012 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N015 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N034 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N034 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N032 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N029 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:54 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:54 - N028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:54 - N028 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N089 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N089 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N079 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N079 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N071 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N071 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N060 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N060 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N077 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N077 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N009 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:55 - N094 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N094 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N038 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N023 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N073 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N073 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N045 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N045 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N092 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:55 - N091 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N091 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N052 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:55 - N054 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:55 - N076 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N076 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N080 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N080 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N098 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N098 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N053 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:55 - N027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N027 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N063 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N063 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N014 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N001 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:55 - N001 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:55 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:56 - N047 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N047 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N010 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N010 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N046 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N048 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N026 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N037 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N039 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N017 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N058 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N058 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N007 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N064 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N064 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N022 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:56 - N016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N016 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N013 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N055 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N072 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N072 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N067 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N067 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N042 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N042 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N033 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N069 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N069 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N005 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:56 - N035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N035 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N049 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N049 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N082 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N082 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:56 - N036 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:56 - N004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:56 - N004 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N024 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N024 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N012 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N012 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N084 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N021 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N086 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N086 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N057 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N057 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N095 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N095 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N032 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N044 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N097 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N097 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N093 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:57 - N050 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N074 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N074 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N006 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N075 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N100 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N008 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:57 - N065 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N065 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N090 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:57 - N090 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:57 - N081 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N078 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:58 - N078 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:58 - N041 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N062 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N018 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N029 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:58 - N029 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:58 - N038 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N030 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N070 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N099 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N040 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N096 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N088 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N059 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N085 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:58 - N009 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:58 - N083 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N053 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N076 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N002 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:58 - N023 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N066 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N073 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N028 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N019 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N087 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:59 - N052 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:59 - N052 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:59 - N094 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N054 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:55:59 - N054 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:55:59 - N079 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N034 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N080 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N071 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N077 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N058 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N039 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N015 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N025 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N060 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N045 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N003 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N051 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:59 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N017 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N055 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N037 ha SALIDO de la Calle Principal.
+2026-04-01 11:55:59 - N092 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:55:59 - N022 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N069 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N091 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N068 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:00 - N082 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N031 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N035 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N013 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N072 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N027 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N048 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N001 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N004 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N098 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N033 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N016 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N061 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:00 - N075 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:00 - N064 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N063 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N056 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:00 - N014 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N010 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N065 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N047 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N006 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:00 - N100 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:00 - N084 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N026 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N086 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N005 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N012 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N007 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N093 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:01 - N093 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:01 - N038 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N097 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N049 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N036 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N042 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N087 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:01 - N087 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:01 - N024 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N090 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N095 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N096 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N040 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N070 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N029 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N067 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N021 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N018 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N057 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N088 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N059 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N074 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:01 - N041 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N051 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:01 - N051 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:01 - N008 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N081 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:01 - N089 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N053 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N044 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N023 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N032 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:02 - N083 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N085 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N054 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:02 - N030 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N066 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N062 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N099 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N015 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N025 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N061 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:02 - N061 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:02 - N060 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:02 - N019 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N078 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:03 - N052 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:03 - N003 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N073 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N031 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N002 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N092 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:03 - N092 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:03 - N077 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N009 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:03 - N082 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N028 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N084 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:03 - N084 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:03 - N017 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N035 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N076 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N046 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N068 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:03 - N068 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:03 - N037 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N048 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:03 - N036 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:03 - N004 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N022 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N034 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N079 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N080 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N027 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N014 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:03 - N045 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N059 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N059 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N033 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N038 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N089 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N089 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N094 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N007 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N075 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N075 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N100 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N100 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N010 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N058 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N071 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N056 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N056 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N006 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N040 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N039 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N005 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N055 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N026 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N093 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:04 - N091 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N001 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N024 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N053 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N072 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N013 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N090 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N030 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N030 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N069 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:04 - N018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N041 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N083 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:04 - N083 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:04 - N067 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N008 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N098 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N021 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N096 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N096 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N081 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N081 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N016 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N097 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N088 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N088 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N062 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N062 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N070 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N070 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N023 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N032 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:05 - N086 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N099 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N099 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N064 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N065 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N049 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N063 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N085 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N085 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N029 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N044 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N042 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N066 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N066 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N047 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:05 - N080 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N080 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:05 - N073 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:05 - N073 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N027 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N077 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N077 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N028 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N060 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N060 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:06 - N082 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N082 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N037 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N010 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N010 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N095 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:06 - N014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N014 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N048 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:06 - N071 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N071 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N074 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:06 - N015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N015 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N006 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N057 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:06 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:06 - N026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N026 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N046 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N045 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N045 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N092 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:06 - N034 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N034 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N024 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N024 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N054 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:06 - N019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N019 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:06 - N031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:06 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N055 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N022 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N017 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N076 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N076 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N036 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N004 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N039 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N052 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:07 - N035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N035 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N090 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N090 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N007 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N094 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N094 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N078 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:07 - N079 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N079 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N040 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N093 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:07 - N033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N033 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N100 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N075 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N084 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:07 - N067 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N067 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:07 - N097 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:07 - N097 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N098 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N098 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N009 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:08 - N058 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N058 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N001 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N001 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N091 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N091 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N030 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N013 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N081 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N005 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N064 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N064 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N062 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N038 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N063 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N063 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N021 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N083 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N023 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N069 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N069 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N016 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N072 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N072 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N002 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N059 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:08 - N032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N032 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N086 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N086 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N047 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:08 - N047 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:08 - N099 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N095 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N095 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N049 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N049 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N065 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N065 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N042 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N042 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N008 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N060 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N003 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N027 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N080 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N037 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N029 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N029 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N041 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N085 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N051 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:09 - N096 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N057 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N057 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:09 - N018 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N071 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N088 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N014 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N053 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N066 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N070 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:09 - N068 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:09 - N093 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:09 - N093 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:10 - N052 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:10 - N052 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:10 - N082 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N087 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:10 - N022 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N054 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:10 - N054 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:10 - N048 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N045 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N074 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:10 - N074 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:10 - N028 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N077 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N044 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N010 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N079 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N006 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N073 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N025 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:10 - N017 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N061 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N055 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N089 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N056 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N024 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N019 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N026 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N036 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N004 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N039 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N078 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:11 - N078 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:11 - N038 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N015 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N034 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N007 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N081 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:11 - N009 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:11 - N084 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N076 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N040 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:11 - N058 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N098 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N068 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:11 - N068 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:11 - N064 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:11 - N031 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N030 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N001 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N033 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N083 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N016 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N023 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N075 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N035 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N013 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N067 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N090 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N094 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N069 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N059 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N042 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N021 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N047 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N037 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N097 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N086 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N049 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N003 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N062 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N072 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N091 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:12 - N002 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N087 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:12 - N087 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:12 - N041 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N099 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:12 - N046 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N061 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:13 - N061 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:13 - N065 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N056 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:13 - N056 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:13 - N063 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N014 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N085 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N093 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N057 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N032 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N082 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N052 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N051 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:13 - N051 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:13 - N060 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N070 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N071 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N008 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N080 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N089 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:13 - N089 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:13 - N088 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N066 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N028 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N027 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:13 - N054 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:13 - N095 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:14 - N010 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N018 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N079 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N029 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:14 - N074 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:14 - N044 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N096 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N017 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N004 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N053 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N077 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N022 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N081 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:14 - N081 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:14 - N039 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:14 - N036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:14 - N036 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:14 - N023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:14 - N023 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:14 - N007 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N075 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N075 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N025 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N059 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N059 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N033 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N073 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N038 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N013 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N024 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N048 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N037 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N046 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N098 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N055 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N084 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N084 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N026 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N082 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N082 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N040 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N034 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N049 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N047 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N062 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N062 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N083 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N083 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N019 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N099 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N099 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N080 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N080 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N016 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N009 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:15 - N030 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N030 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N035 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N094 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:15 - N071 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N071 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:15 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:15 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N015 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N085 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N085 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N072 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N091 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N028 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N097 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N060 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N060 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N061 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:16 - N001 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N058 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N090 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N056 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:16 - N078 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:16 - N021 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N064 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N032 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N031 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N096 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N096 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N041 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N063 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N093 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:16 - N014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N014 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N068 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:16 - N044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:16 - N044 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:16 - N067 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N057 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N066 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N066 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N069 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N079 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N079 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N053 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N070 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N070 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N087 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:17 - N042 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N089 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:17 - N073 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N073 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N095 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N086 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N008 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N088 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N088 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N077 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N077 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N039 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N010 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N010 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N054 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:17 - N004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N004 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N027 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N034 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N034 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N049 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N049 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:17 - N022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:17 - N022 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N052 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:18 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N048 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N072 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N072 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N058 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N058 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N051 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:18 - N029 ha ENTRADO a descansar a la Radio WSQK.
+2026-04-01 11:56:18 - N017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N017 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N055 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N007 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N026 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N091 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N091 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N013 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N046 ha SALIDO de la Calle Principal.
+2026-04-01 11:56:18 - N019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N001 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N001 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N019 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N031 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N016 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N093 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N093 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N015 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-01 11:56:18 - N033 está DEAMBULANDO por la Calle Principal.
+2026-04-01 11:56:18 - N080 ha SALIDO de la Calle Principal.
