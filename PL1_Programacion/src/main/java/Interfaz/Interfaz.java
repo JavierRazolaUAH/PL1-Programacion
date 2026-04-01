@@ -29,9 +29,10 @@ public class Interfaz extends javax.swing.JFrame {
         iniciarActualizadorSotano();
         iniciarActualizadorRadio();
         iniciarActualizadorCalle();
-            iniciarActualizadorZonasInseguras();
+        iniciarActualizadorZonasInseguras();
+        configurarScrollBarsPortales();  // <--- Esto limpia todas las barras vacías al arrancar
+        iniciarActualizadoresPortales(); // <--- Esto arranca el motor gráfico de los 4 portales
         // Más adelante añadiremos aquí:
-        // iniciarActualizadoresPortales();
         // iniciarActualizadoresUpsideDown();
     }
 
@@ -207,6 +208,92 @@ public class Interfaz extends javax.swing.JFrame {
         Ninos_Capturados.setText(String.valueOf(total));
     }
 }
+    
+// --- 1. MÉTODOS GENÉRICOS (Reutilizables para no repetir código) ---
+    private void actualizarListaNinos(java.util.List<Clases.Nino> ninos, javax.swing.JTextArea textArea) {
+        if (zonas == null || zonas.isPausado()) return;
+        
+        StringBuilder sb = new StringBuilder();
+        for (Clases.Nino n : ninos) {
+            sb.append(n.getIdNino()).append("\n");
+        }
+        textArea.setText(sb.toString());
+    }
+
+    private void actualizarNinoCruzando(Clases.Nino nino, javax.swing.JTextArea textArea) {
+        if (zonas == null || zonas.isPausado()) return;
+        
+        if (nino != null) {
+            textArea.setText(nino.getIdNino());
+        } else {
+            textArea.setText("");
+        }
+    }
+
+    // --- 2. ACTUALIZADORES ESPECÍFICOS DE CADA PORTAL ---
+    public void actualizarPortalBosqueGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.Portal portal = zonas.getPortal(0);
+        
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), TextArea_Bosque_Entrada);
+        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Bosque_Dentro);
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), TextArea_Bosque_Salida);
+    }
+
+    public void actualizarPortalLaboratorioGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.Portal portal = zonas.getPortal(1);
+        
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Laboratorio_Entrada);
+        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Laboratorio_Dentro);
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Laboratorio_Salida);
+    }
+
+    public void actualizarPortalCentroComercialGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.Portal portal = zonas.getPortal(2);
+        
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Centro_Comercial_Entrada);
+        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Centro_Comercial_Dentro);
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Centro_Comercial_Salida);
+    }
+
+    public void actualizarPortalAlcantarilladoGUI() {
+        if (zonas == null || zonas.isPausado()) return;
+        Clases.Portal portal = zonas.getPortal(3);
+        
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Alcantarillado_Entrada);
+        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Alcantarillado_Dentro);
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Alcantarillado_Salida);
+    }
+
+    // --- 3. TIMER UNIFICADO ---
+    private void iniciarActualizadoresPortales() {
+        new javax.swing.Timer(500, e -> {
+            actualizarPortalBosqueGUI();
+            actualizarPortalLaboratorioGUI();
+            actualizarPortalCentroComercialGUI();
+            actualizarPortalAlcantarilladoGUI();
+        }).start();
+    }
+
+    // --- 4. TRUCO DE DISEÑO: LIMPIEZA DE BARRAS DE DESPLAZAMIENTO ---
+    private void configurarScrollBarsPortales() {
+        // Metemos todos tus JScrollPanes en un array para aplicarles la regla de golpe
+        javax.swing.JScrollPane[] scrolls = {
+            jScrollPaneBosque_Entrada, jScrollPaneBosque_Salida, jScrollPaneBosque_Dentro,
+            jScrollPane_Laboratorio_Entrada, jScrollPane_Laboratorio_Salida, jScrollPane_Laboratorio_Dentro,
+            jScrollPane_Centro_Comercial_Entrada, jScrollPane_Centro_Comercial_Salida, jScrollPane_Centro_Comercial_Dentro,
+            jScrollPane_Alcantarillado_Entrada, jScrollPane_Alcantarillado_Salida, jScrollPane_Alcantarillado_Dentro
+        };
+
+        for (javax.swing.JScrollPane scroll : scrolls) {
+            // Barra vertical: Solo cuando haga falta
+            scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+            // Barra horizontal: NUNCA
+            scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -274,21 +361,33 @@ public class Interfaz extends javax.swing.JFrame {
         };
         PORTALES = new javax.swing.JLabel();
         Panel_Portal_Bosque = new javax.swing.JPanel();
-        Entrada_1 = new javax.swing.JPanel();
-        Dentro_Portal_1 = new javax.swing.JPanel();
-        Salida_1 = new javax.swing.JPanel();
+        jScrollPaneBosque_Entrada = new javax.swing.JScrollPane();
+        TextArea_Bosque_Entrada = new javax.swing.JTextArea();
+        jScrollPaneBosque_Salida = new javax.swing.JScrollPane();
+        TextArea_Bosque_Salida = new javax.swing.JTextArea();
+        jScrollPaneBosque_Dentro = new javax.swing.JScrollPane();
+        jTextArea_Bosque_Dentro = new javax.swing.JTextArea();
         Panel_Portal_Laboratorio = new javax.swing.JPanel();
-        Entrada_2 = new javax.swing.JPanel();
-        Dentro_Portal_2 = new javax.swing.JPanel();
-        Salida_2 = new javax.swing.JPanel();
+        jScrollPane_Laboratorio_Salida = new javax.swing.JScrollPane();
+        jTextArea_Laboratorio_Salida = new javax.swing.JTextArea();
+        jScrollPane_Laboratorio_Entrada = new javax.swing.JScrollPane();
+        jTextArea_Laboratorio_Entrada = new javax.swing.JTextArea();
+        jScrollPane_Laboratorio_Dentro = new javax.swing.JScrollPane();
+        jTextArea_Laboratorio_Dentro = new javax.swing.JTextArea();
         Panel_Portal_Centro_Comercial = new javax.swing.JPanel();
-        Entrada_3 = new javax.swing.JPanel();
-        Dentro_Portal_3 = new javax.swing.JPanel();
-        Salida_3 = new javax.swing.JPanel();
+        jScrollPane_Centro_Comercial_Dentro = new javax.swing.JScrollPane();
+        jTextArea_Centro_Comercial_Dentro = new javax.swing.JTextArea();
+        jScrollPane_Centro_Comercial_Salida = new javax.swing.JScrollPane();
+        jTextArea_Centro_Comercial_Salida = new javax.swing.JTextArea();
+        jScrollPane_Centro_Comercial_Entrada = new javax.swing.JScrollPane();
+        jTextArea_Centro_Comercial_Entrada = new javax.swing.JTextArea();
         Panel_Portal_Alcantarillado = new javax.swing.JPanel();
-        Entrada_4 = new javax.swing.JPanel();
-        Dentro_Portal_4 = new javax.swing.JPanel();
-        Salida_4 = new javax.swing.JPanel();
+        jScrollPane_Alcantarillado_Salida = new javax.swing.JScrollPane();
+        jTextArea_Alcantarillado_Salida = new javax.swing.JTextArea();
+        jScrollPane_Alcantarillado_Entrada = new javax.swing.JScrollPane();
+        jTextArea_Alcantarillado_Entrada = new javax.swing.JTextArea();
+        jScrollPane_Alcantarillado_Dentro = new javax.swing.JScrollPane();
+        jTextArea_Alcantarillado_Dentro = new javax.swing.JTextArea();
         Panel_Zona_Upsidedown = new javax.swing.JPanel();
         UPSIDEDOWN = new javax.swing.JLabel();
         Bosque = new javax.swing.JLabel();
@@ -361,6 +460,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         ScrollPanel_Calle_Principal.setPreferredSize(new java.awt.Dimension(260, 110));
 
+        jTextAreaCalle.setEditable(false);
         jTextAreaCalle.setColumns(20);
         jTextAreaCalle.setRows(5);
         ScrollPanel_Calle_Principal.setViewportView(jTextAreaCalle);
@@ -368,6 +468,7 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Radio_WSQK.setBackground(new java.awt.Color(255, 255, 255));
         Panel_Radio_WSQK.setOpaque(false);
 
+        jTextAreaRadio.setEditable(false);
         jTextAreaRadio.setColumns(20);
         jTextAreaRadio.setRows(5);
         ScrollPanel_Radio_WSQK.setViewportView(jTextAreaRadio);
@@ -436,6 +537,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         ScrollPanel_Sotano_Byers.setPreferredSize(new java.awt.Dimension(260, 110));
 
+        jTextAreaSotano.setEditable(false);
         jTextAreaSotano.setColumns(20);
         jTextAreaSotano.setRows(5);
         ScrollPanel_Sotano_Byers.setViewportView(jTextAreaSotano);
@@ -444,17 +546,11 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_SotanoByers.setLayout(Panel_SotanoByersLayout);
         Panel_SotanoByersLayout.setHorizontalGroup(
             Panel_SotanoByersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel_SotanoByersLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+            .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
         );
         Panel_SotanoByersLayout.setVerticalGroup(
             Panel_SotanoByersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel_SotanoByersLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+            .addComponent(ScrollPanel_Sotano_Byers, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout Panel_Zona_HawkinsLayout = new javax.swing.GroupLayout(Panel_Zona_Hawkins);
@@ -477,15 +573,13 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(Panel_SotanoByers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Sotano_Byers)))
+                            .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Calle_Principal2)))
                     .addGroup(Panel_Zona_HawkinsLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(Panel_Zona_HawkinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Panel_Radio_WSQK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Calle_Principal2))))
+                            .addComponent(Panel_SotanoByers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Sotano_Byers))))
                 .addGap(228, 228, 228))
         );
         Panel_Zona_HawkinsLayout.setVerticalGroup(
@@ -523,285 +617,178 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Portal_Bosque.setOpaque(false);
         Panel_Portal_Bosque.setPreferredSize(new java.awt.Dimension(260, 100));
 
-        Entrada_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TextArea_Bosque_Entrada.setEditable(false);
+        TextArea_Bosque_Entrada.setColumns(20);
+        TextArea_Bosque_Entrada.setRows(5);
+        jScrollPaneBosque_Entrada.setViewportView(TextArea_Bosque_Entrada);
 
-        javax.swing.GroupLayout Entrada_1Layout = new javax.swing.GroupLayout(Entrada_1);
-        Entrada_1.setLayout(Entrada_1Layout);
-        Entrada_1Layout.setHorizontalGroup(
-            Entrada_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Entrada_1Layout.setVerticalGroup(
-            Entrada_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
+        TextArea_Bosque_Salida.setEditable(false);
+        TextArea_Bosque_Salida.setColumns(20);
+        TextArea_Bosque_Salida.setRows(5);
+        jScrollPaneBosque_Salida.setViewportView(TextArea_Bosque_Salida);
 
-        Dentro_Portal_1.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout Dentro_Portal_1Layout = new javax.swing.GroupLayout(Dentro_Portal_1);
-        Dentro_Portal_1.setLayout(Dentro_Portal_1Layout);
-        Dentro_Portal_1Layout.setHorizontalGroup(
-            Dentro_Portal_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Dentro_Portal_1Layout.setVerticalGroup(
-            Dentro_Portal_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        Salida_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout Salida_1Layout = new javax.swing.GroupLayout(Salida_1);
-        Salida_1.setLayout(Salida_1Layout);
-        Salida_1Layout.setHorizontalGroup(
-            Salida_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Salida_1Layout.setVerticalGroup(
-            Salida_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        jTextArea_Bosque_Dentro.setEditable(false);
+        jTextArea_Bosque_Dentro.setColumns(20);
+        jTextArea_Bosque_Dentro.setRows(5);
+        jScrollPaneBosque_Dentro.setViewportView(jTextArea_Bosque_Dentro);
 
         javax.swing.GroupLayout Panel_Portal_BosqueLayout = new javax.swing.GroupLayout(Panel_Portal_Bosque);
         Panel_Portal_Bosque.setLayout(Panel_Portal_BosqueLayout);
         Panel_Portal_BosqueLayout.setHorizontalGroup(
             Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(Dentro_Portal_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(Salida_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(Entrada_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(94, Short.MAX_VALUE)
+                .addComponent(jScrollPaneBosque_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPaneBosque_Entrada, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+            .addGroup(Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPaneBosque_Dentro, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(183, Short.MAX_VALUE)))
         );
         Panel_Portal_BosqueLayout.setVerticalGroup(
             Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(Dentro_Portal_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(Salida_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(Entrada_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPaneBosque_Entrada, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_BosqueLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPaneBosque_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+            .addGroup(Panel_Portal_BosqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(Panel_Portal_BosqueLayout.createSequentialGroup()
+                    .addComponent(jScrollPaneBosque_Dentro, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         Panel_Portal_Laboratorio.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Laboratorio.setOpaque(false);
 
-        Entrada_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea_Laboratorio_Salida.setColumns(20);
+        jTextArea_Laboratorio_Salida.setRows(5);
+        jScrollPane_Laboratorio_Salida.setViewportView(jTextArea_Laboratorio_Salida);
 
-        javax.swing.GroupLayout Entrada_2Layout = new javax.swing.GroupLayout(Entrada_2);
-        Entrada_2.setLayout(Entrada_2Layout);
-        Entrada_2Layout.setHorizontalGroup(
-            Entrada_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Entrada_2Layout.setVerticalGroup(
-            Entrada_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
+        jTextArea_Laboratorio_Entrada.setColumns(20);
+        jTextArea_Laboratorio_Entrada.setRows(5);
+        jScrollPane_Laboratorio_Entrada.setViewportView(jTextArea_Laboratorio_Entrada);
 
-        Dentro_Portal_2.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout Dentro_Portal_2Layout = new javax.swing.GroupLayout(Dentro_Portal_2);
-        Dentro_Portal_2.setLayout(Dentro_Portal_2Layout);
-        Dentro_Portal_2Layout.setHorizontalGroup(
-            Dentro_Portal_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Dentro_Portal_2Layout.setVerticalGroup(
-            Dentro_Portal_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        Salida_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout Salida_2Layout = new javax.swing.GroupLayout(Salida_2);
-        Salida_2.setLayout(Salida_2Layout);
-        Salida_2Layout.setHorizontalGroup(
-            Salida_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Salida_2Layout.setVerticalGroup(
-            Salida_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        jTextArea_Laboratorio_Dentro.setColumns(20);
+        jTextArea_Laboratorio_Dentro.setRows(5);
+        jScrollPane_Laboratorio_Dentro.setViewportView(jTextArea_Laboratorio_Dentro);
 
         javax.swing.GroupLayout Panel_Portal_LaboratorioLayout = new javax.swing.GroupLayout(Panel_Portal_Laboratorio);
         Panel_Portal_Laboratorio.setLayout(Panel_Portal_LaboratorioLayout);
         Panel_Portal_LaboratorioLayout.setHorizontalGroup(
             Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Dentro_Portal_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Salida_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Entrada_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_LaboratorioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane_Laboratorio_Dentro, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(jScrollPane_Laboratorio_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane_Laboratorio_Entrada, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         Panel_Portal_LaboratorioLayout.setVerticalGroup(
             Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_LaboratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Dentro_Portal_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(Panel_Portal_LaboratorioLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(Salida_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Entrada_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jScrollPane_Laboratorio_Entrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_LaboratorioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane_Laboratorio_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+            .addComponent(jScrollPane_Laboratorio_Dentro)
         );
 
         Panel_Portal_Centro_Comercial.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Centro_Comercial.setOpaque(false);
 
-        Entrada_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea_Centro_Comercial_Dentro.setColumns(20);
+        jTextArea_Centro_Comercial_Dentro.setRows(5);
+        jScrollPane_Centro_Comercial_Dentro.setViewportView(jTextArea_Centro_Comercial_Dentro);
 
-        javax.swing.GroupLayout Entrada_3Layout = new javax.swing.GroupLayout(Entrada_3);
-        Entrada_3.setLayout(Entrada_3Layout);
-        Entrada_3Layout.setHorizontalGroup(
-            Entrada_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Entrada_3Layout.setVerticalGroup(
-            Entrada_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
+        jTextArea_Centro_Comercial_Salida.setColumns(20);
+        jTextArea_Centro_Comercial_Salida.setRows(5);
+        jScrollPane_Centro_Comercial_Salida.setViewportView(jTextArea_Centro_Comercial_Salida);
 
-        Dentro_Portal_3.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout Dentro_Portal_3Layout = new javax.swing.GroupLayout(Dentro_Portal_3);
-        Dentro_Portal_3.setLayout(Dentro_Portal_3Layout);
-        Dentro_Portal_3Layout.setHorizontalGroup(
-            Dentro_Portal_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Dentro_Portal_3Layout.setVerticalGroup(
-            Dentro_Portal_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        Salida_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout Salida_3Layout = new javax.swing.GroupLayout(Salida_3);
-        Salida_3.setLayout(Salida_3Layout);
-        Salida_3Layout.setHorizontalGroup(
-            Salida_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Salida_3Layout.setVerticalGroup(
-            Salida_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        jTextArea_Centro_Comercial_Entrada.setColumns(20);
+        jTextArea_Centro_Comercial_Entrada.setRows(5);
+        jScrollPane_Centro_Comercial_Entrada.setViewportView(jTextArea_Centro_Comercial_Entrada);
 
         javax.swing.GroupLayout Panel_Portal_Centro_ComercialLayout = new javax.swing.GroupLayout(Panel_Portal_Centro_Comercial);
         Panel_Portal_Centro_Comercial.setLayout(Panel_Portal_Centro_ComercialLayout);
         Panel_Portal_Centro_ComercialLayout.setHorizontalGroup(
             Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Dentro_Portal_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Salida_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Entrada_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane_Centro_Comercial_Dentro, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane_Centro_Comercial_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane_Centro_Comercial_Entrada, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addContainerGap())
         );
         Panel_Portal_Centro_ComercialLayout.setVerticalGroup(
             Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Dentro_Portal_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(Salida_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Entrada_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane_Centro_Comercial_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_Centro_ComercialLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel_Portal_Centro_ComercialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane_Centro_Comercial_Entrada, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jScrollPane_Centro_Comercial_Dentro))
+                .addContainerGap())
         );
 
         Panel_Portal_Alcantarillado.setBackground(new java.awt.Color(156, 28, 156));
         Panel_Portal_Alcantarillado.setOpaque(false);
 
-        Entrada_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea_Alcantarillado_Salida.setColumns(20);
+        jTextArea_Alcantarillado_Salida.setRows(5);
+        jScrollPane_Alcantarillado_Salida.setViewportView(jTextArea_Alcantarillado_Salida);
 
-        javax.swing.GroupLayout Entrada_4Layout = new javax.swing.GroupLayout(Entrada_4);
-        Entrada_4.setLayout(Entrada_4Layout);
-        Entrada_4Layout.setHorizontalGroup(
-            Entrada_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Entrada_4Layout.setVerticalGroup(
-            Entrada_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
+        jTextArea_Alcantarillado_Entrada.setColumns(20);
+        jTextArea_Alcantarillado_Entrada.setRows(5);
+        jScrollPane_Alcantarillado_Entrada.setViewportView(jTextArea_Alcantarillado_Entrada);
 
-        Dentro_Portal_4.setBorder(new javax.swing.border.MatteBorder(null));
-        Dentro_Portal_4.setToolTipText("");
-
-        javax.swing.GroupLayout Dentro_Portal_4Layout = new javax.swing.GroupLayout(Dentro_Portal_4);
-        Dentro_Portal_4.setLayout(Dentro_Portal_4Layout);
-        Dentro_Portal_4Layout.setHorizontalGroup(
-            Dentro_Portal_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Dentro_Portal_4Layout.setVerticalGroup(
-            Dentro_Portal_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        Salida_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout Salida_4Layout = new javax.swing.GroupLayout(Salida_4);
-        Salida_4.setLayout(Salida_4Layout);
-        Salida_4Layout.setHorizontalGroup(
-            Salida_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
-        Salida_4Layout.setVerticalGroup(
-            Salida_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        jTextArea_Alcantarillado_Dentro.setColumns(20);
+        jTextArea_Alcantarillado_Dentro.setRows(5);
+        jScrollPane_Alcantarillado_Dentro.setViewportView(jTextArea_Alcantarillado_Dentro);
 
         javax.swing.GroupLayout Panel_Portal_AlcantarilladoLayout = new javax.swing.GroupLayout(Panel_Portal_Alcantarillado);
         Panel_Portal_Alcantarillado.setLayout(Panel_Portal_AlcantarilladoLayout);
         Panel_Portal_AlcantarilladoLayout.setHorizontalGroup(
             Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                .addContainerGap(92, Short.MAX_VALUE)
+                .addComponent(jScrollPane_Alcantarillado_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane_Alcantarillado_Entrada, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Dentro_Portal_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Salida_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(15, 15, 15)
-                    .addComponent(Entrada_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(jScrollPane_Alcantarillado_Dentro, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(183, Short.MAX_VALUE)))
         );
         Panel_Portal_AlcantarilladoLayout.setVerticalGroup(
             Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane_Alcantarillado_Entrada, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane_Alcantarillado_Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
             .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(Panel_Portal_AlcantarilladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Dentro_Portal_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(Salida_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(Entrada_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_Portal_AlcantarilladoLayout.createSequentialGroup()
+                    .addContainerGap(8, Short.MAX_VALUE)
+                    .addComponent(jScrollPane_Alcantarillado_Dentro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
 
         javax.swing.GroupLayout Panel_Zona_PortalesLayout = new javax.swing.GroupLayout(Panel_Zona_Portales);
@@ -809,20 +796,24 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Zona_PortalesLayout.setHorizontalGroup(
             Panel_Zona_PortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(PORTALES))
-            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(Panel_Portal_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Panel_Portal_Bosque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
             .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Panel_Portal_Laboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Panel_Portal_Centro_Comercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(Panel_Portal_Alcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(Panel_Zona_PortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(PORTALES))
+                    .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Panel_Portal_Laboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Panel_Portal_Centro_Comercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_Zona_PortalesLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(Panel_Portal_Alcantarillado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         Panel_Zona_PortalesLayout.setVerticalGroup(
             Panel_Zona_PortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -852,10 +843,12 @@ public class Interfaz extends javax.swing.JFrame {
         Panel_Bosque.setBackground(new java.awt.Color(153, 255, 153));
         Panel_Bosque.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTextAreaNinosBosque.setEditable(false);
         jTextAreaNinosBosque.setColumns(20);
         jTextAreaNinosBosque.setRows(5);
         ScrollPanel_NiñosBosque.setViewportView(jTextAreaNinosBosque);
 
+        jTextAreaDemogorgonsBosque.setEditable(false);
         jTextAreaDemogorgonsBosque.setColumns(20);
         jTextAreaDemogorgonsBosque.setRows(5);
         ScrollPanel_DemogorgonsBosque.setViewportView(jTextAreaDemogorgonsBosque);
@@ -884,10 +877,12 @@ public class Interfaz extends javax.swing.JFrame {
         Laboratorio.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         Laboratorio.setText("Laboratorio");
 
+        jTextAreaNinosLaboratorio.setEditable(false);
         jTextAreaNinosLaboratorio.setColumns(20);
         jTextAreaNinosLaboratorio.setRows(5);
         ScrollPanel_NiñosLaboratorio.setViewportView(jTextAreaNinosLaboratorio);
 
+        jTextAreaDemogorgonsLaboratorio.setEditable(false);
         jTextAreaDemogorgonsLaboratorio.setColumns(20);
         jTextAreaDemogorgonsLaboratorio.setRows(5);
         ScrollPanel_DemogorgonsLaboratorio.setViewportView(jTextAreaDemogorgonsLaboratorio);
@@ -926,12 +921,14 @@ public class Interfaz extends javax.swing.JFrame {
 
         Panel_Portal_Centro_Comercial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextAreaNinosCentroComercial.setEditable(false);
         jTextAreaNinosCentroComercial.setColumns(20);
         jTextAreaNinosCentroComercial.setRows(5);
         ScrollPanel_NiñosCentroComercial.setViewportView(jTextAreaNinosCentroComercial);
 
         Panel_Portal_Centro_Comercial1.add(ScrollPanel_NiñosCentroComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 70));
 
+        jTextAreaDemogorgonsCentroComercial.setEditable(false);
         jTextAreaDemogorgonsCentroComercial.setColumns(20);
         jTextAreaDemogorgonsCentroComercial.setRows(5);
         ScrollPanel_DemogorgonsCentroComercial.setViewportView(jTextAreaDemogorgonsCentroComercial);
@@ -946,10 +943,12 @@ public class Interfaz extends javax.swing.JFrame {
 
         Panel_Portal_Alcantarillado1.setBackground(new java.awt.Color(153, 153, 153));
 
+        jTextAreaNinosAlcantarillado.setEditable(false);
         jTextAreaNinosAlcantarillado.setColumns(20);
         jTextAreaNinosAlcantarillado.setRows(5);
         ScrollPanel_NiñosAlcantarillado.setViewportView(jTextAreaNinosAlcantarillado);
 
+        jTextAreaDemogorgonsAlcantarillado.setEditable(false);
         jTextAreaDemogorgonsAlcantarillado.setColumns(20);
         jTextAreaDemogorgonsAlcantarillado.setRows(5);
         ScrollPanel_DemogorgonsAlcantarillado.setViewportView(jTextAreaDemogorgonsAlcantarillado);
@@ -1211,14 +1210,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField Cantidad_Sangre;
     private javax.swing.JLabel Centro_Comercial;
     private javax.swing.JLabel Demogorgon;
-    private javax.swing.JPanel Dentro_Portal_1;
-    private javax.swing.JPanel Dentro_Portal_2;
-    private javax.swing.JPanel Dentro_Portal_3;
-    private javax.swing.JPanel Dentro_Portal_4;
-    private javax.swing.JPanel Entrada_1;
-    private javax.swing.JPanel Entrada_2;
-    private javax.swing.JPanel Entrada_3;
-    private javax.swing.JPanel Entrada_4;
     private javax.swing.JLabel HAWKINS;
     private javax.swing.JLabel Imagen_Hawkins;
     private javax.swing.JLabel Label_SANGRE;
@@ -1239,10 +1230,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_Zona_Hawkins;
     private javax.swing.JPanel Panel_Zona_Portales;
     private javax.swing.JPanel Panel_Zona_Upsidedown;
-    private javax.swing.JPanel Salida_1;
-    private javax.swing.JPanel Salida_2;
-    private javax.swing.JPanel Salida_3;
-    private javax.swing.JPanel Salida_4;
     private javax.swing.JScrollPane ScrollPanel_Calle_Principal;
     private javax.swing.JScrollPane ScrollPanel_DemogorgonsAlcantarillado;
     private javax.swing.JScrollPane ScrollPanel_DemogorgonsBosque;
@@ -1255,6 +1242,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane ScrollPanel_Radio_WSQK;
     private javax.swing.JScrollPane ScrollPanel_Sotano_Byers;
     private javax.swing.JLabel Sotano_Byers;
+    private javax.swing.JTextArea TextArea_Bosque_Entrada;
+    private javax.swing.JTextArea TextArea_Bosque_Salida;
     private javax.swing.JLabel Texto_Eventos;
     private javax.swing.JLabel Texto_NIÑOS_CAPTURADOS;
     private javax.swing.JLabel Texto_NIÑOS_CAPTURADOS1;
@@ -1263,6 +1252,18 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Textura_Laboratorio;
     private javax.swing.JLabel UPSIDEDOWN;
     private javax.swing.JLabel Vecna;
+    private javax.swing.JScrollPane jScrollPaneBosque_Dentro;
+    private javax.swing.JScrollPane jScrollPaneBosque_Entrada;
+    private javax.swing.JScrollPane jScrollPaneBosque_Salida;
+    private javax.swing.JScrollPane jScrollPane_Alcantarillado_Dentro;
+    private javax.swing.JScrollPane jScrollPane_Alcantarillado_Entrada;
+    private javax.swing.JScrollPane jScrollPane_Alcantarillado_Salida;
+    private javax.swing.JScrollPane jScrollPane_Centro_Comercial_Dentro;
+    private javax.swing.JScrollPane jScrollPane_Centro_Comercial_Entrada;
+    private javax.swing.JScrollPane jScrollPane_Centro_Comercial_Salida;
+    private javax.swing.JScrollPane jScrollPane_Laboratorio_Dentro;
+    private javax.swing.JScrollPane jScrollPane_Laboratorio_Entrada;
+    private javax.swing.JScrollPane jScrollPane_Laboratorio_Salida;
     private javax.swing.JTextArea jTextAreaCalle;
     private javax.swing.JTextArea jTextAreaDemogorgonsAlcantarillado;
     private javax.swing.JTextArea jTextAreaDemogorgonsBosque;
@@ -1274,5 +1275,15 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextAreaNinosLaboratorio;
     private javax.swing.JTextArea jTextAreaRadio;
     private javax.swing.JTextArea jTextAreaSotano;
+    private javax.swing.JTextArea jTextArea_Alcantarillado_Dentro;
+    private javax.swing.JTextArea jTextArea_Alcantarillado_Entrada;
+    private javax.swing.JTextArea jTextArea_Alcantarillado_Salida;
+    private javax.swing.JTextArea jTextArea_Bosque_Dentro;
+    private javax.swing.JTextArea jTextArea_Centro_Comercial_Dentro;
+    private javax.swing.JTextArea jTextArea_Centro_Comercial_Entrada;
+    private javax.swing.JTextArea jTextArea_Centro_Comercial_Salida;
+    private javax.swing.JTextArea jTextArea_Laboratorio_Dentro;
+    private javax.swing.JTextArea jTextArea_Laboratorio_Entrada;
+    private javax.swing.JTextArea jTextArea_Laboratorio_Salida;
     // End of variables declaration//GEN-END:variables
 }

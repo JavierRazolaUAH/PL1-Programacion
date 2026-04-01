@@ -13,34 +13,41 @@ import Interfaz.Interfaz;
 public class Main {
 
     public static void main(String args[]) {
-// 1. Creamos el "mapa" o entorno con todas las zonas seguras
+System.out.println(">>> INICIANDO SIMULACIÓN: LA BATALLA DE HAWKINS...");
+
+        // 1. Creamos el "mapa" o entorno con todas las zonas seguras y el Upside Down
         AgrupacionZonas zonas = new AgrupacionZonas();
         
         // 2. Arrancamos la interfaz gráfica pasándole nuestro mapa
-        // Usamos invokeLater porque es la forma más segura de arrancar ventanas en Java
+        // Usamos invokeLater porque es la forma más segura de arrancar ventanas en Java Swing
         java.awt.EventQueue.invokeLater(() -> {
             Interfaz ventana = new Interfaz(zonas);
             ventana.setLocationRelativeTo(null); // Centra la ventana en la pantalla
             ventana.setVisible(true);
         });
         
-        System.out.println(">>> INICIANDO SIMULACIÓN DE PRUEBA...");
+        // 3. Nace el Demogorgon Alpha en el Upside Down
+        Demogorgon d0 = new Demogorgon("D0000", zonas);
+        d0.start();
         
-        // 3. Creamos 3 niños de prueba
+        // 4. Creamos los 100 niños de forma escalonada
         for (int i = 1; i <= 100; i++) {
             // Generamos un ID único: N001, N002... N100
             String idNino = String.format("N%03d", i);
 
-            // Creamos el hilo del niño pasándole la referencia de las zonas
+            // Creamos y arrancamos el hilo del niño
             Nino n = new Nino(idNino, zonas);
-
-            // Arrancamos el hilo del niño
             n.start();
+
+            // --- EL TRUCO ESTRELLA ---
+            // Hacemos que el programa principal espere un poco antes de crear al siguiente niño.
+            // Generará un niño nuevo cada 0.5 - 1 segundo aproximadamente.
+            try {
+                Thread.sleep(500 + (int)(Math.random() * 500));
+            } catch (InterruptedException e) {
+                System.out.println("Generación de niños interrumpida.");
+            }
         }
         
-        Demogorgon d0 = new Demogorgon("D0000", zonas);
-        // 4. Lanzamos los hilos para que empiecen a moverse
-  
-        d0.start();
-    }
-}
+        System.out.println(">>> TODOS LOS NIÑOS HAN ENTRADO EN HAWKINS.");
+}}
