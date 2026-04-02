@@ -43,7 +43,7 @@ System.out.println(">>> INICIANDO SIMULACIÓN: LA BATALLA DE HAWKINS...");
             // Hacemos que el programa principal espere un poco antes de crear al siguiente niño.
             // Generará un niño nuevo cada 0.5 - 1 segundo aproximadamente.
             try {
-                Thread.sleep(500 + (int)(Math.random() * 500));
+                Thread.sleep(500 + (int)(Math.random() * 1500));
             } catch (InterruptedException e) {
                 System.out.println("Generación de niños interrumpida.");
             }

@@ -19,86 +19,80 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Portal {
-    private final String nombre;
-    private final int capacidadGrupo; // 2, 3 o 4 dependiendo del portal
+private final String nombre;
+    private final int capacidadGrupo; 
     
     // --- HERRAMIENTAS DE SINCRONIZACIÓN ---
     private final Lock lock = new ReentrantLock();
-    private final Condition esperandoParaCruzarAlUpsideDown = lock.newCondition();
-    private final Condition esperandoParaVolverAHawkins = lock.newCondition();
+    private final Condition esperandoParaCruzar = lock.newCondition();
+    private final Condition esperandoParaVolver = lock.newCondition();
     
     // --- ESTADO DEL PORTAL ---
     private boolean ocupado = false;
-    private int esperandoVolver = 0; // Contador para darles prioridad
-    private Nino cruzando = null;    // Para pintar en la interfaz quién está dentro
+    private int esperandoVolver = 0; 
+    private Nino cruzando = null; // El que está en el túnel en ese milisegundo
     
     // --- LISTAS DE ESPERA ---
     private final Queue<Nino> colaHaciaUpsideDown = new LinkedList<>();
     private final List<Nino> grupoActual = new ArrayList<>();
     private final List<Nino> esperandoVolverLista = new ArrayList<>();
 
-    // Constructor: ahora recibe cuántos niños hacen falta para formar grupo
     public Portal(String nombre, int capacidadGrupo) {
         this.nombre = nombre;
         this.capacidadGrupo = capacidadGrupo;
     }
 
     // =================================================================
-    // 1. SALIR AL UPSIDE DOWN (Requiere formar grupo y tiene baja prioridad)
+    // 1. SALIR AL UPSIDE DOWN (Se forma el grupo, pero cruzan de 1 en 1)
     // =================================================================
     public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
         lock.lock();
         try {
             colaHaciaUpsideDown.add(nino);
-            Logs.getInstance().log(nino.getIdNino() + " espera en " + nombre + " para ir al Upside Down. (Esperando: " + colaHaciaUpsideDown.size() + "/" + capacidadGrupo + ")");
+            Logs.getInstance().log(nino.getIdNino() + " espera en " + nombre + " (Esperando: " + colaHaciaUpsideDown.size() + "/" + capacidadGrupo + ")");
             
-            // Avisamos por si ya se puede formar un grupo
-            esperandoParaCruzarAlUpsideDown.signalAll();
-
-            // Bucle de espera: Mientras no esté en el grupo, o el portal esté ocupado, o haya gente queriendo volver (PRIORIDAD)
-            while (!grupoActual.contains(nino) || ocupado || esperandoVolver > 0) {
+            while (true) {
+                // 1. Si soy el PRIMERO de la fila del grupo VIP, y el túnel está libre... ¡Me toca cruzar!
+                if (!grupoActual.isEmpty() && grupoActual.get(0).equals(nino) && !ocupado && esperandoVolver == 0) {
+                    break; 
+                }
                 
-                // Si no hay grupo activo, hay suficientes niños para formarlo, no hay nadie queriendo volver, y está libre: FORMAMOS GRUPO
+                // 2. Si no hay grupo formado, hay gente suficiente, y el túnel está libre... ¡Formamos grupo!
                 if (grupoActual.isEmpty() && colaHaciaUpsideDown.size() >= capacidadGrupo && esperandoVolver == 0 && !ocupado) {
                     for (int i = 0; i < capacidadGrupo; i++) {
                         grupoActual.add(colaHaciaUpsideDown.poll());
                     }
-                    Logs.getInstance().log("¡Grupo formado en " + nombre + " para cruzar al Upside Down!");
-                    esperandoParaCruzarAlUpsideDown.signalAll(); // Despierta a los afortunados
+                    esperandoParaCruzar.signalAll(); // Avisamos a todos
+                    continue; // Reiniciamos el bucle para que el primero del nuevo grupo pase
                 }
                 
-                esperandoParaCruzarAlUpsideDown.await(); // Se queda dormido hasta que le toque
+                // 3. Si no es mi turno, a dormir
+                esperandoParaCruzar.await(); 
             }
 
             // --- COMIENZA A CRUZAR ---
             ocupado = true;
+            grupoActual.remove(nino); // Desaparece del recuadro izquierdo 
+            cruzando = nino;          // Aparece en el recuadro central
             Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " hacia el Upside Down.");
+            
         } finally {
             lock.unlock();
         }
 
-        // Fuera del lock simulamos el tiempo de cruce (1 segundo)
-        cruzando = nino;
+        // Simula el tiempo de cruce (1 segundo)
         Thread.sleep(1000); 
-        cruzando = null;
 
         lock.lock();
         try {
+            cruzando = null; // Desaparece del túnel central
             ocupado = false;
-            grupoActual.remove(nino); // Ya ha cruzado, sale del grupo
             
-            // Si el grupo ha terminado de cruzar y hay gente para formar otro (y nadie quiere volver), formamos otro grupo
-            if (grupoActual.isEmpty() && colaHaciaUpsideDown.size() >= capacidadGrupo && esperandoVolver == 0) {
-                for (int i = 0; i < capacidadGrupo; i++) {
-                    grupoActual.add(colaHaciaUpsideDown.poll());
-                }
-            }
-            
-            // --- GESTIÓN DE PRIORIDADES AL TERMINAR ---
+            // Avisamos a los siguientes
             if (esperandoVolver > 0) {
-                esperandoParaVolverAHawkins.signal(); // Damos paso a los que vuelven
+                esperandoParaVolver.signalAll(); // Tienen prioridad los que vuelven
             } else {
-                esperandoParaCruzarAlUpsideDown.signalAll(); // Si no, damos paso al resto del grupo o a grupos nuevos
+                esperandoParaCruzar.signalAll(); // Que pase el siguiente del grupo de ida
             }
             Logs.getInstance().log(nino.getIdNino() + " TERMINA de cruzar " + nombre + " y entra al Upside Down.");
         } finally {
@@ -106,59 +100,70 @@ public class Portal {
         }
     }
 
-
     // =================================================================
-    // 2. REGRESAR A HAWKINS (Cruce individual, PRIORIDAD ABSOLUTA)
+    // 2. REGRESAR A HAWKINS (Cruce individual en orden, PRIORIDAD ABSOLUTA)
     // =================================================================
     public void cruzarAHawkins(Nino nino) throws InterruptedException {
         lock.lock();
         try {
-            esperandoVolver++; // Aumentamos el contador de prioridad
-            esperandoVolverLista.add(nino);
+            esperandoVolver++; 
+            esperandoVolverLista.add(nino); // Aparece en el recuadro derecho
             
-            // Si está ocupado, tiene que esperar sí o sí
-            while (ocupado) {
-                Logs.getInstance().log(nino.getIdNino() + " espera en " + nombre + " para VOLVER a Hawkins. (¡Tiene prioridad!)");
-                esperandoParaVolverAHawkins.await();
+            while (true) {
+                // Si soy el primero de la cola para volver y el túnel está libre, cruzo
+                if (!esperandoVolverLista.isEmpty() && esperandoVolverLista.get(0).equals(nino) && !ocupado) {
+                    break;
+                }
+                esperandoParaVolver.await();
             }
             
             ocupado = true;
+            esperandoVolverLista.remove(nino); // Desaparece del derecho
+            cruzando = nino;                   // Aparece en el central
             Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " volviendo a Hawkins.");
         } finally {
             lock.unlock();
         }
 
-        // Simula el cruce individual
-        cruzando = nino;
         Thread.sleep(1000);
-        cruzando = null;
 
         lock.lock();
         try {
+            cruzando = null;
             ocupado = false;
             esperandoVolver--;
-            esperandoVolverLista.remove(nino);
             
-            // Al terminar de cruzar, si hay más niños queriendo volver, pasan ellos
             if (esperandoVolver > 0) {
-                esperandoParaVolverAHawkins.signal();
+                esperandoParaVolver.signalAll(); // Pasa el siguiente que vuelve
             } else {
-                // Si ya no queda nadie para volver, dejamos que crucen los grupos hacia el Upside Down
-                esperandoParaCruzarAlUpsideDown.signalAll();
+                esperandoParaCruzar.signalAll(); // Si no quedan regresos, volvemos a dar paso a la ida
             }
-            Logs.getInstance().log(nino.getIdNino() + " TERMINA de cruzar " + nombre + " y está a salvo en Hawkins.");
+            Logs.getInstance().log(nino.getIdNino() + " TERMINA de cruzar " + nombre + " y está a salvo.");
         } finally {
             lock.unlock();
         }
     }
 
-    // --- GETTERS (Igual que los tenías en Tunel.java para tu Interfaz) ---
+    // --- GETTERS PARA LA INTERFAZ ---
     public String getNombre() { return nombre; }
-    public Nino getCruzando() { return cruzando; }
+    
+    // Este método devuelve una lista con 1 solo niño (o vacía) para que tu interfaz actual funcione sin cambiarla
+    public List<Nino> getCruzando() { 
+        lock.lock();
+        try { 
+            List<Nino> listaEnMedio = new ArrayList<>();
+            if (cruzando != null) listaEnMedio.add(cruzando);
+            return listaEnMedio; 
+        } finally { lock.unlock(); }
+    }
     
     public List<Nino> getNinosEsperandoAlUpsideDown() {
         lock.lock();
-        try { return new ArrayList<>(colaHaciaUpsideDown); } finally { lock.unlock(); }
+        try { 
+            List<Nino> todosEnEspera = new ArrayList<>(grupoActual);
+            todosEnEspera.addAll(colaHaciaUpsideDown);
+            return todosEnEspera; 
+        } finally { lock.unlock(); }
     }
     
     public List<Nino> getNinosEsperandoAHawkins() {
@@ -166,4 +171,5 @@ public class Portal {
         try { return new ArrayList<>(esperandoVolverLista); } finally { lock.unlock(); }
     }
 }
+
 

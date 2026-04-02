@@ -53,14 +53,18 @@ public class Nino  extends Thread{
                 
                 zonas.esperarSiPausado();
 
+                // --- ¡EL TRUCO DE LA RUTA! ---
+                // Tiramos el dado UNA sola vez (0 = Bosque, 1 = Lab, 2 = Centro Comercial, 3 = Alcantarillado)
+                int rutaElegida = (int) (Math.random() * 4);
+
                 // --- 2. CRUZAR PORTAL HACIA EL UPSIDE DOWN ---
-                int portalIda = (int) (Math.random() * 4); // Elige un portal del 0 al 3
-                zonas.getPortal(portalIda).cruzarAlUpsideDown(this);
+                zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
                 
                 zonas.esperarSiPausado();
                 
                 // --- 3. UPSIDE DOWN (Recolección y Peligro) ---
-                ZonaInsegura zonaActual = zonas.getUpsidedown().obtenerZonaAleatoria();
+                // Entra exactamente a la zona insegura que está al otro lado de su portal
+                ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
                 zonaActual.entrarNino(this);
                 
                 try {
@@ -90,9 +94,8 @@ public class Nino  extends Thread{
                 zonas.esperarSiPausado();
 
                 // --- 4. CRUZAR PORTAL DE REGRESO A HAWKINS ---
-                // Puede volver por el mismo o por uno aleatorio. Usaremos uno aleatorio.
-                int portalRegreso = (int) (Math.random() * 4);
-                zonas.getPortal(portalRegreso).cruzarAHawkins(this);
+                // Vuelve a casa exactamente por el mismo portal por el que entró
+                zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
                 zonas.esperarSiPausado();
                 

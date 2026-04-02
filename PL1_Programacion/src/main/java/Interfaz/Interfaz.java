@@ -4,6 +4,8 @@
  */
 package Interfaz;
 
+import Clases.Logs;
+
 /**
  *
  * @author javir
@@ -40,19 +42,8 @@ public class Interfaz extends javax.swing.JFrame {
     // ==========================================
     //       ACTUALIZADORES: SÓTANO BYERS
     // ==========================================
-    public void actualizarSotanoGUI() {
-        if (zonas == null || zonas.isPausado()) {
-            return; // Si está pausado, no actualiza
-        }
-        java.util.List<Clases.Nino> ninos = zonas.getSotanoByers().getNinosEnSotano();
-        StringBuilder sb = new StringBuilder();
-
-        for (Clases.Nino n : ninos) {
-            if (n.isVivo()) {
-                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
-            }
-        }
-        jTextAreaSotano.setText(sb.toString()); // Actualiza el área de texto
+public void actualizarSotanoGUI() {
+        actualizarListaNinos(zonas.getSotanoByers().getNinosEnSotano(), jTextAreaSotano);
     }
 
     private void iniciarActualizadorSotano() {
@@ -65,24 +56,15 @@ public class Interfaz extends javax.swing.JFrame {
     // ==========================================
     //       ACTUALIZADORES: RADIO WSQK
     // ==========================================
-    public void actualizarRadioGUI() {
-        if (zonas == null || zonas.isPausado()) {
-            return; // Si está pausado, no actualiza
-        }
-        java.util.List<Clases.Nino> ninos = zonas.getRadioWSQK().getNinosEnRadio();
-        StringBuilder sb = new StringBuilder();
-
-        for (Clases.Nino n : ninos) {
-            if (n.isVivo()) {
-                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
-            }
-        }
-        jTextAreaRadio.setText(sb.toString()); // Actualiza el área de texto
+public void actualizarRadioGUI() {
+        // Usamos el método genérico que ya hace toda la magia del StringBuilder
+        actualizarListaNinos(zonas.getRadioWSQK().getNinosEnRadio(), jTextAreaRadio);
     }
 
     private void iniciarActualizadorRadio() {
         new javax.swing.Timer(500, e -> {
             actualizarRadioGUI();
+            actualizarSangreGUI();
         }).start();
     }
 
@@ -90,26 +72,26 @@ public class Interfaz extends javax.swing.JFrame {
     // ==========================================
     //       ACTUALIZADORES: CALLE PRINCIPAL
     // ==========================================
-    public void actualizarCalleGUI() {
-        if (zonas == null || zonas.isPausado()) {
-            return; // Si está pausado, no actualiza
-        }
-        java.util.List<Clases.Nino> ninos = zonas.getCallePrincipal().getNinosEnCalle();
-        StringBuilder sb = new StringBuilder();
-
-        for (Clases.Nino n : ninos) {
-            if (n.isVivo()) {
-                sb.append(n.getIdNino()).append("\n"); // Añade el ID del niño si está vivo
-            }
-        }
-        jTextAreaCalle.setText(sb.toString()); // Actualiza el área de texto
+public void actualizarCalleGUI() {
+        actualizarListaNinos(zonas.getCallePrincipal().getNinosEnCalle(), jTextAreaCalle);
     }
     private void iniciarActualizadorCalle() {
         new javax.swing.Timer(500, e -> {
             actualizarCalleGUI();
         }).start();
     }
-
+// ==========================================
+    //        ACTUALIZADOR: CONTADOR SANGRE
+    // ==========================================
+    public void actualizarSangreGUI() {
+        if (zonas == null) return;
+        
+        // Leemos el dato de la Radio
+        int sangre = zonas.getRadioWSQK().getSangreTotalAlmacenada();
+        
+        // ACTUALIZA EL NOMBRE: Pon aquí el nombre de tu variable (ej: Sangre_Total)
+        Cantidad_Sangre.setText(String.valueOf(sangre));
+    }
     
     // ==========================================
     //       ACTUALIZADORES: Zonas Inseguras
@@ -231,42 +213,51 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // --- 2. ACTUALIZADORES ESPECÍFICOS DE CADA PORTAL ---
+    // --- 2. ACTUALIZADORES ESPECÍFICOS DE CADA PORTAL (Corregido Izq -> Medio -> Der) ---
     public void actualizarPortalBosqueGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(0);
         
-        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), TextArea_Bosque_Entrada);
-        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Bosque_Dentro);
-        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), TextArea_Bosque_Salida);
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Bosque_Dentro);
+        actualizarListaNinos(portal.getCruzando(), TextArea_Bosque_Salida); // ¡Usamos actualizarListaNinos también aquí!
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), TextArea_Bosque_Entrada);
     }
 
     public void actualizarPortalLaboratorioGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(1);
         
-        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Laboratorio_Entrada);
-        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Laboratorio_Dentro);
-        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Laboratorio_Salida);
+        // IZQUIERDA: Esperando para ir
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Laboratorio_Dentro);
+        // MEDIO: Cruzando en bloque
+        actualizarListaNinos(portal.getCruzando(), jTextArea_Laboratorio_Salida);
+        // DERECHA: Esperando para volver
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Laboratorio_Entrada);
     }
 
     public void actualizarPortalCentroComercialGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(2);
         
-        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Centro_Comercial_Entrada);
-        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Centro_Comercial_Dentro);
-        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Centro_Comercial_Salida);
+        // IZQUIERDA: Esperando para ir
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Centro_Comercial_Dentro);
+        // MEDIO: Cruzando en bloque
+        actualizarListaNinos(portal.getCruzando(), jTextArea_Centro_Comercial_Salida);
+        // DERECHA: Esperando para volver
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Centro_Comercial_Entrada);
     }
 
     public void actualizarPortalAlcantarilladoGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(3);
         
-        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Alcantarillado_Entrada);
-        actualizarNinoCruzando(portal.getCruzando(), jTextArea_Alcantarillado_Dentro);
-        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Alcantarillado_Salida);
+        // IZQUIERDA: Esperando para ir
+        actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Alcantarillado_Dentro);
+        // MEDIO: Cruzando en bloque
+        actualizarListaNinos(portal.getCruzando(), jTextArea_Alcantarillado_Salida);
+        // DERECHA: Esperando para volver
+        actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Alcantarillado_Entrada);
     }
-
     // --- 3. TIMER UNIFICADO ---
     private void iniciarActualizadoresPortales() {
         new javax.swing.Timer(500, e -> {
@@ -284,7 +275,9 @@ public class Interfaz extends javax.swing.JFrame {
             jScrollPaneBosque_Entrada, jScrollPaneBosque_Salida, jScrollPaneBosque_Dentro,
             jScrollPane_Laboratorio_Entrada, jScrollPane_Laboratorio_Salida, jScrollPane_Laboratorio_Dentro,
             jScrollPane_Centro_Comercial_Entrada, jScrollPane_Centro_Comercial_Salida, jScrollPane_Centro_Comercial_Dentro,
-            jScrollPane_Alcantarillado_Entrada, jScrollPane_Alcantarillado_Salida, jScrollPane_Alcantarillado_Dentro
+            jScrollPane_Alcantarillado_Entrada, jScrollPane_Alcantarillado_Salida, jScrollPane_Alcantarillado_Dentro,ScrollPanel_DemogorgonsAlcantarillado,
+            ScrollPanel_DemogorgonsBosque,ScrollPanel_DemogorgonsCentroComercial,ScrollPanel_DemogorgonsLaboratorio,ScrollPanel_NiñosAlcantarillado,ScrollPanel_NiñosBosque,
+            ScrollPanel_NiñosCentroComercial,ScrollPanel_NiñosLaboratorio,ScrollPanel_Radio_WSQK,ScrollPanel_Sotano_Byers
         };
 
         for (javax.swing.JScrollPane scroll : scrolls) {
@@ -303,6 +296,7 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
         Panel_Zona_Hawkins = new javax.swing.JPanel();
         ScrollPanel_Calle_Principal = new javax.swing.JScrollPane();
         jTextAreaCalle = new javax.swing.JTextArea();
@@ -451,6 +445,7 @@ public class Interfaz extends javax.swing.JFrame {
         Texto_NIÑOS_CAPTURADOS1 = new javax.swing.JLabel();
         Texto_Principal = new javax.swing.JLabel();
         Boton_Pausa = new javax.swing.JButton();
+        Boton_Reanudar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1115,24 +1110,34 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        Boton_Reanudar.setText("REANUDAR");
+        Boton_Reanudar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ReanudarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(870, 870, 870)
-                .addComponent(Boton_Pausa, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(Panel_Zona_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(Panel_Zona_Portales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(Panel_Zona_Upsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(Panel_Estadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Boton_Reanudar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Boton_Pausa, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Panel_Zona_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(25, 25, 25)
+                            .addComponent(Panel_Zona_Portales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(25, 25, 25)
+                            .addComponent(Panel_Zona_Upsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Panel_Estadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1141,7 +1146,9 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(Boton_Pausa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Texto_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Boton_Reanudar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Panel_Zona_Hawkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Panel_Zona_Portales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1164,7 +1171,21 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void Boton_PausaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_PausaActionPerformed
         // TODO add your handling code here:
+        if (zonas != null) {
+            zonas.pausar();
+            System.out.println("Simulación pausada.");
+            Logs.getInstance().log("SIMULACIÓN PARADA");
+        }
     }//GEN-LAST:event_Boton_PausaActionPerformed
+
+    private void Boton_ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ReanudarActionPerformed
+        // TODO add your handling code here:
+        if (zonas != null) {
+            zonas.reanudar();
+            System.out.println("Simulación reanudada.");
+            Logs.getInstance().log("SIMULACIÓN REANUDADA");
+        }
+    }//GEN-LAST:event_Boton_ReanudarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1205,6 +1226,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Alcantarillado;
     private javax.swing.JLabel Bosque;
     private javax.swing.JButton Boton_Pausa;
+    private javax.swing.JButton Boton_Reanudar;
     private javax.swing.JLabel Calle_Principal;
     private javax.swing.JLabel Calle_Principal2;
     private javax.swing.JTextField Cantidad_Sangre;
@@ -1252,6 +1274,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel Textura_Laboratorio;
     private javax.swing.JLabel UPSIDEDOWN;
     private javax.swing.JLabel Vecna;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPaneBosque_Dentro;
     private javax.swing.JScrollPane jScrollPaneBosque_Entrada;
     private javax.swing.JScrollPane jScrollPaneBosque_Salida;
