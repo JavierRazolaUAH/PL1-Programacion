@@ -31,6 +31,7 @@ public class CallePrincipal {
 public void inicio(Nino nino) throws InterruptedException {
         ninosEnCalle.put(nino);
         Logs.getInstance().log(nino.getIdNino() + " ha INICIADO su actividad en Hawkins (Calle Principal).");
+        Thread.sleep(1000);
         salirZona(nino); // Sale automáticamente sin esperar
     }
 

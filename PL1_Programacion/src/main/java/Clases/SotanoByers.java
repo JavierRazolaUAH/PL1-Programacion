@@ -15,7 +15,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * @author javir
  */
 public class SotanoByers {
-    // Cola concurrente para almacenar a los niños que están actualmente dentro
+// Cola concurrente para almacenar a los niños que están actualmente dentro
     private final BlockingQueue<Nino> ninosEnSotano;
     private final Random rand;
 
@@ -24,8 +24,8 @@ public class SotanoByers {
         this.rand = new Random();
     }
 
- // --- MÉTODOS DE ENTRADA Y SALIDA SEPARADOS ---
-public void entrarZona(Nino nino) throws InterruptedException {
+    // --- MÉTODOS DE ENTRADA Y SALIDA SEPARADOS ---
+    public void entrarZona(Nino nino) throws InterruptedException {
         ninosEnSotano.put(nino);
         Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO al Sótano Byers y empieza a prepararse.");
         

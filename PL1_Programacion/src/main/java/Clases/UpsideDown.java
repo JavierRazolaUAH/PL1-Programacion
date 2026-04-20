@@ -11,19 +11,21 @@ public class UpsideDown {
 
     // Lista con las 4 zonas inseguras
     private final List<ZonaInsegura> zonasInseguras = new ArrayList<>();
-    // Referencia a la Colmena (la crearemos después)
+    // Referencia a la Colmena
     private Colmena colmena; 
     private final Random random = new Random();
 
-    public UpsideDown() {
-        // Inicializamos las 4 zonas que pide la práctica
-        zonasInseguras.add(new ZonaInsegura("BOSQUE"));
-        zonasInseguras.add(new ZonaInsegura("LABORATORIO"));
-        zonasInseguras.add(new ZonaInsegura("CENTRO COMERCIAL"));
-        zonasInseguras.add(new ZonaInsegura("ALCANTARILLADO"));
+    // --- ACTUALIZACIÓN: El constructor ahora recibe 'zonas' ---
+    public UpsideDown(AgrupacionZonas zonas) {
+        // Pasamos la referencia de 'zonas' a cada ZonaInsegura al crearla
+        zonasInseguras.add(new ZonaInsegura("BOSQUE", zonas));
+        zonasInseguras.add(new ZonaInsegura("LABORATORIO", zonas));
+        zonasInseguras.add(new ZonaInsegura("CENTRO COMERCIAL", zonas));
+        zonasInseguras.add(new ZonaInsegura("ALCANTARILLADO", zonas));
         
-        // La colmena se inicializa aquí también
+        // Inicializamos la colmena y le conectamos el mundo
         this.colmena = new Colmena();
+        this.colmena.setZonas(zonas);
     }
 
     /**
@@ -34,7 +36,7 @@ public class UpsideDown {
     }
 
     /**
-     * Método para obtener una zona específica por nombre (útil para el Main o la GUI)
+     * Método para obtener una zona específica por nombre
      */
     public ZonaInsegura getZona(String nombre) {
         for (ZonaInsegura z : zonasInseguras) {
@@ -45,12 +47,29 @@ public class UpsideDown {
         return null;
     }
 
-    // Getters necesarios
+    // Getters
     public List<ZonaInsegura> getZonas() {
         return zonasInseguras;
     }
 
     public Colmena getColmena() {
         return colmena;
+    }
+    
+    /**
+     * Devuelve la zona insegura que tiene más niños en ese preciso milisegundo.
+     * Útil para el evento "LA RED MENTAL".
+     */
+    public ZonaInsegura obtenerZonaMasPoblada() {
+        ZonaInsegura zonaMasPoblada = zonasInseguras.get(0);
+        int maxNinos = zonaMasPoblada.getNinosEnZona().size();
+
+        for (ZonaInsegura zona : zonasInseguras) {
+            if (zona.getNinosEnZona().size() > maxNinos) {
+                maxNinos = zona.getNinosEnZona().size();
+                zonaMasPoblada = zona;
+            }
+        }
+        return zonaMasPoblada;
     }
 }

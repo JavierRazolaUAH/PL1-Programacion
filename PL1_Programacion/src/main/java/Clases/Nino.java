@@ -9,10 +9,12 @@ package Clases;
  * @author javir
  */
 public class Nino  extends Thread{
-    private String idNino;
+private String idNino;
     private boolean vivo = true;
     private boolean capturado = false;
+    private boolean bajoAtaque = false; 
     private int sangreRecolectada = 0;
+    
     // El niño necesita conocer el mapa para moverse
     private final AgrupacionZonas zonas; 
 
@@ -22,90 +24,111 @@ public class Nino  extends Thread{
     }
 
     // --- GETTERS Y SETTERS ---
-    public String getIdNino() {
-        return idNino;
-    }
+    public String getIdNino() { return idNino; }
+    public void setIdNino(String idNino) { this.idNino = idNino; }
 
-    public void setIdNino(String idNino) {
-        this.idNino = idNino;
-    }
-
-    public boolean isVivo() {
-        return vivo;
-    }
-
-    public void setVivo(boolean vivo) {
-        this.vivo = vivo;
-    }
+    public boolean isVivo() { return vivo; }
+    public void setVivo(boolean vivo) { this.vivo = vivo; }
     
-    public boolean isCapturado() {
-        return capturado;
-    }
+    public boolean isCapturado() { return capturado; }
+    public void setCapturado(boolean capturado) { this.capturado = capturado; }
 
-    public void setCapturado(boolean capturado) {
-        this.capturado = capturado;
-    }
-    // --- EL MOTOR DEL HILO ---
+    public boolean isBajoAtaque() { return bajoAtaque; }
+    public void setBajoAtaque(boolean bajoAtaque) { this.bajoAtaque = bajoAtaque; }
+
+    public int getSangreRecolectada() { return sangreRecolectada; }
+    public void setSangreRecolectada(int sangreRecolectada) { this.sangreRecolectada = sangreRecolectada; }
+    
+    // ==========================================
+    //        EL MOTOR DEL HILO (CICLO DE VIDA)
+    // ==========================================
     @Override
-public void run() {
-    try {
-        // 1. FASE DE NACIMIENTO
-        zonas.getCallePrincipal().inicio(this);
+    public void run() {
+        try {
+            // 1. FASE DE NACIMIENTO
+            zonas.getCallePrincipal().inicio(this);
 
-        // 2. CICLO ITERATIVO
-        while (vivo) {
-            zonas.esperarSiPausado();
-            
-            // --- NUEVA FASE: VIAJE AL UPSIDE DOWN ---
-            // Elegimos una zona aleatoria para ir a recolectar
-            ZonaInsegura zonaActual = zonas.getUpsidedown().obtenerZonaAleatoria();
-            
-            // Entramos en la lista de la zona
-            zonaActual.entrarNino(this);
-            
-            // Recolectamos sangre (dentro de recolectarSangre ya hay un sleep de 3-5s)
-            // Solo recolectamos si NO hemos sido capturados todavía
-            if (!capturado) {
-                zonaActual.recolectarSangre(this);
-            }
-            
-            // IMPORTANTE: Si un Demogorgon nos captura, él mismo nos saca de la zona.
-            // Pero si terminamos de recolectar y nadie nos ha pillado, salimos nosotros.
-            zonaActual.salirNino(this);
-            
-            // --- GESTIÓN DE CAPTURA ---
-            if (capturado) {
-                System.out.println(idNino + " ha sido capturado. Esperando en la Colmena...");
-                synchronized (this) {
-                    while (capturado) {
-                        this.wait(); // El hilo se duerme hasta que Eleven haga notify()
+            // 2. CICLO ITERATIVO
+            while (vivo) {
+                zonas.esperarSiPausado();
+                
+                // --- 1. PREPARACIÓN EN SÓTANO BYERS ---
+                zonas.getSotanoByers().entrarZona(this);
+                
+                zonas.esperarSiPausado();
+
+                // ¡LA LIMPIEZA! Nos borramos del sótano para que la interfaz se limpie 
+                // ANTES de salir corriendo hacia los portales.
+                zonas.getSotanoByers().salirZona(this);
+
+                // --- ¡EL TRUCO DE LA RUTA! ---
+                // Tiramos el dado UNA sola vez (0 = Bosque, 1 = Lab, 2 = Centro Comercial, 3 = Alcantarillado)
+                int rutaElegida = (int) (Math.random() * 4);
+
+                // --- 2. CRUZAR PORTAL HACIA EL UPSIDE DOWN ---
+                zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
+                
+                zonas.esperarSiPausado();
+                
+                // --- 3. UPSIDE DOWN (Recolección y Peligro) ---
+                // Entra exactamente a la zona insegura que está al otro lado de su portal
+                ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
+                zonaActual.entrarNino(this);
+                
+                try {
+                    // Intenta recolectar sangre (esto tiene el Thread.sleep que el Demogorgon puede interrumpir)
+                    zonaActual.recolectarSangre(this);
+                    
+                    // Si llega a esta línea, es que NADIE le ha interrumpido. ¡Éxito!
+                    this.sangreRecolectada = 1; // Guarda 1 unidad de sangre en la mochila
+                    Logs.getInstance().log(idNino + " ha recolectado sangre con éxito en " + zonaActual.getNombre());
+                    
+                } catch (InterruptedException e) {
+                    // ¡SI CAE AQUÍ, ES QUE UN DEMOGORGON LE ESTÁ ATACANDO!
+                    synchronized (this) {
+                        // 1. Espera a que el Demogorgon termine el ataque (0,5s - 1,5s)
+                        while (bajoAtaque) {
+                            this.wait(); 
+                        }
+                        
+                        // 2. Cuando el Demogorgon le suelta, mira cuál ha sido su destino
+                        if (capturado) {
+                            Logs.getInstance().log(idNino + " ha sido arrastrado a la Colmena. Esperando rescate...");
+                            while (capturado) {
+                                this.wait(); // Se congela aquí hasta que Eleven llame a notify()
+                            }
+                            Logs.getInstance().log(idNino + " ¡Ha sido liberado por Eleven y huye a Hawkins!");
+                        }
                     }
+                } finally {
+                    // Pase lo que pase (recolecte, escape del ataque o sea liberado de la colmena), sale de la zona insegura
+                    zonaActual.salirNino(this);
                 }
-                System.out.println(idNino + " ¡Ha sido liberado por Eleven!");
+
+                zonas.esperarSiPausado();
+
+                // --- 4. CRUZAR PORTAL DE REGRESO A HAWKINS ---
+                // Vuelve a casa exactamente por el mismo portal por el que entró
+                zonas.getPortal(rutaElegida).cruzarAHawkins(this);
+
+                zonas.esperarSiPausado();
+                
+                // --- 5. RADIO WSQK (Depositar y Descansar) ---
+                // Primero deja la sangre (el método ya se encarga de poner su mochila a 0)
+                zonas.getRadioWSQK().depositarSangre(this);
+                // Luego entra a descansar
+                zonas.getRadioWSQK().entrarZona(this);
+                
+                zonas.esperarSiPausado();
+                
+                // --- 6. CALLE PRINCIPAL (Deambular) ---
+                zonas.getCallePrincipal().deambular(this);
             }
 
-            zonas.esperarSiPausado();
-            
-            // Entra a la radio a descansar (2 a 4 segundos)
-            zonas.getRadioWSQK().descansar(this);
-            
-            zonas.esperarSiPausado();
-            
-            // Vuelve a la calle a deambular (3 a 5 segundos)
-            zonas.getCallePrincipal().deambular(this);
+        } catch (InterruptedException e) {
+            // Este catch global se activará si interrumpes el hilo desde la ventana principal para apagar el programa
+            System.out.println(idNino + " ha sido interrumpido de forma global. Terminando hilo.");
+            Thread.currentThread().interrupt();
         }
-
-    } catch (InterruptedException e) {
-        System.out.println(idNino + " ha sido interrumpido.");
-        Thread.currentThread().interrupt();
-    }
-}
-    public int getSangreRecolectada() {
-        return sangreRecolectada;
-    }
-
-    public void setSangreRecolectada(int sangreRecolectada) {
-        this.sangreRecolectada = sangreRecolectada;
-    }
-    
+    } 
 }

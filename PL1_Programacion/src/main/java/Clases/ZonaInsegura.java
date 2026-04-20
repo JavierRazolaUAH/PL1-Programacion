@@ -14,19 +14,23 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Alex338
  */
 public class ZonaInsegura {
-    String nombre;
+    private String nombre;
     private final List<Nino> ninosEnZona = new CopyOnWriteArrayList<>();
     private final List<Demogorgon> demogorgonsEnZona = new CopyOnWriteArrayList<>();
     private final Random random = new Random();
     private final AtomicInteger sangreRecolectada = new AtomicInteger(0);
     
-   
-    //Constructor Iniciar para la ZonaInsegura
-    public ZonaInsegura(String nombre) {
+    // --- ¡NUEVO! ---
+    // Necesitamos conocer el entorno para saber si hay tormenta
+    private final AgrupacionZonas zonas; 
+    
+    // Constructor Iniciar para la ZonaInsegura
+    public ZonaInsegura(String nombre, AgrupacionZonas zonas) {
         this.nombre = nombre;
+        this.zonas = zonas;
     }
-    // --- GESTIÓN DE NIÑOS ---
 
+    // --- GESTIÓN DE NIÑOS ---
     public void entrarNino(Nino n) {
         ninosEnZona.add(n);
     }
@@ -36,7 +40,6 @@ public class ZonaInsegura {
     }
 
     // --- GESTIÓN DE DEMOGORGONS ---
-
     public void entrarDemogorgon(Demogorgon d) {
         demogorgonsEnZona.add(d);
     }
@@ -46,40 +49,33 @@ public class ZonaInsegura {
     }
 
     public void recolectarSangre(Nino n) throws InterruptedException {
-
         long tiempo = 3000 + random.nextInt(2001);
+
+        // --- EVENTO: TORMENTA DEL UPSIDE DOWN ---
+        // Si hay tormenta, los niños tardan el doble de tiempo en recolectar
+        if (zonas != null && zonas.isTormentaUpsideDown()) {
+            tiempo *= 2; 
+        }
 
         Thread.sleep(tiempo); // El hilo se detiene simulando el trabajo
         
         sangreRecolectada.incrementAndGet(); // Suma 1 de forma segura
     }
+
     public Nino seleccionarVictima() {
-        if (ninosEnZona.isEmpty()) {
-            return null;
+        // En lugar de leer el tamaño, intentamos cogerlo directamente de forma segura
+        try {
+            if (ninosEnZona.isEmpty()) {
+                return null;
+            }
+            int indice = random.nextInt(ninosEnZona.size());
+            return ninosEnZona.get(indice);
+        } catch (Exception e) {
+            // Si el niño justo se ha escapado en ese milisegundo, devolvemos null
+            return null; 
         }
-        int indice = random.nextInt(ninosEnZona.size());
-        return ninosEnZona.get(indice);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
     public String getNombre() {
         return nombre;
     }
@@ -91,6 +87,4 @@ public class ZonaInsegura {
     public List<Demogorgon> getDemogorgonsEnZona() {
         return demogorgonsEnZona;
     }
-    
-    
 }
