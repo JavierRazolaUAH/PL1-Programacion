@@ -172,6 +172,7 @@ public void actualizarCalleGUI() {
         actualizarCentroComercialGUI();
         actualizarAlcantarilladoGUI();
         actualizarContadorCapturadosGUI();
+        actualizarEventoActivoGUI();
     }).start();
     }
     //
@@ -286,6 +287,31 @@ public void actualizarCalleGUI() {
             // Barra horizontal: NUNCA
             scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         }
+    }
+    
+    
+    // ==========================================
+    //        ACTUALIZADOR: EVENTO ACTIVO
+    // ==========================================
+    public void actualizarEventoActivoGUI() {
+        if (zonas == null) return;
+
+        // Por defecto, ponemos Ninguno
+        String textoEvento = "Ninguno";
+
+        // Comprobamos si hay algún evento activo y cambiamos el texto
+        if (zonas.isApagonLaboratorio()) {
+            textoEvento = "APAGÓN DEL LABORATORIO";
+        } else if (zonas.isTormentaUpsideDown()) {
+            textoEvento = "TORMENTA UPSIDE DOWN";
+        } else if (zonas.isIntervencionEleven()) {
+            textoEvento = "INTERVENCIÓN DE ELEVEN";
+        } else if (zonas.isRedMental()) {
+            textoEvento = "LA RED MENTAL";
+        }
+
+        // Le ponemos el texto al recuadro (asegúrate de que se llama así)
+        jTextAreaEventoActivo.setText(textoEvento); 
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -442,7 +468,8 @@ public void actualizarCalleGUI() {
         Demogorgon = new javax.swing.JLabel();
         Vecna = new javax.swing.JLabel();
         Texto_NIÑOS_CAPTURADOS = new javax.swing.JLabel();
-        Texto_NIÑOS_CAPTURADOS1 = new javax.swing.JLabel();
+        jScrollPaneEventoActivo = new javax.swing.JScrollPane();
+        jTextAreaEventoActivo = new javax.swing.JTextArea();
         Texto_Principal = new javax.swing.JLabel();
         Boton_Pausa = new javax.swing.JButton();
         Boton_Reanudar = new javax.swing.JButton();
@@ -1050,9 +1077,9 @@ public void actualizarCalleGUI() {
         Texto_NIÑOS_CAPTURADOS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Texto_NIÑOS_CAPTURADOS.setText("Niños capturados");
 
-        Texto_NIÑOS_CAPTURADOS1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
-        Texto_NIÑOS_CAPTURADOS1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Texto_NIÑOS_CAPTURADOS1.setText("Ninguno");
+        jTextAreaEventoActivo.setColumns(20);
+        jTextAreaEventoActivo.setRows(5);
+        jScrollPaneEventoActivo.setViewportView(jTextAreaEventoActivo);
 
         javax.swing.GroupLayout Panel_EstadisticasLayout = new javax.swing.GroupLayout(Panel_Estadisticas);
         Panel_Estadisticas.setLayout(Panel_EstadisticasLayout);
@@ -1062,9 +1089,9 @@ public void actualizarCalleGUI() {
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Texto_Eventos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 256, Short.MAX_VALUE)
+                        .addGap(54, 54, 54)
+                        .addComponent(jScrollPaneEventoActivo, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 420, Short.MAX_VALUE)
                 .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
@@ -1086,16 +1113,17 @@ public void actualizarCalleGUI() {
                         .addComponent(Texto_NIÑOS_CAPTURADOS)
                         .addGap(9, 9, 9)
                         .addComponent(Ninos_Capturados, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Demogorgon)
-                            .addComponent(Vecna)))
-                    .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
-                        .addComponent(Texto_Eventos)
-                        .addGap(18, 18, 18)
-                        .addComponent(Texto_NIÑOS_CAPTURADOS1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                    .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_EstadisticasLayout.createSequentialGroup()
+                            .addComponent(Texto_Eventos)
+                            .addGap(18, 18, 18)
+                            .addComponent(jScrollPaneEventoActivo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(Panel_EstadisticasLayout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addGroup(Panel_EstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Demogorgon)
+                                .addComponent(Vecna)))))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         Texto_Principal.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
@@ -1268,7 +1296,6 @@ public void actualizarCalleGUI() {
     private javax.swing.JTextArea TextArea_Bosque_Salida;
     private javax.swing.JLabel Texto_Eventos;
     private javax.swing.JLabel Texto_NIÑOS_CAPTURADOS;
-    private javax.swing.JLabel Texto_NIÑOS_CAPTURADOS1;
     private javax.swing.JLabel Texto_Principal;
     private javax.swing.JLabel Textura_CentroComercial;
     private javax.swing.JLabel Textura_Laboratorio;
@@ -1278,6 +1305,7 @@ public void actualizarCalleGUI() {
     private javax.swing.JScrollPane jScrollPaneBosque_Dentro;
     private javax.swing.JScrollPane jScrollPaneBosque_Entrada;
     private javax.swing.JScrollPane jScrollPaneBosque_Salida;
+    private javax.swing.JScrollPane jScrollPaneEventoActivo;
     private javax.swing.JScrollPane jScrollPane_Alcantarillado_Dentro;
     private javax.swing.JScrollPane jScrollPane_Alcantarillado_Entrada;
     private javax.swing.JScrollPane jScrollPane_Alcantarillado_Salida;
@@ -1292,6 +1320,7 @@ public void actualizarCalleGUI() {
     private javax.swing.JTextArea jTextAreaDemogorgonsBosque;
     private javax.swing.JTextArea jTextAreaDemogorgonsCentroComercial;
     private javax.swing.JTextArea jTextAreaDemogorgonsLaboratorio;
+    private javax.swing.JTextArea jTextAreaEventoActivo;
     private javax.swing.JTextArea jTextAreaNinosAlcantarillado;
     private javax.swing.JTextArea jTextAreaNinosBosque;
     private javax.swing.JTextArea jTextAreaNinosCentroComercial;
