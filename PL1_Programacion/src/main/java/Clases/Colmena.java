@@ -51,6 +51,8 @@ public class Colmena {
         String idFormateado = String.format("D%04d", siguienteId);
         
         Demogorgon nuevo = new Demogorgon(idFormateado, this.zonas);
+        // Registramos el nuevo demogorgon en la lista que creamos en UpsideDown
+        this.zonas.getUpsidedown().registrarDemogorgon(nuevo);
         nuevo.start();
     }
 

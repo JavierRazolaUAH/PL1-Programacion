@@ -45,90 +45,72 @@ private String idNino;
     @Override
     public void run() {
         try {
-            // 1. FASE DE NACIMIENTO
+            // Bloqueo al nacer
+            zonas.esperarSiPausado();
             zonas.getCallePrincipal().inicio(this);
 
-            // 2. CICLO ITERATIVO
             while (vivo) {
-                zonas.esperarSiPausado();
-                
-                // --- 1. PREPARACIÓN EN SÓTANO BYERS ---
+                // --- FASE 1: SÓTANO ---
+                zonas.esperarSiPausado(); // Antes de entrar
                 zonas.getSotanoByers().entrarZona(this);
-                
-                zonas.esperarSiPausado();
 
-                // ¡LA LIMPIEZA! Nos borramos del sótano para que la interfaz se limpie 
-                // ANTES de salir corriendo hacia los portales.
+                Thread.sleep(500); 
+
+                // EL FILTRO QUE TE FALTA:
+                // Si el juego se pausó mientras dormía el sleep de arriba,
+                // el hilo debe morir aquí antes de decir que "terminó de prepararse".
+                zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().salirZona(this);
 
-                // --- ¡EL TRUCO DE LA RUTA! ---
-                // Tiramos el dado UNA sola vez (0 = Bosque, 1 = Lab, 2 = Centro Comercial, 3 = Alcantarillado)
+                // --- FASE 2: ELECCIÓN DE RUTA ---
                 int rutaElegida = (int) (Math.random() * 4);
+                zonas.esperarSiPausado(); // Bloqueo tras elegir, antes de entrar al portal
 
-                // --- 2. CRUZAR PORTAL HACIA EL UPSIDE DOWN ---
+                // --- FASE 3: PORTALES ---
                 zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
-                
-                zonas.esperarSiPausado();
-                
-                // --- 3. UPSIDE DOWN (Recolección y Peligro) ---
-                // Entra exactamente a la zona insegura que está al otro lado de su portal
+
+                // --- FASE 4: UPSIDE DOWN ---
+                zonas.esperarSiPausado(); 
                 ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
                 zonaActual.entrarNino(this);
-                
+
                 try {
-                    // Intenta recolectar sangre (esto tiene el Thread.sleep que el Demogorgon puede interrumpir)
                     zonaActual.recolectarSangre(this);
-                    
-                    // Si llega a esta línea, es que NADIE le ha interrumpido. ¡Éxito!
-                    this.sangreRecolectada = 1; // Guarda 1 unidad de sangre en la mochila
-                    Logs.getInstance().log(idNino + " ha recolectado sangre con éxito en " + zonaActual.getNombre());
-                    
+                    zonas.esperarSiPausado(); // Bloqueo tras recolectar
+                    this.sangreRecolectada = 1;
                 } catch (InterruptedException e) {
-                    // ¡SI CAE AQUÍ, ES QUE UN DEMOGORGON LE ESTÁ ATACANDO!
                     synchronized (this) {
-                        // 1. Espera a que el Demogorgon termine el ataque (0,5s - 1,5s)
-                        while (bajoAtaque) {
-                            this.wait(); 
-                        }
-                        
-                        // 2. Cuando el Demogorgon le suelta, mira cuál ha sido su destino
+                        while (bajoAtaque) { this.wait(); }
+                        zonas.esperarSiPausado(); 
                         if (capturado) {
-                            Logs.getInstance().log(idNino + " ha sido arrastrado a la Colmena. Esperando rescate...");
-                            while (capturado) {
-                                this.wait(); // Se congela aquí hasta que Eleven llame a notify()
-                            }
-                            Logs.getInstance().log(idNino + " ¡Ha sido liberado por Eleven y huye a Hawkins!");
+                            while (capturado) { this.wait(); }
+                            zonas.esperarSiPausado(); 
                         }
                     }
                 } finally {
-                    // Pase lo que pase (recolecte, escape del ataque o sea liberado de la colmena), sale de la zona insegura
                     zonaActual.salirNino(this);
                 }
 
+                // --- FASE 5: VUELTA ---
                 zonas.esperarSiPausado();
-
-                // --- 4. CRUZAR PORTAL DE REGRESO A HAWKINS ---
-                // Vuelve a casa exactamente por el mismo portal por el que entró
                 zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
+                // --- FASE 6: RADIO ---
                 zonas.esperarSiPausado();
-                
-                // --- 5. RADIO WSQK (Depositar y Descansar) ---
-                // Primero deja la sangre (el método ya se encarga de poner su mochila a 0)
                 zonas.getRadioWSQK().depositarSangre(this);
-                // Luego entra a descansar
                 zonas.getRadioWSQK().entrarZona(this);
-                
+
+                Thread.sleep(500);
+
+                zonas.esperarSiPausado(); // Bloqueo tras dormir en la radio
+                zonas.getRadioWSQK().salirZona(this);
+
+                // --- FASE 7: CALLE ---
                 zonas.esperarSiPausado();
-                
-                // --- 6. CALLE PRINCIPAL (Deambular) ---
                 zonas.getCallePrincipal().deambular(this);
             }
-
         } catch (InterruptedException e) {
-            // Este catch global se activará si interrumpes el hilo desde la ventana principal para apagar el programa
-            System.out.println(idNino + " ha sido interrumpido de forma global. Terminando hilo.");
             Thread.currentThread().interrupt();
         }
-    } 
+    }
 }

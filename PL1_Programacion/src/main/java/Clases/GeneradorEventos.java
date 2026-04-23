@@ -59,7 +59,13 @@ public class GeneradorEventos extends Thread {
                 }
 
                 // 4. Esperamos a que pase el evento
-                Thread.sleep(duracionEvento);
+                int tiempoPasado = 0;
+                while (tiempoPasado < duracionEvento) {
+                    zonas.esperarSiPausado(); 
+
+                    Thread.sleep(500); // Dormimos en intervalos pequeños (medio segundo)
+                    tiempoPasado += 500;
+                }
 
                 // 5. Apagamos todos los eventos
                 zonas.setApagonLaboratorio(false);

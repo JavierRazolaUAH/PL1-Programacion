@@ -19,10 +19,12 @@ public class CallePrincipal {
     // Cola para saber quién está en la calle en este momento
     private final BlockingQueue<Nino> ninosEnCalle;
     private final Random rand;
+    private AgrupacionZonas zonas;
 
-    public CallePrincipal() {
+    public CallePrincipal(AgrupacionZonas zonas) {
         this.ninosEnCalle = new LinkedBlockingQueue<>();
         this.rand = new Random();
+        this.zonas= zonas;
     }
 
     // --- MÉTODOS DE LA SIMULACIÓN ---
@@ -32,6 +34,7 @@ public void inicio(Nino nino) throws InterruptedException {
         ninosEnCalle.put(nino);
         Logs.getInstance().log(nino.getIdNino() + " ha INICIADO su actividad en Hawkins (Calle Principal).");
         Thread.sleep(1000);
+        zonas.esperarSiPausado();
         salirZona(nino); // Sale automáticamente sin esperar
     }
 
@@ -42,6 +45,7 @@ public void inicio(Nino nino) throws InterruptedException {
         // Tiempo deambulando: Aleatorio entre 3 y 5 segundos
         int tiempoDeambular = rand.nextInt(2000) + 3000; 
         Thread.sleep(tiempoDeambular);
+        zonas.esperarSiPausado();
         
         salirZona(nino);
     }

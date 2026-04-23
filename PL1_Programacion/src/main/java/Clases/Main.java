@@ -5,6 +5,7 @@
 package Clases;
 
 import Interfaz.Interfaz;
+import Interfaz.VentanaMonitor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,12 +21,18 @@ public class Main {
         // 1. Creamos el "mapa" o entorno con todas las zonas seguras y el Upside Down
         AgrupacionZonas zonas = new AgrupacionZonas();
         
+        ServidorControl servidor = new ServidorControl(zonas);
+        servidor.start();
+        
         // 2. Arrancamos la interfaz gráfica pasándole nuestro mapa
         // Usamos invokeLater porque es la forma más segura de arrancar ventanas en Java Swing
         java.awt.EventQueue.invokeLater(() -> {
             Interfaz ventana = new Interfaz(zonas);
             ventana.setLocationRelativeTo(null); // Centra la ventana en la pantalla
             ventana.setVisible(true);
+            VentanaMonitor monitor = new VentanaMonitor(); 
+            monitor.setTitle("Monitor de Estadísticas (Socket)");
+            monitor.setVisible(true);
         });
         
         // --- ¡PERFECTO! El motor de eventos ya está encendido ---
@@ -34,6 +41,7 @@ public class Main {
         
         // 3. Nace el Demogorgon Alpha en el Upside Down
         Demogorgon d0 = new Demogorgon("D0000", zonas);
+        zonas.getUpsidedown().registrarDemogorgon(d0); //Añadimos el primer Demogorgon a la lista de TODOS los demogorgons
         d0.start();
         
         // 4. Creamos los 100 niños de forma escalonada

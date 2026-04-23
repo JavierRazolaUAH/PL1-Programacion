@@ -20,10 +20,12 @@ public class RadioWSQK {
     private final BlockingQueue<Nino> ninosEnRadio;
     private final Random rand;
     private int sangreTotalAlmacenada = 0;
+    private AgrupacionZonas zonas;
 
-    public RadioWSQK() {
+    public RadioWSQK(AgrupacionZonas zonas) {
         this.ninosEnRadio = new LinkedBlockingQueue<>();
         this.rand = new Random();
+        this.zonas = zonas;
     }
 
 // --- MÉTODOS DE ENTRADA Y SALIDA ---
@@ -45,6 +47,7 @@ public class RadioWSQK {
         // 2. Tiempo de descanso: Aleatorio entre 2 y 4 segundos
         int tiempoDescanso = rand.nextInt(2000) + 2000; 
         Thread.sleep(tiempoDescanso);
+        zonas.esperarSiPausado();
         
         // 3. Llama al método salir
         salirZona(nino);
@@ -63,7 +66,7 @@ public void descansar(Nino nino) throws InterruptedException {
         // Tiempo de descanso: Aleatorio entre 2 y 4 segundos
         int tiempoDescanso = rand.nextInt(2000) + 2000; 
         Thread.sleep(tiempoDescanso);
-        
+        zonas.esperarSiPausado();
         salirZona(nino);
     }
 

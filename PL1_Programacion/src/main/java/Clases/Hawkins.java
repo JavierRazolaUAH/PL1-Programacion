@@ -12,11 +12,13 @@ public class Hawkins {
     private CallePrincipal callePrincipal;
     private SotanoByers sotano;
     private RadioWSQK radio;
+    private AgrupacionZonas zonas;
 
-    public Hawkins() {
+    public Hawkins(AgrupacionZonas zonas) {
         // Al crear Hawkins, se crean sus zonas interiores
-        this.callePrincipal = new CallePrincipal();
-        this.sotano = new SotanoByers();
-        this.radio = new RadioWSQK();
+        this.callePrincipal = new CallePrincipal(zonas);
+        this.sotano = new SotanoByers(zonas);
+        this.radio = new RadioWSQK(zonas);
+        this.zonas = zonas;
     }
 }

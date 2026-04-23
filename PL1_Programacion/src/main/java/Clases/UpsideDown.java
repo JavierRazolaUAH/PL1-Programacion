@@ -3,6 +3,8 @@ package Clases;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Collectors;
 
 /**
  * @author Alex338
@@ -14,6 +16,8 @@ public class UpsideDown {
     // Referencia a la Colmena
     private Colmena colmena; 
     private final Random random = new Random();
+    //Lista de TODOS los demogorgons para el ranking
+    private List<Demogorgon> listaDemogorgons = new CopyOnWriteArrayList<>();
 
     // --- ACTUALIZACIÓN: El constructor ahora recibe 'zonas' ---
     public UpsideDown(AgrupacionZonas zonas) {
@@ -46,7 +50,38 @@ public class UpsideDown {
         }
         return null;
     }
-
+    
+    public void registrarDemogorgon(Demogorgon d) {
+        this.listaDemogorgons.add(d);
+    }
+    public String obtenerDatosSocket() {
+    StringBuilder sb = new StringBuilder();
+    
+    // 1. Niños y Demogorgons por zona
+    for (ZonaInsegura z : zonasInseguras) {
+        sb.append(z.getNombre()).append(": Ninos=").append(z.getNinosEnZona().size())
+          .append(", Demos=").append(z.getDemogorgonsEnZona().size()).append(" | ");
+    }
+    
+    sb.append(";RANKING:");
+    
+    // 2. Ranking de los 3 mejores (Ordenando manualmente)
+    List<Demogorgon> copiaDemos = new ArrayList<>(listaDemogorgons);
+    copiaDemos.sort((d1, d2) -> Integer.compare(d2.getCapturasRealizadas(), d1.getCapturasRealizadas()));
+    
+    int limite = Math.min(3, copiaDemos.size());
+    if (limite == 0) {
+        sb.append("Sin datos");
+    } else {
+        for (int i = 0; i < limite; i++) {
+            Demogorgon d = copiaDemos.get(i);
+            sb.append(d.getIdDemogorgon()).append("(").append(d.getCapturasRealizadas()).append(")");
+            if (i < limite - 1) sb.append(" - ");
+        }
+    }
+    
+    return sb.toString();
+    }
     // Getters
     public List<ZonaInsegura> getZonas() {
         return zonasInseguras;

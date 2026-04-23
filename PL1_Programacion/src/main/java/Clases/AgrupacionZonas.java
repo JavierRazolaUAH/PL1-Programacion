@@ -35,13 +35,14 @@ public class AgrupacionZonas {
     private boolean tormentaUpsideDown = false;
     private boolean intervencionEleven = false;
     private boolean redMental = false;
+    
 
     // Constructor
     public AgrupacionZonas() {
         // Instanciamos las zonas seguras al crear la agrupación
-        this.callePrincipal = new CallePrincipal();
-        this.sotanoByers = new SotanoByers();
-        this.radioWSQK = new RadioWSQK();
+        this.callePrincipal = new CallePrincipal(this);
+        this.sotanoByers = new SotanoByers(this);
+        this.radioWSQK = new RadioWSQK(this);
         
         // Instanciamos el Upside Down y conectamos la Colmena
         this.upsidedown = new UpsideDown(this);
@@ -58,7 +59,9 @@ public class AgrupacionZonas {
         this.portales[2] = new Portal("Centro Comercial", 4,this); // Necesita 4 niños
         this.portales[3] = new Portal("Alcantarillado", 2,this);   // Necesita 2 niños
     }
-
+    
+    
+    
     // --- MÉTODOS GETTER DE ZONAS ---
     
     public CallePrincipal getCallePrincipal() { 
@@ -126,6 +129,21 @@ public class AgrupacionZonas {
         } finally {
             lock.unlock();
         }
+    }
+    // 1. Número total de niños en Hawkins (Suma de las 3 zonas seguras)
+    public int getNinosTotalesHawkins() {
+        return callePrincipal.getNumeroNinos() + 
+               sotanoByers.getNumeroNinos() + 
+               radioWSQK.getNumeroNinos();
+    }
+
+    // 2. Estado del evento activo (Para el servidor)
+    public String getEventoActivo() {
+        if (apagonLaboratorio) return "Apagón en el Laboratorio";
+        if (tormentaUpsideDown) return "Tormenta en el Upside Down";
+        if (intervencionEleven) return "Intervención de Eleven";
+        if (redMental) return "Red Mental Activa";
+        return "Sin evento activo";
     }
     
     public boolean isApagonLaboratorio() { return apagonLaboratorio; }

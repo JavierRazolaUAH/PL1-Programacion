@@ -18,10 +18,12 @@ public class SotanoByers {
 // Cola concurrente para almacenar a los niños que están actualmente dentro
     private final BlockingQueue<Nino> ninosEnSotano;
     private final Random rand;
+    private AgrupacionZonas zonas;
 
-    public SotanoByers() {
+    public SotanoByers(AgrupacionZonas zonas) {
         this.ninosEnSotano = new LinkedBlockingQueue<>();
         this.rand = new Random();
+        this.zonas = zonas;
     }
 
     // --- MÉTODOS DE ENTRADA Y SALIDA SEPARADOS ---
@@ -32,6 +34,7 @@ public class SotanoByers {
         // Permanece un tiempo aleatorio entre 1 y 2 segundos
         int tiempoEspera = rand.nextInt(1000) + 1000; 
         Thread.sleep(tiempoEspera);
+        zonas.esperarSiPausado();
         
         Logs.getInstance().log(nino.getIdNino() + " ha terminado de prepararse en el Sótano Byers.");
     }

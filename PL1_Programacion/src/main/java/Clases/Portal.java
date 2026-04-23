@@ -73,6 +73,7 @@ public class Portal {
                 // --- ¡BLINDAJE ANTI-DEADLOCK! ---
                 try {
                     esperandoParaCruzar.await(); 
+                    zonas.esperarSiPausado();
                 } catch (InterruptedException e) {
                     // Si el niño muere mientras espera la ida, nos aseguramos de borrarlo de las listas
                     colaHaciaUpsideDown.remove(nino);
@@ -95,7 +96,7 @@ public class Portal {
 
         // Simula el tiempo de cruce (1 segundo)
         Thread.sleep(1000); 
-
+        zonas.esperarSiPausado();
         lock.lock();
         try {
             cruzando = null; // Desaparece del túnel central
@@ -131,6 +132,7 @@ public class Portal {
                 // --- ¡BLINDAJE ANTI-DEADLOCK! ---
                 try {
                     esperandoParaVolver.await();
+                    zonas.esperarSiPausado();
                 } catch (InterruptedException e) {
                     // Si el niño muere mientras espera volver (el Sniper Demogorgon), LIMPIAMOS LA PUERTA
                     esperandoVolverLista.remove(nino);
@@ -151,7 +153,8 @@ public class Portal {
         }
 
         Thread.sleep(1000);
-
+        zonas.esperarSiPausado();
+        
         lock.lock();
         try {
             cruzando = null;

@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Clases;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+/**
+ *
+ * @author Alex338
+ */
+public class ServidorControl extends Thread {
+    private AgrupacionZonas mundo;
+    private int puerto = 5011;
+
+    public ServidorControl(AgrupacionZonas mundo) {
+        this.mundo = mundo;
+    }
+
+    @Override
+    public void run() {
+        try (ServerSocket server = new ServerSocket(puerto)) {
+            while (true) {
+                Socket cliente = server.accept();
+                // Creamos un hilo para cada cliente que se conecte
+                new ManejadorCliente(cliente, mundo).start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
