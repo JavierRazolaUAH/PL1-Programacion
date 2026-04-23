@@ -145,7 +145,17 @@ public class AgrupacionZonas {
         if (redMental) return "Red Mental Activa";
         return "Sin evento activo";
     }
+        public void notificarFinEvento() {
+        // Recorremos el array de portales (que tiene 4 posiciones: 0 a 3)
+        for (int i = 0; i < 4; i++) {
+            Portal p = getPortal(i); // Usamos tu método existente
+            if (p != null) {
+                p.despertarHilos();
+            }
+        }
+    }
     
+
     public boolean isApagonLaboratorio() { return apagonLaboratorio; }
     public void setApagonLaboratorio(boolean apagonLaboratorio) { this.apagonLaboratorio = apagonLaboratorio; }
 

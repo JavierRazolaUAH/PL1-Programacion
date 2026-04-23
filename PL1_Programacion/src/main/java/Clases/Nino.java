@@ -106,7 +106,6 @@ private String idNino;
                 zonas.getRadioWSQK().salirZona(this);
 
                 // --- FASE 7: CALLE ---
-                zonas.esperarSiPausado();
                 zonas.getCallePrincipal().deambular(this);
             }
         } catch (InterruptedException e) {
