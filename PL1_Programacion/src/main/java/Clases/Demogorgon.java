@@ -80,7 +80,7 @@ public class Demogorgon extends Thread {
                         tiempoAtaque /= 2; // ¡Doble de rápido!
                     }
                     Thread.sleep(tiempoAtaque);
-
+                    zonas.esperarSiPausado();
                     // Probabilidad de éxito 1/3
                     if (random.nextInt(3) == 0) {
                         // ÉXITO: El niño es capturado 
@@ -113,7 +113,7 @@ public class Demogorgon extends Thread {
                         tiempoEspera /= 2; // Menos tiempo entre ataques/esperas
                     }
                     Thread.sleep(tiempoEspera);
-                    
+                    zonas.esperarSiPausado();
                     // Tras la espera, se desplaza a otra área (salvo que haya apagón)
                     if (!zonas.isApagonLaboratorio()) {
                         zonaActual.salirDemogorgon(this);
@@ -132,7 +132,7 @@ public class Demogorgon extends Thread {
         victima.setCapturado(true); 
 
         Thread.sleep(500 + random.nextInt(501));
-
+        zonas.esperarSiPausado();
         zonas.getUpsidedown().getColmena().depositarNino(victima);
         this.capturasRealizadas++;
         Logs.getInstance().log(idDemogorgon + " ha encerrado a " + victima.getIdNino() + " en la Colmena.");

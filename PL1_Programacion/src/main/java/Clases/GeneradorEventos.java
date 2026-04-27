@@ -26,9 +26,16 @@ public class GeneradorEventos extends Thread {
                 
                 // 1. Espera aleatoria entre 30 y 60 segundos (Modo normal)
                 int tiempoHastaEvento = 30000 + random.nextInt(30001);
-                Thread.sleep(tiempoHastaEvento);
-                
-                zonas.esperarSiPausado();
+                int tiempoTranscurrido = 0;
+
+                while (tiempoTranscurrido < tiempoHastaEvento) {
+                    Thread.sleep(1000); // Esperamos de segundo en segundo
+
+                    // Si pausamos el juego, el contador de "próximo evento" se congela aquí
+                    zonas.esperarSiPausado(); 
+
+                    tiempoTranscurrido += 1000;
+                }
 
                 // 2. Elegir un evento al azar (0 a 3)
                 int tipoEvento = random.nextInt(4);
@@ -70,11 +77,20 @@ public class GeneradorEventos extends Thread {
                 // 4. Esperamos a que pase el evento
                 int tiempoPasado = 0;
                 while (tiempoPasado < duracionEvento) {
-                    zonas.esperarSiPausado(); 
+                    // Calculamos los segundos que quedan
+                    int segundosRestantes = (duracionEvento - tiempoPasado) / 1000;
+                    
+                    // Actualizamos la variable en zonas para el RMI
+                    zonas.setTiempoRestanteEvento(segundosRestantes);
 
-                    Thread.sleep(500); // Dormimos en intervalos pequeños
+                    Thread.sleep(500); 
+                    zonas.esperarSiPausado(); // Si se pausa, el cronómetro se congela aquí
+
                     tiempoPasado += 500;
                 }
+
+                // 5. Al terminar, reseteamos a 0
+                zonas.setTiempoRestanteEvento(0);
 
                 // 5. Apagamos todos los eventos
                 zonas.setApagonLaboratorio(false);

@@ -32,38 +32,210 @@ public class VentanaMonitor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextoNiñosHawkins = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        PanelUpsidedown = new javax.swing.JPanel();
+        UpsideDown1 = new javax.swing.JLabel();
+        UpsideDown2 = new javax.swing.JLabel();
+        UpsideDown3 = new javax.swing.JLabel();
+        UpsideDown4 = new javax.swing.JLabel();
+        TituloPortales1 = new java.awt.Label();
+        PanelPortales = new javax.swing.JPanel();
+        Portal1 = new javax.swing.JLabel();
+        Portal2 = new javax.swing.JLabel();
+        Portal3 = new javax.swing.JLabel();
+        Portal4 = new javax.swing.JLabel();
+        TituloPortales = new java.awt.Label();
+        PanelEventos = new javax.swing.JPanel();
+        TituloEventos = new java.awt.Label();
+        TiempoRestanteEvento = new javax.swing.JLabel();
+        EventoActivo = new javax.swing.JLabel();
+        PanelDemogorgons = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 1000));
 
-        jLabel1.setText("Demogorgons");
+        TextoNiñosHawkins.setText("Niños totales a salvo en Hawkins: 0");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        PanelUpsidedown.setBackground(new java.awt.Color(255, 153, 153));
+
+        UpsideDown1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UpsideDown1.setText("<html><center><b>Zona X - Nombre</b><br>Niños &nbsp;&nbsp;&nbsp;&nbsp; Demos<br>[0] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0]</center></html>");
+
+        UpsideDown2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UpsideDown2.setText("<html><center><b>Zona X - Nombre</b><br>Niños &nbsp;&nbsp;&nbsp;&nbsp; Demos<br>[0] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0]</center></html>");
+
+        UpsideDown3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UpsideDown3.setText("<html><center><b>Zona X - Nombre</b><br>Niños &nbsp;&nbsp;&nbsp;&nbsp; Demos<br>[0] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0]</center></html>");
+
+        UpsideDown4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UpsideDown4.setText("<html><center><b>Zona X - Nombre</b><br>Niños &nbsp;&nbsp;&nbsp;&nbsp; Demos<br>[0] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0]</center></html>");
+
+        TituloPortales1.setAlignment(java.awt.Label.CENTER);
+        TituloPortales1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TituloPortales1.setText("Estado del UpsideDown (niños y Demogorgons)");
+
+        javax.swing.GroupLayout PanelUpsidedownLayout = new javax.swing.GroupLayout(PanelUpsidedown);
+        PanelUpsidedown.setLayout(PanelUpsidedownLayout);
+        PanelUpsidedownLayout.setHorizontalGroup(
+            PanelUpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TituloPortales1, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+            .addComponent(UpsideDown1)
+            .addComponent(UpsideDown2)
+            .addComponent(UpsideDown3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(UpsideDown4)
+        );
+        PanelUpsidedownLayout.setVerticalGroup(
+            PanelUpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelUpsidedownLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(TituloPortales1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(UpsideDown1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(UpsideDown2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(UpsideDown3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(UpsideDown4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
+        );
+
+        PanelPortales.setBackground(new java.awt.Color(255, 153, 153));
+
+        Portal1.setText("<html>\n<div style='text-align: center;'>\n  --- Portal 1 (Bosque) ---<br>\n  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;[0]&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]\n</div>\n</html>");
+
+        Portal2.setText("<html>\n<div style='text-align: center;'>\n  --- Portal 2 (Laboratorio) ---<br>\n  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;[0]&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]\n</div>\n</html>");
+
+        Portal3.setText("<html>\n<div style='text-align: center;'>\n  --- Portal 3 (Centro Comercial) ---<br>\n  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;[0]&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]\n</div>\n</html>");
+
+        Portal4.setText("<html>\n<div style='text-align: center;'>\n  --- Portal 4 (Alcantarillado) ---<br>\n  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;[0]&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]\n</div>\n</html>");
+
+        TituloPortales.setAlignment(java.awt.Label.CENTER);
+        TituloPortales.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TituloPortales.setText("Estado de los Portales (niños)");
+
+        javax.swing.GroupLayout PanelPortalesLayout = new javax.swing.GroupLayout(PanelPortales);
+        PanelPortales.setLayout(PanelPortalesLayout);
+        PanelPortalesLayout.setHorizontalGroup(
+            PanelPortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TituloPortales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(PanelPortalesLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(PanelPortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Portal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Portal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Portal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Portal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        PanelPortalesLayout.setVerticalGroup(
+            PanelPortalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPortalesLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(TituloPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Portal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Portal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Portal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Portal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+
+        PanelEventos.setBackground(new java.awt.Color(255, 255, 153));
+
+        TituloEventos.setAlignment(java.awt.Label.CENTER);
+        TituloEventos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TituloEventos.setText("Eventos");
+
+        TiempoRestanteEvento.setText("Tiempo restante del evento: 0");
+
+        EventoActivo.setText("Evento Activo: Sin evento activo.");
+
+        javax.swing.GroupLayout PanelEventosLayout = new javax.swing.GroupLayout(PanelEventos);
+        PanelEventos.setLayout(PanelEventosLayout);
+        PanelEventosLayout.setHorizontalGroup(
+            PanelEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TituloEventos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(PanelEventosLayout.createSequentialGroup()
+                .addGroup(PanelEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelEventosLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(EventoActivo, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelEventosLayout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(TiempoRestanteEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+        PanelEventosLayout.setVerticalGroup(
+            PanelEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEventosLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(TituloEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EventoActivo)
+                .addGap(18, 18, 18)
+                .addComponent(TiempoRestanteEvento)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelDemogorgonsLayout = new javax.swing.GroupLayout(PanelDemogorgons);
+        PanelDemogorgons.setLayout(PanelDemogorgonsLayout);
+        PanelDemogorgonsLayout.setHorizontalGroup(
+            PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+        PanelDemogorgonsLayout.setVerticalGroup(
+            PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 252, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(590, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(TextoNiñosHawkins, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(PanelEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(PanelDemogorgons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(PanelPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(71, 71, 71)
+                                .addComponent(PanelUpsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
+                .addComponent(TextoNiñosHawkins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(899, Short.MAX_VALUE))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelUpsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
+                        .addComponent(PanelDemogorgons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(315, 315, 315))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PanelEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -72,29 +244,71 @@ public class VentanaMonitor extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    private void actualizarLabelPortal(javax.swing.JLabel label, String nombre, String datosRaw) {
+    // datosRaw viene como "1,0,2" -> split por la coma
+    String[] d = datosRaw.split(",");
     
+    // Si por algún motivo no vienen los 3 datos, evitamos error
+    if (d.length < 3) return;
+
+    String html = "<html>" +
+                  "<div style='text-align: center; font-family: monospaced;'>" +
+                  "  --- Portal (" + nombre + ") ---<br>" +
+                  "  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>" +
+                  "  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[" + d[0] + "]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | " +
+                  "&nbsp;&nbsp;[" + d[1] + "]&nbsp;&nbsp; | " +
+                  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[" + d[2] + "]" +
+                  "</div>" +
+                  "</html>";
+    
+    label.setText(html);
+    }
+    private void actualizarLabelZona(javax.swing.JLabel label, int num, String nombre, String datosRaw) {
+    String[] d = datosRaw.split("/");
+    if (d.length < 2) return;
+
+    String html = "<html>" +
+                  "<center>" +
+                  "  <b style='color: #FF0000;'>Zona " + num + " - " + nombre + "</b><br>" +
+                  "  Niños &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Demogorgons<br>" +
+                  "  <font size='5'>[" + d[0] + "] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [" + d[1] + "]</font>" +
+                  "</center>" +
+                  "</html>";
+    
+    label.setText(html);
+    label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); // Centrado físico del label
+}
     private void pedirDatosAlServidor() {
-    // Usamos el 5011 para conectar con el servidor
     try (Socket s = new Socket("localhost", 5011)) { 
-        // 1. Preparamos los canales de comunicación
         DataOutputStream salida = new DataOutputStream(s.getOutputStream());
         DataInputStream entrada = new DataInputStream(s.getInputStream());
 
-        // 2. Enviamos la petición al servidor
         salida.writeUTF("GET_DATA");
-
-        // 3. Recibimos el "paquete" de datos
         String respuesta = entrada.readUTF();
-
-        // 4. Lo troceamos usando el separador ";"
         String[] partes = respuesta.split(";");
 
-        // 5. Ponemos el primer dato (niños en Hawkins) en el JTextArea
-        if (partes.length > 0) {
-            // Usamos setText para que se borre lo anterior y se actualice con el nuevo número
-            jTextArea1.setText("Niños en zonas seguras (Hawkins): " + partes[0]);
-    } }catch (Exception ex) {
-        //lblEvento.setText("Error: Servidor apagado en puerto 5011");
+        // Verificamos que tengamos todas las partes (del 0 al 7)
+        if (partes.length >= 8) {
+            // 1. Actualizar texto general
+            TextoNiñosHawkins.setText("Total niños en Hawkins: " + partes[0]);
+            // Aquí podrías actualizar un label de Evento si lo tuvieras con partes[1]
+            EventoActivo.setText("Evento Activo: " + partes[1]);
+            TiempoRestanteEvento.setText("Tiempo restante del evento " + partes[2]);
+            // 2. Actualizar Portales
+            // Usamos un método auxiliar para no repetir código 4 veces
+            actualizarLabelPortal(Portal1, "Bosque", partes[4]);
+            actualizarLabelPortal(Portal2, "Laboratorio", partes[5]);
+            actualizarLabelPortal(Portal3, "Centro Comercial", partes[6]);
+            actualizarLabelPortal(Portal4, "Alcantarillado", partes[7]);
+            // 3. Actualizar Zonas Upside Down (partes 8 a 11)
+            actualizarLabelZona(UpsideDown1, 1, "Bosque", partes[8]);
+            actualizarLabelZona(UpsideDown2, 2, "Laboratorio", partes[9]);
+            actualizarLabelZona(UpsideDown3, 3, "Centro Comercial", partes[10]);
+            actualizarLabelZona(UpsideDown4, 4, "Alcantarillado", partes[11]);
+        }
+    } catch (Exception ex) {
+        // En caso de error (servidor apagado), puedes poner un mensaje opcional
+        // TextoNiños.setText("Servidor Desconectado");
     }
 }
     public static void main(String args[]) {
@@ -130,8 +344,24 @@ public class VentanaMonitor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel EventoActivo;
+    private javax.swing.JPanel PanelDemogorgons;
+    private javax.swing.JPanel PanelEventos;
+    private javax.swing.JPanel PanelPortales;
+    private javax.swing.JPanel PanelUpsidedown;
+    private javax.swing.JLabel Portal1;
+    private javax.swing.JLabel Portal2;
+    private javax.swing.JLabel Portal3;
+    private javax.swing.JLabel Portal4;
+    private javax.swing.JLabel TextoNiñosHawkins;
+    private javax.swing.JLabel TiempoRestanteEvento;
+    private java.awt.Label TituloEventos;
+    private java.awt.Label TituloPortales;
+    private java.awt.Label TituloPortales1;
+    private javax.swing.JLabel UpsideDown1;
+    private javax.swing.JLabel UpsideDown2;
+    private javax.swing.JLabel UpsideDown3;
+    private javax.swing.JLabel UpsideDown4;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

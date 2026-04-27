@@ -9,6 +9,7 @@ package Clases;
  * @author javir
  */
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -136,8 +137,17 @@ public class AgrupacionZonas {
                sotanoByers.getNumeroNinos() + 
                radioWSQK.getNumeroNinos();
     }
-
+    
     // 2. Estado del evento activo (Para el servidor)
+    private final AtomicInteger tiempoRestanteEvento = new AtomicInteger(0);
+
+    public int getTiempoRestanteEvento() {
+        return tiempoRestanteEvento.get();
+    }
+
+    public void setTiempoRestanteEvento(int tiempo) {
+        this.tiempoRestanteEvento.set(tiempo);
+    }
     public String getEventoActivo() {
         if (apagonLaboratorio) return "Apagón en el Laboratorio";
         if (tormentaUpsideDown) return "Tormenta en el Upside Down";
@@ -154,7 +164,48 @@ public class AgrupacionZonas {
             }
         }
     }
-    
+     /**
+    * Devuelve un String con los 3 contadores de un portal específico.
+    * Formato: "esperandoIda,enElInterior,esperandoVuelta"
+    */
+   public String getEstadoPortalString(int index) {
+       Portal p = portales[index];
+       if (p == null) return "0,0,0";
+
+       // Obtenemos los tamaños de las listas que definiste
+       int esperandoIda = p.getNinosEsperandoAlUpsideDown().size();
+       int enElInterior = p.getCruzando().size();
+       int esperandoVuelta = p.getNinosEsperandoAHawkins().size();
+
+       // Lo unimos todo en una cadena fácil de trocear luego
+       return esperandoIda + "," + enElInterior + "," + esperandoVuelta;
+    }
+    public String getEntidadesZonaString(int indice) {
+    try {
+        ZonaInsegura zona = upsidedown.getZonas().get(indice);
+        int ninos = zona.getNinosEnZona().size();
+        int demos = zona.getDemogorgonsEnZona().size();
+        
+        // Ejemplo de retorno: "3/1" (3 niños y 1 demogorgon)
+        return ninos + "/" + demos; 
+    } catch (Exception e) {
+        return "0/0"; 
+    }
+    }
+    public String getEstadoGlobalParaMonitor() {
+       return getNinosTotalesHawkins() + ";" +           // partes[0]
+              getEventoActivo() + ";" +                  // partes[1]
+              radioWSQK.getSangreTotalAlmacenada() + ";" + // partes[2]
+              upsidedown.getColmena().getNumPrisioneros() + ";" + // partes[3]
+              getEstadoPortalString(0) + ";" +           // partes[4] (Bosque)
+              getEstadoPortalString(1) + ";" +           // partes[5] (Laboratorio)
+              getEstadoPortalString(2) + ";" +           // partes[6] (Centro Comercial)
+              getEstadoPortalString(3) + ";" +           // partes[7] (Alcantarillado)
+              getEntidadesZonaString(0) + ";" +
+              getEntidadesZonaString(1) + ";" +
+              getEntidadesZonaString(2) + ";" +
+              getEntidadesZonaString(3);
+   }
 
     public boolean isApagonLaboratorio() { return apagonLaboratorio; }
     public void setApagonLaboratorio(boolean apagonLaboratorio) { this.apagonLaboratorio = apagonLaboratorio; }

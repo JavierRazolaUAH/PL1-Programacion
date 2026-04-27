@@ -31,8 +31,9 @@ public class ZonaInsegura {
     }
 
     // --- GESTIÓN DE NIÑOS ---
-    public void entrarNino(Nino n) {
+    public void entrarNino(Nino n) throws InterruptedException{
         ninosEnZona.add(n);
+        zonas.esperarSiPausado();
     }
 
     public void salirNino(Nino n) {
@@ -51,15 +52,17 @@ public class ZonaInsegura {
     public void recolectarSangre(Nino n) throws InterruptedException {
         long tiempo = 3000 + random.nextInt(2001);
 
-        // --- EVENTO: TORMENTA DEL UPSIDE DOWN ---
-        // Si hay tormenta, los niños tardan el doble de tiempo en recolectar
         if (zonas != null && zonas.isTormentaUpsideDown()) {
             tiempo *= 2; 
         }
 
-        Thread.sleep(tiempo); // El hilo se detiene simulando el trabajo
+        Thread.sleep(tiempo); 
         
-        sangreRecolectada.incrementAndGet(); // Suma 1 de forma segura
+        // Al despertar del sleep, comprobamos si han pausado el juego 
+        // ANTES de sumar la sangre y terminar la acción.
+        zonas.esperarSiPausado(); 
+        
+        sangreRecolectada.incrementAndGet(); 
     }
 
     public Nino seleccionarVictima() {

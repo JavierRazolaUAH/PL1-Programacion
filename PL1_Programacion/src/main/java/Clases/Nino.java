@@ -1,21 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Clases;
 
-/**
- *
- * @author javir
- */
 public class Nino extends Thread {
     private String idNino;
     private boolean vivo = true;
     private boolean capturado = false;
     private boolean bajoAtaque = false; 
     private int sangreRecolectada = 0;
-    
-    // El niño necesita conocer el mapa para moverse
     private final AgrupacionZonas zonas; 
 
     public Nino(String idNino, AgrupacionZonas zonas) {
@@ -25,72 +15,60 @@ public class Nino extends Thread {
 
     // --- GETTERS Y SETTERS ---
     public String getIdNino() { return idNino; }
-    public void setIdNino(String idNino) { this.idNino = idNino; }
-
     public boolean isVivo() { return vivo; }
     public void setVivo(boolean vivo) { this.vivo = vivo; }
-    
     public boolean isCapturado() { return capturado; }
     public void setCapturado(boolean capturado) { this.capturado = capturado; }
-
     public boolean isBajoAtaque() { return bajoAtaque; }
     public void setBajoAtaque(boolean bajoAtaque) { this.bajoAtaque = bajoAtaque; }
-
     public int getSangreRecolectada() { return sangreRecolectada; }
     public void setSangreRecolectada(int sangreRecolectada) { this.sangreRecolectada = sangreRecolectada; }
-    
-    // ==========================================
-    //        EL MOTOR DEL HILO (CICLO DE VIDA)
-    // ==========================================
+
     @Override
     public void run() {
         try {
-            // Bloqueo al nacer
             zonas.esperarSiPausado();
             zonas.getCallePrincipal().inicio(this);
 
             while (vivo) {
                 // --- FASE 1: SÓTANO ---
-                zonas.esperarSiPausado(); // Antes de entrar
+                zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().entrarZona(this);
 
                 Thread.sleep(500); 
 
-                // EL FILTRO QUE TE FALTA:
-                // Si el juego se pausó mientras dormía el sleep de arriba,
-                // el hilo debe morir aquí antes de decir que "terminó de prepararse".
                 zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().salirZona(this);
 
                 // --- FASE 2: ELECCIÓN DE RUTA ---
                 int rutaElegida = (int) (Math.random() * 4);
-                zonas.esperarSiPausado(); // Bloqueo tras elegir, antes de entrar al portal
+                zonas.esperarSiPausado(); 
 
-                // --- FASE 3: PORTALES ---
+                // --- FASE 3: PORTALES (HACIA UPSIDE DOWN) ---
                 zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
 
                 // --- FASE 4: UPSIDE DOWN ---
-                zonas.esperarSiPausado(); 
+                // Importante: La pausa ahora ocurre DENTRO de entrarNino para que 
+                // el monitor vea que ya está en la lista antes de congelarse.
                 ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
-                zonaActual.entrarNino(this);
+                zonaActual.entrarNino(this); 
 
                 try {
                     zonaActual.recolectarSangre(this);
-                    zonas.esperarSiPausado(); // Bloqueo tras recolectar
                     
-                    // --- AQUÍ APLICAMOS LA LÓGICA DE LA TORMENTA ---
+                    // Pausa tras despertar del recolectar (antes de asignar la sangre)
+                    zonas.esperarSiPausado(); 
+                    
                     if (zonas.isTormentaUpsideDown()) {
-                        this.sangreRecolectada = 2; // ¡Doble de sangre!
-                        Logs.getInstance().log(idNino + " ha recolectado 2 uds de sangre (¡X2 POR TORMENTA!).");
+                        this.sangreRecolectada = 2;
+                        Logs.getInstance().log(idNino + " ha recolectado 2 uds (¡TORMENTA!).");
                     } else {
-                        this.sangreRecolectada = 1; // Normal
-                        Logs.getInstance().log(idNino + " ha recolectado 1 ud de sangre.");
+                        this.sangreRecolectada = 1;
+                        Logs.getInstance().log(idNino + " ha recolectado 1 ud.");
                     }
                     
                 } catch (InterruptedException e) {
-                    // Si cae aquí, es que el Demogorgon le ha lanzado un interrupt()
-                    this.sangreRecolectada = 0; // Pierde lo que estaba recolectando
-                    
+                    this.sangreRecolectada = 0;
                     synchronized (this) {
                         while (bajoAtaque) { this.wait(); }
                         zonas.esperarSiPausado(); 
@@ -107,18 +85,21 @@ public class Nino extends Thread {
                 zonas.esperarSiPausado();
                 zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
-                // --- FASE 6: RADIO ---
-                zonas.esperarSiPausado();
+                // --- FASE 6: RADIO (ENTREGA DE SANGRE) ---
+                // CLAVE: Pausamos ANTES de depositar para que el RMI no cuente sangre de más
+                zonas.esperarSiPausado(); 
+                
                 zonas.getRadioWSQK().depositarSangre(this);
                 zonas.getRadioWSQK().entrarZona(this);
 
                 Thread.sleep(500);
 
-                zonas.esperarSiPausado(); // Bloqueo tras dormir en la radio
+                zonas.esperarSiPausado(); 
                 zonas.getRadioWSQK().salirZona(this);
 
                 // --- FASE 7: CALLE ---
                 zonas.getCallePrincipal().deambular(this);
+                zonas.esperarSiPausado();
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
