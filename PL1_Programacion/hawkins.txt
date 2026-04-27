@@ -11576,3 +11576,84 @@
 2026-04-27 21:23:42 - >>> [PORTAL Alcantarillado] N016 ha ENTRADO al túnel (Hawkins -> Upside Down)
 2026-04-27 21:23:42 - N018 ha terminado de descansar y SALE de la Radio WSQK.
 2026-04-27 21:23:42 - N018 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:42 - N035 ha terminado de prepararse en el Sótano Byers.
+2026-04-27 21:23:42 - D0000 ha encerrado a N029 en la Colmena.
+2026-04-27 21:23:42 - D0000 está ATACANDO a N001 en ALCANTARILLADO
+2026-04-27 21:23:42 - <<< [PORTAL Bosque] N025 TERMINA de cruzar Bosque y está a salvo.
+2026-04-27 21:23:42 - >>> [PORTAL Bosque] N019 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:42 - N025 ha depositado 1 unidad(es) de sangre. Total en RADIO: 26
+2026-04-27 21:23:42 - N025 ha ENTRADO a la Radio WSQK para descansar.
+2026-04-27 21:23:42 - N037 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-27 21:23:42 - <<< [PORTAL Centro Comercial] N009 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-04-27 21:23:42 - >>> [PORTAL Centro Comercial] N011 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-04-27 21:23:42 - N009 ha depositado 1 unidad(es) de sangre. Total en RADIO: 27
+2026-04-27 21:23:42 - N009 ha ENTRADO a la Radio WSQK para descansar.
+2026-04-27 21:23:43 - <<< [PORTAL Laboratorio] N002 TERMINA de cruzar Laboratorio y está a salvo.
+2026-04-27 21:23:43 - N002 ha depositado 1 unidad(es) de sangre. Total en RADIO: 28
+2026-04-27 21:23:43 - N002 ha ENTRADO a la Radio WSQK para descansar.
+2026-04-27 21:23:43 - N026 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:43 - N026 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:43 - N005 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:43 - N005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:43 - N035 ha SALIDO del Sótano Byers hacia los Portales.
+2026-04-27 21:23:43 - >>> [PORTAL Laboratorio] N030 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:43 - N003 ha recolectado 1 ud.
+2026-04-27 21:23:43 - N025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-27 21:23:43 - N025 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:43 - <<< [PORTAL Alcantarillado] N016 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:43 - >>> [PORTAL Alcantarillado] N014 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:43 - N009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-27 21:23:43 - N009 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:43 - N002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-27 21:23:43 - N002 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:43 - N038 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-27 21:23:43 - N036 ha terminado de prepararse en el Sótano Byers.
+2026-04-27 21:23:43 - <<< [PORTAL Bosque] N019 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:43 - >>> [PORTAL Bosque] N003 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-04-27 21:23:43 - N037 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:43 - N037 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:43 - <<< [PORTAL Centro Comercial] N011 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-04-27 21:23:43 - N011 ha ENTRADO a la Radio WSQK para descansar.
+2026-04-27 21:23:43 - >>> [PORTAL Centro Comercial] N027 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:44 - <<< [PORTAL Laboratorio] N030 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:44 - >>> [PORTAL Laboratorio] N033 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:44 - N039 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-27 21:23:44 - N026 ha terminado de prepararse en el Sótano Byers.
+2026-04-27 21:23:44 - N036 ha SALIDO del Sótano Byers hacia los Portales.
+2026-04-27 21:23:44 - <<< [PORTAL Alcantarillado] N014 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:44 - >>> [PORTAL Alcantarillado] N021 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:44 - N011 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-27 21:23:44 - N011 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:44 - N038 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:44 - N038 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:44 - N005 ha terminado de prepararse en el Sótano Byers.
+2026-04-27 21:23:44 - D0000 ha encerrado a N001 en la Colmena.
+2026-04-27 21:23:44 - D0000 está ATACANDO a N019 en BOSQUE
+2026-04-27 21:23:44 - N026 ha SALIDO del Sótano Byers hacia los Portales.
+2026-04-27 21:23:44 - <<< [PORTAL Bosque] N003 TERMINA de cruzar Bosque y está a salvo.
+2026-04-27 21:23:44 - N003 ha depositado 1 unidad(es) de sangre. Total en RADIO: 29
+2026-04-27 21:23:44 - N003 ha ENTRADO a la Radio WSQK para descansar.
+2026-04-27 21:23:44 - <<< [PORTAL Centro Comercial] N027 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:44 - >>> [PORTAL Centro Comercial] N023 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:45 - N012 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:45 - N012 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:45 - N005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-04-27 21:23:45 - <<< [PORTAL Laboratorio] N033 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:45 - >>> [PORTAL Laboratorio] N035 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-04-27 21:23:45 - N037 ha terminado de prepararse en el Sótano Byers.
+2026-04-27 21:23:45 - N008 ha recolectado 1 ud.
+2026-04-27 21:23:45 - N039 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:45 - N039 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:45 - N003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-04-27 21:23:45 - N003 está DEAMBULANDO por la Calle Principal.
+2026-04-27 21:23:45 - N006 ha recolectado 1 ud.
+2026-04-27 21:23:45 - <<< [PORTAL Alcantarillado] N021 ha SALIDO del túnel hacia el Upside Down.
+2026-04-27 21:23:45 - >>> [PORTAL Alcantarillado] N008 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-04-27 21:23:45 - N019 ha RESISTIDO el ataque de D0000 y huye!
+2026-04-27 21:23:45 - >>> [PORTAL Bosque] N019 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-04-27 21:23:45 - D0000 está ATACANDO a N033 en LABORATORIO
+2026-04-27 21:23:45 - N015 ha recolectado 1 ud.
+2026-04-27 21:23:45 - N004 ha SALIDO de la Calle Principal.
+2026-04-27 21:23:45 - N004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-04-27 21:23:45 - N040 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-04-27 21:23:45 - N037 ha SALIDO del Sótano Byers hacia los Portales.
