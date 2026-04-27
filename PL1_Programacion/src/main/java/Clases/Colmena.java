@@ -59,8 +59,9 @@ public class Colmena {
     /**
      * Método que llamará Eleven en su evento para liberar niños.
      * @param cantidad Número de niños a liberar según la sangre recolectada.
+     * @return El número exacto de niños que han sido rescatados realmente.
      */
-    public void liberarNinos(int cantidad) {
+    public int liberarNinos(int cantidad) {
         int liberados = 0;
         
         // Sacamos de la lista hasta llegar a la cantidad, o hasta que se vacíe la colmena
@@ -68,7 +69,7 @@ public class Colmena {
             Nino rescatado = prisioneros.poll(); // Saca al niño de la cola
             
             if (rescatado != null) {
-                // ¡AQUÍ ESTÁ LA MAGIA! Nos sincronizamos con el hilo del niño para despertarlo
+                // Nos sincronizamos con el hilo del niño para despertarlo
                 synchronized (rescatado) {
                     rescatado.setCapturado(false); // Le quitamos las esposas
                     rescatado.notifyAll();         // ¡Despierta del wait() y huye hacia el portal!
@@ -82,6 +83,9 @@ public class Colmena {
         } else {
             Logs.getInstance().log("⚡ ELEVEN ha llegado a la Colmena, pero estaba vacía. No había nadie a quien rescatar.");
         }
+        
+        // ¡LA CLAVE! Devolvemos la cantidad para poder restar la sangre
+        return liberados; 
     }
 
     // --- Getters para la interfaz ---

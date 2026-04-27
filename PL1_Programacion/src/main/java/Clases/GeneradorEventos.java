@@ -22,9 +22,9 @@ public class GeneradorEventos extends Thread {
     public void run() {
         try {
             while (!Thread.currentThread().isInterrupted()) {
-                zonas.esperarSiPausado();
+                zonas.esperarSiPausado(); 
                 
-                // 1. Espera aleatoria entre 30 y 60 segundos
+                // 1. Espera aleatoria entre 30 y 60 segundos (Modo normal)
                 int tiempoHastaEvento = 30000 + random.nextInt(30001);
                 Thread.sleep(tiempoHastaEvento);
                 
@@ -48,9 +48,18 @@ public class GeneradorEventos extends Thread {
                     case 2:
                         zonas.setIntervencionEleven(true);
                         Logs.getInstance().log("¡EVENTO! INTERVENCIÓN DE ELEVEN: Demogorgons paralizados por " + (duracionEvento/1000) + "s.");
-                        // Liberamos tantos niños como sangre haya
+                        
+                        // 1. Miramos cuánta sangre hay
                         int sangreDisponible = zonas.getRadioWSQK().getSangreTotalAlmacenada();
-                        zonas.getUpsidedown().getColmena().liberarNinos(sangreDisponible);
+                        
+                        // 2. Eleven rescata a los niños y nos dice cuántos ha salvado
+                        int rescatados = zonas.getUpsidedown().getColmena().liberarNinos(sangreDisponible);
+                        
+                        // 3. ¡LA CLAVE! Restamos la sangre gastada de la radio
+                        if (rescatados > 0) {
+                            zonas.getRadioWSQK().consumirSangre(rescatados);
+                            Logs.getInstance().log("Se han consumido " + rescatados + " unidades de sangre para el rescate.");
+                        }
                         break;
                     case 3:
                         zonas.setRedMental(true);
@@ -63,7 +72,7 @@ public class GeneradorEventos extends Thread {
                 while (tiempoPasado < duracionEvento) {
                     zonas.esperarSiPausado(); 
 
-                    Thread.sleep(500); // Dormimos en intervalos pequeños (medio segundo)
+                    Thread.sleep(500); // Dormimos en intervalos pequeños
                     tiempoPasado += 500;
                 }
 
@@ -72,6 +81,10 @@ public class GeneradorEventos extends Thread {
                 zonas.setTormentaUpsideDown(false);
                 zonas.setIntervencionEleven(false);
                 zonas.setRedMental(false);
+                
+                // Despertamos a todos los hilos que se quedaron atrapados en los portales 
+                zonas.notificarFinEvento();
+                
                 Logs.getInstance().log("FIN DEL EVENTO GLOBAL. La normalidad vuelve a Hawkins.");
             }
         } catch (InterruptedException e) {

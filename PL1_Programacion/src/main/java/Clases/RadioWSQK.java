@@ -14,43 +14,52 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class RadioWSQK {
-    // Cola concurrente para almacenar a los niños que están descansando en la radio
+    // Lista de niños descansando
     private final BlockingQueue<Nino> ninosEnRadio;
-    private final Random rand;
-    private int sangreTotalAlmacenada = 0;
-    private AgrupacionZonas zonas;
+    private final AtomicInteger sangreTotalAlmacenada = new AtomicInteger(0);
+    private final AgrupacionZonas zonas;
+    private final Random rand = new Random();
 
     public RadioWSQK(AgrupacionZonas zonas) {
         this.ninosEnRadio = new LinkedBlockingQueue<>();
-        this.rand = new Random();
         this.zonas = zonas;
     }
 
-// --- MÉTODOS DE ENTRADA Y SALIDA ---
- public synchronized void depositarSangre(Nino nino) {
+    // --- GESTIÓN DE SANGRE ---
+
+    public void depositarSangre(Nino nino) {
         int sangreTraida = nino.getSangreRecolectada();
         if (sangreTraida > 0) {
-            this.sangreTotalAlmacenada += sangreTraida;
+            // Sumamos de forma atómica
+            int totalActual = sangreTotalAlmacenada.addAndGet(sangreTraida);
             nino.setSangreRecolectada(0);
-            Logs.getInstance().log(nino.getIdNino() + " ha depositado 1 unidad de sangre en la RADIO. Total sangre: " + sangreTotalAlmacenada);
+            Logs.getInstance().log(nino.getIdNino() + " ha depositado " + sangreTraida + 
+                " unidad(es) de sangre. Total en RADIO: " + totalActual);
         }
     }
 
-    // Unificamos el entrar y el descansar aquí
+    /**
+     * MÉTODO CLAVE: Eleven consume sangre para rescatar niños.
+     * Esto evita que la sangre crezca infinitamente y permite que el ciclo siga.
+     */
+    public void consumirSangre(int cantidad) {
+        int actual = sangreTotalAlmacenada.get();
+        // Restamos asegurándonos de no bajar de cero
+        int nuevaCantidad = Math.max(0, actual - cantidad);
+        sangreTotalAlmacenada.set(nuevaCantidad);
+    }
+
+    // --- MÉTODOS DE ENTRADA Y SALIDA ---
+
     public void entrarZona(Nino nino) throws InterruptedException {
-        // 1. Entra a la lista
-        ninosEnRadio.put(nino);
-        Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO a descansar a la Radio WSQK.");
-        
-        // 2. Tiempo de descanso: Aleatorio entre 2 y 4 segundos
-        int tiempoDescanso = rand.nextInt(2000) + 2000; 
-        Thread.sleep(tiempoDescanso);
-        zonas.esperarSiPausado();
-        
-        // 3. Llama al método salir
-        salirZona(nino);
+        // Solo añadimos a la lista. El tiempo de descanso lo controla el Nino.run()
+        if (!ninosEnRadio.contains(nino)) {
+            ninosEnRadio.put(nino);
+            Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO a la Radio WSQK para descansar.");
+        }
     }
 
     public void salirZona(Nino nino) {
@@ -59,18 +68,7 @@ public class RadioWSQK {
         }
     }
 
-public void descansar(Nino nino) throws InterruptedException {
-        ninosEnRadio.put(nino);
-        Logs.getInstance().log(nino.getIdNino() + " ha ENTRADO a descansar a la Radio WSQK.");
-        
-        // Tiempo de descanso: Aleatorio entre 2 y 4 segundos
-        int tiempoDescanso = rand.nextInt(2000) + 2000; 
-        Thread.sleep(tiempoDescanso);
-        zonas.esperarSiPausado();
-        salirZona(nino);
-    }
-
-    // --- MÉTODOS GETTER (Para la Interfaz) ---
+    // --- GETTERS ---
 
     public int getNumeroNinos() {
         return ninosEnRadio.size();
@@ -79,7 +77,8 @@ public void descansar(Nino nino) throws InterruptedException {
     public List<Nino> getNinosEnRadio() {
         return new ArrayList<>(ninosEnRadio);
     }
-    public synchronized int getSangreTotalAlmacenada() { 
-        return sangreTotalAlmacenada; 
+
+    public int getSangreTotalAlmacenada() {
+        return sangreTotalAlmacenada.get();
     }
 }
