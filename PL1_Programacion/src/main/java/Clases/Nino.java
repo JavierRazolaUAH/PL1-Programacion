@@ -8,8 +8,8 @@ package Clases;
  *
  * @author javir
  */
-public class Nino  extends Thread{
-private String idNino;
+public class Nino extends Thread {
+    private String idNino;
     private boolean vivo = true;
     private boolean capturado = false;
     private boolean bajoAtaque = false; 
@@ -77,8 +77,20 @@ private String idNino;
                 try {
                     zonaActual.recolectarSangre(this);
                     zonas.esperarSiPausado(); // Bloqueo tras recolectar
-                    this.sangreRecolectada = 1;
+                    
+                    // --- AQUÍ APLICAMOS LA LÓGICA DE LA TORMENTA ---
+                    if (zonas.isTormentaUpsideDown()) {
+                        this.sangreRecolectada = 2; // ¡Doble de sangre!
+                        Logs.getInstance().log(idNino + " ha recolectado 2 uds de sangre (¡X2 POR TORMENTA!).");
+                    } else {
+                        this.sangreRecolectada = 1; // Normal
+                        Logs.getInstance().log(idNino + " ha recolectado 1 ud de sangre.");
+                    }
+                    
                 } catch (InterruptedException e) {
+                    // Si cae aquí, es que el Demogorgon le ha lanzado un interrupt()
+                    this.sangreRecolectada = 0; // Pierde lo que estaba recolectando
+                    
                     synchronized (this) {
                         while (bajoAtaque) { this.wait(); }
                         zonas.esperarSiPausado(); 

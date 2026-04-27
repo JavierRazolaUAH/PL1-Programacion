@@ -30,57 +30,70 @@ public class Portal {
     }
 
     public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
-        // REGISTRO INICIAL
         lock.lock();
         try {
+            // 1. El niño llega y se apunta a la cola si no está
             if (!colaIda.contains(nino) && !grupoActual.contains(nino)) {
                 colaIda.add(nino);
             }
+
+            while (true) {
+                // Formar grupo si no hay uno activo y hay gente suficiente
+                if (grupoActual.isEmpty() && colaIda.size() >= capacidadGrupo) {
+                    for (int i = 0; i < capacidadGrupo; i++) {
+                        grupoActual.add(colaIda.poll());
+                    }
+                    condicionPortal.signalAll(); // Avisamos de que el grupo está formado
+                }
+
+                boolean esMiTurno = !grupoActual.isEmpty() && grupoActual.get(0).equals(nino);
+                boolean prioridadVuelta = !colaVuelta.isEmpty();
+
+                // Si es mi turno pero algo me para, logeamos la causa
+                if (esMiTurno) {
+                    if (prioridadVuelta) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Prioridad niños volviendo.");
+                    else if (ocupado) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Túnel ocupado.");
+                    else if (zonas.isApagonLaboratorio()) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Apagón activo.");
+                }
+
+                // Condición de salida para cruzar
+                if (esMiTurno && !ocupado && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
+                    break; 
+                }
+
+                try {
+                    // Esperamos nuestro turno
+                    condicionPortal.await();
+                    gestionarPausa();
+                } catch (InterruptedException e) {
+                    // ¡AQUÍ ESTABA EL BUG! Si me atacan mientras espero, limpio mi rastro
+                    colaIda.remove(nino);
+                    
+                    // Si estaba en el grupo listo para cruzar y me matan, el grupo se queda incompleto
+                    if (grupoActual.remove(nino)) {
+                        colaIda.addAll(grupoActual); // Devolvemos a los demás a la cola
+                        grupoActual.clear();         // Disolvemos el grupo roto
+                    }
+                    
+                    condicionPortal.signalAll(); // Aviso a los demás de que las listas han cambiado
+                    throw e; // Relanzo la excepción para que el hilo termine
+                }
+            }
+
+            // 2. RESERVAR EL TÚNEL
+            ocupado = true;
+            cruzando = nino;
+            grupoActual.remove(nino);
+            Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " hacia el Upside Down.");
+
         } finally {
+            // Siempre soltamos el lock antes de dormir para que otros puedan hacer cola
             lock.unlock();
         }
 
+        // 3. SIMULACIÓN DEL CRUCE (Esto puede ser interrumpido por el Demogorgon)
         try {
-            lock.lock();
-            try {
-                while (true) {
-                    // Formar grupo
-                    if (grupoActual.isEmpty() && colaIda.size() >= capacidadGrupo) {
-                        for (int i = 0; i < capacidadGrupo; i++) {
-                            grupoActual.add(colaIda.poll());
-                        }
-                        condicionPortal.signalAll();
-                    }
-
-                    boolean esMiTurno = !grupoActual.isEmpty() && grupoActual.get(0).equals(nino);
-                    boolean prioridadVuelta = !colaVuelta.isEmpty();
-
-                    // Si es mi turno pero algo me para, logeamos la causa
-                    if (esMiTurno) {
-                        if (prioridadVuelta) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Prioridad niños volviendo.");
-                        else if (ocupado) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Túnel ocupado por " + (cruzando != null ? cruzando.getIdNino() : "Nadie (ERROR DE ESTADO)"));
-                        else if (zonas.isApagonLaboratorio()) Logs.getInstance().log("[ESPERA] " + nino.getIdNino() + " en " + nombre + ": Apagón activo.");
-                    }
-
-                    if (esMiTurno && !ocupado && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                        break;
-                    }
-                    condicionPortal.await();
-                    gestionarPausa();
-                }
-
-                // RESERVAR EL TÚNEL
-                ocupado = true;
-                cruzando = nino;
-                grupoActual.remove(nino);
-                Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " hacia el Upside Down.");
-            } finally {
-                lock.unlock();
-            }
-
-            // SIMULACIÓN (Esto puede ser interrumpido por el Demogorgon)
             Thread.sleep(1000);
-
         } catch (InterruptedException e) {
             Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras cruzaba " + nombre);
             throw e;
@@ -94,34 +107,42 @@ public class Portal {
     public void cruzarAHawkins(Nino nino) throws InterruptedException {
         lock.lock();
         try {
+            // Me apunto en la cola de vuelta
             if (!colaVuelta.contains(nino)) colaVuelta.add(nino);
+
+            while (true) {
+                boolean esMiTurno = !colaVuelta.isEmpty() && colaVuelta.get(0).equals(nino);
+                
+                if (esMiTurno && !ocupado && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
+                    break;
+                }
+                
+                try {
+                    condicionPortal.await();
+                    gestionarPausa();
+                } catch (InterruptedException e) {
+                    // LIMPIEZA SI SOY ATACADO EN LA PUERTA
+                    colaVuelta.remove(nino);
+                    condicionPortal.signalAll();
+                    throw e;
+                }
+            }
+
+            // RESERVAR EL TÚNEL
+            ocupado = true;
+            cruzando = nino;
+            colaVuelta.remove(nino);
+            Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " volviendo a Hawkins.");
+            
         } finally {
             lock.unlock();
         }
 
+        // SIMULACIÓN DE CRUCE
         try {
-            lock.lock();
-            try {
-                while (true) {
-                    boolean esMiTurno = !colaVuelta.isEmpty() && colaVuelta.get(0).equals(nino);
-                    if (esMiTurno && !ocupado && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                        break;
-                    }
-                    condicionPortal.await();
-                    gestionarPausa();
-                }
-
-                ocupado = true;
-                cruzando = nino;
-                colaVuelta.remove(nino);
-                Logs.getInstance().log(nino.getIdNino() + " EMPIEZA a cruzar " + nombre + " volviendo a Hawkins.");
-            } finally {
-                lock.unlock();
-            }
-
             Thread.sleep(1000);
-
         } catch (InterruptedException e) {
+            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras volvía por " + nombre);
             throw e;
         } finally {
             liberarPortalManual();
@@ -161,9 +182,9 @@ public class Portal {
         }
     }
 
-
     // --- Getters ---
     public String getNombre() { return nombre; }
+    
     public List<Nino> getCruzando() {
         lock.lock();
         try {
@@ -172,6 +193,7 @@ public class Portal {
             return l;
         } finally { lock.unlock(); }
     }
+    
     public List<Nino> getNinosEsperandoAlUpsideDown() {
         lock.lock();
         try {
@@ -180,6 +202,7 @@ public class Portal {
             return l;
         } finally { lock.unlock(); }
     }
+    
     public List<Nino> getNinosEsperandoAHawkins() {
         lock.lock();
         try { return new ArrayList<>(colaVuelta); } finally { lock.unlock(); }
