@@ -4,6 +4,7 @@
  */
 package Interfaz;
 
+import Clases.Logs;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
@@ -13,11 +14,15 @@ import java.net.Socket;
  * @author Alex338
  */
 public class VentanaMonitor extends javax.swing.JFrame {
-
+    private Clases.AgrupacionZonas zonas;
     /**
      * Creates new form VentanaMonitor
      */
     public VentanaMonitor() {
+        initComponents();
+    }
+    public VentanaMonitor(Clases.AgrupacionZonas zonas) {
+        this.zonas = zonas;
         initComponents();
         javax.swing.Timer timer = new javax.swing.Timer(10, e -> pedirDatosAlServidor());
         timer.start();
@@ -33,13 +38,13 @@ public class VentanaMonitor extends javax.swing.JFrame {
     private void initComponents() {
 
         TextoNiñosHawkins = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         PanelUpsidedown = new javax.swing.JPanel();
         UpsideDown1 = new javax.swing.JLabel();
         UpsideDown2 = new javax.swing.JLabel();
         UpsideDown3 = new javax.swing.JLabel();
         UpsideDown4 = new javax.swing.JLabel();
         TituloPortales1 = new java.awt.Label();
+        NinosColmena = new javax.swing.JLabel();
         PanelPortales = new javax.swing.JPanel();
         Portal1 = new javax.swing.JLabel();
         Portal2 = new javax.swing.JLabel();
@@ -51,12 +56,27 @@ public class VentanaMonitor extends javax.swing.JFrame {
         TiempoRestanteEvento = new javax.swing.JLabel();
         EventoActivo = new javax.swing.JLabel();
         PanelDemogorgons = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        Puntu1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        Puntu2 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        Puntu3 = new javax.swing.JLabel();
+        TituloClasificacion = new java.awt.Label();
+        Demo1 = new javax.swing.JLabel();
+        Demo2 = new javax.swing.JLabel();
+        Demo3 = new javax.swing.JLabel();
+        Boton_Reanudar = new javax.swing.JButton();
+        Boton_Pausa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TextoNiñosHawkins.setText("Niños totales a salvo en Hawkins: 0");
+        getContentPane().add(TextoNiñosHawkins, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 15, 338, 32));
 
-        PanelUpsidedown.setBackground(new java.awt.Color(255, 153, 153));
+        PanelUpsidedown.setBackground(new java.awt.Color(255, 102, 204));
+        PanelUpsidedown.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 204), 2));
 
         UpsideDown1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         UpsideDown1.setText("<html><center><b>Zona X - Nombre</b><br>Niños &nbsp;&nbsp;&nbsp;&nbsp; Demos<br>[0] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0]</center></html>");
@@ -74,6 +94,9 @@ public class VentanaMonitor extends javax.swing.JFrame {
         TituloPortales1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TituloPortales1.setText("Estado del UpsideDown (niños y Demogorgons)");
 
+        NinosColmena.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        NinosColmena.setText("Niños en la colmena: XXX");
+
         javax.swing.GroupLayout PanelUpsidedownLayout = new javax.swing.GroupLayout(PanelUpsidedown);
         PanelUpsidedown.setLayout(PanelUpsidedownLayout);
         PanelUpsidedownLayout.setHorizontalGroup(
@@ -83,13 +106,14 @@ public class VentanaMonitor extends javax.swing.JFrame {
             .addComponent(UpsideDown2)
             .addComponent(UpsideDown3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(UpsideDown4)
+            .addComponent(NinosColmena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PanelUpsidedownLayout.setVerticalGroup(
             PanelUpsidedownLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelUpsidedownLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(TituloPortales1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UpsideDown1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(UpsideDown2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -97,10 +121,15 @@ public class VentanaMonitor extends javax.swing.JFrame {
                 .addComponent(UpsideDown3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(UpsideDown4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addGap(27, 27, 27)
+                .addComponent(NinosColmena)
+                .addGap(16, 16, 16))
         );
 
+        getContentPane().add(PanelUpsidedown, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 53, -1, -1));
+
         PanelPortales.setBackground(new java.awt.Color(255, 153, 153));
+        PanelPortales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 102), 2));
 
         Portal1.setText("<html>\n<div style='text-align: center;'>\n  --- Portal 1 (Bosque) ---<br>\n  Hawkins → UpsideDown | CRUZANDO | UpsideDown → Hawkins<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;[0]&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[0]\n</div>\n</html>");
 
@@ -133,18 +162,21 @@ public class VentanaMonitor extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPortalesLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(TituloPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(Portal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 25, Short.MAX_VALUE)
                 .addComponent(Portal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 25, Short.MAX_VALUE)
                 .addComponent(Portal3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 25, Short.MAX_VALUE)
                 .addComponent(Portal4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addGap(29, 29, 29))
         );
 
-        PanelEventos.setBackground(new java.awt.Color(255, 255, 153));
+        getContentPane().add(PanelPortales, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 53, -1, -1));
+
+        PanelEventos.setBackground(new java.awt.Color(204, 255, 204));
+        PanelEventos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 255, 102), 2));
 
         TituloEventos.setAlignment(java.awt.Label.CENTER);
         TituloEventos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -181,65 +213,170 @@ public class VentanaMonitor extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
+        getContentPane().add(PanelEventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
+
+        PanelDemogorgons.setBackground(new java.awt.Color(255, 255, 102));
+        PanelDemogorgons.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 2));
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 0));
+
+        Puntu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntu1.setText("DXXXX");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Puntu1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Puntu1)
+                .addContainerGap(103, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+
+        Puntu2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntu2.setText("DXXXX");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Puntu2, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(Puntu2)
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
+        jPanel5.setBackground(new java.awt.Color(204, 153, 0));
+
+        Puntu3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntu3.setText("DXXXX");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Puntu3, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(Puntu3)
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+
+        TituloClasificacion.setAlignment(java.awt.Label.CENTER);
+        TituloClasificacion.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        TituloClasificacion.setText("Clasificación Demogorgons");
+
+        Demo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Demo1.setText("DXXXX");
+
+        Demo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Demo2.setText("Demo2");
+
+        Demo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Demo3.setText("Demo3");
+
         javax.swing.GroupLayout PanelDemogorgonsLayout = new javax.swing.GroupLayout(PanelDemogorgons);
         PanelDemogorgons.setLayout(PanelDemogorgonsLayout);
         PanelDemogorgonsLayout.setHorizontalGroup(
             PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelDemogorgonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloClasificacion, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
+            .addGroup(PanelDemogorgonsLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Demo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Demo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Demo3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         PanelDemogorgonsLayout.setVerticalGroup(
             PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 252, Short.MAX_VALUE)
+            .addGroup(PanelDemogorgonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloClasificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PanelDemogorgonsLayout.createSequentialGroup()
+                        .addComponent(Demo1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelDemogorgonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelDemogorgonsLayout.createSequentialGroup()
+                                .addComponent(Demo3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(PanelDemogorgonsLayout.createSequentialGroup()
+                        .addComponent(Demo2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(TextoNiñosHawkins, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(PanelEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PanelDemogorgons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(PanelPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(71, 71, 71)
-                                .addComponent(PanelUpsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(136, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(TextoNiñosHawkins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PanelUpsidedown, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PanelPortales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
-                        .addComponent(PanelDemogorgons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(315, 315, 315))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(PanelEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        getContentPane().add(PanelDemogorgons, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 380, -1));
+
+        Boton_Reanudar.setText("REANUDAR");
+        Boton_Reanudar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ReanudarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton_Reanudar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 630, 130, 50));
+
+        Boton_Pausa.setText("PAUSAR");
+        Boton_Pausa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_PausaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boton_Pausa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 630, 130, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton_ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ReanudarActionPerformed
+        // TODO add your handling code here:
+        if (zonas != null) {
+            zonas.reanudar();
+            System.out.println("Simulación reanudada.");
+            Logs.getInstance().log("SIMULACIÓN REANUDADA");
+        }
+    }//GEN-LAST:event_Boton_ReanudarActionPerformed
+
+    private void Boton_PausaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_PausaActionPerformed
+        // TODO add your handling code here:
+        if (zonas != null) {
+            zonas.pausar();
+            System.out.println("Simulación pausada.");
+            Logs.getInstance().log("SIMULACIÓN PARADA");
+        }
+    }//GEN-LAST:event_Boton_PausaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,6 +415,37 @@ public class VentanaMonitor extends javax.swing.JFrame {
     label.setText(html);
     label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); // Centrado físico del label
 }
+    private void actualizarRanking(String datosTop) {
+    // Si no hay datos, limpiamos los labels
+    if (datosTop.equals("No hay datos") || datosTop.equals("Sin capturas")) {
+        Demo1.setText("-"); Puntu1.setText("0");
+        Demo2.setText("-"); Puntu2.setText("0");
+        Demo3.setText("-"); Puntu3.setText("0");
+        return;
+    }
+
+    // 1. Separamos por la barra "|" para tener a cada demogorgon
+    String[] tops = datosTop.split(" \\| ");
+
+    // Array de labels para iterar fácilmente
+    javax.swing.JLabel[] labelsNombres = {Demo1, Demo2, Demo3};
+    javax.swing.JLabel[] labelsPuntos = {Puntu1, Puntu2, Puntu3};
+
+    for (int i = 0; i < 3; i++) {
+        if (i < tops.length) {
+            // Separamos el nombre del número (ID: Capturas)
+            String[] info = tops[i].split(": "); 
+            if (info.length == 2) {
+                labelsNombres[i].setText(info[0]);
+                labelsPuntos[i].setText(info[1]);
+            }
+        } else {
+            // Si hay menos de 3 demogorgons con capturas
+            labelsNombres[i].setText("-");
+            labelsPuntos[i].setText("0");
+        }
+    }
+}
     private void pedirDatosAlServidor() {
     try (Socket s = new Socket("localhost", 5011)) { 
         DataOutputStream salida = new DataOutputStream(s.getOutputStream());
@@ -288,12 +456,13 @@ public class VentanaMonitor extends javax.swing.JFrame {
         String[] partes = respuesta.split(";");
 
         // Verificamos que tengamos todas las partes (del 0 al 7)
-        if (partes.length >= 8) {
+        if (partes.length >= 13) {
             // 1. Actualizar texto general
             TextoNiñosHawkins.setText("Total niños en Hawkins: " + partes[0]);
             // Aquí podrías actualizar un label de Evento si lo tuvieras con partes[1]
             EventoActivo.setText("Evento Activo: " + partes[1]);
             TiempoRestanteEvento.setText("Tiempo restante del evento " + partes[2]);
+            NinosColmena.setText("Niños en la colmena: "+ partes[3]);
             // 2. Actualizar Portales
             // Usamos un método auxiliar para no repetir código 4 veces
             actualizarLabelPortal(Portal1, "Bosque", partes[4]);
@@ -305,6 +474,7 @@ public class VentanaMonitor extends javax.swing.JFrame {
             actualizarLabelZona(UpsideDown2, 2, "Laboratorio", partes[9]);
             actualizarLabelZona(UpsideDown3, 3, "Centro Comercial", partes[10]);
             actualizarLabelZona(UpsideDown4, 4, "Alcantarillado", partes[11]);
+            actualizarRanking(partes[12]);
         }
     } catch (Exception ex) {
         // En caso de error (servidor apagado), puedes poner un mensaje opcional
@@ -344,7 +514,13 @@ public class VentanaMonitor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Pausa;
+    private javax.swing.JButton Boton_Reanudar;
+    private javax.swing.JLabel Demo1;
+    private javax.swing.JLabel Demo2;
+    private javax.swing.JLabel Demo3;
     private javax.swing.JLabel EventoActivo;
+    private javax.swing.JLabel NinosColmena;
     private javax.swing.JPanel PanelDemogorgons;
     private javax.swing.JPanel PanelEventos;
     private javax.swing.JPanel PanelPortales;
@@ -353,8 +529,12 @@ public class VentanaMonitor extends javax.swing.JFrame {
     private javax.swing.JLabel Portal2;
     private javax.swing.JLabel Portal3;
     private javax.swing.JLabel Portal4;
+    private javax.swing.JLabel Puntu1;
+    private javax.swing.JLabel Puntu2;
+    private javax.swing.JLabel Puntu3;
     private javax.swing.JLabel TextoNiñosHawkins;
     private javax.swing.JLabel TiempoRestanteEvento;
+    private java.awt.Label TituloClasificacion;
     private java.awt.Label TituloEventos;
     private java.awt.Label TituloPortales;
     private java.awt.Label TituloPortales1;
@@ -362,6 +542,8 @@ public class VentanaMonitor extends javax.swing.JFrame {
     private javax.swing.JLabel UpsideDown2;
     private javax.swing.JLabel UpsideDown3;
     private javax.swing.JLabel UpsideDown4;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }

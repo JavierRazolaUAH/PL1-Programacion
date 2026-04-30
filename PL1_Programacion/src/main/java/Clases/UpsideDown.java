@@ -16,7 +16,8 @@ public class UpsideDown {
     // Referencia a la Colmena
     private Colmena colmena; 
     private final Random random = new Random();
-    //Lista de TODOS los demogorgons para el ranking
+
+
     private List<Demogorgon> listaDemogorgons = new CopyOnWriteArrayList<>();
 
     // --- ACTUALIZACIÓN: El constructor ahora recibe 'zonas' ---
@@ -90,7 +91,10 @@ public class UpsideDown {
     public Colmena getColmena() {
         return colmena;
     }
-    
+
+    public List<Demogorgon> getListaDemogorgons() {
+        return listaDemogorgons;
+    }
     /**
      * Devuelve la zona insegura que tiene más niños en ese preciso milisegundo.
      * Útil para el evento "LA RED MENTAL".

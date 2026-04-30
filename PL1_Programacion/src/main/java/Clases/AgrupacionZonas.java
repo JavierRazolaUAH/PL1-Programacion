@@ -9,6 +9,7 @@ package Clases;
  * @author javir
  */
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -148,6 +149,7 @@ public class AgrupacionZonas {
     public void setTiempoRestanteEvento(int tiempo) {
         this.tiempoRestanteEvento.set(tiempo);
     }
+    
     public String getEventoActivo() {
         if (apagonLaboratorio) return "Apagón en el Laboratorio";
         if (tormentaUpsideDown) return "Tormenta en el Upside Down";
@@ -192,19 +194,42 @@ public class AgrupacionZonas {
         return "0/0"; 
     }
     }
+    public String getTop3Demogorgons() {
+    try {
+        // Accedemos a la lista que está en UpsideDown
+        List<Demogorgon> lista = upsidedown.getListaDemogorgons();
+
+        if (lista == null || lista.isEmpty()) {
+            return "No hay datos";
+        }
+
+        // Usamos Streams para ordenar y obtener el Top 3
+        return lista.stream()
+                // Ordenar por capturas (Descendente)
+                .sorted((d1, d2) -> Integer.compare(d2.getCapturasRealizadas(), d1.getCapturasRealizadas()))
+                .limit(3)
+                .map(d -> d.getIdDemogorgon() + ": " + d.getCapturasRealizadas())
+                .reduce((a, b) -> a + " | " + b)
+                .orElse("Sin capturas");
+                
+    } catch (Exception e) {
+        return "Error al calcular Top";
+    }
+}
     public String getEstadoGlobalParaMonitor() {
        return getNinosTotalesHawkins() + ";" +           // partes[0]
               getEventoActivo() + ";" +                  // partes[1]
-              radioWSQK.getSangreTotalAlmacenada() + ";" + // partes[2]
-              upsidedown.getColmena().getNumPrisioneros() + ";" + // partes[3]
+              getTiempoRestanteEvento() + ";" + // partes[2]
+              getUpsidedown().getColmena().getNumPrisioneros() + ";" + // partes[3]
               getEstadoPortalString(0) + ";" +           // partes[4] (Bosque)
-              getEstadoPortalString(1) + ";" +           // partes[5] (Laboratorio)
-              getEstadoPortalString(2) + ";" +           // partes[6] (Centro Comercial)
-              getEstadoPortalString(3) + ";" +           // partes[7] (Alcantarillado)
-              getEntidadesZonaString(0) + ";" +
-              getEntidadesZonaString(1) + ";" +
-              getEntidadesZonaString(2) + ";" +
-              getEntidadesZonaString(3);
+              getEstadoPortalString(1) + ";" +                 // partes[5] (Lab)
+              getEstadoPortalString(2) + ";" +                    // partes[6] (Centro)
+              getEstadoPortalString(3) + ";" +                  // partes[7] (Alcantarilla)
+              getEntidadesZonaString(0) + ";" +                 // partes[8]
+              getEntidadesZonaString(1) + ";" +                 // partes[9]
+              getEntidadesZonaString(2) + ";" +                 // partes[10]
+              getEntidadesZonaString(3) + ";" +                 // partes[11]
+              getTop3Demogorgons();                             // partes[12
    }
 
     public boolean isApagonLaboratorio() { return apagonLaboratorio; }
