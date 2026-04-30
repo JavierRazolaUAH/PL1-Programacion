@@ -29,130 +29,119 @@ public class Portal {
         this.zonas = zonas;
     }
 
-public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
-    gestionarPausaFueraDeLock(); 
+    public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
+        gestionarPausaFueraDeLock(); 
 
-    lock.lock();
-    try {
-        if (!colaIda.contains(nino) && !grupoActual.contains(nino)) {
-            colaIda.add(nino);
+        lock.lock();
+        try {
+            if (!colaIda.contains(nino) && !grupoActual.contains(nino)) {
+                colaIda.add(nino);
+            }
+
+            while (true) {
+                if (grupoActual.isEmpty() && colaIda.size() >= capacidadGrupo) {
+                    for (int i = 0; i < capacidadGrupo; i++) {
+                        grupoActual.add(colaIda.poll());
+                    }
+                    condicionPortal.signalAll();
+                }
+
+                boolean esMiTurno = !grupoActual.isEmpty() && grupoActual.get(0).equals(nino);
+                boolean prioridadVuelta = !colaVuelta.isEmpty();
+
+                if (esMiTurno && !ocupado && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
+                    break; 
+                }
+
+                try {
+                    condicionPortal.await();
+                    gestionarPausa(); 
+                } catch (InterruptedException e) {
+                    colaIda.remove(nino);
+                    if (grupoActual.remove(nino)) {
+                        colaIda.addAll(grupoActual);
+                        grupoActual.clear();
+                    }
+                    condicionPortal.signalAll();
+                    throw e;
+                }
+            }
+
+            ocupado = true;
+            cruzando = nino;
+            grupoActual.remove(nino);
+            Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Hawkins -> Upside Down)");
+
+        } finally {
+            lock.unlock();
         }
 
-        while (true) {
-            if (grupoActual.isEmpty() && colaIda.size() >= capacidadGrupo) {
-                for (int i = 0; i < capacidadGrupo; i++) {
-                    grupoActual.add(colaIda.poll());
-                }
-                condicionPortal.signalAll();
-            }
-
-            boolean esMiTurno = !grupoActual.isEmpty() && grupoActual.get(0).equals(nino);
-            boolean prioridadVuelta = !colaVuelta.isEmpty();
-
-            if (esMiTurno && !ocupado && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                break; 
-            }
-
-            try {
-                condicionPortal.await();
-                gestionarPausa(); 
-            } catch (InterruptedException e) {
-                colaIda.remove(nino);
-                if (grupoActual.remove(nino)) {
-                    colaIda.addAll(grupoActual);
-                    grupoActual.clear();
-                }
-                condicionPortal.signalAll();
-                throw e;
-            }
-        }
-
-        // --- ENTRADA AL TÚNEL ---
-        ocupado = true;
-        cruzando = nino;
-        grupoActual.remove(nino);
-        Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Hawkins -> Upside Down)");
-
-    } finally {
-        lock.unlock();
-    }
-
-    try {
+        try {
             Thread.sleep(1000);
-            
-            // --- CAMBIO AQUÍ: Primero pausamos si es necesario ---
             gestionarPausaFueraDeLock(); 
-            
         } catch (InterruptedException e) {
             Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras cruzaba " + nombre);
             throw e;
         } finally {
-            // --- CAMBIO AQUÍ: Solo liberamos cuando el juego NO esté pausado ---
             liberarPortalManual();
             Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " ha SALIDO del túnel hacia el Upside Down.");
         }
-}
-
-public void cruzarAHawkins(Nino nino) throws InterruptedException {
-    gestionarPausaFueraDeLock();
-
-    lock.lock();
-    try {
-        if (!colaVuelta.contains(nino)) colaVuelta.add(nino);
-
-        while (true) {
-            boolean esMiTurno = !colaVuelta.isEmpty() && colaVuelta.get(0).equals(nino);
-            if (esMiTurno && !ocupado && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                break;
-            }
-            
-            try {
-                condicionPortal.await();
-                gestionarPausa();
-            } catch (InterruptedException e) {
-                colaVuelta.remove(nino);
-                condicionPortal.signalAll();
-                throw e;
-            }
-        }
-
-        // --- ENTRADA AL TÚNEL ---
-        ocupado = true;
-        cruzando = nino;
-        colaVuelta.remove(nino);
-        Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Upside Down -> Hawkins)");
-        
-    } finally {
-        lock.unlock();
     }
 
-    try {
+    public void cruzarAHawkins(Nino nino) throws InterruptedException {
+        gestionarPausaFueraDeLock();
+
+        lock.lock();
+        try {
+            if (!colaVuelta.contains(nino)) colaVuelta.add(nino);
+
+            while (true) {
+                boolean esMiTurno = !colaVuelta.isEmpty() && colaVuelta.get(0).equals(nino);
+                if (esMiTurno && !ocupado && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
+                    break;
+                }
+                
+                try {
+                    condicionPortal.await();
+                    gestionarPausa();
+                } catch (InterruptedException e) {
+                    colaVuelta.remove(nino);
+                    condicionPortal.signalAll();
+                    throw e;
+                }
+            }
+
+            ocupado = true;
+            cruzando = nino;
+            colaVuelta.remove(nino);
+            Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Upside Down -> Hawkins)");
+            
+        } finally {
+            lock.unlock();
+        }
+
+        try {
             Thread.sleep(1000);
-            
-            // --- CAMBIO AQUÍ: Pausa antes de salir ---
             gestionarPausaFueraDeLock();
-            
         } catch (InterruptedException e) {
             Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras volvía por " + nombre);
             throw e;
         } finally {
-            // --- CAMBIO AQUÍ: Liberar y log después de la pausa ---
             liberarPortalManual();
             Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " TERMINA de cruzar " + nombre + " y está a salvo.");
         }
-}
+    }
 
-    // Método auxiliar para cuando no tenemos el lock del portal cogido
     private void gestionarPausaFueraDeLock() throws InterruptedException {
         zonas.esperarSiPausado();
     }
-    // MÉTODO MAESTRO DE LIBERACIÓN
+
     private void liberarPortalManual() {
         lock.lock();
         try {
             ocupado = false;
             cruzando = null;
-            condicionPortal.signalAll(); // Despertar al siguiente
+            condicionPortal.signalAll();
         } finally {
             lock.unlock();
         }
@@ -178,7 +167,6 @@ public void cruzarAHawkins(Nino nino) throws InterruptedException {
         }
     }
 
-    // --- Getters ---
     public String getNombre() { return nombre; }
     
     public List<Nino> getCruzando() {

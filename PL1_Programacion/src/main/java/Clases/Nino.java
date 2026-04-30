@@ -13,7 +13,6 @@ public class Nino extends Thread {
         this.zonas = zonas;
     }
 
-    // --- GETTERS Y SETTERS ---
     public String getIdNino() { return idNino; }
     public boolean isVivo() { return vivo; }
     public void setVivo(boolean vivo) { this.vivo = vivo; }
@@ -31,7 +30,6 @@ public class Nino extends Thread {
             zonas.getCallePrincipal().inicio(this);
 
             while (vivo) {
-                // --- FASE 1: SÓTANO ---
                 zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().entrarZona(this);
 
@@ -40,23 +38,17 @@ public class Nino extends Thread {
                 zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().salirZona(this);
 
-                // --- FASE 2: ELECCIÓN DE RUTA ---
                 int rutaElegida = (int) (Math.random() * 4);
                 zonas.esperarSiPausado(); 
 
-                // --- FASE 3: PORTALES (HACIA UPSIDE DOWN) ---
                 zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
 
-                // --- FASE 4: UPSIDE DOWN ---
-                // Importante: La pausa ahora ocurre DENTRO de entrarNino para que 
-                // el monitor vea que ya está en la lista antes de congelarse.
                 ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
                 zonaActual.entrarNino(this); 
 
                 try {
                     zonaActual.recolectarSangre(this);
                     
-                    // Pausa tras despertar del recolectar (antes de asignar la sangre)
                     zonas.esperarSiPausado(); 
                     
                     if (zonas.isTormentaUpsideDown()) {
@@ -81,12 +73,9 @@ public class Nino extends Thread {
                     zonaActual.salirNino(this);
                 }
 
-                // --- FASE 5: VUELTA ---
                 zonas.esperarSiPausado();
                 zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
-                // --- FASE 6: RADIO (ENTREGA DE SANGRE) ---
-                // CLAVE: Pausamos ANTES de depositar para que el RMI no cuente sangre de más
                 zonas.esperarSiPausado(); 
                 
                 zonas.getRadioWSQK().depositarSangre(this);
@@ -97,7 +86,6 @@ public class Nino extends Thread {
                 zonas.esperarSiPausado(); 
                 zonas.getRadioWSQK().salirZona(this);
 
-                // --- FASE 7: CALLE ---
                 zonas.getCallePrincipal().deambular(this);
                 zonas.esperarSiPausado();
             }

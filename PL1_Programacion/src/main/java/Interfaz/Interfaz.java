@@ -6,10 +6,6 @@ package Interfaz;
 
 import Clases.Logs;
 
-/**
- *
- * @author javir
- */
 public class Interfaz extends javax.swing.JFrame {
 
     /**
@@ -25,17 +21,14 @@ public class Interfaz extends javax.swing.JFrame {
 
     public Interfaz(Clases.AgrupacionZonas zonas) {
         this.zonas = zonas;
-        initComponents(); // Inicializa los componentes gráficos
+        initComponents(); 
 
-        // Inicia todos los temporizadores que actualizan las distintas zonas cada 500ms
         iniciarActualizadorSotano();
         iniciarActualizadorRadio();
         iniciarActualizadorCalle();
         iniciarActualizadorZonasInseguras();
-        configurarScrollBarsPortales();  // <--- Esto limpia todas las barras vacías al arrancar
-        iniciarActualizadoresPortales(); // <--- Esto arranca el motor gráfico de los 4 portales
-        // Más adelante añadiremos aquí:
-        // iniciarActualizadoresUpsideDown();
+        configurarScrollBarsPortales(); 
+        iniciarActualizadoresPortales();
     }
 
 
@@ -57,7 +50,6 @@ public void actualizarSotanoGUI() {
     //       ACTUALIZADORES: RADIO WSQK
     // ==========================================
 public void actualizarRadioGUI() {
-        // Usamos el método genérico que ya hace toda la magia del StringBuilder
         actualizarListaNinos(zonas.getRadioWSQK().getNinosEnRadio(), jTextAreaRadio);
     }
 
@@ -86,10 +78,8 @@ public void actualizarCalleGUI() {
     public void actualizarSangreGUI() {
         if (zonas == null) return;
         
-        // Leemos el dato de la Radio
         int sangre = zonas.getRadioWSQK().getSangreTotalAlmacenada();
         
-        // ACTUALIZA EL NOMBRE: Pon aquí el nombre de tu variable (ej: Sangre_Total)
         Cantidad_Sangre.setText(String.valueOf(sangre));
     }
     
@@ -180,19 +170,15 @@ public void actualizarCalleGUI() {
     public void actualizarContadorCapturadosGUI() {
     if (zonas == null) return;
 
-    // Accedemos a la colmena a través de UpsideDown
     Clases.Colmena colmena = zonas.getUpsidedown().getColmena();
     
     if (colmena != null) {
-        int total = colmena.getNumPrisioneros(); // Niños que están allí ahora
-        // O si quieres el histórico: colmena.getCapturasHistoricas();
+        int total = colmena.getNumPrisioneros(); 
 
-        // Actualizamos el JTextField (importante convertir el int a String)
         Ninos_Capturados.setText(String.valueOf(total));
     }
 }
     
-// --- 1. MÉTODOS GENÉRICOS (Reutilizables para no repetir código) ---
     private void actualizarListaNinos(java.util.List<Clases.Nino> ninos, javax.swing.JTextArea textArea) {
         if (zonas == null || zonas.isPausado()) return;
         
@@ -213,8 +199,6 @@ public void actualizarCalleGUI() {
         }
     }
 
-    // --- 2. ACTUALIZADORES ESPECÍFICOS DE CADA PORTAL ---
-    // --- 2. ACTUALIZADORES ESPECÍFICOS DE CADA PORTAL (Corregido Izq -> Medio -> Der) ---
     public void actualizarPortalBosqueGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(0);
@@ -227,12 +211,11 @@ public void actualizarCalleGUI() {
     public void actualizarPortalLaboratorioGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(1);
-        
-        // IZQUIERDA: Esperando para ir
+
         actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Laboratorio_Dentro);
-        // MEDIO: Cruzando en bloque
+
         actualizarListaNinos(portal.getCruzando(), jTextArea_Laboratorio_Salida);
-        // DERECHA: Esperando para volver
+
         actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Laboratorio_Entrada);
     }
 
@@ -240,11 +223,10 @@ public void actualizarCalleGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(2);
         
-        // IZQUIERDA: Esperando para ir
         actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Centro_Comercial_Dentro);
-        // MEDIO: Cruzando en bloque
+
         actualizarListaNinos(portal.getCruzando(), jTextArea_Centro_Comercial_Salida);
-        // DERECHA: Esperando para volver
+
         actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Centro_Comercial_Entrada);
     }
 
@@ -252,14 +234,13 @@ public void actualizarCalleGUI() {
         if (zonas == null || zonas.isPausado()) return;
         Clases.Portal portal = zonas.getPortal(3);
         
-        // IZQUIERDA: Esperando para ir
         actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Alcantarillado_Dentro);
-        // MEDIO: Cruzando en bloque
+
         actualizarListaNinos(portal.getCruzando(), jTextArea_Alcantarillado_Salida);
-        // DERECHA: Esperando para volver
+
         actualizarListaNinos(portal.getNinosEsperandoAHawkins(), jTextArea_Alcantarillado_Entrada);
     }
-    // --- 3. TIMER UNIFICADO ---
+
     private void iniciarActualizadoresPortales() {
         new javax.swing.Timer(500, e -> {
             actualizarPortalBosqueGUI();
@@ -269,9 +250,9 @@ public void actualizarCalleGUI() {
         }).start();
     }
 
-    // --- 4. TRUCO DE DISEÑO: LIMPIEZA DE BARRAS DE DESPLAZAMIENTO ---
+
     private void configurarScrollBarsPortales() {
-        // Metemos todos tus JScrollPanes en un array para aplicarles la regla de golpe
+
         javax.swing.JScrollPane[] scrolls = {
             jScrollPaneBosque_Entrada, jScrollPaneBosque_Salida, jScrollPaneBosque_Dentro,
             jScrollPane_Laboratorio_Entrada, jScrollPane_Laboratorio_Salida, jScrollPane_Laboratorio_Dentro,
@@ -282,9 +263,9 @@ public void actualizarCalleGUI() {
         };
 
         for (javax.swing.JScrollPane scroll : scrolls) {
-            // Barra vertical: Solo cuando haga falta
+
             scroll.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-            // Barra horizontal: NUNCA
+
             scroll.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         }
     }
@@ -296,10 +277,8 @@ public void actualizarCalleGUI() {
     public void actualizarEventoActivoGUI() {
         if (zonas == null) return;
 
-        // Por defecto, ponemos Ninguno
         String textoEvento = "Ninguno";
 
-        // Comprobamos si hay algún evento activo y cambiamos el texto
         if (zonas.isApagonLaboratorio()) {
             textoEvento = "APAGÓN DEL LABORATORIO";
         } else if (zonas.isTormentaUpsideDown()) {
@@ -310,7 +289,7 @@ public void actualizarCalleGUI() {
             textoEvento = "LA RED MENTAL";
         }
 
-        // Le ponemos el texto al recuadro (asegúrate de que se llama así)
+
         jTextAreaEventoActivo.setText(textoEvento); 
     }
     /**

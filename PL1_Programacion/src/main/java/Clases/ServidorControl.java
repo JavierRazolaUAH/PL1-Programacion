@@ -8,10 +8,6 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- *
- * @author Alex338
- */
 public class ServidorControl extends Thread {
     private AgrupacionZonas mundo;
     private int puerto = 5011;
@@ -25,7 +21,6 @@ public class ServidorControl extends Thread {
         try (ServerSocket server = new ServerSocket(puerto)) {
             while (true) {
                 Socket cliente = server.accept();
-                // Creamos un hilo para cada cliente que se conecte
                 new ManejadorCliente(cliente, mundo).start();
             }
         } catch (IOException e) {

@@ -382,10 +382,10 @@ public class VentanaMonitor extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     private void actualizarLabelPortal(javax.swing.JLabel label, String nombre, String datosRaw) {
-    // datosRaw viene como "1,0,2" -> split por la coma
+
     String[] d = datosRaw.split(",");
     
-    // Si por algún motivo no vienen los 3 datos, evitamos error
+
     if (d.length < 3) return;
 
     String html = "<html>" +
@@ -413,10 +413,10 @@ public class VentanaMonitor extends javax.swing.JFrame {
                   "</html>";
     
     label.setText(html);
-    label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); // Centrado físico del label
+    label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); 
 }
     private void actualizarRanking(String datosTop) {
-    // Si no hay datos, limpiamos los labels
+
     if (datosTop.equals("No hay datos") || datosTop.equals("Sin capturas")) {
         Demo1.setText("-"); Puntu1.setText("0");
         Demo2.setText("-"); Puntu2.setText("0");
@@ -424,23 +424,19 @@ public class VentanaMonitor extends javax.swing.JFrame {
         return;
     }
 
-    // 1. Separamos por la barra "|" para tener a cada demogorgon
     String[] tops = datosTop.split(" \\| ");
 
-    // Array de labels para iterar fácilmente
     javax.swing.JLabel[] labelsNombres = {Demo1, Demo2, Demo3};
     javax.swing.JLabel[] labelsPuntos = {Puntu1, Puntu2, Puntu3};
 
     for (int i = 0; i < 3; i++) {
         if (i < tops.length) {
-            // Separamos el nombre del número (ID: Capturas)
             String[] info = tops[i].split(": "); 
             if (info.length == 2) {
                 labelsNombres[i].setText(info[0]);
                 labelsPuntos[i].setText(info[1]);
             }
         } else {
-            // Si hay menos de 3 demogorgons con capturas
             labelsNombres[i].setText("-");
             labelsPuntos[i].setText("0");
         }
@@ -455,30 +451,27 @@ public class VentanaMonitor extends javax.swing.JFrame {
         String respuesta = entrada.readUTF();
         String[] partes = respuesta.split(";");
 
-        // Verificamos que tengamos todas las partes (del 0 al 7)
         if (partes.length >= 13) {
-            // 1. Actualizar texto general
+            //Actualizar Resto de partes
             TextoNiñosHawkins.setText("Total niños en Hawkins: " + partes[0]);
-            // Aquí podrías actualizar un label de Evento si lo tuvieras con partes[1]
             EventoActivo.setText("Evento Activo: " + partes[1]);
             TiempoRestanteEvento.setText("Tiempo restante del evento " + partes[2]);
             NinosColmena.setText("Niños en la colmena: "+ partes[3]);
-            // 2. Actualizar Portales
-            // Usamos un método auxiliar para no repetir código 4 veces
+            //Actualizar Portales
             actualizarLabelPortal(Portal1, "Bosque", partes[4]);
             actualizarLabelPortal(Portal2, "Laboratorio", partes[5]);
             actualizarLabelPortal(Portal3, "Centro Comercial", partes[6]);
             actualizarLabelPortal(Portal4, "Alcantarillado", partes[7]);
-            // 3. Actualizar Zonas Upside Down (partes 8 a 11)
+            //Actualizar Zonas Upside Down (partes 8 a 11)
             actualizarLabelZona(UpsideDown1, 1, "Bosque", partes[8]);
             actualizarLabelZona(UpsideDown2, 2, "Laboratorio", partes[9]);
             actualizarLabelZona(UpsideDown3, 3, "Centro Comercial", partes[10]);
             actualizarLabelZona(UpsideDown4, 4, "Alcantarillado", partes[11]);
+            //Actualizar Ranking
             actualizarRanking(partes[12]);
         }
     } catch (Exception ex) {
-        // En caso de error (servidor apagado), puedes poner un mensaje opcional
-        // TextoNiños.setText("Servidor Desconectado");
+
     }
 }
     public static void main(String args[]) {
