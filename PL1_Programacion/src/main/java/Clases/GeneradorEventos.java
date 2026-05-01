@@ -17,7 +17,7 @@ public class GeneradorEventos extends Thread {
             while (!Thread.currentThread().isInterrupted()) {
                 zonas.esperarSiPausado();
 
-                int tiempoHastaEvento = 30000 + random.nextInt(30001);
+                int tiempoHastaEvento = 3000 + random.nextInt(100001);
                 int tiempoTranscurrido = 0;
 
                 while (tiempoTranscurrido < tiempoHastaEvento) {
@@ -52,24 +52,16 @@ public class GeneradorEventos extends Thread {
     private void activarEvento(int tipo, int duracion) {
         switch (tipo) {
             case 0:
-                zonas.setApagonLaboratorio(true);
-                Logs.getInstance().log("¡EVENTO! APAGÓN DEL LABORATORIO: Portales bloqueados por " + (duracion / 1000) + "s.");
+                zonas.setRedMental(true);
+                Logs.getInstance().log("¡EVENTO! LA RED MENTAL: Los Demogorgons van a la zona más poblada por " + (duracion / 1000) + "s.");
                 break;
             case 1:
-                zonas.setTormentaUpsideDown(true);
-                Logs.getInstance().log("¡EVENTO! TORMENTA UPSIDE DOWN: Sangre x2 y Demogorgons rápidos por " + (duracion / 1000) + "s.");
+                zonas.setRedMental(true);
+                Logs.getInstance().log("¡EVENTO! LA RED MENTAL: Los Demogorgons van a la zona más poblada por " + (duracion / 1000) + "s.");
                 break;
             case 2:
-                zonas.setIntervencionEleven(true);
-                Logs.getInstance().log("¡EVENTO! INTERVENCIÓN DE ELEVEN: Demogorgons paralizados por " + (duracion / 1000) + "s.");
-
-                int sangreDisponible = zonas.getRadioWSQK().getSangreTotalAlmacenada();
-                int rescatados = zonas.getUpsidedown().getColmena().liberarNinos(sangreDisponible);
-
-                if (rescatados > 0) {
-                    zonas.getRadioWSQK().consumirSangre(rescatados);
-                    Logs.getInstance().log("Se han consumido " + rescatados + " unidades de sangre para el rescate.");
-                }
+                zonas.setRedMental(true);
+                Logs.getInstance().log("¡EVENTO! LA RED MENTAL: Los Demogorgons van a la zona más poblada por " + (duracion / 1000) + "s.");
                 break;
             case 3:
                 zonas.setRedMental(true);
