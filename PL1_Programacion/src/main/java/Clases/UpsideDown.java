@@ -61,15 +61,25 @@ public class UpsideDown {
     public Colmena getColmena() { return colmena; }
     public List<Demogorgon> getListaDemogorgons() { return listaDemogorgons; }
 
+    // --- EL MÉTODO CORREGIDO PARA LA RED MENTAL ---
     public ZonaInsegura obtenerZonaMasPoblada() {
-        ZonaInsegura zonaMasPoblada = zonasInseguras.get(0);
-        int maxNinos = zonaMasPoblada.getNinosEnZona().size();
+        ZonaInsegura zonaMasPoblada = null;
+        int maxNinos = 0; // Solo nos interesan zonas con > 0 niños
+
         for (ZonaInsegura zona : zonasInseguras) {
-            if (zona.getNinosEnZona().size() > maxNinos) {
-                maxNinos = zona.getNinosEnZona().size();
+            int numNinos = zona.getNinosEnZona().size();
+            if (numNinos > maxNinos) {
+                maxNinos = numNinos;
                 zonaMasPoblada = zona;
             }
         }
+
+        // Si maxNinos sigue siendo 0, es que todas las zonas están vacías.
+        // En este caso, devolvemos una al azar para que no vayan todos al Bosque.
+        if (zonaMasPoblada == null) {
+            return obtenerZonaAleatoria();
+        }
+
         return zonaMasPoblada;
     }
 }
