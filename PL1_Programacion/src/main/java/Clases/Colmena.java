@@ -20,9 +20,8 @@ public class Colmena {
 
     public void depositarNino(Nino nino) {
         prisioneros.add(nino);
-        int total = contadorCapturasTotal.incrementAndGet();
 
-        if (zonas != null && total % 8 == 0) {
+        if (zonas != null && prisioneros.size() % 8 == 0) {
             Logs.getInstance().log("¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.");
             crearNuevoDemogorgon();
         }
