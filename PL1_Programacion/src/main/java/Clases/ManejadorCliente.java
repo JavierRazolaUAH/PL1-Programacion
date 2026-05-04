@@ -5,8 +5,8 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 
 public class ManejadorCliente extends Thread {
-    private Socket socket;
-    private AgrupacionZonas mundo;
+    private final Socket socket;
+    private final AgrupacionZonas mundo;
 
     public ManejadorCliente(Socket s, AgrupacionZonas m) {
         this.socket = s;
@@ -15,19 +15,39 @@ public class ManejadorCliente extends Thread {
 
     @Override
     public void run() {
-        try {
-            DataInputStream entrada = new DataInputStream(socket.getInputStream());
-            DataOutputStream salida = new DataOutputStream(socket.getOutputStream());
+        // Usamos try-with-resources para asegurar que los flujos se cierren siempre
+        try (DataInputStream entrada = new DataInputStream(socket.getInputStream());
+             DataOutputStream salida = new DataOutputStream(socket.getOutputStream())) {
 
             String peticion = entrada.readUTF();
 
-            if (peticion.equals("GET_DATA")) {
-                String respuesta = mundo.getEstadoGlobalParaMonitor();
-                salida.writeUTF(respuesta);
+            switch (peticion) {
+                case "GET_DATA":
+                    // Envía toda la ristra de datos para el monitor
+                    String respuesta = mundo.getEstadoGlobalParaMonitor();
+                    salida.writeUTF(respuesta);
+                    break;
+
+                case "PAUSAR":
+                    // Ejecuta la pausa en el monitor global
+                    mundo.pausar();
+                    salida.writeUTF("OK_PAUSA");
+                    break;
+
+                case "REANUDAR":
+                    // Ejecuta la reanudación en el monitor global
+                    mundo.reanudar();
+                    salida.writeUTF("OK_REANUDAR");
+                    break;
+
+                default:
+                    salida.writeUTF("ERROR: Comando no reconocido");
+                    break;
             }
+
             socket.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error en la conexión con el cliente: " + e.getMessage());
         }
     }
 }

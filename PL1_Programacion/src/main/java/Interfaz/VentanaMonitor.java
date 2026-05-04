@@ -361,22 +361,28 @@ public class VentanaMonitor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+private void enviarComandoControl(String comando) {
+    // try-with-resources: asegura el cierre automático de los recursos
+    try (Socket s = new Socket("localhost", 5011);
+         DataOutputStream salida = new DataOutputStream(s.getOutputStream())) {
+        
+        salida.writeUTF(comando);
+        // No hace falta s.close(), se hace solo al salir del bloque
+        
+    } catch (Exception ex) {
+        System.err.println("Error al enviar comando: " + ex.getMessage());
+    }
+}
     private void Boton_ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ReanudarActionPerformed
         // TODO add your handling code here:
-        if (zonas != null) {
-            zonas.reanudar();
-            System.out.println("Simulación reanudada.");
-            Logs.getInstance().log("SIMULACIÓN REANUDADA");
-        }
+        enviarComandoControl("REANUDAR");
+            Logs.getInstance().log("SOLICITUD DE REANUDACIÓN REMOTA ENVIADA");
     }//GEN-LAST:event_Boton_ReanudarActionPerformed
 
     private void Boton_PausaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_PausaActionPerformed
         // TODO add your handling code here:
-        if (zonas != null) {
-            zonas.pausar();
-            System.out.println("Simulación pausada.");
-            Logs.getInstance().log("SIMULACIÓN PARADA");
-        }
+        enviarComandoControl("PAUSAR");
+            Logs.getInstance().log("SOLICITUD DE PAUSA REMOTA ENVIADA");
     }//GEN-LAST:event_Boton_PausaActionPerformed
 
     /**
