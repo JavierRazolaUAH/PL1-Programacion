@@ -1,5 +1,6 @@
 package Clases;
 
+import sockets.ServidorControl;
 import Interfaz.Interfaz;
 import Interfaz.VentanaMonitor;
 import java.util.logging.Level;
@@ -9,7 +10,7 @@ public class Main {
 
     public static void main(String args[]) {
  
-System.out.println(">>> INICIANDO SIMULACIÓN: LA BATALLA DE HAWKINS...");
+    System.out.println(">>> INICIANDO SIMULACIÓN: LA BATALLA DE HAWKINS...");
 
         AgrupacionZonas zonas = new AgrupacionZonas();
         

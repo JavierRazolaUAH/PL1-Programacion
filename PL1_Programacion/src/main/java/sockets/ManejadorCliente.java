@@ -1,5 +1,6 @@
-package Clases;
+package sockets;
 
+import Clases.AgrupacionZonas;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
