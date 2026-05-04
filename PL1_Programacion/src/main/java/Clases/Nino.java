@@ -5,7 +5,7 @@ public class Nino extends Thread {
     private boolean vivo = true;
     private boolean capturado = false;
     private boolean bajoAtaque = false; 
-    private boolean inmune = false; // <-- ESCUDO DE INMUNIDAD (I-Frames)
+    private boolean inmune = false; 
     private int sangreRecolectada = 0;
     private final AgrupacionZonas zonas; 
 
@@ -14,6 +14,7 @@ public class Nino extends Thread {
         this.zonas = zonas;
     }
 
+    // Getters y Setters (Se mantienen igual)
     public String getIdNino() { return idNino; }
     public boolean isVivo() { return vivo; }
     public void setVivo(boolean vivo) { this.vivo = vivo; }
@@ -24,7 +25,6 @@ public class Nino extends Thread {
     public int getSangreRecolectada() { return sangreRecolectada; }
     public void setSangreRecolectada(int sangreRecolectada) { this.sangreRecolectada = sangreRecolectada; }
     public boolean isInmune() { return inmune; }
-    
 
     @Override
     public void run() {
@@ -33,12 +33,10 @@ public class Nino extends Thread {
             zonas.getCallePrincipal().inicio(this);
 
             while (vivo) {
-                // --- SÓTANO BYERS (1 a 2 segundos) ---
+                // --- SÓTANO BYERS ---
                 zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().entrarZona(this);
-                
                 Thread.sleep(1000 + (long)(Math.random() * 1001)); 
-
                 zonas.esperarSiPausado(); 
                 zonas.getSotanoByers().salirZona(this);
 
@@ -47,13 +45,11 @@ public class Nino extends Thread {
                 zonas.esperarSiPausado(); 
                 zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
 
-                // --- UPSIDE DOWN: RECOLECCIÓN (3 a 5 segundos) ---
+                // --- UPSIDE DOWN: RECOLECCIÓN ---
                 ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(rutaElegida);
                 zonaActual.entrarNino(this); 
 
                 boolean sobreviveYEscapa = true;
-                
-                // Calculamos el tiempo base que requiere el niño
                 long tiempoRestante = 3000 + (long)(Math.random() * 2001);
                 if (zonas.isTormentaUpsideDown()) {
                     tiempoRestante *= 2; 
@@ -61,73 +57,70 @@ public class Nino extends Thread {
 
                 while (tiempoRestante > 0 && sobreviveYEscapa) {
                     long inicioExtraccion = System.currentTimeMillis();
-                    
                     try {
-                        // Le pasamos el tiempo exacto que debe dormir a la zona
                         zonaActual.recolectarSangre(tiempoRestante);
                         
-                        // Si no hay interrupción, termina con éxito
+                        // Si termina sin interrupción
                         tiempoRestante = 0; 
                         this.sangreRecolectada = zonas.isTormentaUpsideDown() ? 2 : 1;
-                        zonaActual.registrarExtraccionGlobal(this.sangreRecolectada); // Suma al total de la zona
-                        Logs.getInstance().log(idNino + " ha recolectado " + this.sangreRecolectada + " ud(s) con éxito.");
+                        zonaActual.registrarExtraccionGlobal(this.sangreRecolectada);
+                        Logs.getInstance().log(idNino + " ha recolectado sangre con éxito.");
 
                     } catch (InterruptedException e) {
-                        // ¡ATACADO! Calculamos cuánto tiempo le dio tiempo a avanzar
                         long tiempoPasado = System.currentTimeMillis() - inicioExtraccion;
                         tiempoRestante -= tiempoPasado;
                         if (tiempoRestante < 0) tiempoRestante = 0;
 
-                        this.sangreRecolectada = 0; // Pierde la sangre momentáneamente
+                        this.sangreRecolectada = 0; 
                         
                         synchronized (this) {
-                            while (bajoAtaque) { this.wait(); } // Forcejeo con el monstruo
+                            while (bajoAtaque) { this.wait(); } 
                             zonas.esperarSiPausado(); 
                             
                             if (capturado) {
-                                // PIERDE Y ES CAPTURADO
                                 sobreviveYEscapa = false;
-                                while (capturado) { this.wait(); } // Espera el rescate en la colmena
+                                // Espera en la colmena hasta que Eleven intervenga
+                                while (capturado) { this.wait(); } 
                                 zonas.esperarSiPausado(); 
                             } else {
-                                // ¡RESISTE Y REANUDA SU MARCHA!
-                                this.inmune = true; // Activa I-Frames
-                                Logs.getInstance().log(idNino + " RESISTE. Reanuda su marcha con INMUNIDAD. Quedan: " + tiempoRestante + "ms.");
+                                this.inmune = true; 
+                                Logs.getInstance().log(idNino + " RESISTE con inmunidad.");
                             }
                         }
                     }
                 }
 
-                // Al salir de la zona, pierde el escudo de inmunidad
                 this.inmune = false;
                 zonaActual.salirNino(this);
 
-                // --- PORTAL VUELTA O RESCATE ---
+                // --- PORTAL DE VUELTA (CORREGIDO) ---
+                // No usamos 'continue'. Todos los niños deben cruzar el portal físicamente.
                 if (!sobreviveYEscapa) {
-                    // Si llega aquí, es porque fue rescatado por Eleven
-                    zonas.getCallePrincipal().deambular(this);
-                    Thread.sleep(3000 + (long)(Math.random() * 2001)); // Deambula 3 a 5 seg
-                    continue; 
+                    Logs.getInstance().log(idNino + " inicia retirada tras ser rescatado.");
                 }
 
                 zonas.esperarSiPausado();
+                // Esta llamada asegura que el niño aparezca en la lista "Cruzando" del portal
                 zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
-                // --- RADIO WSQK (2 a 4 segundos) ---
+                // --- RADIO WSQK ---
+                // Solo depositan si traen sangre (los rescatados suelen traer 0)
                 zonas.esperarSiPausado(); 
-                zonas.getRadioWSQK().depositarSangre(this);
+                if (this.sangreRecolectada > 0) {
+                    zonas.getRadioWSQK().depositarSangre(this);
+                }
+                
                 zonas.getRadioWSQK().entrarZona(this);
-
                 Thread.sleep(2000 + (long)(Math.random() * 2001));
-
                 zonas.esperarSiPausado(); 
                 zonas.getRadioWSQK().salirZona(this);
 
-                // --- CALLE PRINCIPAL (3 a 5 segundos) ---
+                // --- CALLE PRINCIPAL ---
                 zonas.getCallePrincipal().deambular(this);
                 Thread.sleep(3000 + (long)(Math.random() * 2001));
                 
                 zonas.esperarSiPausado();
+                // Reinicia el ciclo: vuelve al Sótano Byers
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
