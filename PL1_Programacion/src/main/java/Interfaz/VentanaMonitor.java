@@ -14,17 +14,17 @@ import java.net.Socket;
  * @author Alex338
  */
 public class VentanaMonitor extends javax.swing.JFrame {
-    private Clases.AgrupacionZonas zonas;
+   
     /**
      * Creates new form VentanaMonitor
      */
-    public VentanaMonitor() {
+public VentanaMonitor() {
         initComponents();
-    }
-    public VentanaMonitor(Clases.AgrupacionZonas zonas) {
-        this.zonas = zonas;
-        initComponents();
-        javax.swing.Timer timer = new javax.swing.Timer(10, e -> pedirDatosAlServidor());
+        // Centrar ventana al iniciar
+        this.setLocationRelativeTo(null);
+        
+        // Iniciamos el Timer: cada 500ms pide una actualización al servidor vía Socket
+        javax.swing.Timer timer = new javax.swing.Timer(500, e -> pedirDatosAlServidor());
         timer.start();
     }
     
@@ -362,17 +362,18 @@ public class VentanaMonitor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void enviarComandoControl(String comando) {
-    // try-with-resources: asegura el cierre automático de los recursos
-    try (Socket s = new Socket("localhost", 5011);
-         DataOutputStream salida = new DataOutputStream(s.getOutputStream())) {
-        
-        salida.writeUTF(comando);
-        // No hace falta s.close(), se hace solo al salir del bloque
-        
-    } catch (Exception ex) {
-        System.err.println("Error al enviar comando: " + ex.getMessage());
+        // Conexión rápida para enviar un comando de texto
+        try (Socket s = new Socket("localhost", 5011);
+             DataOutputStream salida = new DataOutputStream(s.getOutputStream())) {
+            
+            salida.writeUTF(comando);
+            // El log se hace localmente en el monitor
+            System.out.println("Comando enviado al servidor: " + comando);
+            
+        } catch (Exception ex) {
+            System.err.println("No se pudo enviar el comando: " + ex.getMessage());
+        }
     }
-}
     private void Boton_ReanudarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ReanudarActionPerformed
         // TODO add your handling code here:
         enviarComandoControl("REANUDAR");
@@ -450,37 +451,47 @@ private void enviarComandoControl(String comando) {
     }
 }
     private void pedirDatosAlServidor() {
-    try (Socket s = new Socket("localhost", 5011)) { 
-        DataOutputStream salida = new DataOutputStream(s.getOutputStream());
-        DataInputStream entrada = new DataInputStream(s.getInputStream());
+        // Usamos try-with-resources para manejar el Socket
+        try (Socket s = new Socket("localhost", 5011);
+             DataOutputStream salida = new DataOutputStream(s.getOutputStream());
+             DataInputStream entrada = new DataInputStream(s.getInputStream())) {
 
-        salida.writeUTF("GET_DATA");
-        String respuesta = entrada.readUTF();
-        String[] partes = respuesta.split(";");
+            // Enviamos la petición
+            salida.writeUTF("GET_DATA");
+            
+            // Recibimos la respuesta (el String con ";" del servidor)
+            String respuesta = entrada.readUTF();
+            String[] partes = respuesta.split(";");
 
-        if (partes.length >= 13) {
-            //Actualizar Resto de partes
-            TextoNiñosHawkins.setText("Total niños en Hawkins: " + partes[0]);
-            EventoActivo.setText("Evento Activo: " + partes[1]);
-            TiempoRestanteEvento.setText("Tiempo restante del evento " + partes[2]);
-            NinosColmena.setText("Niños en la colmena: "+ partes[3]);
-            //Actualizar Portales
-            actualizarLabelPortal(Portal1, "Bosque", partes[4]);
-            actualizarLabelPortal(Portal2, "Laboratorio", partes[5]);
-            actualizarLabelPortal(Portal3, "Centro Comercial", partes[6]);
-            actualizarLabelPortal(Portal4, "Alcantarillado", partes[7]);
-            //Actualizar Zonas Upside Down (partes 8 a 11)
-            actualizarLabelZona(UpsideDown1, 1, "Bosque", partes[8]);
-            actualizarLabelZona(UpsideDown2, 2, "Laboratorio", partes[9]);
-            actualizarLabelZona(UpsideDown3, 3, "Centro Comercial", partes[10]);
-            actualizarLabelZona(UpsideDown4, 4, "Alcantarillado", partes[11]);
-            //Actualizar Ranking
-            actualizarRanking(partes[12]);
+            // Verificamos que el String tenga todas las partes necesarias (13 según tu lógica)
+            if (partes.length >= 13) {
+                // 1. Datos generales
+                TextoNiñosHawkins.setText("Total niños en Hawkins: " + partes[0]);
+                EventoActivo.setText("Evento Activo: " + partes[1]);
+                TiempoRestanteEvento.setText("Tiempo restante: " + partes[2]);
+                NinosColmena.setText("Niños en la colmena: " + partes[3]);
+                
+                // 2. Actualizar Portales (partes 4 a 7)
+                actualizarLabelPortal(Portal1, "Bosque", partes[4]);
+                actualizarLabelPortal(Portal2, "Laboratorio", partes[5]);
+                actualizarLabelPortal(Portal3, "Centro Comercial", partes[6]);
+                actualizarLabelPortal(Portal4, "Alcantarillado", partes[7]);
+                
+                // 3. Actualizar Zonas Upside Down (partes 8 a 11)
+                actualizarLabelZona(UpsideDown1, 1, "Bosque", partes[8]);
+                actualizarLabelZona(UpsideDown2, 2, "Laboratorio", partes[9]);
+                actualizarLabelZona(UpsideDown3, 3, "Centro Comercial", partes[10]);
+                actualizarLabelZona(UpsideDown4, 4, "Alcantarillado", partes[11]);
+                
+                // 4. Actualizar Ranking (parte 12)
+                actualizarRanking(partes[12]);
+            }
+            
+        } catch (Exception ex) {
+            // Si el servidor no responde, ponemos un aviso visual
+            TextoNiñosHawkins.setText("ESTADO: DESCONECTADO DEL SERVIDOR...");
         }
-    } catch (Exception ex) {
-
     }
-}
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
