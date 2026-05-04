@@ -32,9 +32,7 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
 
-    // ==========================================
-    //       ACTUALIZADORES: SÓTANO BYERS
-    // ==========================================
+    //       ACTUALIZADOR: SÓTANO BYERS
 public void actualizarSotanoGUI() {
         actualizarListaNinos(zonas.getSotanoByers().getNinosEnSotano(), jTextAreaSotano);
     }
@@ -46,9 +44,7 @@ public void actualizarSotanoGUI() {
     }
 
 
-    // ==========================================
-    //       ACTUALIZADORES: RADIO WSQK
-    // ==========================================
+    //       ACTUALIZADOR: RADIO WSQK
 public void actualizarRadioGUI() {
         actualizarListaNinos(zonas.getRadioWSQK().getNinosEnRadio(), jTextAreaRadio);
     }
@@ -61,9 +57,7 @@ public void actualizarRadioGUI() {
     }
 
 
-    // ==========================================
-    //       ACTUALIZADORES: CALLE PRINCIPAL
-    // ==========================================
+    //       ACTUALIZADOR: CALLE PRINCIPAL
 public void actualizarCalleGUI() {
         actualizarListaNinos(zonas.getCallePrincipal().getNinosEnCalle(), jTextAreaCalle);
     }
@@ -72,9 +66,7 @@ public void actualizarCalleGUI() {
             actualizarCalleGUI();
         }).start();
     }
-// ==========================================
     //        ACTUALIZADOR: CONTADOR SANGRE
-    // ==========================================
     public void actualizarSangreGUI() {
         if (zonas == null) return;
         
@@ -83,9 +75,7 @@ public void actualizarCalleGUI() {
         Cantidad_Sangre.setText(String.valueOf(sangre));
     }
     
-    // ==========================================
-    //       ACTUALIZADORES: Zonas Inseguras
-    // ==========================================
+    //       ACTUALIZADOR: Zonas Inseguras
     // Zona Bosque
         public void actualizarBosqueGUI(){
             if (zonas == null || zonas.isPausado()) {
@@ -271,9 +261,7 @@ public void actualizarCalleGUI() {
     }
     
     
-    // ==========================================
     //        ACTUALIZADOR: EVENTO ACTIVO
-    // ==========================================
     public void actualizarEventoActivoGUI() {
         if (zonas == null) return;
 

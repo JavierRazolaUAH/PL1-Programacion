@@ -8,12 +8,14 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class AgrupacionZonas {
 
+    // --- Atributos de Zonas y Entidades ---
     private final CallePrincipal callePrincipal;
     private final SotanoByers sotanoByers;
     private final RadioWSQK radioWSQK;
     private final UpsideDown upsidedown;
     private final Portal[] portales;
     
+    // --- Atributos de Control y Concurrencia ---
     private final Lock lock = new ReentrantLock();
     private final Condition pausadoCondition = lock.newCondition();
     private final AtomicInteger tiempoRestanteEvento = new AtomicInteger(0);
@@ -24,6 +26,7 @@ public class AgrupacionZonas {
     private boolean intervencionEleven = false;
     private boolean redMental = false;
 
+    // --- Constructor ---
     public AgrupacionZonas() {
         this.callePrincipal = new CallePrincipal(this);
         this.sotanoByers = new SotanoByers(this);
@@ -39,34 +42,7 @@ public class AgrupacionZonas {
         this.portales[3] = new Portal("Alcantarillado", 2, this);
     }
 
-    public CallePrincipal getCallePrincipal() {
-        return callePrincipal;
-    }
-
-    public SotanoByers getSotanoByers() {
-        return sotanoByers;
-    }
-
-    public RadioWSQK getRadioWSQK() {
-        return radioWSQK;
-    }
-
-    public UpsideDown getUpsidedown() {
-        return upsidedown;
-    }
-
-    public Portal getPortal(int index) {
-        return portales[index];
-    }
-
-    public Portal[] getTodosLosPortales() {
-        return portales;
-    }
-
-    public boolean isPausado() {
-        return pausado;
-    }
-
+    // --- Gestión de Pausa y Sincronización ---
     public void pausar() {
         lock.lock();
         try {
@@ -97,34 +73,29 @@ public class AgrupacionZonas {
         }
     }
 
-    public int getNinosTotalesHawkins() {
-        return callePrincipal.getNumeroNinos() + 
-               sotanoByers.getNumeroNinos() + 
-               radioWSQK.getNumeroNinos();
-    }
-
-    public int getTiempoRestanteEvento() {
-        return tiempoRestanteEvento.get();
-    }
-
-    public void setTiempoRestanteEvento(int tiempo) {
-        this.tiempoRestanteEvento.set(tiempo);
-    }
-
-    public String getEventoActivo() {
-        if (apagonLaboratorio) return "Apagón en el Laboratorio";
-        if (tormentaUpsideDown) return "Tormenta en el Upside Down";
-        if (intervencionEleven) return "Intervención de Eleven";
-        if (redMental) return "Red Mental Activa";
-        return "Sin evento activo";
-    }
-
     public void notificarFinEvento() {
         for (Portal p : portales) {
             if (p != null) {
                 p.despertarHilos();
             }
         }
+    }
+
+    // --- Lógica de Estado y Reportes (Strings) ---
+    public String getEstadoGlobalParaMonitor() {
+        return getNinosTotalesHawkins() + ";" +
+               getEventoActivo() + ";" +
+               getTiempoRestanteEvento() + ";" +
+               upsidedown.getColmena().getNumPrisioneros() + ";" +
+               getEstadoPortalString(0) + ";" +
+               getEstadoPortalString(1) + ";" +
+               getEstadoPortalString(2) + ";" +
+               getEstadoPortalString(3) + ";" +
+               getEntidadesZonaString(0) + ";" +
+               getEntidadesZonaString(1) + ";" +
+               getEntidadesZonaString(2) + ";" +
+               getEntidadesZonaString(3) + ";" +
+               getTop3Demogorgons();
     }
 
     public String getEstadoPortalString(int index) {
@@ -165,51 +136,42 @@ public class AgrupacionZonas {
         }
     }
 
-    public String getEstadoGlobalParaMonitor() {
-        return getNinosTotalesHawkins() + ";" +
-               getEventoActivo() + ";" +
-               getTiempoRestanteEvento() + ";" +
-               upsidedown.getColmena().getNumPrisioneros() + ";" +
-               getEstadoPortalString(0) + ";" +
-               getEstadoPortalString(1) + ";" +
-               getEstadoPortalString(2) + ";" +
-               getEstadoPortalString(3) + ";" +
-               getEntidadesZonaString(0) + ";" +
-               getEntidadesZonaString(1) + ";" +
-               getEntidadesZonaString(2) + ";" +
-               getEntidadesZonaString(3) + ";" +
-               getTop3Demogorgons();
+    public String getEventoActivo() {
+        if (apagonLaboratorio) return "Apagón en el Laboratorio";
+        if (tormentaUpsideDown) return "Tormenta en el Upside Down";
+        if (intervencionEleven) return "Intervención de Eleven";
+        if (redMental) return "Red Mental Activa";
+        return "Sin evento activo";
     }
 
-    public boolean isApagonLaboratorio() { 
-        return apagonLaboratorio; 
-    }
-    
-    public void setApagonLaboratorio(boolean apagonLaboratorio) { 
-        this.apagonLaboratorio = apagonLaboratorio; 
-    }
-
-    public boolean isTormentaUpsideDown() { 
-        return tormentaUpsideDown; 
-    }
-    
-    public void setTormentaUpsideDown(boolean tormentaUpsideDown) { 
-        this.tormentaUpsideDown = tormentaUpsideDown; 
+    // --- Getters de Zonas y Conteo ---
+    public int getNinosTotalesHawkins() {
+        return callePrincipal.getNumeroNinos() + 
+               sotanoByers.getNumeroNinos() + 
+               radioWSQK.getNumeroNinos();
     }
 
-    public boolean isIntervencionEleven() { 
-        return intervencionEleven; 
-    }
-    
-    public void setIntervencionEleven(boolean intervencionEleven) { 
-        this.intervencionEleven = intervencionEleven; 
-    }
+    public CallePrincipal getCallePrincipal() { return callePrincipal; }
+    public SotanoByers getSotanoByers() { return sotanoByers; }
+    public RadioWSQK getRadioWSQK() { return radioWSQK; }
+    public UpsideDown getUpsidedown() { return upsidedown; }
+    public Portal getPortal(int index) { return portales[index]; }
+    public Portal[] getTodosLosPortales() { return portales; }
 
-    public boolean isRedMental() { 
-        return redMental; 
-    }
-    
-    public void setRedMental(boolean redMental) { 
-        this.redMental = redMental; 
-    }
+    // --- Getters y Setters de Eventos y Tiempo ---
+    public boolean isPausado() { return pausado; }
+    public int getTiempoRestanteEvento() { return tiempoRestanteEvento.get(); }
+    public void setTiempoRestanteEvento(int tiempo) { this.tiempoRestanteEvento.set(tiempo); }
+
+    public boolean isApagonLaboratorio() { return apagonLaboratorio; }
+    public void setApagonLaboratorio(boolean apagonLaboratorio) { this.apagonLaboratorio = apagonLaboratorio; }
+
+    public boolean isTormentaUpsideDown() { return tormentaUpsideDown; }
+    public void setTormentaUpsideDown(boolean tormentaUpsideDown) { this.tormentaUpsideDown = tormentaUpsideDown; }
+
+    public boolean isIntervencionEleven() { return intervencionEleven; }
+    public void setIntervencionEleven(boolean intervencionEleven) { this.intervencionEleven = intervencionEleven; }
+
+    public boolean isRedMental() { return redMental; }
+    public void setRedMental(boolean redMental) { this.redMental = redMental; }
 }

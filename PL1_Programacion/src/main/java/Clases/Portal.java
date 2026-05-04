@@ -9,19 +9,24 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Portal {
+
+    // --- Atributos de Configuración ---
     private final String nombre;
     private final int capacidadGrupo;
     private final AgrupacionZonas zonas;
 
+    // --- Herramientas de Sincronización ---
     private final Lock lock = new ReentrantLock();
     private final Condition condicionPortal = lock.newCondition();
 
+    // --- Estado del Túnel ---
     private boolean ocupado = false;
     private Nino cruzando = null;
 
-    private final Queue<Nino> colaIda = new LinkedList<>();
-    private final List<Nino> grupoActual = new ArrayList<>();
-    private final List<Nino> colaVuelta = new ArrayList<>();
+    // --- Colas de Espera y Tránsito ---
+    private final Queue<Nino> colaIda = new LinkedList<>();    // Cola general de entrada
+    private final List<Nino> grupoActual = new ArrayList<>();   // Grupo que tiene permiso de cruce
+    private final List<Nino> colaVuelta = new ArrayList<>();    // Niños que quieren volver (Prioridad)
 
     public Portal(String nombre, int capacidadGrupo, AgrupacionZonas zonas) {
         this.nombre = nombre;
@@ -29,16 +34,23 @@ public class Portal {
         this.zonas = zonas;
     }
 
+    // --- Lógica de Cruce: Hawkins -> Upside Down ---
+
+    /**
+     * Gestiona el acceso al Upside Down en grupos de tamaño fijo.
+     */
     public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
         gestionarPausaFueraDeLock(); 
 
         lock.lock();
         try {
+            // Registro en cola de espera
             if (!colaIda.contains(nino) && !grupoActual.contains(nino)) {
                 colaIda.add(nino);
             }
 
             while (true) {
+                // Lógica de formación de grupos
                 if (grupoActual.isEmpty() && colaIda.size() >= capacidadGrupo) {
                     for (int i = 0; i < capacidadGrupo; i++) {
                         grupoActual.add(colaIda.poll());
@@ -46,8 +58,9 @@ public class Portal {
                     condicionPortal.signalAll();
                 }
 
+                // Condiciones de acceso al túnel
                 boolean esMiTurno = !grupoActual.isEmpty() && grupoActual.get(0).equals(nino);
-                boolean prioridadVuelta = !colaVuelta.isEmpty();
+                boolean prioridadVuelta = !colaVuelta.isEmpty(); // El retorno tiene prioridad sobre la ida
 
                 if (esMiTurno && !ocupado && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
                     break; 
@@ -57,12 +70,7 @@ public class Portal {
                     condicionPortal.await();
                     gestionarPausa(); 
                 } catch (InterruptedException e) {
-                    colaIda.remove(nino);
-                    if (grupoActual.remove(nino)) {
-                        colaIda.addAll(grupoActual);
-                        grupoActual.clear();
-                    }
-                    condicionPortal.signalAll();
+                    gestionarInterrupcionEnEspera(nino);
                     throw e;
                 }
             }
@@ -76,18 +84,14 @@ public class Portal {
             lock.unlock();
         }
 
-        try {
-            Thread.sleep(1000);
-            gestionarPausaFueraDeLock(); 
-        } catch (InterruptedException e) {
-            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras cruzaba " + nombre);
-            throw e;
-        } finally {
-            liberarPortalManual();
-            Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " ha SALIDO del túnel hacia el Upside Down.");
-        }
+        realizarTransitoFisico(nino, "<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " ha SALIDO hacia el Upside Down.");
     }
 
+    // --- Lógica de Cruce: Upside Down -> Hawkins ---
+
+    /**
+     * Gestiona el regreso a Hawkins con prioridad sobre los que intentan entrar.
+     */
     public void cruzarAHawkins(Nino nino) throws InterruptedException {
         gestionarPausaFueraDeLock();
 
@@ -120,20 +124,22 @@ public class Portal {
             lock.unlock();
         }
 
+        realizarTransitoFisico(nino, "<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " TERMINA de cruzar y está a salvo.");
+    }
+
+    // --- Métodos de Apoyo ---
+
+    private void realizarTransitoFisico(Nino nino, String mensajeExito) throws InterruptedException {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1000); // Tiempo que tarda en recorrer el túnel
             gestionarPausaFueraDeLock();
         } catch (InterruptedException e) {
-            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras volvía por " + nombre);
+            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " interrumpido en " + nombre);
             throw e;
         } finally {
             liberarPortalManual();
-            Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " TERMINA de cruzar " + nombre + " y está a salvo.");
+            Logs.getInstance().log(mensajeExito);
         }
-    }
-
-    private void gestionarPausaFueraDeLock() throws InterruptedException {
-        zonas.esperarSiPausado();
     }
 
     private void liberarPortalManual() {
@@ -147,6 +153,30 @@ public class Portal {
         }
     }
 
+    private void gestionarInterrupcionEnEspera(Nino nino) {
+        colaIda.remove(nino);
+        if (grupoActual.remove(nino)) {
+            colaIda.addAll(grupoActual);
+            grupoActual.clear();
+        }
+        condicionPortal.signalAll();
+    }
+
+    private void gestionarPausa() throws InterruptedException {
+        if (zonas.isPausado()) {
+            lock.unlock();
+            try {
+                zonas.wait(); // O el método de pausa que utilices
+            } finally {
+                lock.lock();
+            }
+        }
+    }
+
+    private void gestionarPausaFueraDeLock() throws InterruptedException {
+        zonas.esperarSiPausado();
+    }
+
     public void despertarHilos() {
         lock.lock();
         try {
@@ -156,16 +186,7 @@ public class Portal {
         }
     }
 
-    private void gestionarPausa() throws InterruptedException {
-        if (zonas.isPausado()) {
-            lock.unlock();
-            try {
-                zonas.esperarSiPausado();
-            } finally {
-                lock.lock();
-            }
-        }
-    }
+    // --- Consultas de Estado para Interfaz ---
 
     public String getNombre() { return nombre; }
     

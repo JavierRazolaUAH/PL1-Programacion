@@ -4,19 +4,23 @@ import java.util.Random;
 
 public class GeneradorEventos extends Thread {
 
+    // --- Atributos de Control ---
     private final AgrupacionZonas zonas;
     private final Random random = new Random();
 
+    // --- Constructor ---
     public GeneradorEventos(AgrupacionZonas zonas) {
         this.zonas = zonas;
     }
 
+    // --- Ciclo de Vida del Generador ---
     @Override
     public void run() {
         try {
             while (!Thread.currentThread().isInterrupted()) {
                 zonas.esperarSiPausado();
 
+                // 1. Fase de Latencia: Espera entre 30 y 60 segundos antes de un evento
                 int tiempoHastaEvento = 30000 + random.nextInt(30001);
                 int tiempoTranscurrido = 0;
 
@@ -26,11 +30,13 @@ public class GeneradorEventos extends Thread {
                     tiempoTranscurrido += 1000;
                 }
 
+                // 2. Fase de Selección: Determina tipo y duración (5-10 segundos)
                 int tipoEvento = random.nextInt(4);
                 int duracionEvento = 5000 + random.nextInt(5001);
 
                 activarEvento(tipoEvento, duracionEvento);
 
+                // 3. Fase de Ejecución: Monitorización del tiempo restante
                 int tiempoPasado = 0;
                 while (tiempoPasado < duracionEvento) {
                     int segundosRestantes = (duracionEvento - tiempoPasado) / 1000;
@@ -41,6 +47,7 @@ public class GeneradorEventos extends Thread {
                     tiempoPasado += 500;
                 }
 
+                // 4. Fase de Cierre: Limpieza de estados
                 finalizarEventos();
             }
         } catch (InterruptedException e) {
@@ -49,6 +56,11 @@ public class GeneradorEventos extends Thread {
         }
     }
 
+    // --- Gestión de Estados de Evento ---
+
+    /**
+     * Modifica las flags globales en el monitor para alterar el comportamiento de los hilos.
+     */
     private void activarEvento(int tipo, int duracion) {
         switch (tipo) {
             case 0:
@@ -63,6 +75,7 @@ public class GeneradorEventos extends Thread {
                 zonas.setIntervencionEleven(true);
                 Logs.getInstance().log("¡EVENTO! INTERVENCIÓN DE ELEVEN: Demogorgons paralizados por " + (duracion / 1000) + "s.");
 
+                // Lógica de rescate inmediata basada en el recurso de sangre
                 int sangreDisponible = zonas.getRadioWSQK().getSangreTotalAlmacenada();
                 int rescatados = zonas.getUpsidedown().getColmena().liberarNinos(sangreDisponible);
 
@@ -78,6 +91,9 @@ public class GeneradorEventos extends Thread {
         }
     }
 
+    /**
+     * Restablece la normalidad del sistema y notifica a los hilos bloqueados.
+     */
     private void finalizarEventos() {
         zonas.setTiempoRestanteEvento(0);
         zonas.setApagonLaboratorio(false);

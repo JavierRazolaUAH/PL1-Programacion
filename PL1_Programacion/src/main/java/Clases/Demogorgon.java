@@ -3,16 +3,20 @@ package Clases;
 import java.util.Random;
 
 public class Demogorgon extends Thread {
+    
+    // --- Atributos de Identificación y Estado ---
     private final String idDemogorgon;
     private final AgrupacionZonas zonas;
     private final Random random = new Random();
     private int capturasRealizadas = 0;
 
+    // --- Constructor ---
     public Demogorgon(String id, AgrupacionZonas zonas) {
         this.idDemogorgon = id;
         this.zonas = zonas;
     }
 
+    // --- Ciclo de Vida del Hilo ---
     @Override
     public void run() {
         ZonaInsegura zonaActual = null; 
@@ -21,91 +25,90 @@ public class Demogorgon extends Thread {
             while (!Thread.currentThread().isInterrupted()) {
                 zonas.esperarSiPausado(); 
 
-                // --- FASE DE DESPLAZAMIENTO ---
-                ZonaInsegura zonaNueva;
-
-                if (zonaActual == null) {
-                    // Si acaba de nacer o viene de la Colmena
-                    zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
-                } else if (zonas.isApagonLaboratorio()) {
-                    zonaNueva = zonaActual;
-                } else if (zonas.isRedMental()) {
-                    zonaNueva = zonas.getUpsidedown().obtenerZonaMasPoblada();
-                } else {
-                    zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
-                }
-                
-                // Realizamos el cambio de zona limpiamente
-                if (zonaActual != zonaNueva) {
-                    if (zonaActual != null) {
-                        zonaActual.salirDemogorgon(this);
-                    }
-                    zonaActual = zonaNueva;
-                    zonaActual.entrarDemogorgon(this);
-                }
+                // --- Fase de Desplazamiento ---
+                zonaActual = gestionarMovimiento(zonaActual);
                 
                 zonas.esperarSiPausado(); 
 
-                // --- EVENTO: INTERVENCIÓN DE ELEVEN ---
-                // ¡AQUÍ ESTÁ LA MAGIA! Lo paralizamos CUANDO YA ESTÁ DENTRO de una zona, 
-                // así la interfaz gráfica lo sigue dibujando sin problema.
+                // --- Manejo de Eventos: Parálisis por Eleven ---
                 while (zonas.isIntervencionEleven()) {
                     Thread.sleep(500); 
                 }
 
-                // 2. Comprobar presencia de niños 
+                // --- Lógica de Combate y Captura ---
                 Nino objetivo = zonaActual.seleccionarVictima();
 
                 if (objetivo != null) {
-                    // Blindaje Anti-Race Condition
-                    synchronized (objetivo) {
-                        if (!zonaActual.getNinosEnZona().contains(objetivo)) {
-                            continue; // Se escapó
-                        }
-                        objetivo.setBajoAtaque(true); 
-                        objetivo.interrupt(); 
+                    gestionarAtaque(objetivo, zonaActual);
+                    // Si hubo captura, zonaActual se resetea en el flujo de realizarCaptura
+                    if (objetivo.isCapturado()) {
+                        zonaActual = null;
                     }
-                    
-                    Logs.getInstance().log(idDemogorgon + " está ATACANDO a " + objetivo.getIdNino() + " en " + zonaActual.getNombre());
-
-                    // --- EVENTO: TORMENTA DEL UPSIDE DOWN ---
-                    int tiempoAtaque = 500 + random.nextInt(1001);
-                    if (zonas.isTormentaUpsideDown()) {
-                        tiempoAtaque /= 2; // ¡Doble de rápido!
-                    }
-                    Thread.sleep(tiempoAtaque);
-
-                    if (random.nextInt(3) == 0) {
-                        // ÉXITO: El niño es capturado 
-                        zonaActual.salirDemogorgon(this); 
-                        realizarCaptura(objetivo, zonaActual);
-                        zonaActual = null; // Va a la colmena físicamente, así que reseteamos su zona
-                    } else {
-                        // FRACASO: El niño resiste 
-                        Logs.getInstance().log(idDemogorgon + " ha FALLADO su ataque contra " + objetivo.getIdNino() + ".");
-                        // Eliminamos el zonaActual = null de aquí para que la transición sea limpia
-                    }
-                    
-                    synchronized (objetivo) {
-                        objetivo.setBajoAtaque(false);
-                        objetivo.notifyAll(); 
-                    }
-                    
                 } else {
-                    // ZONA VACÍA
-                    int tiempoEspera = 4000 + random.nextInt(1001);
-                    if (zonas.isTormentaUpsideDown()) {
-                        tiempoEspera /= 2; 
-                    }
-                    Thread.sleep(tiempoEspera);
-                    
-                    // Eliminamos el zonaActual = null de aquí también.
-                    // En la siguiente vuelta del bucle se moverá con total normalidad.
+                    gestionarEsperaEnZonaVacia();
                 }
             }
         } catch (InterruptedException e) {
             System.out.println(idDemogorgon + " interrumpido. Terminando hilo.");
             Thread.currentThread().interrupt();
+        }
+    }
+
+    // --- Lógica de Movimiento ---
+    private ZonaInsegura gestionarMovimiento(ZonaInsegura zonaActual) {
+        ZonaInsegura zonaNueva;
+
+        // Selección de destino basada en eventos globales
+        if (zonaActual == null) {
+            zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
+        } else if (zonas.isApagonLaboratorio()) {
+            zonaNueva = zonaActual; // Se queda en la zona por el apagón
+        } else if (zonas.isRedMental()) {
+            zonaNueva = zonas.getUpsidedown().obtenerZonaMasPoblada();
+        } else {
+            zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
+        }
+        
+        // Ejecución del cambio de zona
+        if (zonaActual != zonaNueva) {
+            if (zonaActual != null) {
+                zonaActual.salirDemogorgon(this);
+            }
+            zonaNueva.entrarDemogorgon(this);
+        }
+        return zonaNueva;
+    }
+
+    // --- Lógica de Ataque ---
+    private void gestionarAtaque(Nino objetivo, ZonaInsegura zonaActual) throws InterruptedException {
+        synchronized (objetivo) {
+            if (!zonaActual.getNinosEnZona().contains(objetivo)) {
+                return; // El niño abandonó la zona antes del ataque
+            }
+            objetivo.setBajoAtaque(true); 
+            objetivo.interrupt(); 
+        }
+        
+        Logs.getInstance().log(idDemogorgon + " está ATACANDO a " + objetivo.getIdNino() + " en " + zonaActual.getNombre());
+
+        // Cálculo de tiempo de ataque afectado por Tormenta
+        int tiempoAtaque = 500 + random.nextInt(1001);
+        if (zonas.isTormentaUpsideDown()) {
+            tiempoAtaque /= 2;
+        }
+        Thread.sleep(tiempoAtaque);
+
+        // Resolución de la probabilidad de captura (33%)
+        if (random.nextInt(3) == 0) {
+            zonaActual.salirDemogorgon(this); 
+            realizarCaptura(objetivo, zonaActual);
+        } else {
+            Logs.getInstance().log(idDemogorgon + " ha FALLADO su ataque contra " + objetivo.getIdNino() + ".");
+        }
+        
+        synchronized (objetivo) {
+            objetivo.setBajoAtaque(false);
+            objetivo.notifyAll(); 
         }
     }
 
@@ -120,6 +123,15 @@ public class Demogorgon extends Thread {
         Logs.getInstance().log(idDemogorgon + " ha encerrado a " + victima.getIdNino() + " en la Colmena.");
     }
 
+    private void gestionarEsperaEnZonaVacia() throws InterruptedException {
+        int tiempoEspera = 4000 + random.nextInt(1001);
+        if (zonas.isTormentaUpsideDown()) {
+            tiempoEspera /= 2; 
+        }
+        Thread.sleep(tiempoEspera);
+    }
+
+    // --- Getters ---
     public String getIdDemogorgon() { return idDemogorgon; }
     public int getCapturasRealizadas() { return capturasRealizadas; }
 }
