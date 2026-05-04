@@ -1,5 +1,6 @@
 package Clases;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -35,14 +36,15 @@ public class ZonaInsegura {
         demogorgonsEnZona.remove(d);
     }
 
-    public void recolectarSangre(Nino n) throws InterruptedException {
-        long tiempo = 3000 + random.nextInt(2001);
-        if (zonas != null && zonas.isTormentaUpsideDown()) {
-            tiempo *= 2;
-        }
-        Thread.sleep(tiempo);
+    // Ahora recibe el tiempo exacto que le falta al niño (el cálculo se hace en la clase Nino)
+    public void recolectarSangre(long tiempoRestante) throws InterruptedException {
+        Thread.sleep(tiempoRestante);
         zonas.esperarSiPausado();
-        sangreRecolectada.incrementAndGet();
+    }
+
+    // Nuevo método para registrar la sangre de forma segura una vez que el niño termina
+    public void registrarExtraccionGlobal(int cantidad) {
+        sangreRecolectada.addAndGet(cantidad);
     }
 
     public Nino seleccionarVictima() {
@@ -50,8 +52,22 @@ public class ZonaInsegura {
             if (ninosEnZona.isEmpty()) {
                 return null;
             }
-            int indice = random.nextInt(ninosEnZona.size());
-            return ninosEnZona.get(indice);
+
+            // Filtramos a los niños para NO atacar a los que ya están peleando o son inmunes
+            List<Nino> objetivosValidos = new ArrayList<>();
+            for (Nino n : ninosEnZona) {
+                if (!n.isBajoAtaque() && !n.isInmune()) {
+                    objetivosValidos.add(n);
+                }
+            }
+
+            if (objetivosValidos.isEmpty()) {
+                return null; // Todos los niños en la zona están ocupados peleando o son invisibles
+            }
+
+            int indice = random.nextInt(objetivosValidos.size());
+            return objetivosValidos.get(indice);
+            
         } catch (Exception e) {
             return null;
         }

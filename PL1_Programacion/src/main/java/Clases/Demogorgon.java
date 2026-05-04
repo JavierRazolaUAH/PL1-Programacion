@@ -82,7 +82,7 @@ public class Demogorgon extends Thread {
                         zonaActual = null; // Va a la colmena físicamente, así que reseteamos su zona
                     } else {
                         // FRACASO: El niño resiste 
-                        Logs.getInstance().log(objetivo.getIdNino() + " ha RESISTIDO el ataque de " + idDemogorgon + " y huye!");
+                        Logs.getInstance().log(idDemogorgon + " ha FALLADO su ataque contra " + objetivo.getIdNino() + ".");
                         // Eliminamos el zonaActual = null de aquí para que la transición sea limpia
                     }
                     
