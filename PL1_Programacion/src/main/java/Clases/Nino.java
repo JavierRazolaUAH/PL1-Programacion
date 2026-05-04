@@ -24,7 +24,7 @@ public class Nino extends Thread {
     public int getSangreRecolectada() { return sangreRecolectada; }
     public void setSangreRecolectada(int sangreRecolectada) { this.sangreRecolectada = sangreRecolectada; }
     public boolean isInmune() { return inmune; }
-    public void setInmune(boolean inmune) { this.inmune = inmune; }
+    
 
     @Override
     public void run() {

@@ -20,6 +20,7 @@ public class Colmena {
 
     public void depositarNino(Nino nino) {
         prisioneros.add(nino);
+        contadorCapturasTotal.incrementAndGet(); // <-- AQUÍ ESTÁ LA MAGIA AÑADIDA
 
         if (zonas != null && prisioneros.size() % 8 == 0) {
             Logs.getInstance().log("¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.");
