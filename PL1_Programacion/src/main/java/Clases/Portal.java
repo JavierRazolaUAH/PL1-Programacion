@@ -1,207 +1,230 @@
 package Clases;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Portal {
-    private final String nombre;
-    private final int capacidadGrupo;
-    private final AgrupacionZonas zonas;
+    private final String idPortal;
+    private final int limiteGrupo;
+    private final AgrupacionZonas gestorZonas;
 
-    // --- Herramientas de Sincronización ---
-    private final Lock cerrojoPaso = new ReentrantLock();
-    private final Condition condicionTurno = cerrojoPaso.newCondition();
+    // --- Sincronización ---
+    // Garantiza la exclusión mutua al modificar el estado o las listas del portal
+    private final Lock mutex = new ReentrantLock();
+    private final Condition condicionAcceso = mutex.newCondition();
 
-    // --- Estado del Portal ---
-    private boolean tunelEnUso = false;
-    private Nino ninoCruzando = null;
+    // --- Estado de Tránsito ---
+    private boolean zonaTransitoOcupada = false;
+    private Nino pasajeroActual = null;
 
-    // --- Estructuras de Datos ---
-    private final Queue<Nino> ninosEsperandoCruzar = new LinkedList<>();
-    private final List<Nino> escuadronSalida = new ArrayList<>();
-    private final List<Nino> ninosRetornando = new ArrayList<>();
+    // --- Listas de Gestión ---
+    private final List<Nino> colaSalida = new ArrayList<>();
+    private final List<Nino> grupoAprobado = new ArrayList<>();
+    private final List<Nino> colaRetorno = new ArrayList<>();
 
-    public Portal(String nombre, int capacidadGrupo, AgrupacionZonas zonas) {
-        this.nombre = nombre;
-        this.capacidadGrupo = capacidadGrupo;
-        this.zonas = zonas;
+    public Portal(String idPortal, int limiteGrupo, AgrupacionZonas gestorZonas) {
+        this.idPortal = idPortal;
+        this.limiteGrupo = limiteGrupo;
+        this.gestorZonas = gestorZonas;
     }
-
+   
+    // Flujo principal para cruzar de Hawkins al Upside Down (Ida)
     public void cruzarAlUpsideDown(Nino nino) throws InterruptedException {
-        gestionarPausaFueraDeLock(); 
-
-        cerrojoPaso.lock();
+        gestorZonas.esperarSiPausado();
+        mutex.lock();
         try {
-            // Añadir a la cola si no está en ella ni en el escuadrón
-            if (!ninosEsperandoCruzar.contains(nino) && !escuadronSalida.contains(nino)) {
-                ninosEsperandoCruzar.add(nino);
-            }
-
-            while (true) {
-                // Formación del grupo
-                if (escuadronSalida.isEmpty() && ninosEsperandoCruzar.size() >= capacidadGrupo) {
-                    for (int i = 0; i < capacidadGrupo; i++) {
-                        escuadronSalida.add(ninosEsperandoCruzar.poll());
-                    }
-                    condicionTurno.signalAll();
-                }
-
-                // Condiciones de avance
-                boolean esMiTurno = !escuadronSalida.isEmpty() && escuadronSalida.get(0).equals(nino);
-                boolean prioridadVuelta = !ninosRetornando.isEmpty();
-
-                if (esMiTurno && !tunelEnUso && !prioridadVuelta && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                    break; 
-                }
-
-                try {
-                    condicionTurno.await();
-                    gestionarPausa(); 
-                } catch (InterruptedException e) {
-                    // Limpieza en caso de ser atacado mientras esperaba
-                    ninosEsperandoCruzar.remove(nino);
-                    if (escuadronSalida.remove(nino)) {
-                        ninosEsperandoCruzar.addAll(escuadronSalida);
-                        escuadronSalida.clear();
-                    }
-                    condicionTurno.signalAll();
-                    throw e;
-                }
-            }
-
-            // Iniciar el cruce
-            tunelEnUso = true;
-            ninoCruzando = nino;
-            escuadronSalida.remove(nino);
-            Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Hawkins -> Upside Down)");
-
+            registrarEnColaSalida(nino);
+            esperarAprobacionIda(nino);
+            iniciarCruceIda(nino);
         } finally {
-            cerrojoPaso.unlock();
+            mutex.unlock();
         }
+        simularTiempoCruce(nino, true);
+    }
 
-        // Simulación física del tránsito
-        try {
-            Thread.sleep(1000);
-            gestionarPausaFueraDeLock(); 
-        } catch (InterruptedException e) {
-            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras cruzaba " + nombre);
-            throw e;
-        } finally {
-            liberarPortalManual();
-            Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " ha SALIDO del túnel hacia el Upside Down.");
+    private void registrarEnColaSalida(Nino nino) {
+        if (!colaSalida.contains(nino) && !grupoAprobado.contains(nino)) {
+            colaSalida.add(nino);
         }
     }
 
+    private void esperarAprobacionIda(Nino nino) throws InterruptedException {
+        while (true) {
+            intentarFormarGrupo();
+            if (tienePermisoParaIr(nino)) break;
+
+            try {
+                condicionAcceso.await();
+                verificarPausaEnEspera();
+            } catch (InterruptedException ex) {
+                limpiarRastroIda(nino);
+                throw ex; // Propaga la interrupción (ej. ataque de Demogorgon)
+            }
+        }
+    }
+
+    // Traspasa los hilos de la cola de espera al grupo de tránsito si hay capacidad
+    private void intentarFormarGrupo() {
+        if (grupoAprobado.isEmpty() && colaSalida.size() >= limiteGrupo) {
+            for (int i = 0; i < limiteGrupo; i++) {
+                grupoAprobado.add(colaSalida.remove(0));
+            }
+            condicionAcceso.signalAll(); // Avisa a los elegidos para que avancen
+        }
+    }
+
+    private boolean tienePermisoParaIr(Nino nino) {
+        boolean esLiderGrupo = !grupoAprobado.isEmpty() && grupoAprobado.get(0).equals(nino);
+        boolean prioridadInversa = !colaRetorno.isEmpty();
+        
+        // La condición !prioridadInversa asegura que el retorno tenga prioridad absoluta
+        return esLiderGrupo && !zonaTransitoOcupada && !prioridadInversa 
+                && !gestorZonas.isApagonLaboratorio() && !gestorZonas.isPausado();
+    }
+
+    private void iniciarCruceIda(Nino nino) {
+        zonaTransitoOcupada = true;
+        pasajeroActual = nino;
+        grupoAprobado.remove(nino);
+        Logs.getInstance().log(">>> [PORTAL " + idPortal + "] " + nino.getIdNino() + " ENTRA (Ida)");
+    }
+
+    // Restaura el estado de las listas si un hilo es interrumpido mientras esperaba
+    private void limpiarRastroIda(Nino nino) {
+        colaSalida.remove(nino);
+        if (grupoAprobado.remove(nino)) {
+            colaSalida.addAll(grupoAprobado); // Deshace el grupo incompleto
+            grupoAprobado.clear();
+        }
+        condicionAcceso.signalAll();
+    }
+    
+    // Flujo de retorno. Los niños escapan de forma individual y con máxima prioridad
     public void cruzarAHawkins(Nino nino) throws InterruptedException {
-        gestionarPausaFueraDeLock();
-
-        cerrojoPaso.lock();
+        gestorZonas.esperarSiPausado();
+        mutex.lock();
         try {
-            if (!ninosRetornando.contains(nino)) {
-                ninosRetornando.add(nino);
-            }
-
-            while (true) {
-                boolean esMiTurno = !ninosRetornando.isEmpty() && ninosRetornando.get(0).equals(nino);
-                
-                // Los que retornan NO comprueban si hay gente esperando para ir al Upside Down (Prioridad Absoluta)
-                if (esMiTurno && !tunelEnUso && !zonas.isApagonLaboratorio() && !zonas.isPausado()) {
-                    break;
-                }
-                
-                try {
-                    condicionTurno.await();
-                    gestionarPausa();
-                } catch (InterruptedException e) {
-                    ninosRetornando.remove(nino);
-                    condicionTurno.signalAll();
-                    throw e;
-                }
-            }
-
-            tunelEnUso = true;
-            ninoCruzando = nino;
-            ninosRetornando.remove(nino);
-            Logs.getInstance().log(">>> [PORTAL " + nombre + "] " + nino.getIdNino() + " ha ENTRADO al túnel (Upside Down -> Hawkins)");
-            
+            registrarEnColaRetorno(nino);
+            esperarAprobacionVuelta(nino);
+            iniciarCruceVuelta(nino);
         } finally {
-            cerrojoPaso.unlock();
+            mutex.unlock();
         }
+        simularTiempoCruce(nino, false);
+    }
 
+    private void registrarEnColaRetorno(Nino nino) {
+        if (!colaRetorno.contains(nino)) {
+            colaRetorno.add(nino);
+        }
+    }
+
+    private void esperarAprobacionVuelta(Nino nino) throws InterruptedException {
+        while (true) {
+            if (tienePermisoParaVolver(nino)) break;
+
+            try {
+                condicionAcceso.await();
+                verificarPausaEnEspera();
+            } catch (InterruptedException ex) {
+                colaRetorno.remove(nino);
+                condicionAcceso.signalAll();
+                throw ex;
+            }
+        }
+    }
+
+    private boolean tienePermisoParaVolver(Nino nino) {
+        // Garantiza un orden FIFO estricto para los retornos
+        boolean esPrimero = !colaRetorno.isEmpty() && colaRetorno.get(0).equals(nino);
+        return esPrimero && !zonaTransitoOcupada && !gestorZonas.isApagonLaboratorio() && !gestorZonas.isPausado();
+    }
+
+    private void iniciarCruceVuelta(Nino nino) {
+        zonaTransitoOcupada = true;
+        pasajeroActual = nino;
+        colaRetorno.remove(nino);
+        Logs.getInstance().log(">>> [PORTAL " + idPortal + "] " + nino.getIdNino() + " ENTRA (Vuelta)");
+    }
+
+    
+    // Representa el tiempo físico dentro del portal. Libera el recurso al terminar.
+    private void simularTiempoCruce(Nino nino, boolean esIda) throws InterruptedException {
         try {
             Thread.sleep(1000);
-            gestionarPausaFueraDeLock();
+            gestorZonas.esperarSiPausado();
         } catch (InterruptedException e) {
-            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " ha sido interrumpido mientras volvía por " + nombre);
+            Logs.getInstance().log("[ALERTA] " + nino.getIdNino() + " fue interrumpido cruzando el portal " + idPortal);
             throw e;
         } finally {
-            liberarPortalManual();
-            Logs.getInstance().log("<<< [PORTAL " + nombre + "] " + nino.getIdNino() + " TERMINA de cruzar " + nombre + " y está a salvo.");
+            liberarAcceso();
+            if (esIda) {
+                Logs.getInstance().log("<<< [PORTAL " + idPortal + "] " + nino.getIdNino() + " SALE (Upside Down)");
+            } else {
+                Logs.getInstance().log("<<< [PORTAL " + idPortal + "] " + nino.getIdNino() + " A SALVO en Hawkins.");
+            }
         }
     }
 
-    private void gestionarPausaFueraDeLock() throws InterruptedException {
-        zonas.esperarSiPausado();
-    }
-
-    private void liberarPortalManual() {
-        cerrojoPaso.lock();
+    // Desbloquea el portal y avisa a los siguientes hilos en espera
+    private void liberarAcceso() {
+        mutex.lock();
         try {
-            tunelEnUso = false;
-            ninoCruzando = null;
-            condicionTurno.signalAll();
+            zonaTransitoOcupada = false;
+            pasajeroActual = null;
+            condicionAcceso.signalAll();
         } finally {
-            cerrojoPaso.unlock();
+            mutex.unlock();
         }
     }
 
     public void despertarHilos() {
-        cerrojoPaso.lock();
+        mutex.lock();
         try {
-            condicionTurno.signalAll();
+            condicionAcceso.signalAll();
         } finally {
-            cerrojoPaso.unlock();
+            mutex.unlock();
         }
     }
 
-    private void gestionarPausa() throws InterruptedException {
-        if (zonas.isPausado()) {
-            cerrojoPaso.unlock();
+    // Patrón de diseño para evitar deadlocks
+    private void verificarPausaEnEspera() throws InterruptedException {
+        if (gestorZonas.isPausado()) {
+            mutex.unlock();
             try {
-                zonas.esperarSiPausado();
+                gestorZonas.esperarSiPausado();
             } finally {
-                cerrojoPaso.lock();
+                mutex.lock();
             }
         }
     }
 
-    public String getNombre() { return nombre; }
-    
+    // Getters
+    public String getNombre() { return idPortal; }
+
     public List<Nino> getCruzando() {
-        cerrojoPaso.lock();
+        mutex.lock();
         try {
             List<Nino> l = new ArrayList<>();
-            if (ninoCruzando != null) l.add(ninoCruzando);
+            if (pasajeroActual != null) l.add(pasajeroActual);
             return l;
-        } finally { cerrojoPaso.unlock(); }
+        } finally { mutex.unlock(); }
     }
-    
+
     public List<Nino> getNinosEsperandoAlUpsideDown() {
-        cerrojoPaso.lock();
+        mutex.lock();
         try {
-            List<Nino> l = new ArrayList<>(escuadronSalida);
-            l.addAll(ninosEsperandoCruzar);
+            List<Nino> l = new ArrayList<>(grupoAprobado);
+            l.addAll(colaSalida);
             return l;
-        } finally { cerrojoPaso.unlock(); }
+        } finally { mutex.unlock(); }
     }
-    
+
     public List<Nino> getNinosEsperandoAHawkins() {
-        cerrojoPaso.lock();
-        try { return new ArrayList<>(ninosRetornando); } finally { cerrojoPaso.unlock(); }
+        mutex.lock();
+        try { return new ArrayList<>(colaRetorno); } finally { mutex.unlock(); }
     }
 }

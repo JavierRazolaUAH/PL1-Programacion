@@ -147,7 +147,7 @@ public class Nino extends Thread {
         zonas.getRadioWSQK().salirZona(this);
     }
 
-    // El Demogorgon usa esto para saber si puede atacar (
+    // El Demogorgon usa esto para saber si puede atacar evitando condiciones de carrera
     public boolean intentarAtrapar() {
         return bajoAtaque.compareAndSet(false, true);
     }
