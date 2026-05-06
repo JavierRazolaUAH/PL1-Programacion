@@ -16,11 +16,11 @@ public class AgrupacionZonas {
     private final Portal[] portales;
     
     // --- Atributos de Control y Concurrencia ---
-    private final Lock lock = new ReentrantLock();
-    private final Condition pausadoCondition = lock.newCondition();
+    private final Lock cerrojoGlobal = new ReentrantLock();
+    private final Condition condicionDetencion = cerrojoGlobal.newCondition();
     private final AtomicInteger tiempoRestanteEvento = new AtomicInteger(0);
     
-    private volatile boolean pausado = false;
+    private volatile boolean simulacionDetenida = false;
     private boolean apagonLaboratorio = false;
     private boolean tormentaUpsideDown = false;
     private boolean intervencionEleven = false;
@@ -44,32 +44,32 @@ public class AgrupacionZonas {
 
     // --- Gestión de Pausa y Sincronización ---
     public void pausar() {
-        lock.lock();
+        cerrojoGlobal.lock();
         try {
-            pausado = true;
+            simulacionDetenida = true;
         } finally {
-            lock.unlock();
+            cerrojoGlobal.unlock();
         }
     }
 
     public void reanudar() {
-        lock.lock();
+        cerrojoGlobal.lock();
         try {
-            pausado = false;
-            pausadoCondition.signalAll();
+            simulacionDetenida = false;
+            condicionDetencion.signalAll();
         } finally {
-            lock.unlock();
+            cerrojoGlobal.unlock();
         }
     }
 
     public void esperarSiPausado() throws InterruptedException {
-        lock.lock();
+        cerrojoGlobal.lock();
         try {
-            while (pausado) {
-                pausadoCondition.await();
+            while (simulacionDetenida) {
+                condicionDetencion.await();
             }
         } finally {
-            lock.unlock();
+            cerrojoGlobal.unlock();
         }
     }
 
@@ -159,7 +159,8 @@ public class AgrupacionZonas {
     public Portal[] getTodosLosPortales() { return portales; }
 
     // --- Getters y Setters de Eventos y Tiempo ---
-    public boolean isPausado() { return pausado; }
+    public boolean isPausado() { return simulacionDetenida; }
+    
     public int getTiempoRestanteEvento() { return tiempoRestanteEvento.get(); }
     public void setTiempoRestanteEvento(int tiempo) { this.tiempoRestanteEvento.set(tiempo); }
 

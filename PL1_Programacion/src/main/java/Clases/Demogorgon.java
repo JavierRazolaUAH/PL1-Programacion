@@ -89,7 +89,7 @@ public class Demogorgon extends Thread {
             objetivo.interrupt(); 
         }
         
-        Logs.getInstance().log(idDemogorgon + " está ATACANDO a " + objetivo.getIdNino() + " en " + zonaActual.getNombre());
+        Logs.getInstance().log("El demogorgon " + idDemogorgon + " ataca al niño " + objetivo.getIdNino() + " (capturas: " + capturasRealizadas + ")");
 
         // Cálculo de tiempo de ataque afectado por Tormenta
         int tiempoAtaque = 500 + random.nextInt(1001);
@@ -115,7 +115,7 @@ public class Demogorgon extends Thread {
     private void realizarCaptura(Nino victima, ZonaInsegura zona) throws InterruptedException {
         zona.salirNino(victima);
         victima.setCapturado(true); 
-
+        Logs.getInstance().log("El niño " + victima.getIdNino() + " ha sido capturado");
         Thread.sleep(500 + random.nextInt(501));
 
         zonas.getUpsidedown().getColmena().depositarNino(victima);

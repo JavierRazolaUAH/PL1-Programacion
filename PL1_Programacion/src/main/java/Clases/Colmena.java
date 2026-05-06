@@ -77,9 +77,9 @@ public class Colmena {
 
     private void registrarLogRescate(int liberados) {
         if (liberados > 0) {
-            Logs.getInstance().log("⚡ ELEVEN ha usado sus poderes y ha rescatado a " + liberados + " niños de la Colmena.");
+            Logs.getInstance().log(" ELEVEN ha usado sus poderes y ha rescatado a " + liberados + " niños de la Colmena.");
         } else {
-            Logs.getInstance().log("⚡ ELEVEN ha llegado a la Colmena, pero estaba vacía.");
+            Logs.getInstance().log(" ELEVEN ha llegado a la Colmena, pero estaba vacía.");
         }
     }
 

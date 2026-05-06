@@ -194,7 +194,7 @@ public void actualizarCalleGUI() {
         Clases.Portal portal = zonas.getPortal(0);
         
         actualizarListaNinos(portal.getNinosEsperandoAlUpsideDown(), jTextArea_Bosque_Dentro);
-        actualizarListaNinos(portal.getCruzando(), TextArea_Bosque_Salida); // ¡Usamos actualizarListaNinos también aquí!
+        actualizarListaNinos(portal.getCruzando(), TextArea_Bosque_Salida); // 
         actualizarListaNinos(portal.getNinosEsperandoAHawkins(), TextArea_Bosque_Entrada);
     }
 
