@@ -3,8 +3,7 @@ package Clases;
 import java.util.Random;
 
 public class Demogorgon extends Thread {
-    
-    // --- Atributos de Identificación y Estado ---
+    // --- Atributos ---
     private final String idDemogorgon;
     private final AgrupacionZonas zonas;
     private final Random random = new Random();
@@ -19,30 +18,24 @@ public class Demogorgon extends Thread {
     // --- Ciclo de Vida del Hilo ---
     @Override
     public void run() {
-        ZonaInsegura zonaActual = null; 
-
+        ZonaInsegura zonaActual = null;
         try {
             while (!Thread.currentThread().isInterrupted()) {
-                zonas.esperarSiPausado(); 
-
-                // --- Fase de Desplazamiento ---
-                zonaActual = gestionarMovimiento(zonaActual);
+                zonas.esperarSiPausado();
                 
-                zonas.esperarSiPausado(); 
+                zonaActual = gestionarMovimiento(zonaActual);
+                zonas.esperarSiPausado();
 
-                // --- Manejo de Eventos: Parálisis por Eleven ---
                 while (zonas.isIntervencionEleven()) {
-                    Thread.sleep(500); 
+                    Thread.sleep(500);
                 }
 
-                // --- Lógica de Combate y Captura ---
                 Nino objetivo = zonaActual.seleccionarVictima();
-
+                
                 if (objetivo != null) {
                     gestionarAtaque(objetivo, zonaActual);
-                    // Si hubo captura, zonaActual se resetea en el flujo de realizarCaptura
                     if (objetivo.isCapturado()) {
-                        zonaActual = null;
+                        zonaActual = null; 
                     }
                 } else {
                     gestionarEsperaEnZonaVacia();
@@ -57,67 +50,68 @@ public class Demogorgon extends Thread {
     // --- Lógica de Movimiento ---
     private ZonaInsegura gestionarMovimiento(ZonaInsegura zonaActual) {
         ZonaInsegura zonaNueva;
-
-        // Selección de destino basada en eventos globales
+        
         if (zonaActual == null) {
             zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
         } else if (zonas.isApagonLaboratorio()) {
-            zonaNueva = zonaActual; // Se queda en la zona por el apagón
+            zonaNueva = zonaActual; 
         } else if (zonas.isRedMental()) {
-            zonaNueva = zonas.getUpsidedown().obtenerZonaMasPoblada();
+            zonaNueva = zonas.getUpsidedown().obtenerZonaMasPoblada(); 
         } else {
             zonaNueva = zonas.getUpsidedown().obtenerZonaAleatoria();
         }
-        
-        // Ejecución del cambio de zona
+        // Realiza el cambio físico entre las listas de las zonas
         if (zonaActual != zonaNueva) {
             if (zonaActual != null) {
-                zonaActual.salirDemogorgon(this);
+                zonaActual.salirDemogorgon(this); 
             }
             zonaNueva.entrarDemogorgon(this);
         }
         return zonaNueva;
     }
 
-    // --- Lógica de Ataque ---
-    private void gestionarAtaque(Nino objetivo, ZonaInsegura zonaActual) throws InterruptedException {
-        synchronized (objetivo) {
-            if (!zonaActual.getNinosEnZona().contains(objetivo)) {
-                return; // El niño abandonó la zona antes del ataque
+    // --- Lógica de Combate ---
+    private void gestionarAtaque(Nino objetivo, ZonaInsegura zonaActual) {
+        // Intenta "bloquear" al niño atómicamente para evitar ataques simultáneos
+        if (objetivo.intentarAtrapar()) {
+            boolean exitoCaptura = false;
+            
+            try {
+                // Interrumpe la recolección de sangre del niño inmediatamente
+                objetivo.interrupt();
+                Logs.getInstance().log("El demogorgon " + idDemogorgon + " ataca al niño " + objetivo.getIdNino() + " (capturas: " + capturasRealizadas + ")");
+
+                int tiempoAtaque = 500 + random.nextInt(1001);
+                if (zonas.isTormentaUpsideDown()) {
+                    tiempoAtaque /= 2; 
+                }
+                Thread.sleep(tiempoAtaque);
+
+                exitoCaptura = (random.nextInt(3) == 0);
+                
+                if (exitoCaptura) {
+                    zonaActual.salirDemogorgon(this);
+                    realizarCaptura(objetivo, zonaActual);
+                } else {
+                    Logs.getInstance().log(idDemogorgon + " ha FALLADO su ataque contra " + objetivo.getIdNino() + ".");
+                }
+
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            } finally {
+                // Notifica al niño el resultado final para que pueda reanudar su marcha o quedar cautivo
+                objetivo.resolverAtaque(exitoCaptura);
             }
-            objetivo.setBajoAtaque(true); 
-            objetivo.interrupt(); 
-        }
-        
-        Logs.getInstance().log("El demogorgon " + idDemogorgon + " ataca al niño " + objetivo.getIdNino() + " (capturas: " + capturasRealizadas + ")");
-
-        // Cálculo de tiempo de ataque afectado por Tormenta
-        int tiempoAtaque = 500 + random.nextInt(1001);
-        if (zonas.isTormentaUpsideDown()) {
-            tiempoAtaque /= 2;
-        }
-        Thread.sleep(tiempoAtaque);
-
-        // Resolución de la probabilidad de captura (33%)
-        if (random.nextInt(3) == 0) {
-            zonaActual.salirDemogorgon(this); 
-            realizarCaptura(objetivo, zonaActual);
-        } else {
-            Logs.getInstance().log(idDemogorgon + " ha FALLADO su ataque contra " + objetivo.getIdNino() + ".");
-        }
-        
-        synchronized (objetivo) {
-            objetivo.setBajoAtaque(false);
-            objetivo.notifyAll(); 
         }
     }
 
+    // --- Lógica de Captura y Espera ---
     private void realizarCaptura(Nino victima, ZonaInsegura zona) throws InterruptedException {
         zona.salirNino(victima);
-        victima.setCapturado(true); 
         Logs.getInstance().log("El niño " + victima.getIdNino() + " ha sido capturado");
+        
         Thread.sleep(500 + random.nextInt(501));
-
+        
         zonas.getUpsidedown().getColmena().depositarNino(victima);
         this.capturasRealizadas++;
         Logs.getInstance().log(idDemogorgon + " ha encerrado a " + victima.getIdNino() + " en la Colmena.");
@@ -131,7 +125,6 @@ public class Demogorgon extends Thread {
         Thread.sleep(tiempoEspera);
     }
 
-    // --- Getters ---
     public String getIdDemogorgon() { return idDemogorgon; }
     public int getCapturasRealizadas() { return capturasRealizadas; }
 }

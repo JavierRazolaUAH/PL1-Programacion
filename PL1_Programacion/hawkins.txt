@@ -1,424 +1,1752 @@
-2026-05-06 10:26:38 - N0001 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:38 - N0002 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:39 - N0001 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:39 - N0001 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:39 - N0002 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:39 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:40 - N0001 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:40 - N0003 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:41 - N0002 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:41 - N0004 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:41 - N0003 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:41 - N0003 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:42 - N0001 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:42 - N0005 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:42 - N0004 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:42 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:43 - N0002 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:43 - N0005 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:43 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:43 - N0003 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:43 - N0004 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:44 - N0006 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:45 - N0005 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:45 - N0007 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:45 - N0006 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:45 - N0006 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:45 - N0003 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:45 - >>> [PORTAL Alcantarillado] N0001 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:45 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:45 - >>> [PORTAL Bosque] N0002 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:46 - N0007 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:46 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:46 - >>> [PORTAL Alcantarillado] N0003 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:46 - <<< [PORTAL Alcantarillado] N0001 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:46 - N0008 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:46 - <<< [PORTAL Bosque] N0002 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:46 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:47 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:47 - N0006 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:47 - <<< [PORTAL Alcantarillado] N0003 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:47 - N0008 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:47 - N0008 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:47 - <<< [PORTAL Bosque] N0004 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:47 - N0007 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:48 - N0009 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:48 - N0006 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:49 - N0008 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:49 - N0009 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:49 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:49 - N0001 ha recolectado sangre con éxito.
-2026-05-06 10:26:49 - >>> [PORTAL Alcantarillado] N0001 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:49 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:49 - N0010 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:50 - N0003 ha recolectado sangre con éxito.
-2026-05-06 10:26:50 - >>> [PORTAL Alcantarillado] N0003 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:50 - <<< [PORTAL Alcantarillado] N0001 TERMINA de cruzar Alcantarillado y está a salvo.
-2026-05-06 10:26:50 - N0001 ha depositado 1 unidad(es) de sangre. Total en RADIO: 1
-2026-05-06 10:26:50 - N0001 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:50 - N0010 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:50 - N0010 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:50 - N0009 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:51 - N0008 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:51 - N0011 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:51 - N0002 ha recolectado sangre con éxito.
-2026-05-06 10:26:51 - >>> [PORTAL Bosque] N0002 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:51 - <<< [PORTAL Alcantarillado] N0003 TERMINA de cruzar Alcantarillado y está a salvo.
-2026-05-06 10:26:51 - N0003 ha depositado 1 unidad(es) de sangre. Total en RADIO: 2
-2026-05-06 10:26:51 - N0003 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:51 - N0012 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:52 - N0011 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:52 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:52 - N0004 ha recolectado sangre con éxito.
-2026-05-06 10:26:52 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:52 - >>> [PORTAL Alcantarillado] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:52 - <<< [PORTAL Bosque] N0002 TERMINA de cruzar Bosque y está a salvo.
-2026-05-06 10:26:52 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:52 - N0002 ha depositado 1 unidad(es) de sangre. Total en RADIO: 3
-2026-05-06 10:26:52 - N0002 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:52 - N0010 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:52 - N0001 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:26:52 - N0001 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:26:52 - N0012 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:52 - N0012 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:53 - N0011 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:53 - <<< [PORTAL Alcantarillado] N0007 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:53 - >>> [PORTAL Alcantarillado] N0009 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:53 - <<< [PORTAL Bosque] N0004 TERMINA de cruzar Bosque y está a salvo.
-2026-05-06 10:26:53 - N0004 ha depositado 1 unidad(es) de sangre. Total en RADIO: 4
-2026-05-06 10:26:53 - N0004 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:53 - N0013 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:53 - N0010 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:53 - >>> [PORTAL Bosque] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:54 - N0012 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:54 - <<< [PORTAL Alcantarillado] N0009 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:54 - N0002 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:26:54 - N0002 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:26:54 - N0013 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:54 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:54 - <<< [PORTAL Bosque] N0005 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:54 - >>> [PORTAL Bosque] N0010 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:55 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:55 - N0003 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:26:55 - N0003 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:26:55 - N0012 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:55 - El demogorgon D0000 ataca al niño N0009 (capturas: 0)
-2026-05-06 10:26:55 - N0014 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:55 - <<< [PORTAL Bosque] N0010 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:26:56 - N0001 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:56 - N0001 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:56 - N0015 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:56 - N0014 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:56 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:56 - N0013 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:56 - N0004 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:26:56 - N0004 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:26:56 - D0000 ha FALLADO su ataque contra N0009.
-2026-05-06 10:26:56 - El demogorgon D0000 ataca al niño N0010 (capturas: 0)
-2026-05-06 10:26:56 - N0009 RESISTE con inmunidad.
-2026-05-06 10:26:57 - N0015 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:57 - N0015 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:57 - El niño N0010 ha sido capturado
-2026-05-06 10:26:57 - N0001 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:57 - N0016 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:57 - N0013 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:57 - D0000 ha encerrado a N0010 en la Colmena.
-2026-05-06 10:26:57 - N0002 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:57 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:58 - N0007 ha recolectado sangre con éxito.
-2026-05-06 10:26:58 - >>> [PORTAL Alcantarillado] N0007 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:58 - N0017 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:58 - N0014 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:58 - N0015 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:58 - N0016 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:58 - N0016 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:58 - N0003 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:58 - N0003 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:58 - N0005 ha recolectado sangre con éxito.
-2026-05-06 10:26:58 - >>> [PORTAL Bosque] N0005 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:58 - N0009 ha recolectado sangre con éxito.
-2026-05-06 10:26:59 - <<< [PORTAL Alcantarillado] N0007 TERMINA de cruzar Alcantarillado y está a salvo.
-2026-05-06 10:26:59 - >>> [PORTAL Alcantarillado] N0009 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:26:59 - N0007 ha depositado 1 unidad(es) de sangre. Total en RADIO: 5
-2026-05-06 10:26:59 - N0007 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:59 - N0001 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:26:59 - >>> [PORTAL Laboratorio] N0008 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:26:59 - N0002 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:26:59 - N0017 ha SALIDO de la Calle Principal.
-2026-05-06 10:26:59 - N0017 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:26:59 - <<< [PORTAL Bosque] N0005 TERMINA de cruzar Bosque y está a salvo.
-2026-05-06 10:26:59 - N0005 ha depositado 1 unidad(es) de sangre. Total en RADIO: 6
-2026-05-06 10:26:59 - N0005 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:26:59 - N0018 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:26:59 - N0014 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:00 - <<< [PORTAL Alcantarillado] N0009 TERMINA de cruzar Alcantarillado y está a salvo.
-2026-05-06 10:27:00 - N0009 ha depositado 1 unidad(es) de sangre. Total en RADIO: 7
-2026-05-06 10:27:00 - N0009 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:00 - <<< [PORTAL Laboratorio] N0008 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:00 - >>> [PORTAL Laboratorio] N0011 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:00 - N0015 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:00 - N0016 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:00 - N0002 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:00 - N0019 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:00 - N0004 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:00 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:00 - N0003 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:00 - N0017 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:00 - N0018 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:00 - N0018 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:01 - <<< [PORTAL Laboratorio] N0011 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:01 - >>> [PORTAL Laboratorio] N0001 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:01 - N0007 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:01 - N0007 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:01 - N0019 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:01 - N0019 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:01 - N0004 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:01 - N0017 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:02 - N0016 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:02 - <<< [PORTAL Laboratorio] N0001 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:02 - >>> [PORTAL Laboratorio] N0014 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:02 - N0018 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:02 - N0020 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:02 - N0005 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:02 - N0005 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:02 - N0003 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:03 - N0019 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:03 - >>> [PORTAL Laboratorio] N0002 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:03 - <<< [PORTAL Laboratorio] N0014 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:03 - N0018 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:03 - >>> [PORTAL Bosque] N0013 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:03 - N0020 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:03 - N0020 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:03 - N0009 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:03 - N0009 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:03 - N0021 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:03 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:04 - >>> [PORTAL Laboratorio] N0017 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:04 - <<< [PORTAL Laboratorio] N0002 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:04 - <<< [PORTAL Bosque] N0013 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:04 - >>> [PORTAL Bosque] N0018 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:04 - N0019 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:04 - N0021 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:04 - N0021 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:04 - N0011 ha recolectado sangre con éxito.
-2026-05-06 10:27:04 - N0008 ha recolectado sangre con éxito.
-2026-05-06 10:27:04 - N0007 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:04 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:04 - N0020 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:05 - <<< [PORTAL Laboratorio] N0017 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:05 - >>> [PORTAL Laboratorio] N0011 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:05 - N0022 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:05 - N0001 ha recolectado sangre con éxito.
-2026-05-06 10:27:05 - <<< [PORTAL Bosque] N0018 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:05 - N0007 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:06 - N0021 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:06 - <<< [PORTAL Laboratorio] N0011 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:06 - >>> [PORTAL Laboratorio] N0008 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:06 - N0011 ha depositado 1 unidad(es) de sangre. Total en RADIO: 8
-2026-05-06 10:27:06 - N0011 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:06 - N0022 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:06 - N0022 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:06 - N0020 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:06 - N0009 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:06 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:06 - El demogorgon D0000 ataca al niño N0013 (capturas: 1)
-2026-05-06 10:27:06 - N0005 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:06 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:07 - N0023 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:07 - <<< [PORTAL Laboratorio] N0008 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:07 - >>> [PORTAL Laboratorio] N0001 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:07 - N0008 ha depositado 1 unidad(es) de sangre. Total en RADIO: 9
-2026-05-06 10:27:07 - N0008 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:07 - D0000 ha FALLADO su ataque contra N0013.
-2026-05-06 10:27:07 - N0013 RESISTE con inmunidad.
-2026-05-06 10:27:07 - El demogorgon D0000 ataca al niño N0018 (capturas: 1)
-2026-05-06 10:27:07 - N0014 ha recolectado sangre con éxito.
-2026-05-06 10:27:07 - N0021 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:07 - >>> [PORTAL Centro Comercial] N0006 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:07 - N0005 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:07 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:07 - N0009 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:08 - N0023 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:08 - N0023 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:08 - >>> [PORTAL Laboratorio] N0014 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:08 - <<< [PORTAL Laboratorio] N0001 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:08 - N0001 ha depositado 1 unidad(es) de sangre. Total en RADIO: 10
-2026-05-06 10:27:08 - N0001 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:08 - N0022 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:08 - N0024 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:08 - N0013 ha recolectado sangre con éxito.
-2026-05-06 10:27:08 - >>> [PORTAL Bosque] N0013 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:08 - El niño N0018 ha sido capturado
-2026-05-06 10:27:08 - >>> [PORTAL Centro Comercial] N0015 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:08 - <<< [PORTAL Centro Comercial] N0006 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:08 - N0011 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:08 - N0011 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:08 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:09 - N0017 ha recolectado sangre con éxito.
-2026-05-06 10:27:09 - N0002 ha recolectado sangre con éxito.
-2026-05-06 10:27:09 - <<< [PORTAL Laboratorio] N0014 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:09 - >>> [PORTAL Laboratorio] N0017 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:09 - N0014 ha depositado 1 unidad(es) de sangre. Total en RADIO: 11
-2026-05-06 10:27:09 - N0014 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:09 - N0025 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:09 - N0022 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:09 - N0024 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:09 - N0024 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:09 - <<< [PORTAL Bosque] N0013 TERMINA de cruzar Bosque y está a salvo.
-2026-05-06 10:27:09 - N0013 ha depositado 1 unidad(es) de sangre. Total en RADIO: 12
-2026-05-06 10:27:09 - N0013 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:09 - D0000 ha encerrado a N0018 en la Colmena.
-2026-05-06 10:27:09 - N0023 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:09 - <<< [PORTAL Centro Comercial] N0015 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:09 - >>> [PORTAL Centro Comercial] N0003 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:09 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:10 - <<< [PORTAL Laboratorio] N0017 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:10 - >>> [PORTAL Laboratorio] N0002 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:10 - N0017 ha depositado 1 unidad(es) de sangre. Total en RADIO: 13
-2026-05-06 10:27:10 - N0017 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:10 - N0025 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:10 - N0025 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:10 - N0008 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:10 - N0008 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:10 - N0024 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:10 - <<< [PORTAL Centro Comercial] N0003 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:10 - >>> [PORTAL Centro Comercial] N0021 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:10 - N0026 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:11 - <<< [PORTAL Laboratorio] N0002 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:11 - >>> [PORTAL Laboratorio] N0016 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:11 - N0002 ha depositado 1 unidad(es) de sangre. Total en RADIO: 14
-2026-05-06 10:27:11 - N0002 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:11 - N0001 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:11 - N0001 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:11 - N0025 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:11 - N0023 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:11 - <<< [PORTAL Centro Comercial] N0021 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:11 - N0024 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:11 - >>> [PORTAL Alcantarillado] N0012 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:11 - N0014 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:11 - N0014 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:11 - N0026 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:11 - N0026 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:12 - <<< [PORTAL Laboratorio] N0016 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:12 - >>> [PORTAL Laboratorio] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:12 - N0011 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:12 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:12 - N0025 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:12 - >>> [PORTAL Bosque] N0022 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:12 - <<< [PORTAL Alcantarillado] N0012 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:12 - >>> [PORTAL Alcantarillado] N0024 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:12 - N0006 ha recolectado sangre con éxito.
-2026-05-06 10:27:12 - >>> [PORTAL Centro Comercial] N0006 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:12 - N0027 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:12 - N0017 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:12 - N0017 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:13 - <<< [PORTAL Laboratorio] N0004 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:13 - >>> [PORTAL Laboratorio] N0019 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:13 - N0015 ha recolectado sangre con éxito.
-2026-05-06 10:27:13 - N0026 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:13 - N0028 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:13 - N0013 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:13 - N0013 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:13 - El demogorgon D0000 ataca al niño N0004 (capturas: 2)
-2026-05-06 10:27:13 - N0002 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:13 - N0002 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:13 - <<< [PORTAL Bosque] N0022 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:13 - >>> [PORTAL Bosque] N0025 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:13 - N0008 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:13 - N0008 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:13 - <<< [PORTAL Alcantarillado] N0024 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:13 - <<< [PORTAL Centro Comercial] N0006 TERMINA de cruzar Centro Comercial y está a salvo.
-2026-05-06 10:27:13 - >>> [PORTAL Centro Comercial] N0015 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:13 - N0006 ha depositado 1 unidad(es) de sangre. Total en RADIO: 15
-2026-05-06 10:27:13 - N0006 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:13 - N0027 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:13 - N0027 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:14 - >>> [PORTAL Laboratorio] N0020 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:14 - <<< [PORTAL Laboratorio] N0019 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:14 - N0011 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:14 - N0001 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:14 - N0001 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:14 - N0028 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:14 - N0028 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:14 - <<< [PORTAL Bosque] N0025 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:14 - N0029 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:14 - N0008 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:14 - El niño N0004 ha sido capturado
-2026-05-06 10:27:14 - N0026 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:14 - <<< [PORTAL Centro Comercial] N0015 TERMINA de cruzar Centro Comercial y está a salvo.
-2026-05-06 10:27:14 - N0015 ha depositado 1 unidad(es) de sangre. Total en RADIO: 16
-2026-05-06 10:27:14 - N0015 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:15 - N0027 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:15 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:15 - <<< [PORTAL Laboratorio] N0020 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:15 - N0003 ha recolectado sangre con éxito.
-2026-05-06 10:27:15 - >>> [PORTAL Centro Comercial] N0003 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:15 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:15 - N0028 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:15 - N0001 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:15 - N0021 ha recolectado sangre con éxito.
-2026-05-06 10:27:15 - D0000 ha encerrado a N0004 en la Colmena.
-2026-05-06 10:27:15 - N0029 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:15 - N0029 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:15 - N0016 ha recolectado sangre con éxito.
-2026-05-06 10:27:15 - N0008 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:16 - N0030 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:16 - <<< [PORTAL Laboratorio] N0007 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:16 - >>> [PORTAL Laboratorio] N0016 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:16 - <<< [PORTAL Centro Comercial] N0003 TERMINA de cruzar Centro Comercial y está a salvo.
-2026-05-06 10:27:16 - >>> [PORTAL Centro Comercial] N0021 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:16 - N0003 ha depositado 1 unidad(es) de sangre. Total en RADIO: 17
-2026-05-06 10:27:16 - N0003 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:16 - N0014 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:16 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:16 - N0002 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:16 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:16 - N0012 ha recolectado sangre con éxito.
-2026-05-06 10:27:16 - >>> [PORTAL Alcantarillado] N0012 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:16 - N0006 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:16 - N0006 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:17 - N0030 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:17 - N0030 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:17 - N0027 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:17 - N0028 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:17 - >>> [PORTAL Laboratorio] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
-2026-05-06 10:27:17 - <<< [PORTAL Laboratorio] N0016 TERMINA de cruzar Laboratorio y está a salvo.
-2026-05-06 10:27:17 - N0016 ha depositado 1 unidad(es) de sangre. Total en RADIO: 18
-2026-05-06 10:27:17 - N0016 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:17 - <<< [PORTAL Centro Comercial] N0021 TERMINA de cruzar Centro Comercial y está a salvo.
-2026-05-06 10:27:17 - N0021 ha depositado 1 unidad(es) de sangre. Total en RADIO: 19
-2026-05-06 10:27:17 - N0021 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:17 - N0017 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:17 - N0017 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:17 - N0019 ha recolectado sangre con éxito.
-2026-05-06 10:27:17 - N0001 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 10:27:17 - N0029 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:17 - N0031 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 10:27:17 - N0015 ha terminado de descansar y SALE de la Radio WSQK.
-2026-05-06 10:27:17 - N0015 está DEAMBULANDO por la Calle Principal.
-2026-05-06 10:27:17 - N0024 ha recolectado sangre con éxito.
-2026-05-06 10:27:17 - <<< [PORTAL Alcantarillado] N0012 TERMINA de cruzar Alcantarillado y está a salvo.
-2026-05-06 10:27:17 - >>> [PORTAL Alcantarillado] N0024 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:17 - N0012 ha depositado 1 unidad(es) de sangre. Total en RADIO: 20
-2026-05-06 10:27:17 - N0012 ha ENTRADO a la Radio WSQK para descansar.
-2026-05-06 10:27:18 - <<< [PORTAL Laboratorio] N0005 ha SALIDO del túnel hacia el Upside Down.
-2026-05-06 10:27:18 - >>> [PORTAL Laboratorio] N0019 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:18 - N0020 ha recolectado sangre con éxito.
-2026-05-06 10:27:18 - N0014 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:18 - N0013 ha SALIDO de la Calle Principal.
-2026-05-06 10:27:18 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 10:27:18 - N0022 ha recolectado sangre con éxito.
-2026-05-06 10:27:18 - >>> [PORTAL Bosque] N0022 ha ENTRADO al túnel (Upside Down -> Hawkins)
-2026-05-06 10:27:18 - N0002 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 10:27:18 - SIMULACIÓN PARADA
-2026-05-06 12:02:24 - N0001 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 12:02:25 - N0001 ha SALIDO de la Calle Principal.
-2026-05-06 12:02:25 - N0001 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 12:02:25 - N0002 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 12:02:26 - N0001 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 12:02:26 - N0002 ha SALIDO de la Calle Principal.
-2026-05-06 12:02:26 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
-2026-05-06 12:02:27 - N0001 ha SALIDO del Sótano Byers hacia los Portales.
-2026-05-06 12:02:27 - N0003 ha INICIADO su actividad en Hawkins (Calle Principal).
-2026-05-06 12:02:28 - N0002 ha terminado de prepararse en el Sótano Byers.
-2026-05-06 12:02:28 - SIMULACIÓN PARADA
+2026-05-06 17:01:28 - N0001 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:29 - N0001 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:29 - N0001 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:29 - N0002 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:30 - N0003 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:30 - N0001 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:30 - N0002 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:30 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:31 - N0003 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:31 - N0003 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:32 - N0004 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:32 - N0001 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:32 - N0002 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:32 - N0003 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:33 - N0004 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:33 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:33 - N0005 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:34 - N0003 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:34 - N0002 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:34 - N0005 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:34 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:34 - N0004 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:35 - N0006 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:35 - N0005 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:35 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:35 - >>> [PORTAL Laboratorio] N0003 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:36 - N0006 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:36 - N0006 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:36 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:36 - >>> [PORTAL Alcantarillado] N0001 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:36 - >>> [PORTAL Laboratorio] N0002 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:36 - <<< [PORTAL Laboratorio] N0003 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:37 - N0007 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:37 - >>> [PORTAL Alcantarillado] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:37 - <<< [PORTAL Alcantarillado] N0001 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:37 - <<< [PORTAL Laboratorio] N0002 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:37 - >>> [PORTAL Laboratorio] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:38 - N0006 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:38 - N0007 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:38 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:38 - N0008 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:38 - <<< [PORTAL Alcantarillado] N0005 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:38 - <<< [PORTAL Laboratorio] N0004 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:39 - N0006 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:39 - N0008 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:39 - N0008 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:39 - N0007 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:40 - N0009 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:41 - N0009 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:41 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:41 - N0010 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:41 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:41 - N0008 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:41 - N0002 ha recolectado sangre con éxito.
+2026-05-06 17:01:41 - >>> [PORTAL Laboratorio] N0002 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:41 - N0003 ha recolectado sangre con éxito.
+2026-05-06 17:01:41 - El demogorgon D0000 ataca al niño N0004 (capturas: 0)
+2026-05-06 17:01:42 - N0010 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:42 - N0010 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:42 - >>> [PORTAL Laboratorio] N0003 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:42 - <<< [PORTAL Laboratorio] N0002 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:42 - N0002 ha depositado 1 unidad(es) de sangre. Total en RADIO: 1
+2026-05-06 17:01:42 - N0002 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:42 - D0000 ha FALLADO su ataque contra N0004.
+2026-05-06 17:01:42 - El demogorgon D0000 ataca al niño N0001 (capturas: 0)
+2026-05-06 17:01:42 - N0004 RESISTE con inmunidad.
+2026-05-06 17:01:42 - N0009 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:42 - N0008 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:42 - N0011 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:42 - N0004 ha recolectado sangre con éxito.
+2026-05-06 17:01:43 - El niño N0001 ha sido capturado
+2026-05-06 17:01:43 - N0005 ha recolectado sangre con éxito.
+2026-05-06 17:01:43 - >>> [PORTAL Alcantarillado] N0005 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:43 - <<< [PORTAL Laboratorio] N0003 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:43 - >>> [PORTAL Laboratorio] N0004 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:43 - N0003 ha depositado 1 unidad(es) de sangre. Total en RADIO: 2
+2026-05-06 17:01:43 - N0003 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:43 - N0012 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:43 - N0011 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:43 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:43 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:43 - D0000 ha encerrado a N0001 en la Colmena.
+2026-05-06 17:01:44 - N0010 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:44 - <<< [PORTAL Alcantarillado] N0005 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:01:44 - N0005 ha depositado 1 unidad(es) de sangre. Total en RADIO: 3
+2026-05-06 17:01:44 - N0005 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:44 - <<< [PORTAL Laboratorio] N0004 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:44 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:44 - N0004 ha depositado 1 unidad(es) de sangre. Total en RADIO: 4
+2026-05-06 17:01:44 - N0004 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:44 - N0012 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:44 - N0012 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:44 - N0011 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:45 - N0013 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:45 - <<< [PORTAL Laboratorio] N0007 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:45 - >>> [PORTAL Laboratorio] N0008 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:45 - N0003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:45 - N0003 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:45 - N0002 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:45 - N0002 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:45 - N0010 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:45 - N0012 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:46 - N0013 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:46 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:46 - <<< [PORTAL Laboratorio] N0008 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:46 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:46 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:46 - N0005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:46 - N0005 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:46 - N0004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:46 - N0004 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:46 - N0012 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:46 - N0014 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:47 - N0013 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:47 - <<< [PORTAL Laboratorio] N0009 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:47 - N0015 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:47 - N0014 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:47 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:48 - N0013 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:48 - >>> [PORTAL Alcantarillado] N0011 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:48 - N0015 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:48 - N0015 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:49 - N0002 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:49 - N0002 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:49 - N0016 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:49 - N0014 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:49 - <<< [PORTAL Alcantarillado] N0011 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:49 - >>> [PORTAL Alcantarillado] N0013 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:49 - N0004 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:49 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:50 - N0015 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:50 - N0017 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:50 - N0007 ha recolectado sangre con éxito.
+2026-05-06 17:01:50 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:50 - N0002 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:50 - N0003 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:50 - N0003 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:50 - N0016 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:50 - N0016 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:50 - N0009 ha recolectado sangre con éxito.
+2026-05-06 17:01:50 - <<< [PORTAL Alcantarillado] N0013 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:50 - N0008 ha recolectado sangre con éxito.
+2026-05-06 17:01:51 - N0017 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:51 - N0017 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:51 - N0005 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:51 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:51 - <<< [PORTAL Laboratorio] N0007 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:51 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:51 - N0007 ha depositado 1 unidad(es) de sangre. Total en RADIO: 5
+2026-05-06 17:01:51 - N0007 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:51 - N0014 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:51 - N0018 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:51 - N0016 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:51 - N0015 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:51 - >>> [PORTAL Alcantarillado] N0014 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:51 - N0002 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:51 - N0004 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:51 - N0003 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:52 - <<< [PORTAL Laboratorio] N0009 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:52 - >>> [PORTAL Laboratorio] N0008 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:52 - N0009 ha depositado 1 unidad(es) de sangre. Total en RADIO: 6
+2026-05-06 17:01:52 - N0009 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:52 - N0017 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:52 - N0018 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:52 - N0018 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:52 - N0005 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:52 - >>> [PORTAL Alcantarillado] N0015 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:52 - <<< [PORTAL Alcantarillado] N0014 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:52 - N0019 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:53 - <<< [PORTAL Laboratorio] N0008 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:01:53 - N0008 ha depositado 1 unidad(es) de sangre. Total en RADIO: 7
+2026-05-06 17:01:53 - N0008 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:53 - N0016 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:53 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:53 - >>> [PORTAL Bosque] N0016 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:53 - N0018 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:53 - N0003 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:53 - <<< [PORTAL Alcantarillado] N0015 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:53 - N0019 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:53 - N0019 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:53 - N0011 ha recolectado sangre con éxito.
+2026-05-06 17:01:53 - >>> [PORTAL Alcantarillado] N0011 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:53 - N0020 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:53 - N0017 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:54 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:54 - <<< [PORTAL Bosque] N0016 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:54 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:54 - N0007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:54 - N0007 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:54 - <<< [PORTAL Alcantarillado] N0011 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:01:54 - >>> [PORTAL Alcantarillado] N0002 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:54 - N0011 ha depositado 1 unidad(es) de sangre. Total en RADIO: 8
+2026-05-06 17:01:54 - N0011 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:54 - N0020 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:54 - N0020 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:54 - N0019 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:54 - N0013 ha recolectado sangre con éxito.
+2026-05-06 17:01:54 - N0021 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:55 - N0009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:55 - N0009 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:55 - N0018 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:55 - <<< [PORTAL Bosque] N0004 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:55 - N0014 ha recolectado sangre con éxito.
+2026-05-06 17:01:55 - <<< [PORTAL Alcantarillado] N0002 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:55 - >>> [PORTAL Alcantarillado] N0013 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:55 - N0020 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:55 - N0021 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:55 - N0021 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:56 - N0022 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:56 - N0019 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:56 - <<< [PORTAL Alcantarillado] N0013 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:01:56 - >>> [PORTAL Alcantarillado] N0014 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:56 - N0013 ha depositado 1 unidad(es) de sangre. Total en RADIO: 9
+2026-05-06 17:01:56 - N0013 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:56 - N0023 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:56 - N0015 ha recolectado sangre con éxito.
+2026-05-06 17:01:56 - N0008 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:56 - N0008 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:57 - N0022 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:57 - N0022 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:57 - N0020 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:57 - N0021 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:57 - <<< [PORTAL Alcantarillado] N0014 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:01:57 - >>> [PORTAL Alcantarillado] N0015 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:57 - N0014 ha depositado 1 unidad(es) de sangre. Total en RADIO: 10
+2026-05-06 17:01:57 - N0014 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:57 - N0016 ha recolectado sangre con éxito.
+2026-05-06 17:01:57 - >>> [PORTAL Bosque] N0016 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:57 - N0023 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:57 - N0023 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:57 - El demogorgon D0000 ataca al niño N0002 (capturas: 1)
+2026-05-06 17:01:58 - N0011 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:01:58 - N0011 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:01:58 - N0024 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:01:58 - <<< [PORTAL Alcantarillado] N0015 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:01:58 - >>> [PORTAL Alcantarillado] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:58 - N0015 ha depositado 1 unidad(es) de sangre. Total en RADIO: 11
+2026-05-06 17:01:58 - N0015 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:58 - <<< [PORTAL Bosque] N0016 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:01:58 - N0016 ha depositado 1 unidad(es) de sangre. Total en RADIO: 12
+2026-05-06 17:01:58 - N0016 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:01:58 - N0022 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:58 - N0021 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:58 - >>> [PORTAL Laboratorio] N0010 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:58 - N0023 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:01:59 - N0009 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:59 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:59 - N0004 ha recolectado sangre con éxito.
+2026-05-06 17:01:59 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:01:59 - D0000 ha FALLADO su ataque contra N0002.
+2026-05-06 17:01:59 - El demogorgon D0000 ataca al niño N0002 (capturas: 1)
+2026-05-06 17:01:59 - N0007 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:59 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:59 - N0024 ha SALIDO de la Calle Principal.
+2026-05-06 17:01:59 - N0024 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:01:59 - <<< [PORTAL Alcantarillado] N0005 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:59 - >>> [PORTAL Alcantarillado] N0018 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:59 - N0022 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:59 - <<< [PORTAL Laboratorio] N0010 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:01:59 - >>> [PORTAL Laboratorio] N0012 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:01:59 - N0023 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:01:59 - D0000 ha FALLADO su ataque contra N0002.
+2026-05-06 17:01:59 - El demogorgon D0000 ataca al niño N0010 (capturas: 1)
+2026-05-06 17:02:00 - N0025 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:00 - <<< [PORTAL Bosque] N0004 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:00 - N0004 ha depositado 1 unidad(es) de sangre. Total en RADIO: 13
+2026-05-06 17:02:00 - N0004 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:00 - N0013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:00 - N0013 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:00 - N0009 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:00 - N0014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:00 - N0014 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:00 - N0008 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:00 - N0008 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:00 - <<< [PORTAL Alcantarillado] N0018 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:00 - >>> [PORTAL Alcantarillado] N0019 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:00 - <<< [PORTAL Laboratorio] N0012 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:00 - >>> [PORTAL Laboratorio] N0021 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:01 - N0025 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:01 - N0025 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:01 - El niño N0010 ha sido capturado
+2026-05-06 17:02:01 - N0007 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:01 - N0024 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:01 - N0026 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:01 - <<< [PORTAL Alcantarillado] N0019 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:01 - >>> [PORTAL Alcantarillado] N0020 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:01 - D0000 ha encerrado a N0010 en la Colmena.
+2026-05-06 17:02:01 - El demogorgon D0000 ataca al niño N0012 (capturas: 2)
+2026-05-06 17:02:01 - <<< [PORTAL Laboratorio] N0021 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:01 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:02 - N0016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:02 - N0016 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:02 - N0025 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:02 - N0004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:02 - N0004 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:02 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:02 - >>> [PORTAL Centro Comercial] N0006 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:02 - N0011 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:02 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:02 - N0015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:02 - N0015 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:02 - N0008 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:02 - N0027 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:02 - N0026 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:02 - N0026 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:02 - <<< [PORTAL Alcantarillado] N0020 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:02 - >>> [PORTAL Alcantarillado] N0022 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:02 - N0024 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:02 - El niño N0012 ha sido capturado
+2026-05-06 17:02:03 - N0005 ha recolectado sangre con éxito.
+2026-05-06 17:02:03 - N0025 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:03 - <<< [PORTAL Centro Comercial] N0006 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:03 - N0013 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:03 - >>> [PORTAL Centro Comercial] N0003 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:03 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:03 - N0008 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:03 - >>> [PORTAL Laboratorio] N0023 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:03 - D0000 ha encerrado a N0012 en la Colmena.
+2026-05-06 17:02:03 - N0027 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:03 - N0027 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:03 - <<< [PORTAL Alcantarillado] N0022 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:03 - >>> [PORTAL Alcantarillado] N0005 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:04 - N0014 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:04 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:04 - N0028 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:04 - N0011 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:04 - <<< [PORTAL Centro Comercial] N0003 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:04 - >>> [PORTAL Centro Comercial] N0017 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:04 - <<< [PORTAL Laboratorio] N0023 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:04 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:04 - N0013 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:04 - N0027 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:04 - N0026 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:04 - <<< [PORTAL Alcantarillado] N0005 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:04 - >>> [PORTAL Alcantarillado] N0024 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:04 - N0005 ha depositado 1 unidad(es) de sangre. Total en RADIO: 14
+2026-05-06 17:02:04 - N0005 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:05 - N0028 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:05 - N0028 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:05 - N0029 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:05 - N0018 ha recolectado sangre con éxito.
+2026-05-06 17:02:05 - <<< [PORTAL Centro Comercial] N0017 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:05 - >>> [PORTAL Centro Comercial] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:05 - <<< [PORTAL Laboratorio] N0009 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:05 - >>> [PORTAL Laboratorio] N0008 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:05 - N0004 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:05 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:05 - <<< [PORTAL Alcantarillado] N0024 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:05 - >>> [PORTAL Alcantarillado] N0018 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:05 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:05 - N0014 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:05 - N0027 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:05 - N0019 ha recolectado sangre con éxito.
+2026-05-06 17:02:06 - N0029 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:06 - N0029 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:06 - N0015 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:06 - N0015 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:06 - N0013 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:06 - N0026 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:06 - <<< [PORTAL Centro Comercial] N0007 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:06 - N0021 ha recolectado sangre con éxito.
+2026-05-06 17:02:06 - <<< [PORTAL Laboratorio] N0008 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:06 - >>> [PORTAL Laboratorio] N0021 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:06 - N0028 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:06 - <<< [PORTAL Alcantarillado] N0018 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:06 - N0018 ha depositado 1 unidad(es) de sangre. Total en RADIO: 15
+2026-05-06 17:02:06 - >>> [PORTAL Alcantarillado] N0019 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:06 - N0018 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:06 - N0004 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:06 - N0020 ha recolectado sangre con éxito.
+2026-05-06 17:02:07 - N0030 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:07 - N0016 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:07 - N0016 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:07 - N0005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:07 - N0005 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:07 - N0029 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:07 - N0014 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:07 - N0022 ha recolectado sangre con éxito.
+2026-05-06 17:02:07 - <<< [PORTAL Laboratorio] N0021 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:07 - N0021 ha depositado 1 unidad(es) de sangre. Total en RADIO: 16
+2026-05-06 17:02:07 - N0021 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:07 - <<< [PORTAL Alcantarillado] N0019 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:07 - >>> [PORTAL Alcantarillado] N0020 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:07 - N0019 ha depositado 1 unidad(es) de sangre. Total en RADIO: 17
+2026-05-06 17:02:07 - N0019 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:08 - N0030 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:08 - N0030 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:08 - El demogorgon D0000 ataca al niño N0024 (capturas: 3)
+2026-05-06 17:02:08 - N0015 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:08 - N0006 ha recolectado sangre con éxito.
+2026-05-06 17:02:08 - >>> [PORTAL Centro Comercial] N0006 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:08 - N0031 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:08 - N0003 ha recolectado sangre con éxito.
+2026-05-06 17:02:08 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:08 - >>> [PORTAL Bosque] N0026 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:08 - N0028 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:08 - N0029 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:08 - N0016 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:08 - N0009 ha recolectado sangre con éxito.
+2026-05-06 17:02:08 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:08 - <<< [PORTAL Alcantarillado] N0020 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:08 - N0020 ha depositado 1 unidad(es) de sangre. Total en RADIO: 18
+2026-05-06 17:02:08 - N0020 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:08 - >>> [PORTAL Alcantarillado] N0022 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:09 - El niño N0024 ha sido capturado
+2026-05-06 17:02:09 - <<< [PORTAL Centro Comercial] N0006 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:09 - >>> [PORTAL Centro Comercial] N0003 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:09 - N0006 ha depositado 1 unidad(es) de sangre. Total en RADIO: 19
+2026-05-06 17:02:09 - N0006 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:09 - N0023 ha recolectado sangre con éxito.
+2026-05-06 17:02:09 - N0030 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:09 - N0031 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:09 - N0031 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:09 - <<< [PORTAL Bosque] N0026 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:09 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:09 - N0015 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:09 - N0018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:09 - N0018 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:09 - <<< [PORTAL Laboratorio] N0009 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:09 - >>> [PORTAL Laboratorio] N0023 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:09 - N0009 ha depositado 1 unidad(es) de sangre. Total en RADIO: 20
+2026-05-06 17:02:09 - N0009 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:09 - N0016 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:09 - N0017 ha recolectado sangre con éxito.
+2026-05-06 17:02:09 - <<< [PORTAL Alcantarillado] N0022 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:09 - N0022 ha depositado 1 unidad(es) de sangre. Total en RADIO: 21
+2026-05-06 17:02:09 - N0022 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:09 - >>> [PORTAL Alcantarillado] N0025 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:09 - D0000 ha encerrado a N0024 en la Colmena.
+2026-05-06 17:02:09 - El demogorgon D0000 ataca al niño N0008 (capturas: 4)
+2026-05-06 17:02:09 - N0032 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:10 - <<< [PORTAL Centro Comercial] N0003 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:10 - >>> [PORTAL Centro Comercial] N0017 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:10 - N0003 ha depositado 1 unidad(es) de sangre. Total en RADIO: 22
+2026-05-06 17:02:10 - N0003 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:10 - N0005 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:10 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:10 - <<< [PORTAL Bosque] N0004 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:10 - >>> [PORTAL Bosque] N0015 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:10 - <<< [PORTAL Laboratorio] N0023 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:10 - N0023 ha depositado 1 unidad(es) de sangre. Total en RADIO: 23
+2026-05-06 17:02:10 - N0023 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:10 - N0030 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:10 - <<< [PORTAL Alcantarillado] N0025 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:10 - N0032 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:10 - N0032 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:11 - N0033 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:11 - N0031 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:11 - El niño N0008 ha sido capturado
+2026-05-06 17:02:11 - <<< [PORTAL Centro Comercial] N0017 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:11 - N0017 ha depositado 1 unidad(es) de sangre. Total en RADIO: 24
+2026-05-06 17:02:11 - N0017 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:11 - N0020 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:11 - N0020 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:11 - N0007 ha recolectado sangre con éxito.
+2026-05-06 17:02:11 - >>> [PORTAL Centro Comercial] N0007 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:11 - N0021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:11 - N0021 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:11 - N0019 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:11 - N0019 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:11 - N0005 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:11 - <<< [PORTAL Bosque] N0015 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:11 - >>> [PORTAL Bosque] N0016 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:11 - N0022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:11 - N0022 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:11 - D0000 ha encerrado a N0008 en la Colmena.
+2026-05-06 17:02:11 - N0006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:11 - N0006 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:12 - N0033 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:12 - N0033 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:12 - N0034 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:12 - <<< [PORTAL Centro Comercial] N0007 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:12 - N0007 ha depositado 1 unidad(es) de sangre. Total en RADIO: 25
+2026-05-06 17:02:12 - N0007 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:12 - N0032 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:12 - <<< [PORTAL Bosque] N0016 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:12 - N0035 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:12 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:12 - >>> [PORTAL Laboratorio] N0013 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:12 - N0031 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:12 - >>> [PORTAL Centro Comercial] N0027 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:13 - N0034 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:13 - N0034 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:13 - N0003 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:13 - N0003 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:13 - N0023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:13 - N0023 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:13 - N0026 ha recolectado sangre con éxito.
+2026-05-06 17:02:13 - >>> [PORTAL Bosque] N0026 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:13 - N0036 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:13 - N0009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:13 - N0009 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:13 - N0033 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:13 - N0035 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:13 - N0035 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:13 - N0018 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:13 - N0018 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:13 - <<< [PORTAL Laboratorio] N0013 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:13 - >>> [PORTAL Laboratorio] N0028 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:13 - <<< [PORTAL Centro Comercial] N0027 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:13 - >>> [PORTAL Centro Comercial] N0014 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:14 - N0025 ha recolectado sangre con éxito.
+2026-05-06 17:02:14 - >>> [PORTAL Alcantarillado] N0025 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:14 - N0017 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:14 - N0017 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:14 - N0032 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:14 - N0037 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:14 - N0007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:14 - N0007 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:14 - <<< [PORTAL Bosque] N0026 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:14 - N0026 ha depositado 1 unidad(es) de sangre. Total en RADIO: 26
+2026-05-06 17:02:14 - N0026 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:14 - N0036 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:14 - N0036 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:14 - N0019 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:14 - N0019 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:14 - N0034 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:14 - N0033 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:14 - <<< [PORTAL Laboratorio] N0028 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:14 - >>> [PORTAL Laboratorio] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:14 - <<< [PORTAL Centro Comercial] N0014 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:14 - >>> [PORTAL Centro Comercial] N0029 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:14 - N0035 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:14 - N0004 ha recolectado sangre con éxito.
+2026-05-06 17:02:14 - >>> [PORTAL Bosque] N0004 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:15 - N0021 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:15 - N0021 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:15 - N0020 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:15 - N0020 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:15 - <<< [PORTAL Alcantarillado] N0025 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:15 - >>> [PORTAL Alcantarillado] N0011 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:15 - N0025 ha depositado 1 unidad(es) de sangre. Total en RADIO: 27
+2026-05-06 17:02:15 - N0025 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:15 - N0037 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:15 - N0037 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:15 - N0018 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:15 - N0034 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:15 - N0019 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:15 - <<< [PORTAL Laboratorio] N0005 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:15 - <<< [PORTAL Centro Comercial] N0029 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:15 - >>> [PORTAL Centro Comercial] N0031 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:15 - <<< [PORTAL Bosque] N0004 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:15 - N0004 ha depositado 1 unidad(es) de sangre. Total en RADIO: 28
+2026-05-06 17:02:15 - N0004 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:16 - <<< [PORTAL Alcantarillado] N0011 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:16 - >>> [PORTAL Alcantarillado] N0033 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:16 - N0038 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:16 - N0035 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:16 - N0003 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:16 - N0003 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:16 - N0036 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:16 - N0020 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:16 - N0023 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:16 - N0023 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:16 - N0015 ha recolectado sangre con éxito.
+2026-05-06 17:02:16 - >>> [PORTAL Bosque] N0015 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:16 - N0037 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:16 - N0016 ha recolectado sangre con éxito.
+2026-05-06 17:02:16 - El demogorgon D0000 ataca al niño N0028 (capturas: 5)
+2026-05-06 17:02:16 - N0022 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:16 - N0022 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:16 - <<< [PORTAL Centro Comercial] N0031 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:16 - N0018 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:16 - N0021 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:16 - N0006 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:16 - N0006 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:17 - <<< [PORTAL Alcantarillado] N0033 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:17 - N0038 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:17 - N0038 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:17 - N0019 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:17 - N0025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:17 - N0025 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:17 - N0003 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:17 - <<< [PORTAL Bosque] N0015 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:17 - N0015 ha depositado 1 unidad(es) de sangre. Total en RADIO: 29
+2026-05-06 17:02:17 - N0015 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:17 - >>> [PORTAL Bosque] N0016 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:17 - N0036 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:17 - >>> [PORTAL Alcantarillado] N0018 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:17 - N0037 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:18 - D0000 ha FALLADO su ataque contra N0028.
+2026-05-06 17:02:18 - N0028 RESISTE con inmunidad.
+2026-05-06 17:02:18 - El demogorgon D0000 ataca al niño N0013 (capturas: 5)
+2026-05-06 17:02:18 - N0009 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:18 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:18 - N0004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:18 - N0004 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:18 - N0039 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:18 - N0021 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:18 - N0020 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:18 - >>> [PORTAL Centro Comercial] N0032 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:18 - N0027 ha recolectado sangre con éxito.
+2026-05-06 17:02:18 - N0023 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:18 - N0017 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:18 - N0017 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:18 - N0026 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:18 - N0026 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:18 - <<< [PORTAL Bosque] N0016 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:18 - >>> [PORTAL Bosque] N0030 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:18 - N0016 ha depositado 1 unidad(es) de sangre. Total en RADIO: 30
+2026-05-06 17:02:18 - N0016 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:18 - N0006 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:18 - <<< [PORTAL Alcantarillado] N0018 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:18 - >>> [PORTAL Alcantarillado] N0036 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:18 - N0022 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:18 - D0000 ha FALLADO su ataque contra N0013.
+2026-05-06 17:02:18 - N0013 RESISTE con inmunidad.
+2026-05-06 17:02:18 - El demogorgon D0000 ataca al niño N0005 (capturas: 5)
+2026-05-06 17:02:18 - N0038 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:19 - N0007 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:19 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:19 - N0013 ha recolectado sangre con éxito.
+2026-05-06 17:02:19 - >>> [PORTAL Laboratorio] N0013 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:19 - N0039 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:19 - N0039 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:19 - <<< [PORTAL Centro Comercial] N0032 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:19 - >>> [PORTAL Centro Comercial] N0027 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:19 - N0003 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:19 - <<< [PORTAL Bosque] N0030 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:19 - >>> [PORTAL Bosque] N0037 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:19 - <<< [PORTAL Alcantarillado] N0036 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:19 - N0009 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:19 - N0014 ha recolectado sangre con éxito.
+2026-05-06 17:02:19 - D0000 ha FALLADO su ataque contra N0005.
+2026-05-06 17:02:19 - El demogorgon D0000 ataca al niño N0030 (capturas: 5)
+2026-05-06 17:02:19 - N0005 RESISTE con inmunidad.
+2026-05-06 17:02:20 - N0017 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:20 - N0031 ha recolectado sangre con éxito.
+2026-05-06 17:02:20 - N0040 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:20 - N0023 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:20 - <<< [PORTAL Laboratorio] N0013 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:20 - >>> [PORTAL Laboratorio] N0034 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:20 - N0013 ha depositado 1 unidad(es) de sangre. Total en RADIO: 31
+2026-05-06 17:02:20 - N0013 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:20 - N0007 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:20 - N0022 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:20 - >>> [PORTAL Alcantarillado] N0003 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:20 - <<< [PORTAL Centro Comercial] N0027 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:20 - N0027 ha depositado 1 unidad(es) de sangre. Total en RADIO: 32
+2026-05-06 17:02:20 - >>> [PORTAL Centro Comercial] N0014 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:20 - N0027 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:20 - N0011 ha recolectado sangre con éxito.
+2026-05-06 17:02:20 - N0029 ha recolectado sangre con éxito.
+2026-05-06 17:02:20 - N0006 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:20 - <<< [PORTAL Bosque] N0037 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:20 - N0015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:20 - N0015 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:20 - N0028 ha recolectado sangre con éxito.
+2026-05-06 17:02:20 - El niño N0030 ha sido capturado
+2026-05-06 17:02:20 - N0039 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:20 - N0038 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:20 - N0016 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:20 - N0016 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:21 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:21 - N0005 ha recolectado sangre con éxito.
+2026-05-06 17:02:21 - N0040 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:21 - N0040 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:21 - <<< [PORTAL Laboratorio] N0034 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:21 - >>> [PORTAL Laboratorio] N0028 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:21 - D0000 ha encerrado a N0030 en la Colmena.
+2026-05-06 17:02:21 - El demogorgon D0000 ataca al niño N0034 (capturas: 6)
+2026-05-06 17:02:21 - <<< [PORTAL Alcantarillado] N0003 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:21 - >>> [PORTAL Alcantarillado] N0011 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:21 - <<< [PORTAL Centro Comercial] N0014 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:21 - N0014 ha depositado 1 unidad(es) de sangre. Total en RADIO: 33
+2026-05-06 17:02:21 - N0014 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:21 - >>> [PORTAL Centro Comercial] N0031 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:21 - N0017 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:21 - N0025 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:21 - N0025 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:21 - N0033 ha recolectado sangre con éxito.
+2026-05-06 17:02:22 - N0041 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:22 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:22 - <<< [PORTAL Laboratorio] N0028 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:22 - >>> [PORTAL Laboratorio] N0005 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:22 - N0028 ha depositado 1 unidad(es) de sangre. Total en RADIO: 34
+2026-05-06 17:02:22 - N0028 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:22 - <<< [PORTAL Alcantarillado] N0011 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:22 - N0011 ha depositado 1 unidad(es) de sangre. Total en RADIO: 35
+2026-05-06 17:02:22 - N0011 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:22 - >>> [PORTAL Alcantarillado] N0033 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:22 - <<< [PORTAL Centro Comercial] N0031 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:22 - >>> [PORTAL Centro Comercial] N0029 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:22 - N0031 ha depositado 1 unidad(es) de sangre. Total en RADIO: 36
+2026-05-06 17:02:22 - N0031 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:22 - ¡EVENTO! LA RED MENTAL: Los Demogorgons van a la zona más poblada por 9s.
+2026-05-06 17:02:22 - El niño N0034 ha sido capturado
+2026-05-06 17:02:22 - N0004 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:22 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:22 - N0039 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:22 - N0026 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:22 - N0026 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:22 - N0018 ha recolectado sangre con éxito.
+2026-05-06 17:02:22 - N0025 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:22 - N0032 ha recolectado sangre con éxito.
+2026-05-06 17:02:22 - N0013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:23 - N0013 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:23 - D0000 ha encerrado a N0034 en la Colmena.
+2026-05-06 17:02:23 - El demogorgon D0000 ataca al niño N0037 (capturas: 7)
+2026-05-06 17:02:23 - N0041 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:23 - N0041 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:23 - N0040 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:23 - <<< [PORTAL Laboratorio] N0005 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:23 - >>> [PORTAL Laboratorio] N0019 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:23 - N0005 ha depositado 1 unidad(es) de sangre. Total en RADIO: 37
+2026-05-06 17:02:23 - N0005 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:23 - <<< [PORTAL Alcantarillado] N0033 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:23 - >>> [PORTAL Alcantarillado] N0018 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:23 - N0033 ha depositado 1 unidad(es) de sangre. Total en RADIO: 38
+2026-05-06 17:02:23 - N0033 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:23 - <<< [PORTAL Centro Comercial] N0029 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:23 - >>> [PORTAL Centro Comercial] N0032 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:23 - N0029 ha depositado 1 unidad(es) de sangre. Total en RADIO: 39
+2026-05-06 17:02:23 - N0029 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:23 - N0027 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:23 - N0027 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:23 - N0004 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:23 - N0036 ha recolectado sangre con éxito.
+2026-05-06 17:02:23 - N0042 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:24 - N0014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:24 - N0014 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:24 - N0015 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:24 - N0015 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:24 - <<< [PORTAL Laboratorio] N0019 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:24 - >>> [PORTAL Laboratorio] N0023 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:24 - <<< [PORTAL Alcantarillado] N0018 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:24 - >>> [PORTAL Alcantarillado] N0036 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:24 - N0018 ha depositado 1 unidad(es) de sangre. Total en RADIO: 40
+2026-05-06 17:02:24 - N0018 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:24 - N0041 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:24 - <<< [PORTAL Centro Comercial] N0032 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:24 - >>> [PORTAL Centro Comercial] N0035 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:24 - N0032 ha depositado 1 unidad(es) de sangre. Total en RADIO: 41
+2026-05-06 17:02:24 - N0032 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:24 - N0016 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:24 - N0016 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:24 - N0026 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:24 - D0000 ha FALLADO su ataque contra N0037.
+2026-05-06 17:02:24 - N0037 RESISTE con inmunidad.
+2026-05-06 17:02:24 - El demogorgon D0000 ataca al niño N0003 (capturas: 7)
+2026-05-06 17:02:24 - N0031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:24 - N0031 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:24 - N0025 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:24 - N0011 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:24 - N0011 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:24 - N0040 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:24 - N0042 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:24 - N0042 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:25 - N0028 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:25 - N0028 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:25 - N0043 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:25 - <<< [PORTAL Laboratorio] N0023 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:25 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:25 - <<< [PORTAL Alcantarillado] N0036 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:25 - >>> [PORTAL Alcantarillado] N0022 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:25 - N0036 ha depositado 1 unidad(es) de sangre. Total en RADIO: 42
+2026-05-06 17:02:25 - N0036 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:25 - <<< [PORTAL Centro Comercial] N0035 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:25 - >>> [PORTAL Centro Comercial] N0021 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:25 - N0015 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:25 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:25 - N0037 ha recolectado sangre con éxito.
+2026-05-06 17:02:25 - >>> [PORTAL Bosque] N0037 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:25 - El niño N0003 ha sido capturado
+2026-05-06 17:02:25 - N0041 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:25 - N0029 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:25 - N0029 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:25 - N0016 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:25 - N0033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:25 - N0033 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:25 - N0026 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:26 - N0044 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:26 - N0043 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:26 - N0043 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:26 - <<< [PORTAL Laboratorio] N0009 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:26 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:26 - <<< [PORTAL Alcantarillado] N0022 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:26 - >>> [PORTAL Alcantarillado] N0006 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:26 - <<< [PORTAL Centro Comercial] N0021 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:26 - >>> [PORTAL Centro Comercial] N0020 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:26 - ¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.
+2026-05-06 17:02:26 - D0000 ha encerrado a N0003 en la Colmena.
+2026-05-06 17:02:26 - El demogorgon D0001 ataca al niño N0019 (capturas: 0)
+2026-05-06 17:02:26 - El demogorgon D0000 ataca al niño N0022 (capturas: 8)
+2026-05-06 17:02:26 - <<< [PORTAL Bosque] N0037 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:26 - N0037 ha depositado 1 unidad(es) de sangre. Total en RADIO: 43
+2026-05-06 17:02:26 - N0037 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:26 - N0005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:26 - N0005 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:26 - N0042 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:26 - D0000 ha FALLADO su ataque contra N0022.
+2026-05-06 17:02:26 - N0022 RESISTE con inmunidad.
+2026-05-06 17:02:26 - El demogorgon D0000 ataca al niño N0023 (capturas: 8)
+2026-05-06 17:02:26 - N0016 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:27 - El niño N0019 ha sido capturado
+2026-05-06 17:02:27 - N0044 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:27 - N0044 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:27 - <<< [PORTAL Laboratorio] N0007 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:27 - >>> [PORTAL Laboratorio] N0025 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:27 - N0015 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:27 - N0013 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:27 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:27 - <<< [PORTAL Alcantarillado] N0006 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:27 - >>> [PORTAL Alcantarillado] N0017 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:27 - N0043 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:27 - <<< [PORTAL Centro Comercial] N0020 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:27 - N0027 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:27 - N0027 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:27 - N0036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:27 - N0036 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:27 - D0001 ha encerrado a N0019 en la Colmena.
+2026-05-06 17:02:27 - El demogorgon D0001 ataca al niño N0002 (capturas: 1)
+2026-05-06 17:02:27 - N0045 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:27 - D0000 ha FALLADO su ataque contra N0023.
+2026-05-06 17:02:27 - N0023 RESISTE con inmunidad.
+2026-05-06 17:02:27 - El demogorgon D0000 ataca al niño N0023 (capturas: 8)
+2026-05-06 17:02:28 - N0018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:28 - N0018 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:28 - N0031 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:28 - N0031 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:28 - <<< [PORTAL Laboratorio] N0025 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:28 - N0042 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:28 - >>> [PORTAL Centro Comercial] N0038 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:28 - N0032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:28 - N0032 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:28 - <<< [PORTAL Alcantarillado] N0017 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:28 - >>> [PORTAL Alcantarillado] N0039 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:28 - N0014 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:28 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:28 - D0000 ha FALLADO su ataque contra N0023.
+2026-05-06 17:02:28 - El demogorgon D0000 ataca al niño N0025 (capturas: 8)
+2026-05-06 17:02:28 - N0023 RESISTE con inmunidad.
+2026-05-06 17:02:28 - N0013 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:28 - N0043 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:28 - N0027 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:28 - N0045 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:28 - N0045 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:28 - D0001 ha FALLADO su ataque contra N0002.
+2026-05-06 17:02:28 - El demogorgon D0001 ataca al niño N0007 (capturas: 1)
+2026-05-06 17:02:28 - N0011 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:28 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:28 - N0044 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:28 - N0037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:28 - N0037 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:28 - N0035 ha recolectado sangre con éxito.
+2026-05-06 17:02:29 - N0046 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:29 - <<< [PORTAL Centro Comercial] N0038 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:29 - >>> [PORTAL Centro Comercial] N0035 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:29 - <<< [PORTAL Alcantarillado] N0039 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:29 - >>> [PORTAL Alcantarillado] N0026 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:29 - N0028 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:29 - N0028 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:29 - N0014 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:29 - N0013 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:29 - D0000 ha FALLADO su ataque contra N0025.
+2026-05-06 17:02:29 - N0025 RESISTE con inmunidad.
+2026-05-06 17:02:29 - El demogorgon D0000 ataca al niño N0017 (capturas: 8)
+2026-05-06 17:02:29 - N0033 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:29 - N0033 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:29 - N0005 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:29 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:29 - N0031 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:29 - N0009 ha recolectado sangre con éxito.
+2026-05-06 17:02:29 - N0045 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:29 - >>> [PORTAL Laboratorio] N0009 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:30 - N0046 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:30 - N0046 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:30 - N0023 ha recolectado sangre con éxito.
+2026-05-06 17:02:30 - N0011 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:30 - D0001 ha FALLADO su ataque contra N0007.
+2026-05-06 17:02:30 - El demogorgon D0001 ataca al niño N0002 (capturas: 1)
+2026-05-06 17:02:30 - N0007 RESISTE con inmunidad.
+2026-05-06 17:02:30 - <<< [PORTAL Centro Comercial] N0035 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:30 - >>> [PORTAL Centro Comercial] N0040 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:30 - N0035 ha depositado 1 unidad(es) de sangre. Total en RADIO: 44
+2026-05-06 17:02:30 - N0035 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:30 - <<< [PORTAL Alcantarillado] N0026 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:30 - N0047 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:30 - N0027 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:30 - >>> [PORTAL Bosque] N0041 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:30 - El niño N0017 ha sido capturado
+2026-05-06 17:02:30 - N0022 ha recolectado sangre con éxito.
+2026-05-06 17:02:30 - >>> [PORTAL Alcantarillado] N0022 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:30 - N0021 ha recolectado sangre con éxito.
+2026-05-06 17:02:30 - N0029 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:30 - N0029 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:30 - N0044 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:30 - D0001 ha FALLADO su ataque contra N0002.
+2026-05-06 17:02:30 - El demogorgon D0001 ataca al niño N0006 (capturas: 1)
+2026-05-06 17:02:30 - <<< [PORTAL Laboratorio] N0009 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:30 - >>> [PORTAL Laboratorio] N0023 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:30 - N0009 ha depositado 1 unidad(es) de sangre. Total en RADIO: 45
+2026-05-06 17:02:31 - N0009 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:31 - N0033 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:31 - N0028 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:31 - N0005 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:31 - N0020 ha recolectado sangre con éxito.
+2026-05-06 17:02:31 - <<< [PORTAL Centro Comercial] N0040 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:31 - N0014 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:31 - >>> [PORTAL Centro Comercial] N0021 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:31 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:31 - D0000 ha encerrado a N0017 en la Colmena.
+2026-05-06 17:02:31 - N0047 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:31 - N0047 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:31 - <<< [PORTAL Bosque] N0041 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:31 - >>> [PORTAL Bosque] N0027 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:31 - N0036 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:31 - N0036 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:31 - <<< [PORTAL Alcantarillado] N0022 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:31 - N0022 ha depositado 1 unidad(es) de sangre. Total en RADIO: 46
+2026-05-06 17:02:31 - N0022 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:31 - N0031 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:31 - N0046 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:31 - N0045 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:31 - D0001 ha FALLADO su ataque contra N0006.
+2026-05-06 17:02:31 - El demogorgon D0001 ataca al niño N0026 (capturas: 1)
+2026-05-06 17:02:31 - N0006 RESISTE con inmunidad.
+2026-05-06 17:02:31 - N0048 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:31 - N0018 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:31 - N0018 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:31 - FIN DEL EVENTO GLOBAL. La normalidad vuelve a Hawkins.
+2026-05-06 17:02:31 - N0037 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:31 - N0037 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:32 - <<< [PORTAL Laboratorio] N0023 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:32 - >>> [PORTAL Laboratorio] N0016 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:32 - N0023 ha depositado 1 unidad(es) de sangre. Total en RADIO: 47
+2026-05-06 17:02:32 - N0023 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:32 - N0029 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:32 - N0038 ha recolectado sangre con éxito.
+2026-05-06 17:02:32 - <<< [PORTAL Centro Comercial] N0021 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:32 - >>> [PORTAL Centro Comercial] N0020 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:32 - N0021 ha depositado 1 unidad(es) de sangre. Total en RADIO: 48
+2026-05-06 17:02:32 - N0021 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:32 - <<< [PORTAL Bosque] N0027 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:32 - N0033 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:32 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:32 - N0006 ha recolectado sangre con éxito.
+2026-05-06 17:02:32 - >>> [PORTAL Alcantarillado] N0006 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:32 - N0007 ha recolectado sangre con éxito.
+2026-05-06 17:02:32 - N0032 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:32 - N0032 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:32 - N0028 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:32 - N0039 ha recolectado sangre con éxito.
+2026-05-06 17:02:32 - N0048 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:32 - N0048 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:32 - N0046 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:32 - N0047 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:32 - N0036 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:32 - El niño N0026 ha sido capturado
+2026-05-06 17:02:33 - <<< [PORTAL Laboratorio] N0016 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:33 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:33 - <<< [PORTAL Centro Comercial] N0020 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:33 - N0020 ha depositado 1 unidad(es) de sangre. Total en RADIO: 49
+2026-05-06 17:02:33 - >>> [PORTAL Centro Comercial] N0038 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:33 - N0020 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:33 - N0029 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:33 - >>> [PORTAL Bosque] N0014 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:33 - N0018 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:33 - N0049 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:33 - D0001 ha encerrado a N0026 en la Colmena.
+2026-05-06 17:02:33 - El demogorgon D0001 ataca al niño N0027 (capturas: 2)
+2026-05-06 17:02:33 - <<< [PORTAL Alcantarillado] N0006 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:33 - >>> [PORTAL Alcantarillado] N0039 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:33 - N0006 ha depositado 1 unidad(es) de sangre. Total en RADIO: 50
+2026-05-06 17:02:33 - N0006 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:33 - N0037 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:33 - N0009 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:33 - N0009 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:33 - N0032 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:33 - N0025 ha recolectado sangre con éxito.
+2026-05-06 17:02:33 - N0050 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:34 - <<< [PORTAL Laboratorio] N0007 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:34 - >>> [PORTAL Laboratorio] N0025 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:34 - N0007 ha depositado 1 unidad(es) de sangre. Total en RADIO: 51
+2026-05-06 17:02:34 - N0007 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:34 - N0035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:34 - N0035 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:34 - <<< [PORTAL Centro Comercial] N0038 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:34 - >>> [PORTAL Centro Comercial] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:34 - N0038 ha depositado 1 unidad(es) de sangre. Total en RADIO: 52
+2026-05-06 17:02:34 - N0038 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:34 - N0048 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:34 - El niño N0027 ha sido capturado
+2026-05-06 17:02:34 - <<< [PORTAL Bosque] N0014 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:34 - >>> [PORTAL Bosque] N0029 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:34 - N0047 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:34 - N0049 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:34 - N0049 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:34 - <<< [PORTAL Alcantarillado] N0039 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:34 - N0039 ha depositado 1 unidad(es) de sangre. Total en RADIO: 53
+2026-05-06 17:02:34 - N0039 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:34 - N0036 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:34 - N0022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:34 - N0022 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:34 - N0021 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:34 - N0021 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:34 - N0037 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:34 - D0001 ha encerrado a N0027 en la Colmena.
+2026-05-06 17:02:34 - El demogorgon D0001 ataca al niño N0002 (capturas: 3)
+2026-05-06 17:02:34 - N0040 ha recolectado sangre con éxito.
+2026-05-06 17:02:34 - N0050 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:34 - N0050 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:35 - >>> [PORTAL Laboratorio] N0015 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:35 - <<< [PORTAL Laboratorio] N0025 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:35 - N0025 ha depositado 1 unidad(es) de sangre. Total en RADIO: 54
+2026-05-06 17:02:35 - N0025 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:35 - N0032 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:35 - <<< [PORTAL Centro Comercial] N0004 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:35 - >>> [PORTAL Centro Comercial] N0040 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:35 - <<< [PORTAL Bosque] N0029 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:35 - >>> [PORTAL Bosque] N0036 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:35 - N0048 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:35 - N0018 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:35 - D0001 ha FALLADO su ataque contra N0002.
+2026-05-06 17:02:35 - El demogorgon D0001 ataca al niño N0014 (capturas: 3)
+2026-05-06 17:02:35 - N0023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:35 - N0023 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:35 - N0051 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:35 - N0049 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:36 - <<< [PORTAL Laboratorio] N0015 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:36 - >>> [PORTAL Laboratorio] N0011 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:36 - N0041 ha recolectado sangre con éxito.
+2026-05-06 17:02:36 - El demogorgon D0000 ataca al niño N0016 (capturas: 9)
+2026-05-06 17:02:36 - N0007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:36 - N0007 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:36 - <<< [PORTAL Centro Comercial] N0040 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:36 - >>> [PORTAL Centro Comercial] N0042 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:36 - N0040 ha depositado 1 unidad(es) de sangre. Total en RADIO: 55
+2026-05-06 17:02:36 - N0040 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:36 - <<< [PORTAL Bosque] N0036 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:36 - >>> [PORTAL Bosque] N0041 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:36 - D0001 ha FALLADO su ataque contra N0014.
+2026-05-06 17:02:36 - N0014 RESISTE con inmunidad.
+2026-05-06 17:02:36 - El demogorgon D0001 ataca al niño N0036 (capturas: 3)
+2026-05-06 17:02:36 - N0050 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:36 - N0051 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:36 - N0051 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:36 - El niño N0016 ha sido capturado
+2026-05-06 17:02:36 - N0052 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:37 - <<< [PORTAL Laboratorio] N0011 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:37 - >>> [PORTAL Laboratorio] N0031 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:37 - N0039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:37 - N0039 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:37 - N0020 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:37 - N0020 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:37 - N0025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:37 - N0025 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:37 - <<< [PORTAL Centro Comercial] N0042 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:37 - >>> [PORTAL Centro Comercial] N0043 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:37 - <<< [PORTAL Bosque] N0041 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:37 - >>> [PORTAL Bosque] N0032 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:37 - N0041 ha depositado 1 unidad(es) de sangre. Total en RADIO: 56
+2026-05-06 17:02:37 - N0041 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:37 - N0006 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:37 - N0006 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:37 - D0000 ha encerrado a N0016 en la Colmena.
+2026-05-06 17:02:37 - El demogorgon D0000 ataca al niño N0042 (capturas: 10)
+2026-05-06 17:02:37 - N0049 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:37 - N0051 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:37 - D0001 ha FALLADO su ataque contra N0036.
+2026-05-06 17:02:37 - N0036 RESISTE con inmunidad.
+2026-05-06 17:02:37 - El demogorgon D0001 ataca al niño N0002 (capturas: 3)
+2026-05-06 17:02:37 - N0052 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:37 - N0052 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:38 - <<< [PORTAL Laboratorio] N0031 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:38 - >>> [PORTAL Laboratorio] N0045 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:38 - N0050 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:38 - N0035 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:38 - N0035 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:38 - N0038 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:38 - N0038 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:38 - D0000 ha FALLADO su ataque contra N0042.
+2026-05-06 17:02:38 - El demogorgon D0000 ataca al niño N0029 (capturas: 10)
+2026-05-06 17:02:38 - N0042 RESISTE con inmunidad.
+2026-05-06 17:02:38 - N0053 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:38 - <<< [PORTAL Centro Comercial] N0043 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:38 - >>> [PORTAL Centro Comercial] N0013 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:38 - <<< [PORTAL Bosque] N0032 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:38 - N0009 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:38 - N0009 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:38 - N0022 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:38 - N0022 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:38 - N0040 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:38 - N0040 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:38 - N0004 ha recolectado sangre con éxito.
+2026-05-06 17:02:38 - D0001 ha FALLADO su ataque contra N0002.
+2026-05-06 17:02:38 - El demogorgon D0001 ataca al niño N0043 (capturas: 3)
+2026-05-06 17:02:39 - <<< [PORTAL Laboratorio] N0045 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:39 - >>> [PORTAL Laboratorio] N0028 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:39 - N0054 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:39 - N0021 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:39 - N0021 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:39 - El niño N0029 ha sido capturado
+2026-05-06 17:02:39 - N0053 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:39 - N0053 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:39 - <<< [PORTAL Centro Comercial] N0013 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:39 - >>> [PORTAL Centro Comercial] N0004 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:39 - N0051 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:39 - N0022 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:39 - D0001 ha FALLADO su ataque contra N0043.
+2026-05-06 17:02:39 - N0043 RESISTE con inmunidad.
+2026-05-06 17:02:39 - El demogorgon D0001 ataca al niño N0002 (capturas: 3)
+2026-05-06 17:02:39 - N0035 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:39 - N0041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:39 - N0041 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:39 - N0052 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:39 - N0014 ha recolectado sangre con éxito.
+2026-05-06 17:02:39 - >>> [PORTAL Bosque] N0014 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:40 - <<< [PORTAL Laboratorio] N0028 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:40 - El niño N0002 ha sido capturado
+2026-05-06 17:02:40 - D0000 ha encerrado a N0029 en la Colmena.
+2026-05-06 17:02:40 - N0054 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:40 - N0054 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:40 - N0007 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:40 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:40 - N0009 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:40 - <<< [PORTAL Centro Comercial] N0004 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:40 - N0004 ha depositado 1 unidad(es) de sangre. Total en RADIO: 57
+2026-05-06 17:02:40 - N0004 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:40 - >>> [PORTAL Centro Comercial] N0044 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:40 - N0023 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:40 - N0023 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:40 - D0001 ha encerrado a N0002 en la Colmena.
+2026-05-06 17:02:40 - El demogorgon D0001 ataca al niño N0032 (capturas: 4)
+2026-05-06 17:02:40 - N0020 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:40 - N0020 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:40 - N0015 ha recolectado sangre con éxito.
+2026-05-06 17:02:40 - >>> [PORTAL Laboratorio] N0015 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:40 - N0053 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:40 - N0052 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:40 - >>> [PORTAL Alcantarillado] N0037 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:40 - <<< [PORTAL Bosque] N0014 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:40 - N0014 ha depositado 1 unidad(es) de sangre. Total en RADIO: 58
+2026-05-06 17:02:40 - N0014 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:41 - N0055 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:41 - N0031 ha recolectado sangre con éxito.
+2026-05-06 17:02:41 - N0021 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:41 - N0025 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:41 - N0025 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:41 - <<< [PORTAL Centro Comercial] N0044 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:41 - >>> [PORTAL Centro Comercial] N0033 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:41 - N0009 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:41 - N0022 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:41 - N0035 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:41 - N0006 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:41 - N0006 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:41 - N0054 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:41 - N0007 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:41 - N0011 ha recolectado sangre con éxito.
+2026-05-06 17:02:41 - D0001 ha FALLADO su ataque contra N0032.
+2026-05-06 17:02:41 - El demogorgon D0001 ataca al niño N0045 (capturas: 4)
+2026-05-06 17:02:41 - N0032 RESISTE con inmunidad.
+2026-05-06 17:02:41 - N0039 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:41 - N0039 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:41 - <<< [PORTAL Laboratorio] N0015 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:41 - >>> [PORTAL Laboratorio] N0031 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:41 - N0015 ha depositado 1 unidad(es) de sangre. Total en RADIO: 59
+2026-05-06 17:02:41 - N0015 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:41 - <<< [PORTAL Alcantarillado] N0037 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:41 - >>> [PORTAL Alcantarillado] N0052 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:41 - N0036 ha recolectado sangre con éxito.
+2026-05-06 17:02:41 - >>> [PORTAL Bosque] N0036 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:42 - N0055 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:42 - N0055 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:42 - N0042 ha recolectado sangre con éxito.
+2026-05-06 17:02:42 - N0053 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:42 - N0021 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:42 - N0020 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:42 - <<< [PORTAL Centro Comercial] N0033 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:42 - >>> [PORTAL Centro Comercial] N0042 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:42 - N0056 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:42 - N0023 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:42 - N0054 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:42 - N0004 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:42 - N0004 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:42 - N0032 ha recolectado sangre con éxito.
+2026-05-06 17:02:42 - N0038 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:42 - N0038 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:42 - N0041 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:42 - N0041 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:42 - N0013 ha recolectado sangre con éxito.
+2026-05-06 17:02:42 - N0007 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:42 - El niño N0045 ha sido capturado
+2026-05-06 17:02:42 - N0025 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:42 - <<< [PORTAL Laboratorio] N0031 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:42 - N0031 ha depositado 1 unidad(es) de sangre. Total en RADIO: 60
+2026-05-06 17:02:42 - N0031 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:42 - >>> [PORTAL Laboratorio] N0011 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:42 - <<< [PORTAL Alcantarillado] N0052 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:42 - <<< [PORTAL Bosque] N0036 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:42 - >>> [PORTAL Bosque] N0032 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:43 - N0036 ha depositado 1 unidad(es) de sangre. Total en RADIO: 61
+2026-05-06 17:02:43 - N0036 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:43 - N0040 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:43 - N0040 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:43 - <<< [PORTAL Centro Comercial] N0042 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:43 - >>> [PORTAL Centro Comercial] N0013 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:43 - N0042 ha depositado 1 unidad(es) de sangre. Total en RADIO: 62
+2026-05-06 17:02:43 - N0042 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:43 - N0006 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:43 - N0056 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:43 - N0056 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:43 - ¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.
+2026-05-06 17:02:43 - D0001 ha encerrado a N0045 en la Colmena.
+2026-05-06 17:02:43 - El demogorgon D0001 ataca al niño N0033 (capturas: 5)
+2026-05-06 17:02:43 - N0014 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:43 - N0014 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:43 - N0055 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:43 - N0039 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:43 - N0043 ha recolectado sangre con éxito.
+2026-05-06 17:02:43 - <<< [PORTAL Laboratorio] N0011 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:43 - N0011 ha depositado 1 unidad(es) de sangre. Total en RADIO: 63
+2026-05-06 17:02:43 - >>> [PORTAL Laboratorio] N0018 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:43 - N0011 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:43 - N0020 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:43 - >>> [PORTAL Alcantarillado] N0054 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:44 - <<< [PORTAL Bosque] N0032 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:44 - >>> [PORTAL Bosque] N0009 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:44 - N0032 ha depositado 1 unidad(es) de sangre. Total en RADIO: 64
+2026-05-06 17:02:44 - N0032 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:44 - N0041 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:44 - N0057 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:44 - N0023 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:44 - <<< [PORTAL Centro Comercial] N0013 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:44 - N0013 ha depositado 1 unidad(es) de sangre. Total en RADIO: 65
+2026-05-06 17:02:44 - >>> [PORTAL Centro Comercial] N0043 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:44 - N0013 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:44 - El demogorgon D0000 ataca al niño N0028 (capturas: 11)
+2026-05-06 17:02:44 - N0015 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:44 - N0015 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:44 - N0025 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:44 - D0001 ha FALLADO su ataque contra N0033.
+2026-05-06 17:02:44 - N0033 RESISTE con inmunidad.
+2026-05-06 17:02:44 - El demogorgon D0001 ataca al niño N0052 (capturas: 5)
+2026-05-06 17:02:44 - N0040 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:44 - N0038 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:44 - N0056 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:44 - N0044 ha recolectado sangre con éxito.
+2026-05-06 17:02:44 - <<< [PORTAL Laboratorio] N0018 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:44 - >>> [PORTAL Laboratorio] N0022 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:44 - <<< [PORTAL Alcantarillado] N0054 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:44 - >>> [PORTAL Alcantarillado] N0020 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:44 - N0006 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - <<< [PORTAL Bosque] N0009 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:45 - >>> [PORTAL Bosque] N0053 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:45 - N0057 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:45 - N0057 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:45 - N0058 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:45 - N0039 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - <<< [PORTAL Centro Comercial] N0043 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:45 - >>> [PORTAL Centro Comercial] N0044 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:45 - N0043 ha depositado 1 unidad(es) de sangre. Total en RADIO: 66
+2026-05-06 17:02:45 - N0043 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:45 - N0055 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - El niño N0028 ha sido capturado
+2026-05-06 17:02:45 - N0042 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:45 - N0042 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:45 - N0040 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - D0001 ha FALLADO su ataque contra N0052.
+2026-05-06 17:02:45 - El demogorgon D0001 ataca al niño N0037 (capturas: 5)
+2026-05-06 17:02:45 - N0052 RESISTE con inmunidad.
+2026-05-06 17:02:45 - N0004 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:45 - N0004 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:45 - N0056 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - N0038 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - N0041 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:45 - <<< [PORTAL Laboratorio] N0022 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:45 - >>> [PORTAL Laboratorio] N0035 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:45 - <<< [PORTAL Alcantarillado] N0020 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:46 - <<< [PORTAL Bosque] N0053 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:46 - >>> [PORTAL Bosque] N0023 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:46 - D0000 ha encerrado a N0028 en la Colmena.
+2026-05-06 17:02:46 - El demogorgon D0000 ataca al niño N0018 (capturas: 12)
+2026-05-06 17:02:46 - N0058 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:46 - N0058 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:46 - <<< [PORTAL Centro Comercial] N0044 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:46 - >>> [PORTAL Centro Comercial] N0005 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:46 - N0044 ha depositado 1 unidad(es) de sangre. Total en RADIO: 67
+2026-05-06 17:02:46 - N0044 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:46 - N0059 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:46 - N0036 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:46 - N0036 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:46 - N0011 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:46 - N0011 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:46 - N0057 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:46 - N0031 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:46 - N0031 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:46 - N0033 ha recolectado sangre con éxito.
+2026-05-06 17:02:46 - <<< [PORTAL Laboratorio] N0035 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:46 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:47 - <<< [PORTAL Bosque] N0023 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:47 - >>> [PORTAL Bosque] N0025 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:47 - N0032 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:47 - N0032 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:47 - D0001 ha FALLADO su ataque contra N0037.
+2026-05-06 17:02:47 - N0037 RESISTE con inmunidad.
+2026-05-06 17:02:47 - El demogorgon D0001 ataca al niño N0020 (capturas: 5)
+2026-05-06 17:02:47 - N0004 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:47 - <<< [PORTAL Centro Comercial] N0005 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:47 - >>> [PORTAL Centro Comercial] N0033 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:47 - N0059 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:47 - N0059 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:47 - N0043 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:47 - N0043 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:47 - D0000 ha FALLADO su ataque contra N0018.
+2026-05-06 17:02:47 - N0018 RESISTE con inmunidad.
+2026-05-06 17:02:47 - El demogorgon D0000 ataca al niño N0054 (capturas: 12)
+2026-05-06 17:02:47 - N0060 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:47 - N0014 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:47 - N0014 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:47 - N0013 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:47 - N0013 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:47 - N0058 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:47 - N0057 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:47 - <<< [PORTAL Laboratorio] N0007 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:47 - >>> [PORTAL Laboratorio] N0056 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:48 - <<< [PORTAL Bosque] N0025 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:48 - >>> [PORTAL Bosque] N0039 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:48 - N0037 ha recolectado sangre con éxito.
+2026-05-06 17:02:48 - >>> [PORTAL Alcantarillado] N0037 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:48 - El niño N0020 ha sido capturado
+2026-05-06 17:02:48 - <<< [PORTAL Centro Comercial] N0033 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:48 - >>> [PORTAL Centro Comercial] N0046 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:48 - N0033 ha depositado 1 unidad(es) de sangre. Total en RADIO: 68
+2026-05-06 17:02:48 - N0033 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:48 - El demogorgon D0002 ataca al niño N0009 (capturas: 0)
+2026-05-06 17:02:48 - N0060 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:48 - N0060 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:48 - N0042 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:48 - N0042 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:48 - N0014 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:48 - N0015 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:48 - N0015 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:48 - N0052 ha recolectado sangre con éxito.
+2026-05-06 17:02:48 - D0000 ha FALLADO su ataque contra N0054.
+2026-05-06 17:02:48 - El demogorgon D0000 ataca al niño N0054 (capturas: 12)
+2026-05-06 17:02:48 - <<< [PORTAL Laboratorio] N0056 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:48 - >>> [PORTAL Laboratorio] N0041 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:49 - <<< [PORTAL Bosque] N0039 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:49 - >>> [PORTAL Bosque] N0055 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:49 - N0004 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:49 - N0059 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:49 - <<< [PORTAL Alcantarillado] N0037 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:49 - >>> [PORTAL Alcantarillado] N0052 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:49 - N0037 ha depositado 1 unidad(es) de sangre. Total en RADIO: 69
+2026-05-06 17:02:49 - N0037 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:49 - D0001 ha encerrado a N0020 en la Colmena.
+2026-05-06 17:02:49 - El demogorgon D0001 ataca al niño N0035 (capturas: 6)
+2026-05-06 17:02:49 - <<< [PORTAL Centro Comercial] N0046 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:49 - >>> [PORTAL Centro Comercial] N0047 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:49 - N0058 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:49 - N0044 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:49 - N0044 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:49 - N0061 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:49 - N0018 ha recolectado sangre con éxito.
+2026-05-06 17:02:49 - El niño N0009 ha sido capturado
+2026-05-06 17:02:49 - <<< [PORTAL Laboratorio] N0041 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:49 - >>> [PORTAL Laboratorio] N0018 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:49 - N0053 ha recolectado sangre con éxito.
+2026-05-06 17:02:50 - N0060 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:50 - <<< [PORTAL Bosque] N0055 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:50 - >>> [PORTAL Bosque] N0053 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:50 - N0062 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:50 - N0011 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:50 - N0011 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:50 - D0000 ha FALLADO su ataque contra N0054.
+2026-05-06 17:02:50 - El demogorgon D0000 ataca al niño N0055 (capturas: 12)
+2026-05-06 17:02:50 - <<< [PORTAL Alcantarillado] N0052 TERMINA de cruzar Alcantarillado y está a salvo.
+2026-05-06 17:02:50 - N0052 ha depositado 1 unidad(es) de sangre. Total en RADIO: 70
+2026-05-06 17:02:50 - N0052 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:50 - N0042 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:50 - D0002 ha encerrado a N0009 en la Colmena.
+2026-05-06 17:02:50 - El demogorgon D0002 ataca al niño N0054 (capturas: 1)
+2026-05-06 17:02:50 - <<< [PORTAL Centro Comercial] N0047 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:50 - >>> [PORTAL Centro Comercial] N0048 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:50 - N0061 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:50 - N0061 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:50 - N0063 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:50 - N0015 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:50 - D0001 ha FALLADO su ataque contra N0035.
+2026-05-06 17:02:50 - El demogorgon D0001 ataca al niño N0056 (capturas: 6)
+2026-05-06 17:02:50 - N0035 RESISTE con inmunidad.
+2026-05-06 17:02:50 - N0014 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:50 - N0005 ha recolectado sangre con éxito.
+2026-05-06 17:02:50 - D0000 ha FALLADO su ataque contra N0055.
+2026-05-06 17:02:50 - N0055 RESISTE con inmunidad.
+2026-05-06 17:02:50 - El demogorgon D0000 ataca al niño N0041 (capturas: 12)
+2026-05-06 17:02:50 - N0022 ha recolectado sangre con éxito.
+2026-05-06 17:02:50 - N0036 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:50 - N0036 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:50 - D0002 ha FALLADO su ataque contra N0054.
+2026-05-06 17:02:50 - El demogorgon D0002 ataca al niño N0007 (capturas: 1)
+2026-05-06 17:02:50 - <<< [PORTAL Laboratorio] N0018 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:50 - N0018 ha depositado 1 unidad(es) de sangre. Total en RADIO: 71
+2026-05-06 17:02:50 - N0018 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:50 - >>> [PORTAL Laboratorio] N0022 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:50 - N0059 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:51 - N0043 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:51 - N0043 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:51 - <<< [PORTAL Bosque] N0053 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:51 - >>> [PORTAL Bosque] N0040 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:51 - N0053 ha depositado 1 unidad(es) de sangre. Total en RADIO: 72
+2026-05-06 17:02:51 - N0053 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:51 - N0062 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:51 - N0062 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:51 - N0033 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:51 - N0033 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:51 - N0060 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:51 - <<< [PORTAL Centro Comercial] N0048 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:51 - >>> [PORTAL Centro Comercial] N0005 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:51 - N0023 ha recolectado sangre con éxito.
+2026-05-06 17:02:51 - El niño N0056 ha sido capturado
+2026-05-06 17:02:51 - N0042 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:51 - N0031 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:51 - N0031 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:51 - N0063 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:51 - N0063 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:51 - D0000 ha FALLADO su ataque contra N0041.
+2026-05-06 17:02:51 - N0041 RESISTE con inmunidad.
+2026-05-06 17:02:51 - El demogorgon D0000 ataca al niño N0047 (capturas: 12)
+2026-05-06 17:02:51 - N0013 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:51 - SIMULACIÓN PARADA
+2026-05-06 17:02:52 - D0002 ha FALLADO su ataque contra N0007.
+2026-05-06 17:02:52 - D0000 ha FALLADO su ataque contra N0047.
+2026-05-06 17:02:52 - D0001 ha encerrado a N0056 en la Colmena.
+2026-05-06 17:02:56 - N0013 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:56 - N0032 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:56 - N0061 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0011 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0035 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0025 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - <<< [PORTAL Laboratorio] N0022 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:56 - <<< [PORTAL Bosque] N0040 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:56 - >>> [PORTAL Laboratorio] N0057 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:56 - El demogorgon D0002 ataca al niño N0007 (capturas: 1)
+2026-05-06 17:02:56 - N0007 RESISTE con inmunidad.
+2026-05-06 17:02:56 - N0047 RESISTE con inmunidad.
+2026-05-06 17:02:56 - SOLICITUD DE REANUDACIÓN REMOTA ENVIADA
+2026-05-06 17:02:56 - <<< [PORTAL Centro Comercial] N0005 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:56 - N0005 ha depositado 1 unidad(es) de sangre. Total en RADIO: 74
+2026-05-06 17:02:56 - El demogorgon D0000 ataca al niño N0054 (capturas: 12)
+2026-05-06 17:02:56 - >>> [PORTAL Bosque] N0023 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:56 - >>> [PORTAL Centro Comercial] N0049 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:56 - N0043 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0037 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:56 - N0062 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0015 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:56 - N0052 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:56 - N0036 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0063 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0039 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0046 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0031 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:56 - N0055 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0044 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:56 - N0018 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:56 - N0053 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:56 - N0033 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:56 - N0048 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0041 ha recolectado sangre con éxito.
+2026-05-06 17:02:56 - N0064 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:56 - N0032 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:56 - N0022 ha depositado 1 unidad(es) de sangre. Total en RADIO: 73
+2026-05-06 17:02:56 - N0005 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:56 - N0037 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:56 - N0052 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:56 - N0044 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:56 - N0018 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:56 - N0053 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:56 - N0033 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:56 - N0022 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:57 - <<< [PORTAL Laboratorio] N0057 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:57 - >>> [PORTAL Laboratorio] N0035 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:57 - <<< [PORTAL Centro Comercial] N0049 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:57 - >>> [PORTAL Centro Comercial] N0046 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:57 - <<< [PORTAL Bosque] N0023 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:57 - >>> [PORTAL Bosque] N0025 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:57 - N0023 ha depositado 1 unidad(es) de sangre. Total en RADIO: 75
+2026-05-06 17:02:57 - N0023 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:57 - N0061 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:57 - N0064 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:57 - D0002 ha FALLADO su ataque contra N0007.
+2026-05-06 17:02:57 - N0064 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:57 - N0007 RESISTE con inmunidad.
+2026-05-06 17:02:57 - El demogorgon D0002 ataca al niño N0040 (capturas: 1)
+2026-05-06 17:02:57 - D0000 ha FALLADO su ataque contra N0054.
+2026-05-06 17:02:57 - N0013 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:57 - N0063 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:57 - El demogorgon D0000 ataca al niño N0054 (capturas: 12)
+2026-05-06 17:02:57 - >>> [PORTAL Alcantarillado] N0060 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:57 - N0032 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:57 - N0043 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:57 - N0065 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:57 - N0062 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:57 - N0031 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:58 - N0036 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:58 - El niño N0040 ha sido capturado
+2026-05-06 17:02:58 - N0033 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:58 - N0044 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:58 - El niño N0054 ha sido capturado
+2026-05-06 17:02:58 - N0011 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:58 - <<< [PORTAL Laboratorio] N0035 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:58 - >>> [PORTAL Laboratorio] N0041 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:58 - N0035 ha depositado 1 unidad(es) de sangre. Total en RADIO: 76
+2026-05-06 17:02:58 - N0035 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:58 - <<< [PORTAL Centro Comercial] N0046 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:58 - <<< [PORTAL Bosque] N0025 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:58 - >>> [PORTAL Centro Comercial] N0048 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:58 - >>> [PORTAL Bosque] N0039 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:58 - N0046 ha depositado 1 unidad(es) de sangre. Total en RADIO: 78
+2026-05-06 17:02:58 - N0046 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:58 - N0025 ha depositado 1 unidad(es) de sangre. Total en RADIO: 77
+2026-05-06 17:02:58 - N0025 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:58 - <<< [PORTAL Alcantarillado] N0060 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:58 - N0007 ha recolectado sangre con éxito.
+2026-05-06 17:02:58 - >>> [PORTAL Alcantarillado] N0063 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:02:58 - N0065 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:58 - N0065 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:02:58 - N0047 ha recolectado sangre con éxito.
+2026-05-06 17:02:58 - N0032 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:58 - N0064 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:02:59 - D0002 ha encerrado a N0040 en la Colmena.
+2026-05-06 17:02:59 - El demogorgon D0002 ataca al niño N0060 (capturas: 2)
+2026-05-06 17:02:59 - D0000 ha encerrado a N0054 en la Colmena.
+2026-05-06 17:02:59 - N0022 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:59 - N0022 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:59 - N0033 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:59 - N0013 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:02:59 - <<< [PORTAL Laboratorio] N0041 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:02:59 - >>> [PORTAL Laboratorio] N0007 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:59 - N0041 ha depositado 1 unidad(es) de sangre. Total en RADIO: 79
+2026-05-06 17:02:59 - N0041 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:59 - <<< [PORTAL Centro Comercial] N0048 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:02:59 - >>> [PORTAL Centro Comercial] N0047 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:59 - N0048 ha depositado 1 unidad(es) de sangre. Total en RADIO: 80
+2026-05-06 17:02:59 - <<< [PORTAL Bosque] N0039 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:02:59 - >>> [PORTAL Bosque] N0055 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:02:59 - N0048 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:59 - N0039 ha depositado 1 unidad(es) de sangre. Total en RADIO: 81
+2026-05-06 17:02:59 - N0039 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:02:59 - N0005 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:59 - N0005 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:59 - <<< [PORTAL Alcantarillado] N0063 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:02:59 - N0066 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:02:59 - N0023 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:02:59 - N0023 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:02:59 - N0018 ha SALIDO de la Calle Principal.
+2026-05-06 17:02:59 - N0018 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:00 - N0052 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:00 - N0052 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:00 - N0044 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:00 - El niño N0060 ha sido capturado
+2026-05-06 17:03:00 - <<< [PORTAL Laboratorio] N0007 TERMINA de cruzar Laboratorio y está a salvo.
+2026-05-06 17:03:00 - N0007 ha depositado 1 unidad(es) de sangre. Total en RADIO: 82
+2026-05-06 17:03:00 - >>> [PORTAL Laboratorio] N0004 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:00 - N0007 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:03:00 - <<< [PORTAL Centro Comercial] N0047 TERMINA de cruzar Centro Comercial y está a salvo.
+2026-05-06 17:03:00 - N0047 ha depositado 1 unidad(es) de sangre. Total en RADIO: 83
+2026-05-06 17:03:00 - >>> [PORTAL Centro Comercial] N0050 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:00 - N0047 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:03:00 - <<< [PORTAL Bosque] N0055 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:03:00 - N0055 ha depositado 1 unidad(es) de sangre. Total en RADIO: 84
+2026-05-06 17:03:00 - >>> [PORTAL Bosque] N0038 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:00 - N0055 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:03:00 - N0064 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:00 - >>> [PORTAL Alcantarillado] N0044 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:00 - El demogorgon D0001 ataca al niño N0057 (capturas: 7)
+2026-05-06 17:03:00 - N0066 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:00 - N0066 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:00 - N0065 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:00 - N0025 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:00 - N0025 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:01 - N0052 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:01 - N0053 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:01 - N0053 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:01 - D0002 ha encerrado a N0060 en la Colmena.
+2026-05-06 17:03:01 - El demogorgon D0002 ataca al niño N0049 (capturas: 3)
+2026-05-06 17:03:01 - N0046 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:01 - N0046 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:01 - N0067 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:01 - N0037 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:01 - <<< [PORTAL Laboratorio] N0004 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:01 - >>> [PORTAL Laboratorio] N0042 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:01 - N0037 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:01 - <<< [PORTAL Centro Comercial] N0050 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:01 - >>> [PORTAL Centro Comercial] N0051 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:01 - >>> [PORTAL Bosque] N0058 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:01 - <<< [PORTAL Bosque] N0038 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:01 - N0018 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:01 - <<< [PORTAL Alcantarillado] N0044 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:01 - >>> [PORTAL Alcantarillado] N0064 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:01 - N0066 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:01 - El niño N0057 ha sido capturado
+2026-05-06 17:03:01 - El niño N0049 ha sido capturado
+2026-05-06 17:03:02 - N0035 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:02 - N0035 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:02 - ¡Los Demogorgons han capturado 8 niños! Nace un nuevo Demogorgon.
+2026-05-06 17:03:02 - D0001 ha encerrado a N0057 en la Colmena.
+2026-05-06 17:03:02 - El demogorgon D0003 ataca al niño N0063 (capturas: 0)
+2026-05-06 17:03:02 - El demogorgon D0001 ataca al niño N0050 (capturas: 8)
+2026-05-06 17:03:02 - D0002 ha encerrado a N0049 en la Colmena.
+2026-05-06 17:03:02 - El demogorgon D0002 ataca al niño N0044 (capturas: 4)
+2026-05-06 17:03:02 - N0067 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:02 - N0067 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:02 - <<< [PORTAL Laboratorio] N0042 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:02 - >>> [PORTAL Laboratorio] N0061 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:02 - <<< [PORTAL Centro Comercial] N0051 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:02 - >>> [PORTAL Centro Comercial] N0021 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:02 - <<< [PORTAL Bosque] N0058 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:02 - >>> [PORTAL Bosque] N0059 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:02 - <<< [PORTAL Alcantarillado] N0064 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:02 - N0065 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:02 - N0048 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:02 - N0048 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:02 - N0039 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:02 - N0039 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:02 - N0053 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:02 - N0068 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:02 - N0037 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:03 - N0066 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:03 - N0022 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:03 - N0022 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:03 - N0052 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:03 - N0041 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:03 - N0041 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:03 - D0001 ha FALLADO su ataque contra N0050.
+2026-05-06 17:03:03 - N0050 RESISTE con inmunidad.
+2026-05-06 17:03:03 - El demogorgon D0001 ataca al niño N0064 (capturas: 8)
+2026-05-06 17:03:03 - El demogorgon D0000 ataca al niño N0051 (capturas: 13)
+2026-05-06 17:03:03 - N0018 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:03 - N0007 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:03 - N0007 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:03 - <<< [PORTAL Laboratorio] N0061 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:03 - >>> [PORTAL Laboratorio] N0062 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:03 - <<< [PORTAL Centro Comercial] N0021 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:03 - >>> [PORTAL Centro Comercial] N0006 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:03 - >>> [PORTAL Bosque] N0015 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:03 - <<< [PORTAL Bosque] N0059 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:03 - El niño N0044 ha sido capturado
+2026-05-06 17:03:03 - El niño N0063 ha sido capturado
+2026-05-06 17:03:03 - N0068 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:03 - N0068 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:03 - N0053 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:04 - N0023 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:04 - N0023 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:04 - N0055 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:04 - N0055 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:04 - D0002 ha encerrado a N0044 en la Colmena.
+2026-05-06 17:03:04 - El demogorgon D0002 ataca al niño N0042 (capturas: 5)
+2026-05-06 17:03:04 - N0067 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:04 - N0047 ha terminado de descansar y SALE de la Radio WSQK.
+2026-05-06 17:03:04 - N0047 está DEAMBULANDO por la Calle Principal.
+2026-05-06 17:03:04 - N0005 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:04 - N0005 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:04 - N0069 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:04 - D0001 ha FALLADO su ataque contra N0064.
+2026-05-06 17:03:04 - El demogorgon D0001 ataca al niño N0004 (capturas: 8)
+2026-05-06 17:03:04 - N0064 RESISTE con inmunidad.
+2026-05-06 17:03:04 - D0000 ha FALLADO su ataque contra N0051.
+2026-05-06 17:03:04 - N0051 RESISTE con inmunidad.
+2026-05-06 17:03:04 - N0022 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:04 - <<< [PORTAL Laboratorio] N0062 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:04 - >>> [PORTAL Laboratorio] N0031 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:04 - N0037 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:04 - <<< [PORTAL Centro Comercial] N0006 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:04 - >>> [PORTAL Centro Comercial] N0014 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:04 - <<< [PORTAL Bosque] N0015 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:04 - >>> [PORTAL Bosque] N0043 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:04 - D0003 ha encerrado a N0063 en la Colmena.
+2026-05-06 17:03:04 - El demogorgon D0003 ataca al niño N0021 (capturas: 1)
+2026-05-06 17:03:04 - D0002 ha FALLADO su ataque contra N0042.
+2026-05-06 17:03:04 - El demogorgon D0002 ataca al niño N0006 (capturas: 5)
+2026-05-06 17:03:04 - N0042 RESISTE con inmunidad.
+2026-05-06 17:03:04 - N0025 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:04 - N0025 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:04 - N0068 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:05 - El niño N0004 ha sido capturado
+2026-05-06 17:03:05 - N0023 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:05 - N0069 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:05 - N0069 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:05 - <<< [PORTAL Laboratorio] N0031 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:05 - >>> [PORTAL Laboratorio] N0011 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:05 - <<< [PORTAL Centro Comercial] N0014 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:05 - >>> [PORTAL Centro Comercial] N0036 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:05 - <<< [PORTAL Bosque] N0043 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:05 - >>> [PORTAL Bosque] N0032 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:05 - N0038 ha recolectado sangre con éxito.
+2026-05-06 17:03:05 - D0003 ha FALLADO su ataque contra N0021.
+2026-05-06 17:03:05 - N0021 RESISTE con inmunidad.
+2026-05-06 17:03:05 - D0001 ha encerrado a N0004 en la Colmena.
+2026-05-06 17:03:05 - N0067 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:05 - N0070 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:06 - N0022 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:06 - N0068 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:06 - N0046 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:06 - N0046 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:06 - N0035 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:06 - N0035 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:06 - N0048 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:06 - N0048 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:06 - N0025 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:06 - D0002 ha FALLADO su ataque contra N0006.
+2026-05-06 17:03:06 - N0006 RESISTE con inmunidad.
+2026-05-06 17:03:06 - N0005 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:06 - N0023 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:06 - N0041 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:06 - N0041 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:06 - <<< [PORTAL Laboratorio] N0011 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:06 - >>> [PORTAL Laboratorio] N0013 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:06 - <<< [PORTAL Centro Comercial] N0036 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:06 - >>> [PORTAL Centro Comercial] N0033 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:06 - <<< [PORTAL Bosque] N0032 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:06 - >>> [PORTAL Bosque] N0038 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:03:06 - N0042 ha recolectado sangre con éxito.
+2026-05-06 17:03:06 - N0070 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:06 - N0070 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:07 - N0069 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:07 - N0050 ha recolectado sangre con éxito.
+2026-05-06 17:03:07 - N0007 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:07 - N0007 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:07 - N0058 ha recolectado sangre con éxito.
+2026-05-06 17:03:07 - N0046 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:07 - N0059 ha recolectado sangre con éxito.
+2026-05-06 17:03:07 - N0039 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:07 - N0039 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:07 - <<< [PORTAL Laboratorio] N0013 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:07 - >>> [PORTAL Laboratorio] N0042 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:03:07 - N0048 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:07 - N0071 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:07 - <<< [PORTAL Centro Comercial] N0033 ha SALIDO del túnel hacia el Upside Down.
+2026-05-06 17:03:07 - >>> [PORTAL Centro Comercial] N0050 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:03:07 - <<< [PORTAL Bosque] N0038 TERMINA de cruzar Bosque y está a salvo.
+2026-05-06 17:03:07 - >>> [PORTAL Bosque] N0058 ha ENTRADO al túnel (Upside Down -> Hawkins)
+2026-05-06 17:03:07 - N0038 ha depositado 1 unidad(es) de sangre. Total en RADIO: 85
+2026-05-06 17:03:07 - N0038 ha ENTRADO a la Radio WSQK para descansar.
+2026-05-06 17:03:07 - N0051 ha recolectado sangre con éxito.
+2026-05-06 17:03:07 - N0041 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:07 - N0025 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:07 - >>> [PORTAL Alcantarillado] N0023 ha ENTRADO al túnel (Hawkins -> Upside Down)
+2026-05-06 17:03:07 - N0035 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:07 - N0055 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:07 - N0055 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:07 - N0061 ha recolectado sangre con éxito.
+2026-05-06 17:03:08 - N0070 ha terminado de prepararse en el Sótano Byers.
+2026-05-06 17:03:08 - N0005 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:08 - N0047 ha SALIDO de la Calle Principal.
+2026-05-06 17:03:08 - N0047 ha ENTRADO al Sótano Byers y empieza a prepararse.
+2026-05-06 17:03:08 - N0015 ha recolectado sangre con éxito.
+2026-05-06 17:03:08 - N0072 ha INICIADO su actividad en Hawkins (Calle Principal).
+2026-05-06 17:03:08 - N0064 ha recolectado sangre con éxito.
+2026-05-06 17:03:08 - N0069 ha SALIDO del Sótano Byers hacia los Portales.
+2026-05-06 17:03:08 - SIMULACIÓN PARADA

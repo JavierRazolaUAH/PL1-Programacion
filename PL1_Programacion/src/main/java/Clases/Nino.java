@@ -1,15 +1,32 @@
 package Clases;
 
-public class Nino extends Thread {
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
+public class Nino extends Thread {
     // --- Atributos de Identificación y Estado ---
     private String idNino;
     private boolean vivo = true;
     private boolean capturado = false;
-    private boolean bajoAtaque = false; 
-    private boolean inmune = false; 
+    private boolean inmune = false;
     private int sangreRecolectada = 0;
-    private final AgrupacionZonas zonas; 
+    
+    private final AgrupacionZonas zonas;
+    
+    // --- Herramientas de concurrencia avanzada ---
+    
+    // Garantiza de forma atómica (Lock-free) que solo un monstruo puede atacarle a la vez
+    private final AtomicBoolean bajoAtaque = new AtomicBoolean(false);
+    
+    // Pausa al niño durante el forcejeo hasta que el monstruo decide su destino
+    private final Semaphore resolucionCombate = new Semaphore(0);
+    
+    // Cerrojo y condición para esperar el rescate de Eleven en La Colmena
+    private final Lock cerrojoRescate = new ReentrantLock();
+    private final Condition condicionRescate = cerrojoRescate.newCondition();
 
     // --- Constructor ---
     public Nino(String idNino, AgrupacionZonas zonas) {
@@ -17,112 +34,140 @@ public class Nino extends Thread {
         this.zonas = zonas;
     }
 
-    // --- Ciclo de Vida (FSM - Máquina de Estados) ---
+    // --- Ciclo de Vida Principal ---
     @Override
     public void run() {
         try {
-            // Inicialización en el sistema
             zonas.esperarSiPausado();
             zonas.getCallePrincipal().inicio(this);
 
+            // Máquina de estados: el niño repite su rutina mientras siga vivo
             while (vivo) {
-                // 1. ESTADO: Sótano Byers (Preparación)
-                zonas.esperarSiPausado(); 
+                // 1. Preparación en la base
+                zonas.esperarSiPausado();
                 zonas.getSotanoByers().entrarZona(this);
-                Thread.sleep(1000 + (long)(Math.random() * 1001)); 
-                zonas.esperarSiPausado(); 
+                Thread.sleep(1000 + (long) (Math.random() * 1001));
+                zonas.esperarSiPausado();
                 zonas.getSotanoByers().salirZona(this);
 
-                // 2. ESTADO: Selección y cruce de Portal
+                // 2. Cruce de Portal (Ida al peligro)
                 int rutaElegida = (int) (Math.random() * 4);
-                zonas.esperarSiPausado(); 
+                zonas.esperarSiPausado();
                 zonas.getPortal(rutaElegida).cruzarAlUpsideDown(this);
 
-                // 3. ESTADO: Upside Down (Recolección de Sangre)
+                // 3. Upside Down (Fase crítica donde puede ser atacado)
                 gestionarFaseUpsideDown(rutaElegida);
 
-                // 4. ESTADO: Regreso a Hawkins (Portal de vuelta)
+                // 4. Regreso a Hawkins (Prioridad absoluta en el portal)
                 zonas.esperarSiPausado();
                 zonas.getPortal(rutaElegida).cruzarAHawkins(this);
 
-                // 5. ESTADO: Radio WSQK (Entrega de recursos)
+                // 5. Depositar sangre y descansar en la Radio
                 gestionarFaseRadio();
 
-                // 6. ESTADO: Calle Principal (Deambular)
+                // 6. Camuflaje en la Calle Principal
                 zonas.getCallePrincipal().deambular(this);
-                // El bucle reinicia y el hilo vuelve al Sótano Byers
             }
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            System.out.println(idNino + " ha finalizado su ejecución.");
+            Thread.currentThread().interrupt(); // Restaura la bandera de interrupción
         }
     }
 
     // --- Lógica Interna de Fases ---
-
-    /**
-     * Gestiona la estancia en el Upside Down y la posibilidad de ser capturado.
-     */
     private void gestionarFaseUpsideDown(int ruta) throws InterruptedException {
         ZonaInsegura zonaActual = zonas.getUpsidedown().getZonas().get(ruta);
-        zonaActual.entrarNino(this); 
-
-        boolean sobreviveYEscapa = true;
-        long tiempoRestante = 3000 + (long)(Math.random() * 2001);
+        zonaActual.entrarNino(this);
         
-        // Efecto Tormenta: se tarda el doble en recolectar
-        if (zonas.isTormentaUpsideDown()) tiempoRestante *= 2; 
+        boolean sobreviveYEscapa = true;
+        long tiempoRestante = 3000 + (long) (Math.random() * 2001);
+        
+        // Las condiciones climáticas afectan al tiempo total requerido
+        if (zonas.isTormentaUpsideDown()) tiempoRestante *= 2;
 
+        // Bucle de extracción: intenta terminar su tarea a menos que sea capturado
         while (tiempoRestante > 0 && sobreviveYEscapa) {
             long inicioExtraccion = System.currentTimeMillis();
             try {
+                // Si este sleep es interrumpido, significa que un Demogorgon le ha atacado
                 zonaActual.recolectarSangre(tiempoRestante);
                 
-                // Éxito en la recolección
-                tiempoRestante = 0; 
+                // Extracción completada sin incidentes
+                tiempoRestante = 0;
                 this.sangreRecolectada = zonas.isTormentaUpsideDown() ? 2 : 1;
                 zonaActual.registrarExtraccionGlobal(this.sangreRecolectada);
                 Logs.getInstance().log(idNino + " ha recolectado sangre con éxito.");
-
+                
             } catch (InterruptedException e) {
-                // Interrupción por Ataque de Demogorgon
+                // ATAQUE DETECTADO: Calculamos cuánto le faltaba por recolectar
                 long tiempoPasado = System.currentTimeMillis() - inicioExtraccion;
                 tiempoRestante -= tiempoPasado;
                 if (tiempoRestante < 0) tiempoRestante = 0;
+                this.sangreRecolectada = 0;
 
-                this.sangreRecolectada = 0; 
-                
-                synchronized (this) {
-                    // Esperar a que el ataque termine (éxito o fallo)
-                    while (bajoAtaque) { this.wait(); } 
-                    zonas.esperarSiPausado(); 
+                // El niño se queda "congelado" aquí esperando que el monstruo dicte sentencia
+                resolucionCombate.acquire();
+                zonas.esperarSiPausado();
+
+                if (capturado) {
+                    sobreviveYEscapa = false;
                     
-                    if (capturado) {
-                        sobreviveYEscapa = false;
-                        // Bloqueo en la Colmena hasta rescate de Eleven
-                        while (capturado) { this.wait(); } 
-                        zonas.esperarSiPausado(); 
-                        Logs.getInstance().log(idNino + " inicia retirada tras ser rescatado.");
-                    } else {
-                        this.inmune = true; // El niño resistió el ataque
-                        Logs.getInstance().log(idNino + " RESISTE con inmunidad.");
+                    // Si perdió, se bloquea de forma segura hasta que Eleven lo rescate
+                    cerrojoRescate.lock();
+                    try {
+                        while (capturado) {
+                            condicionRescate.await(); // El niño se duerme
+                        }
+                    } finally {
+                        cerrojoRescate.unlock();
                     }
+                    
+                    zonas.esperarSiPausado();
+                    Logs.getInstance().log(idNino + " inicia retirada tras ser rescatado.");
+                } else {
+                    // Si ganó, gana inmunidad temporal y el bucle reinicia para terminar la recolección
+                    this.inmune = true; 
+                    Logs.getInstance().log(idNino + " RESISTE con inmunidad.");
                 }
             }
         }
-        this.inmune = false;
+        
+        this.inmune = false; // Pierde la inmunidad al abandonar el área
         zonaActual.salirNino(this);
     }
 
     private void gestionarFaseRadio() throws InterruptedException {
-        zonas.esperarSiPausado(); 
+        zonas.esperarSiPausado();
         if (this.sangreRecolectada > 0) {
             zonas.getRadioWSQK().depositarSangre(this);
         }
-        
         zonas.getRadioWSQK().entrarZona(this);
-        Thread.sleep(2000 + (long)(Math.random() * 2001));
-        zonas.esperarSiPausado(); 
+        Thread.sleep(2000 + (long) (Math.random() * 2001));
+        zonas.esperarSiPausado();
         zonas.getRadioWSQK().salirZona(this);
+    }
+
+    // El Demogorgon usa esto para saber si puede atacar (
+    public boolean intentarAtrapar() {
+        return bajoAtaque.compareAndSet(false, true);
+    }
+
+    // El Demogorgon usa esto para liberar al niño y comunicarle su destino
+    public void resolverAtaque(boolean fueCapturado) {
+        this.capturado = fueCapturado;
+        this.bajoAtaque.set(false);
+        this.resolucionCombate.release(); 
+    }
+
+    // Eleven usa esto para liberar al niño de su encierro
+    public void serRescatado() {
+        cerrojoRescate.lock();
+        try {
+            this.capturado = false;
+            condicionRescate.signalAll(); 
+        } finally {
+            cerrojoRescate.unlock();
+        }
     }
 
     // --- Getters y Setters ---
@@ -130,9 +175,7 @@ public class Nino extends Thread {
     public boolean isVivo() { return vivo; }
     public void setVivo(boolean vivo) { this.vivo = vivo; }
     public boolean isCapturado() { return capturado; }
-    public void setCapturado(boolean capturado) { this.capturado = capturado; }
-    public boolean isBajoAtaque() { return bajoAtaque; }
-    public void setBajoAtaque(boolean bajoAtaque) { this.bajoAtaque = bajoAtaque; }
+    public boolean isBajoAtaque() { return bajoAtaque.get(); }
     public int getSangreRecolectada() { return sangreRecolectada; }
     public void setSangreRecolectada(int sangreRecolectada) { this.sangreRecolectada = sangreRecolectada; }
     public boolean isInmune() { return inmune; }

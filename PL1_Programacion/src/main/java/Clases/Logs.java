@@ -3,41 +3,58 @@ package Clases;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Logs {
-    // --- Atributos de Configuración y Singleton ---
-    private static Logs loggerGlobal;
-    private static final String ARCHIVO = "hawkins.txt";
-    private final DateTimeFormatter formateadorTiempo = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    // --- Constructor Privado ---
+    
+    private static final Logs instancia = new Logs();
+    
+    // Definición de la ruta 
+    private static final Path RUTA_ARCHIVO = Paths.get("hawkins.txt");
+    
+    // Formateador para la marca de tiempo de cada evento
+    private final DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    
+    // Cerrojo explícito para garantizar la exclusión mutua a
+    private final Lock cerrojo = new ReentrantLock();
+
+    // Constructor 
     private Logs() {}
 
-    /**
-     * Implementación del patrón Singleton con sincronización para hilos.
-     */
-    public static synchronized Logs getInstance() {
-        if (loggerGlobal == null) {
-            loggerGlobal = new Logs();
-        }
-        return loggerGlobal;
+    // Devuelve la única instancia global de la clase
+    public static Logs getInstance() {
+        return instancia;
     }
 
-    // --- Gestión de Persistencia ---
-    /**
-     * Registra un evento en el archivo de texto con marca de tiempo.
-     */
-    public synchronized void log(String evento) {
-        String timestamp = LocalDateTime.now().format(formateadorTiempo);
-        String linea = timestamp + " - " + evento;
+    // Registra un evento en el archivo de forma segura para múltiples hilos
+    public void log(String evento) {
+        // Obtiene la hora actual formateada
+        String tiempoActual = LocalDateTime.now().format(formatoHora);
+        
+        // Prepara la línea completa. El '%n' asegura un salto de línea compatible con cualquier sistema
+        String lineaAEscribir = String.format("%s - %s%n", tiempoActual, evento);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARCHIVO, true))) {
-            writer.write(linea);
-            writer.newLine();
+        // Bloquea el acceso para que ningún otro hilo pueda escribir al mismo tiempo
+        cerrojo.lock(); 
+        try {
+            // Escribe la línea usando Java NIO. Si no existe lo crea (CREATE), si existe añade al final (APPEND)
+            Files.writeString(RUTA_ARCHIVO, lineaAEscribir, 
+                              StandardOpenOption.CREATE, 
+                              StandardOpenOption.APPEND);
         } catch (IOException e) {
-            System.err.println("Error al escribir en el log: " + e.getMessage());
+            // Captura y muestra errores de entrada/salida sin detener el programa
+            System.err.println("Fallo al escribir el log: " + e.getMessage());
+        } finally {
+            // Se coloca en el 'finally' para garantizar que el cerrojo SIEMPRE se libere, incluso si hay error
+            cerrojo.unlock(); 
         }
     }
 }
