@@ -16,15 +16,9 @@ public class Nino extends Thread {
     
     private final AgrupacionZonas zonas;
     
-    // --- Herramientas de concurrencia avanzada ---
-    
-    // Garantiza de forma atómica (Lock-free) que solo un monstruo puede atacarle a la vez
+    // --- Herramientas de concurrencia---
     private final AtomicBoolean bajoAtaque = new AtomicBoolean(false);
-    
-    // Pausa al niño durante el forcejeo hasta que el monstruo decide su destino
     private final Semaphore resolucionCombate = new Semaphore(0);
-    
-    // Cerrojo y condición para esperar el rescate de Eleven en La Colmena
     private final Lock cerrojoRescate = new ReentrantLock();
     private final Condition condicionRescate = cerrojoRescate.newCondition();
 
@@ -37,12 +31,18 @@ public class Nino extends Thread {
     // --- Ciclo de Vida Principal ---
     @Override
     public void run() {
+        
         try {
             zonas.esperarSiPausado();
             zonas.getCallePrincipal().inicio(this);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return; 
+        }
 
-            // Máquina de estados: el niño repite su rutina mientras siga vivo
-            while (vivo) {
+        // El niño repite su rutina mientras siga vivo
+        while (vivo) {
+            try {
                 // 1. Preparación en la base
                 zonas.esperarSiPausado();
                 zonas.getSotanoByers().entrarZona(this);
@@ -67,11 +67,12 @@ public class Nino extends Thread {
 
                 // 6. Camuflaje en la Calle Principal
                 zonas.getCallePrincipal().deambular(this);
+
+            } catch (InterruptedException e) {
+
             }
-        } catch (InterruptedException e) {
-            System.out.println(idNino + " ha finalizado su ejecución.");
-            Thread.currentThread().interrupt(); // Restaura la bandera de interrupción
         }
+        System.out.println(idNino + " ha finalizado su ejecución.");
     }
 
     // --- Lógica Interna de Fases ---
@@ -82,41 +83,34 @@ public class Nino extends Thread {
         boolean sobreviveYEscapa = true;
         long tiempoRestante = 3000 + (long) (Math.random() * 2001);
         
-        // Las condiciones climáticas afectan al tiempo total requerido
         if (zonas.isTormentaUpsideDown()) tiempoRestante *= 2;
 
-        // Bucle de extracción: intenta terminar su tarea a menos que sea capturado
         while (tiempoRestante > 0 && sobreviveYEscapa) {
             long inicioExtraccion = System.currentTimeMillis();
             try {
-                // Si este sleep es interrumpido, significa que un Demogorgon le ha atacado
                 zonaActual.recolectarSangre(tiempoRestante);
                 
-                // Extracción completada sin incidentes
                 tiempoRestante = 0;
                 this.sangreRecolectada = zonas.isTormentaUpsideDown() ? 2 : 1;
                 zonaActual.registrarExtraccionGlobal(this.sangreRecolectada);
                 Logs.getInstance().log(idNino + " ha recolectado sangre con éxito.");
                 
             } catch (InterruptedException e) {
-                // ATAQUE DETECTADO: Calculamos cuánto le faltaba por recolectar
                 long tiempoPasado = System.currentTimeMillis() - inicioExtraccion;
                 tiempoRestante -= tiempoPasado;
                 if (tiempoRestante < 0) tiempoRestante = 0;
                 this.sangreRecolectada = 0;
 
-                // El niño se queda "congelado" aquí esperando que el monstruo dicte sentencia
                 resolucionCombate.acquire();
                 zonas.esperarSiPausado();
 
                 if (capturado) {
                     sobreviveYEscapa = false;
                     
-                    // Si perdió, se bloquea de forma segura hasta que Eleven lo rescate
                     cerrojoRescate.lock();
                     try {
                         while (capturado) {
-                            condicionRescate.await(); // El niño se duerme
+                            condicionRescate.await(); 
                         }
                     } finally {
                         cerrojoRescate.unlock();
@@ -125,14 +119,13 @@ public class Nino extends Thread {
                     zonas.esperarSiPausado();
                     Logs.getInstance().log(idNino + " inicia retirada tras ser rescatado.");
                 } else {
-                    // Si ganó, gana inmunidad temporal y el bucle reinicia para terminar la recolección
                     this.inmune = true; 
                     Logs.getInstance().log(idNino + " RESISTE con inmunidad.");
                 }
             }
         }
         
-        this.inmune = false; // Pierde la inmunidad al abandonar el área
+        this.inmune = false; 
         zonaActual.salirNino(this);
     }
 
@@ -147,19 +140,16 @@ public class Nino extends Thread {
         zonas.getRadioWSQK().salirZona(this);
     }
 
-    // El Demogorgon usa esto para saber si puede atacar evitando condiciones de carrera
     public boolean intentarAtrapar() {
         return bajoAtaque.compareAndSet(false, true);
     }
 
-    // El Demogorgon usa esto para liberar al niño y comunicarle su destino
     public void resolverAtaque(boolean fueCapturado) {
         this.capturado = fueCapturado;
         this.bajoAtaque.set(false);
         this.resolucionCombate.release(); 
     }
 
-    // Eleven usa esto para liberar al niño de su encierro
     public void serRescatado() {
         cerrojoRescate.lock();
         try {
