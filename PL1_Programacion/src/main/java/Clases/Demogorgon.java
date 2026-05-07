@@ -48,7 +48,7 @@ public class Demogorgon extends Thread {
     private ZonaInsegura gestionarMovimiento(ZonaInsegura zonaPrevia) {
         ZonaInsegura zonaNueva;
         
-        // ¡CORRECCIÓN!: Bucle para forzar que elija una zona distinta a la anterior
+        
         while (true) {
             if (zonas.isApagonLaboratorio() && zonaPrevia != null) {
                 return zonaPrevia; // Bloqueado por el apagón, se queda donde está
